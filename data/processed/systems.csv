@@ -1,0 +1,5 @@
+system,name,version,authority,scope,source,accessed,notes
+EUNIS_2012,"EUNIS habitat classification 2007, revised descriptions 2012 (amended 2019)",2012,EEA,terrestrial + marine,"eunis.habitats R package (ramiromagno/eunis.habitats), data/eunis_habitats.rda",2026-11-21,
+EUNIS_M_2019,EUNIS marine habitat classification,2019,EEA,marine,"eunis.habitats R package (ramiromagno/eunis.habitats), data/eunis_habitats.rda",2026-11-21,
+EUNIS_M_2022,EUNIS marine habitat classification,2022,EEA,marine,"eunis.habitats R package (ramiromagno/eunis.habitats), data/eunis_habitats.rda",2026-11-21,
+EUNIS_T_2021,EUNIS terrestrial habitat classification,2021,EEA,terrestrial,"eunis.habitats R package (ramiromagno/eunis.habitats), data/eunis_habitats.rda",2026-11-21,
