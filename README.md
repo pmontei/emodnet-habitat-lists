@@ -33,6 +33,9 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | ICES VME habitat types and subtypes | ✅ | planned |
 | HELCOM HUB (BSEP 139) with HELCOM Red List 2013 (BSEP 138) | ✅ (328 biotopes/habitats + 68 higher levels + 10 biotope complexes) | ✅ to EUNIS 2012, HELCOM 1998 (fact sheets) and EUNIS marine 2022 (EEA) |
 | MSFD benthic broad habitat types (Decision 2017/848) | ✅ (22) | ✅ to EUNIS marine 2022 level 2 |
+| Marine Habitat Classification for Britain and Ireland v22.04 (JNCC) | ✅ (694 units) | ✅ JNCC correlation tables 2026: earlier versions, EUNIS 2022/2007, Annex I, OSPAR, MSFD, VME, Emerald, GOOS EOV, IUCN GET, UK lists |
+| Nature Restoration Regulation (EU) 2024/1991, Annex II | ✅ (7 groups × regions) | ✅ to EUNIS marine 2022 (231 types) and EUNIS 2022 → Annex I |
+| Black Sea | via EUNIS marine 2022 (Black Sea units) | — |
 
 ## Usage
 

@@ -19,7 +19,7 @@ import pandas as pd
 
 from . import pdftext
 from .schema import CROSSWALKS_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
-from .sources import annex_i, barcelona, eunis_habitats, helcom_hub, ices_vme, msfd_bht, ospar
+from .sources import annex_i, barcelona, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
 
 EUNIS_M_2022_XLSX = (
     "1.EUNIS habitat classification/3_eea_t_eunis-hab-m_p_2004-2019_v01_r00/"
@@ -48,8 +48,30 @@ SYSTEMS = [
      helcom_hub.SRC_139 + "; " + helcom_hub.SRC_138 + "; HELCOM HUB fact sheets"),
     ("HELCOM_1998", "HELCOM Red List of marine and coastal biotopes and biotope complexes (classification of 1998)",
      "1998", "HELCOM", "Baltic Sea", "not loaded; codes appear in crosswalks only (from HUB fact sheets)"),
+    ("UK_MHC_2204", "Marine Habitat Classification for Britain and Ireland", "22.04", "JNCC", "UK and Ireland",
+     jncc_mhc.SRC_LIST),
+    ("UK_MHC_1503", "Marine Habitat Classification for Britain and Ireland", "15.03", "JNCC", "UK and Ireland",
+     "not loaded; codes appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
     ("UK_MNCR_0405", "Marine Habitat Classification for Britain and Ireland", "04.05", "JNCC", "UK and Ireland",
-     "not loaded; codes appear in crosswalks only"),
+     "not loaded; codes appear in crosswalks only (OSPAR Agreement 2008-07; " + jncc_mhc.SRC_CORR + ")"),
+    ("UK_MHC_9706", "Marine Habitat Classification for Britain and Ireland (MNCR BioMar)", "97.06", "JNCC",
+     "UK and Ireland", "not loaded; codes appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
+    ("UK_HPI", "Habitats of Principal Importance (UK)", "", "UK nature conservation bodies", "UK",
+     "not loaded; names (slugs) appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
+    ("UK_MCZ_FOCI", "Marine Conservation Zone habitat Features of Conservation Importance", "", "Defra / JNCC",
+     "England, Wales, UK offshore", "not loaded; names (slugs) appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
+    ("UK_PMF", "Priority Marine Features (Scotland)", "", "NatureScot / JNCC", "Scotland",
+     "not loaded; names (slugs) appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
+    ("UK_MCZ_BSH", "Marine Conservation Zone Broad-Scale Habitats", "", "Defra / JNCC", "England, Wales, UK offshore",
+     "not loaded; names (slugs) appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
+    ("EMERALD", "Bern Convention Resolution No. 4 habitats (Emerald Network)", "", "Council of Europe", "Europe",
+     "not yet loaded; codes appear in crosswalks only"),
+    ("GOOS_EOV", "GOOS biology and ecosystems Essential Ocean Variables", "", "GOOS", "global",
+     "not loaded; names (slugs) appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
+    ("IUCN_GET", "IUCN Global Ecosystem Typology", "2.x", "IUCN", "global",
+     "not yet loaded; codes appear in crosswalks only"),
+    ("NRL_2024", "Nature Restoration Regulation (EU) 2024/1991, Annex II: groups of marine habitat types", "2024",
+     "European Parliament and Council", "EU marine waters", nrl.SRC),
     ("EMODNET_OSPAR2025", "EMODnet Seabed Habitats OSPAR habitats dataset: habtype / habsubtype values", "2025",
      "EMODnet Seabed Habitats", "North-East Atlantic", ospar.SRC_EMODNET + "; codes appear in crosswalks only"),
     ("ANNEX_I", "Habitats Directive (92/43/EEC) Annex I natural habitat types", "2013 (EUR28)",
@@ -136,6 +158,21 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
         loaded.add("MSFD_BHT")
     else:
         print(f"skipped MSFD broad habitat types: {sources / msfd_bht.FOLDER} not found or pdftotext not installed")
+
+    if (sources / nrl.FOLDER).is_dir() and pdftext.available():
+        habitats.append(nrl.habitats(sources))
+        crosswalks.append(nrl.crosswalks(sources))
+        loaded.add("NRL_2024")
+    else:
+        print(f"skipped Nature Restoration Regulation: {sources / nrl.FOLDER} not found or pdftotext not installed")
+    if (sources / jncc_mhc.FOLDER).is_dir():
+        habitats.append(jncc_mhc.habitats(sources))
+        so_far = pd.concat(habitats, ignore_index=True)
+        crosswalks.append(jncc_mhc.crosswalks(sources, so_far[so_far.system == "OSPAR_TD_2021"],
+                                              so_far[so_far.system == "ICES_VME"]))
+        loaded.add("UK_MHC_2204")
+    else:
+        print(f"skipped JNCC Marine Habitat Classification: {sources / jncc_mhc.FOLDER} not found")
 
     habitats_df = pd.concat(habitats, ignore_index=True)[HABITATS_COLUMNS]
     crosswalks_df = (

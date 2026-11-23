@@ -172,3 +172,60 @@ Notes:
 * The Decision lists the "Relevant EUNIS habitat codes (version 2016)", level 2. Relationship `=`
   when one code is listed and `>` when several are (the broad habitat type contains each). These
   level-2 codes are unchanged in EUNIS marine 2022; every code `MA1` … `MG6` is used exactly once.
+
+## 8. Marine Habitat Classification for Britain and Ireland (JNCC)
+
+Folder: `8.Marine Habitat Classification for Britain and Ireland/`
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `01_2022_JNCC_MHC-v22-04_*.xlsx` | JNCC, 2022. Marine Habitat Classification for Britain and Ireland v22.04, full biotope list. | `UK_MHC_2204` | https://mhc.jncc.gov.uk/resources/ |
+| `02_2026_JNCC_*correlation*.xlsm` | JNCC, 2026. Marine habitat correlation tables v2026.02 ("Read Me" says 2026.01). | `UK_MHC_2204 ->` 16 systems (see below) | https://jncc.gov.uk/resources/ea153999-2892-4c62-919e-c33b33c65fda |
+| `03_2026_*user-guide.pdf` | JNCC, 2026. Correlation tables user guide (March 2026). | relationship types | https://data.jncc.gov.uk/data/ea153999-2892-4c62-919e-c33b33c65fda/UserGuide-MarineHabitatsCorrelations.pdf |
+| `04_2023_*`, `05_2019_*` | How to use MHC v22.04 (2023); Parry 2019, JNCC Report 546 (assigning biotopes using EUNIS or MHC). | documentation | https://mhc.jncc.gov.uk/resources/ |
+| `06_2004_*` to `09_2004_*` | Connor et al., 2004. MHC v04.05 (introduction, biotope sections, comparative tables). | not used (v04.05 codes come from the correlation tables) | ISBN 1 861 07561 8 |
+
+Notes:
+
+* Correlation targets: `UK_MHC_1503`, `UK_MNCR_0405`, `UK_MHC_9706`, `EUNIS_M_2022`, `EUNIS_2012`
+  (JNCC "EUNIS 2007"), `OSPAR_TD_2021`, `ANNEX_I`, `MSFD_BHT`, `ICES_VME`, `EMERALD`, `GOOS_EOV`,
+  `IUCN_GET`, `UK_HPI`, `UK_MCZ_FOCI`, `UK_PMF`, `UK_MCZ_BSH`.
+* Relationships: "Is the same as" `=`, "Contains" `>`, "Is contained within" `<`, "Partially overlaps with" `#`.
+* OSPAR and VME are given by name; they are matched to the repository codes (aliases: "Kelp Forest",
+  "Seapen and burrowing megafauna communities", "Modiolus modiolus horse mussel beds", "Seapen fields",
+  "Lophelia pertusa /Madrepora oculata reef", "Solenosmilia variabilis reef"). The JNCC name is kept in `notes`.
+  Other name-only lists (GOOS EOV, UK lists) are coded with a slug of the name.
+* Inconsistencies between the two JNCC files (flagged as "from_code not found"):
+  the correlation tables use `LR.FLR.CvOv.RpurPlac`, the biotope list `LR.FLR.CvOv.RpurPil`;
+  `M.AtMB.Sa.InfPol` is in the correlation tables but not in the biotope list. In the biotope list,
+  `M.AtLB.Sa.InfPol` is named "... in Atlantic mid bathyal sand".
+
+## 9. Nature Restoration Regulation (EU) 2024/1991
+
+Folder: `9.Restauration law/`
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `01_2024_*2024-1991*.pdf` | Regulation (EU) 2024/1991 of 24 June 2024 on nature restoration (OJ L, 2024/1991, 29.7.2024), Annex II. | `NRL_2024`; `NRL_2024 -> EUNIS_M_2022`; `EUNIS_M_2022 -> ANNEX_I` | http://data.europa.eu/eli/reg/2024/1991/oj |
+
+Notes:
+
+* `NRL_2024` rows are the 7 groups (`G1` seagrass beds … `G7` soft sediments not deeper than 1 000 m)
+  and their marine regions (`G1-ATL`, `G1-BAL`, `G1-BLS`, `G1-MED`). The 231 habitat types listed are
+  EUNIS 2022 habitats, linked with `>` (the group/region contains the EUNIS type); the Annex II name
+  is kept in `notes`.
+* The "Related habitat type code" column (Annex I) comes from the EEA 2021 crosswalk according to the
+  Regulation; relationship `unspecified`.
+
+## 10. Black Sea
+
+Folder: `10.Black Sea/`
+
+* The Black Sea habitat units used are those of **EUNIS marine 2022**: level-3 codes ending in `4`
+  (e.g. `MB54` Black Sea infralittoral sand) and their sub-units (52 level-3, 97 level-4 units,
+  benthic and pelagic). Filter `habitats.csv` with `system == "EUNIS_M_2022"` and a code matching
+  `^M[A-H][0-9A]4`.
+* Grande et al., 2025. CoDeMap: a classification scheme for benthic habitats from the coast to the deep
+  sea in the Mediterranean and Black Sea. Front. Mar. Sci. 12:1663369
+  (https://doi.org/10.3389/fmars.2025.1663369), with its supplementary table (morphology, substrate,
+  biology components): not used yet (a mapping scheme, not an adopted classification).
