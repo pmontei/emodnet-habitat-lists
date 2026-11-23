@@ -229,3 +229,37 @@ Folder: `10.Black Sea/`
   sea in the Mediterranean and Black Sea. Front. Mar. Sci. 12:1663369
   (https://doi.org/10.3389/fmars.2025.1663369), with its supplementary table (morphology, substrate,
   biology components): not used yet (a mapping scheme, not an adopted classification).
+
+## 11. Biogenic substrate (EMODnet Seabed Habitats)
+
+Folder: `11.Biogenic substrate/`
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `01_2021_*Biogenic-substrate*.pdf` | Lillis, H., Allen, H., Agnesi, S., Annunziatellis, A. & Vasquez, M., 2021. A combined, harmonized data product showing the best evidence for the extent of biogenic substrate in Europe. EMODnet Seabed Habitats D3.05/D3.06. | `EMODNET_BIOGENIC_2021` (Table 5); Appendix 1 and 2 crosswalks | EMODnet Seabed Habitats reports (https://emodnet.ec.europa.eu/) |
+
+Notes:
+
+* Definition (section 1.1): beds or reefs of a species that, like *Posidonia oceanica* meadows, cover
+  and replace the underlying substrate, can occur on different substrate types and are detectable
+  acoustically. Stored as the `description` of `biogenic-substrate`.
+* Typology (Table 5): 29 types in 4 levels, transcribed in `biogenic.TYPOLOGY` and checked against the
+  PDF text by the tests; regions in `notes`. Codes are slugs of the names.
+* Appendix 1 (EUNIS 2007-11, Annex I, HELCOM HUB, OSPAR → biogenic type): relationship `maps to`;
+  region in `notes`. Annex I 1170 maps to biogenic substrate only for its biogenic subtype.
+  Table 16 says "Sabellaria spinulosa beds" for the type "Sabellaria spinulosa reefs".
+* Appendix 2 (biogenic type + biological zone + region → EUNIS 2019): relationship
+  `maps to (with biological zone)`; zone, region, EUNIS 2007-11 code and the report's "unofficial
+  corrections" in `notes`. The corrections add codes that are not in EUNIS 2019 (flagged "not found"):
+  `MB2224`, `MC223`, `MC2237`, `MC2238`.
+* **EUNIS 2022 vs the report's corrections:** EUNIS 2022 adopted `MC223` "Bivalve reefs in the
+  Atlantic circalittoral zone" and the name fixes of `MB2211` and `MD22`, but codes the circalittoral
+  *Mytilus edulis* and *Hiatella arctica* beds as `MC2235` and `MC2236` (the report proposed `MC2237`
+  and `MC2238`), and has no `MB2224`. To be taken into account when updating the product to EUNIS 2022
+  (D3.10).
+
+## 12. Caribbean
+
+Folder: `12.Caribbean/` (sources being collected). EUSeaMap Caribbean uses the benthic broad habitat
+types of Andres et al. (2022), *Typologie des habitats benthiques de la Martinique* (PatriNat), also
+published as a HabRef table (INPN, https://inpn.mnhn.fr/habitat/cd_hab/34410).

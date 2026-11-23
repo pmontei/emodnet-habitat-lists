@@ -19,7 +19,7 @@ import pandas as pd
 
 from . import pdftext
 from .schema import CROSSWALKS_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
-from .sources import annex_i, barcelona, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
+from .sources import annex_i, barcelona, biogenic, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
 
 EUNIS_M_2022_XLSX = (
     "1.EUNIS habitat classification/3_eea_t_eunis-hab-m_p_2004-2019_v01_r00/"
@@ -70,6 +70,8 @@ SYSTEMS = [
      "not loaded; names (slugs) appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
     ("IUCN_GET", "IUCN Global Ecosystem Typology", "2.x", "IUCN", "global",
      "not yet loaded; codes appear in crosswalks only"),
+    ("EMODNET_BIOGENIC_2021", "EMODnet Seabed Habitats biogenic substrate types (composite data product D3.05/D3.06)",
+     "2021", "EMODnet Seabed Habitats", "European seas", biogenic.SRC),
     ("NRL_2024", "Nature Restoration Regulation (EU) 2024/1991, Annex II: groups of marine habitat types", "2024",
      "European Parliament and Council", "EU marine waters", nrl.SRC),
     ("EMODNET_OSPAR2025", "EMODnet Seabed Habitats OSPAR habitats dataset: habtype / habsubtype values", "2025",
@@ -159,6 +161,12 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
     else:
         print(f"skipped MSFD broad habitat types: {sources / msfd_bht.FOLDER} not found or pdftotext not installed")
 
+    if (sources / biogenic.FOLDER).is_dir() and pdftext.available():
+        habitats.append(biogenic.habitats(sources))
+        crosswalks += [biogenic.crosswalk_appendix1(sources), biogenic.crosswalk_appendix2(sources)]
+        loaded.add("EMODNET_BIOGENIC_2021")
+    else:
+        print(f"skipped biogenic substrate: {sources / biogenic.FOLDER} not found or pdftotext not installed")
     if (sources / nrl.FOLDER).is_dir() and pdftext.available():
         habitats.append(nrl.habitats(sources))
         crosswalks.append(nrl.crosswalks(sources))

@@ -34,7 +34,7 @@ All tables are CSV, UTF-8, long format. Column lists are defined in
 |---|---|
 | from_system, from_code | Origin habitat. |
 | to_system, to_code | Target habitat. |
-| relationship | `=` same, `<` from is narrower, `>` from is broader, `#` overlap, or as given by the source: `partim` (marked "(partim)" in the source), `unspecified` (listed without qualifier), `source of` (the from habitat is the source the to habitat was derived from), `indicative` (published as indicative), `candidate` (derived, needs expert review). |
+| relationship | `=` same, `<` from is narrower, `>` from is broader, `#` overlap, or as given by the source: `partim` (marked "(partim)" in the source), `unspecified` (listed without qualifier), `source of` (the from habitat is the source the to habitat was derived from), `indicative` (published as indicative), `candidate` (derived, needs expert review), `maps to` (the from habitat is translated to the to type in a composite product), `maps to (with biological zone)`. |
 | source | Provenance (file / sheet, or report + page). |
 | notes | Free text. |
 
