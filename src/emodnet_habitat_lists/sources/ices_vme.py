@@ -19,7 +19,7 @@ import pandas as pd
 
 from ..schema import HABITATS_COLUMNS
 
-FOLDER = "VME (FAO  ICES)"
+FOLDER = "5.VME (FAO  ICES)"
 VOCAB_CSV = "04_2023_ICES_vocab_VME-HabitatType-Subtype.csv"
 SRC = "ICES Vocabulary Server (RECO), code types HabitatType (ref 1410) and HabitatSubtype (ref 1411), last modified 2023-09-21"
 
