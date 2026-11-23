@@ -1,0 +1,684 @@
+from_system,from_code,to_system,to_code,relationship,source,notes
+BARCELONA_2019,MA1.51,EUNIS_M_2019,MA151,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.51,EUNIS_2012,B3.1,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA1.51,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.51,CORINE,18.16,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.51a,EUNIS_M_2019,MA152,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.51a,EUNIS_2012,A1.42,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA1.51a,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.51a,CORINE,18.17,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.52,EUNIS_M_2019,MA155,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.52,EUNIS_2012,A1.44,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA1.52,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.52,CORINE,12.7,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.53,EUNIS_M_2019,MA153,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.53,EUNIS_2012,A1.13,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA1.53,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.53,CORINE,18.22,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.54,EUNIS_M_2019,MA154,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.54,EUNIS_2012,A1.14,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA1.54,EUNIS_2012,A1.23,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA1.54,EUNIS_2012,A1.34,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA1.54,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.54,CORINE,18.22,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.542,EUNIS_M_2019,MA1548,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.542,EUNIS_2012,A1.316,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA1.542,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.544,EUNIS_M_2019,MA1541,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.544,EUNIS_2012,A1.142,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA1.544,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.544,CORINE,18.22,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.54a,EUNIS_M_2019,MA154A,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.54a,EUNIS_2012,A1.234,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA1.54a,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.54a,CORINE,18.22,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA2.51,EUNIS_M_2019,MA1542,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA2.51,EUNIS_M_2019,MA1552,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",to_code not found in EUNIS_M_2019
+BARCELONA_2019,MA2.51,EUNIS_2012,A1.141,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA2.51,EUNIS_2012,A2.7,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA2.51,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA2.54,EUNIS_M_2019,MA2561,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MA2.54,EUNIS_2012,A2.131,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MA3.511,ANNEX_I,1210,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA4.511,ANNEX_I,1210,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA5.511,ANNEX_I,1210,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.511,ANNEX_I,1210,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA3.511,ANNEX_I,2110,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA4.511,ANNEX_I,2110,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA5.511,ANNEX_I,2110,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.511,ANNEX_I,2110,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA3.511,ANNEX_I,2120,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA4.511,ANNEX_I,2120,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA5.511,ANNEX_I,2120,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.511,ANNEX_I,2120,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA3.511,CORINE,16,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA4.511,CORINE,16,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA5.511,CORINE,16,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.511,CORINE,16,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA3.511,CORINE,16.12,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA4.511,CORINE,16.12,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA5.511,CORINE,16.12,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.511,CORINE,16.12,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA3.511,CORINE,16.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA4.511,CORINE,16.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA5.511,CORINE,16.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.511,CORINE,16.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA3.511,CORINE,16.3,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA4.511,CORINE,16.3,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA5.511,CORINE,16.3,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.511,CORINE,16.3,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,EUNIS_M_2019,MA251,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,EUNIS_M_2019,MA252,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,EUNIS_M_2019,MA253,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,EUNIS_M_2019,MA254,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,EUNIS_M_2019,MA5531,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,EUNIS_M_2019,MA6511,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,EUNIS_M_2019,MB554,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,EUNIS_M_2019,MB652,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,EUNIS_2012,A2.52,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA6.521a,EUNIS_2012,A2.53,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA6.521a,EUNIS_2012,A2.54,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA6.521a,EUNIS_2012,A2.55,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA6.521a,EUNIS_2012,A2.5511,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA6.521a,EUNIS_2012,A2.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA6.521a,EUNIS_2012,A2.3,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA6.521a,EUNIS_2012,A5.53,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA6.521a,EUNIS_2012,A5.3,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MA6.521a,ANNEX_I,1130,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,ANNEX_I,1140,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,ANNEX_I,1150*,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,ANNEX_I,1310,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,ANNEX_I,1320,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,ANNEX_I,1410,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,ANNEX_I,1420,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,ANNEX_I,1510*,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,CORINE,11.3,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,CORINE,11.33,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,CORINE,11.41,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,CORINE,13.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,CORINE,14,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,CORINE,15,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA6.521a,CORINE,23.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.51,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511a,EUNIS_M_2019,MB1512,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511c,EUNIS_M_2019,MB1512,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511a,EUNIS_M_2019,MB1513,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511c,EUNIS_M_2019,MB1513,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511a,EUNIS_M_2019,MB151F,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511c,EUNIS_M_2019,MB151F,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511a,EUNIS_M_2019,MB151G,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511c,EUNIS_M_2019,MB151G,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511a,EUNIS_M_2019,MB151H,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511c,EUNIS_M_2019,MB151H,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511a,EUNIS_M_2019,MB151J,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511c,EUNIS_M_2019,MB151J,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511a,EUNIS_M_2019,MB151K,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511c,EUNIS_M_2019,MB151K,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511a,EUNIS_M_2019,MB151L,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511c,EUNIS_M_2019,MB151L,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511a,EUNIS_2012,A3.23A,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511c,EUNIS_2012,A3.23A,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511a,EUNIS_2012,A3.23B,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511c,EUNIS_2012,A3.23B,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511a,EUNIS_2012,A3.23C,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511c,EUNIS_2012,A3.23C,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511a,EUNIS_2012,A3.23D,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511c,EUNIS_2012,A3.23D,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511a,EUNIS_2012,AB.23D,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; to_code not found in EUNIS_2012
+BARCELONA_2019,MB1.511c,EUNIS_2012,AB.23D,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; to_code not found in EUNIS_2012
+BARCELONA_2019,MB1.511a,EUNIS_2012,A3.239,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511c,EUNIS_2012,A3.239,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511a,EUNIS_2012,A3.132,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511c,EUNIS_2012,A3.132,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511a,EUNIS_2012,A3.234,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511c,EUNIS_2012,A3.234,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.511a,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.511c,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.513a,EUNIS_M_2019,MA1543,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.513a,EUNIS_M_2019,MA1546,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.513a,EUNIS_2012,A1.144,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.513a,EUNIS_2012,A1.232,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.513a,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.514a,EUNIS_M_2019,MB5536,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.514c,EUNIS_M_2019,MB5536,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.514a,EUNIS_2012,A5.284,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.514c,EUNIS_2012,A5.284,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.516a,EUNIS_M_2019,MB151E,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.516c,EUNIS_M_2019,MB151E,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.516a,EUNIS_2012,A3.238,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.516c,EUNIS_2012,A3.238,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.516a,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.516c,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.516a,CORINE,11.24,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.516c,CORINE,11.24,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.51e,EUNIS_M_2019,MB15,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.51e,EUNIS_2012,A3,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.51e,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.52,EUNIS_M_2019,MB15,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.52,EUNIS_2012,A3,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.52,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.52a,EUNIS_M_2019,MB15,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.52a,EUNIS_2012,A3,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.52a,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.524a,EUNIS_M_2019,MB151Q,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.524a,EUNIS_2012,A3.23I,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.524a,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.524a,CORINE,11.24,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.524a,CORINE,11.25,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.53,EUNIS_M_2019,MB15,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.53,EUNIS_2012,A3,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.53,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.55,EUNIS_M_2019,MB25,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.55,EUNIS_2012,A5.535,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.55,EUNIS_2012,A5.6,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.55,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.55,CORINE,11.25,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.55,CORINE,11.251,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.51,EUNIS_M_2019,MA154A,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.51,EUNIS_M_2019,MA2551,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.51,EUNIS_M_2019,MB151,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.51,EUNIS_M_2019,MB2511,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.52,EUNIS_M_2019,MB2541,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.52,EUNIS_2012,A5.612,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB2.52,ANNEX_I,1110,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.52,CORINE,11.253,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.53,EUNIS_M_2019,MB151E,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.53,EUNIS_2012,A3.238,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB2.53,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.53,CORINE,11.251,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.54,EUNIS_M_2019,MB252,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.541,EUNIS_M_2019,MB252,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.542,EUNIS_M_2019,MB252,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.543,EUNIS_M_2019,MB252,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.54,EUNIS_2012,A5.535,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB2.541,EUNIS_2012,A5.535,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB2.542,EUNIS_2012,A5.535,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB2.543,EUNIS_2012,A5.535,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB2.546,EUNIS_M_2019,MB2524,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.546,EUNIS_2012,A5.5354,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB2.546,ANNEX_I,1120,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.546,CORINE,11.34,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.547,EUNIS_M_2019,MB2523,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB2.547,EUNIS_2012,A5.5353,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB5.52,EUNIS_M_2019,MB552,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.52,EUNIS_2012,A5.236,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB5.52,ANNEX_I,1110,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.52,CORINE,11.22,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.521,EUNIS_M_2019,MB5521,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.521,EUNIS_M_2019,MB5534,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.521,EUNIS_M_2019,MB5535,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.521,EUNIS_2012,A5.53131,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB5.521,EUNIS_2012,A5.53132,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB5.521,EUNIS_2012,A5.53322,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB5.521,CORINE,11.33,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.521,CORINE,11.332,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.539,EUNIS_M_2019,MB5537,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.539,EUNIS_2012,A5.285,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB5.539,ANNEX_I,1180,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.539,CORINE,11.22,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.54,EUNIS_M_2019,MA553,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.54,EUNIS_M_2019,MA553,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.51,EUNIS_M_2019,MA553,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.54,EUNIS_M_2019,MA651,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.54,EUNIS_M_2019,MA651,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.51,EUNIS_M_2019,MA651,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.54,EUNIS_M_2019,MB152,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.54,EUNIS_M_2019,MB152,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.51,EUNIS_M_2019,MB152,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.54,EUNIS_M_2019,MB253,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.54,EUNIS_M_2019,MB253,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.51,EUNIS_M_2019,MB253,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.54,EUNIS_M_2019,MB2531,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.54,EUNIS_M_2019,MB2531,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.51,EUNIS_M_2019,MB2531,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.54,EUNIS_M_2019,MB554,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.54,EUNIS_M_2019,MB554,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.51,EUNIS_M_2019,MB554,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.54,EUNIS_M_2019,MB652,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.54,EUNIS_M_2019,MB652,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.51,EUNIS_M_2019,MB652,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.54,EUNIS_2012,A2.2,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB5.54,EUNIS_2012,A2.2,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB6.51,EUNIS_2012,A2.2,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.54,EUNIS_2012,A2.3,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB5.54,EUNIS_2012,A2.3,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB6.51,EUNIS_2012,A2.3,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.54,EUNIS_2012,A3,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB5.54,EUNIS_2012,A3,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB6.51,EUNIS_2012,A3,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.54,EUNIS_2012,A5.3,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB5.54,EUNIS_2012,A5.3,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB6.51,EUNIS_2012,A5.3,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.54,EUNIS_2012,A5.6,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB5.54,EUNIS_2012,A5.6,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB6.51,EUNIS_2012,A5.6,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.54,EUNIS_2012,A5.529,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB5.54,EUNIS_2012,A5.529,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB6.51,EUNIS_2012,A5.529,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.54,EUNIS_2012,A5.53,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB5.54,EUNIS_2012,A5.53,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB6.51,EUNIS_2012,A5.53,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB1.54,ANNEX_I,1130,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.54,ANNEX_I,1130,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.51,ANNEX_I,1130,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.54,ANNEX_I,1150,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.54,ANNEX_I,1150,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.51,ANNEX_I,1150,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.54,CORINE,13.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.54,CORINE,13.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.51,CORINE,13.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB1.54,CORINE,21,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB5.54,CORINE,21,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.51,CORINE,21,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,EUNIS_M_2019,MB5541,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,EUNIS_M_2019,MB5542,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,EUNIS_M_2019,MB5544,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,EUNIS_M_2019,MB5545,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,EUNIS_M_2019,MB6521,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,EUNIS_M_2019,MB6522,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,EUNIS_M_2019,MB6524,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,EUNIS_M_2019,MB6525,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,EUNIS_2012,A5.5342,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB6.511,EUNIS_2012,A5.542,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB6.511,EUNIS_2012,A5.5332,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB6.511,EUNIS_2012,A5.5333,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MB6.511,ANNEX_I,1130,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,ANNEX_I,1150*,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,ANNEX_I,1160,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,CORINE,11.33,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,CORINE,11.41,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MB6.511,CORINE,23.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.51,EUNIS_M_2019,MC151,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.51,EUNIS_2012,A4.26,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.51,EUNIS_2012,A4.32,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.51,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.51,CORINE,11.251,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.51,CORINE,11.252,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.51a,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.512,EUNIS_M_2019,MC1511,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.512,EUNIS_M_2019,MC1512,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.512,EUNIS_M_2019,MC1513,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.512,EUNIS_M_2019,MC1514,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.512,EUNIS_M_2019,MC1515,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.512,EUNIS_M_2019,MC1518,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.512,EUNIS_2012,A4.261,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.512,EUNIS_2012,A4.262,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.512,EUNIS_2012,A4.263,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.512,EUNIS_2012,A4.264,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.512,EUNIS_2012,A4.2615,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019; to_code not found in EUNIS_2012
+BARCELONA_2019,MC1.512,EUNIS_2012,A4.268,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.512b,EUNIS_M_2019,MC151G,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.512c,EUNIS_M_2019,MC151G,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.514b,EUNIS_M_2019,MC1519,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.514c,EUNIS_M_2019,MC1519,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.514b,EUNIS_M_2019,MC151A,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.514c,EUNIS_M_2019,MC151A,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.514b,EUNIS_M_2019,MC151B,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.514c,EUNIS_M_2019,MC151B,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.514b,EUNIS_M_2019,MC151E,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.514c,EUNIS_M_2019,MC151E,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.514b,EUNIS_2012,A4.269,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.514c,EUNIS_2012,A4.269,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.514b,EUNIS_2012,A4.26A,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.514c,EUNIS_2012,A4.26A,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.514b,EUNIS_2012,A4.26B,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.514c,EUNIS_2012,A4.26B,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.514b,EUNIS_2012,A4.322,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.514c,EUNIS_2012,A4.322,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.52,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.52c,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.53,EUNIS_M_2019,MC152,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.53,EUNIS_2012,A4.71,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.53,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.53,CORINE,11.26,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.53a,EUNIS_M_2019,MC152,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.53b,EUNIS_M_2019,MC152,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.53a,EUNIS_M_2019,MC1521,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.53b,EUNIS_M_2019,MC1521,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.53a,EUNIS_2012,A4.71,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.53b,EUNIS_2012,A4.71,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.53a,EUNIS_2012,A4.712,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.53b,EUNIS_2012,A4.712,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.53a,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.53b,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.53a,CORINE,11.26,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.53b,CORINE,11.26,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.531a,EUNIS_M_2019,MC1522,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.531b,EUNIS_M_2019,MC1522,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.531a,EUNIS_2012,A4.713,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.531b,EUNIS_2012,A4.713,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.531a,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.531b,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.531a,CORINE,11.26,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.531b,CORINE,11.26,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.533a,EUNIS_M_2019,MC1522,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.533b,EUNIS_M_2019,MC1522,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.533a,EUNIS_2012,A4.713,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.533b,EUNIS_2012,A4.713,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.533a,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.533b,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.533a,CORINE,11.26,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.533b,CORINE,11.26,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.534a,EUNIS_M_2019,MC1522,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.534b,EUNIS_M_2019,MC1522,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.534a,EUNIS_M_2019,MC1523,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.534b,EUNIS_M_2019,MC1523,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.534a,EUNIS_2012,A4.713,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.534b,EUNIS_2012,A4.713,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.534a,EUNIS_2012,A4.714,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.534b,EUNIS_2012,A4.714,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.534a,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.534b,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.536a,EUNIS_M_2019,MC1522,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.536b,EUNIS_M_2019,MC1522,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.536a,EUNIS_2012,A4.713,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.536b,EUNIS_2012,A4.713,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.536a,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.536b,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.536a,CORINE,11.26,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.536b,CORINE,11.26,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC1.53d,EUNIS_M_2019,MC152,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.53d,EUNIS_2012,A4.71,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.53d,EUNIS_2012,A4.715,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.53d,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.53d,CORINE,11.26,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC3.531d,EUNIS_M_2019,MC152,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MC3.531d,EUNIS_2012,A4.71,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MC2.51,EUNIS_M_2019,MC251,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC2.51,EUNIS_2012,A4.26D,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC2.51,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC2.51,CORINE,11.251,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC2.51,CORINE,11.252,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC3.51,EUNIS_M_2019,MC351,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC3.51,EUNIS_2012,A5.46,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC3.511,EUNIS_M_2019,MC3517,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC3.511,EUNIS_2012,A5.52L,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC3.515,EUNIS_M_2019,MC6513,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC3.515,EUNIS_M_2019,MD6511,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC3.515,EUNIS_2012,A5.392,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC3.518,EUNIS_M_2019,MC3513,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC3.518,EUNIS_2012,A5.463,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC3.52,EUNIS_M_2019,MC352,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC3.52,EUNIS_M_2019,MC3521,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC3.52,EUNIS_2012,A5.516,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC3.521,EUNIS_M_2019,MC3523,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC3.521,EUNIS_2012,A5.513,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC3.522,EUNIS_M_2019,MC3522,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC3.522,EUNIS_2012,A5.52H,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC3.522,EUNIS_2012,CIRCALITTORAL,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; to_code not found in EUNIS_2012
+BARCELONA_2019,MC4.51,EUNIS_M_2019,MC451,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC4.51,EUNIS_2012,A5.38,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC4.51,EUNIS_2012,CIRCALITTORAL,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; to_code not found in EUNIS_2012
+BARCELONA_2019,MC6.51,EUNIS_M_2019,MC651,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC6.51,EUNIS_2012,A5.39,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC6.511,EUNIS_M_2019,MC6514,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD1.514,EUNIS_M_2019,MD151,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD1.524,EUNIS_M_2019,MD151,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MD1.514,EUNIS_M_2019,MC151F,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD1.524,EUNIS_M_2019,MC151F,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MD1.514,EUNIS_2012,A4.1,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MD1.524,EUNIS_2012,A4.1,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MD1.514,EUNIS_2012,A4.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MD1.524,EUNIS_2012,A4.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MD1.514,EUNIS_2012,A4.3,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MD1.524,EUNIS_2012,A4.3,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MD1.53,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD2.51,EUNIS_M_2019,MD25,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD2.51,EUNIS_2012,A5.6,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MD2.51,ANNEX_I,1170,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD3.51,EUNIS_M_2019,MD35,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD4.51,EUNIS_M_2019,MD35,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD3.51,EUNIS_M_2019,MD45,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD4.51,EUNIS_M_2019,MD45,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD3.51,EUNIS_2012,A5.15,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MD4.51,EUNIS_2012,A5.15,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MD3.51,EUNIS_2012,A5.54,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MD4.51,EUNIS_2012,A5.54,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MD3.51,EUNIS_2012,CIRCALITTORAL,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; to_code not found in EUNIS_2012
+BARCELONA_2019,MD4.51,EUNIS_2012,CIRCALITTORAL,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; to_code not found in EUNIS_2012
+BARCELONA_2019,MD3.511,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD4.511,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MD3.514,EUNIS_M_2019,MD4512,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD4.514,EUNIS_M_2019,MD4512,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",from_code not found in BARCELONA_2019
+BARCELONA_2019,MD3.514,EUNIS_2012,A5.472,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MD4.514,EUNIS_2012,A5.472,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'; from_code not found in BARCELONA_2019
+BARCELONA_2019,MD5.51,EUNIS_M_2019,MD55,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD5.51,EUNIS_2012,A5.27,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MD6.51,EUNIS_M_2019,MD651,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MD6.51,EUNIS_2012,A5.39,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME1.51,EUNIS_M_2019,ME151,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME1.51,EUNIS_2012,A6.1,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME1.512,EUNIS_M_2019,MC151G,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME1.512,EUNIS_M_2019,MC1511,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME1.512,EUNIS_2012,A4.1,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME1.512,EUNIS_2012,A4.2,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME1.512,EUNIS_2012,A4.261,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME1.512,EUNIS_2012,A4.3,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME1.513,EUNIS_M_2019,ME1511,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME1.513,EUNIS_M_2019,MF1511,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME1.513,EUNIS_2012,A6.611,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME1.514,EUNIS_M_2019,ME1511,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME1.514,EUNIS_M_2019,MF1511,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME1.514,EUNIS_2012,A6.611,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME1.516,EUNIS_M_2019,ME151,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME1.516,EUNIS_M_2019,MF151,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME1.518,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.52,EUNIS_M_2019,ME152,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.52,EUNIS_2012,A6.1,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MC1.52,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MC1.52,CORINE,11.26,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.51,EUNIS_M_2019,ME25,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MF2.51,EUNIS_M_2019,ME25,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.51,EUNIS_M_2019,MF25,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MF2.51,EUNIS_M_2019,MF25,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.51,EUNIS_2012,A6.6,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MF2.51,EUNIS_2012,A6.6,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME2.51,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MF2.51,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.513,EUNIS_M_2019,ME151,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.513,EUNIS_M_2019,ME1511,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.513,EUNIS_M_2019,ME1512,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.513,EUNIS_M_2019,ME1513,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.513,EUNIS_M_2019,MF151,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.513,EUNIS_M_2019,MF1511,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.513,EUNIS_M_2019,MF1512,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.513,EUNIS_M_2019,MF1513,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.513,EUNIS_M_2019,ME25,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.513,EUNIS_2012,A6.1,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME2.513,EUNIS_2012,A6.611,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME2.513,EUNIS_2012,A6.6,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME2.513,EUNIS_2012,A6.61,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME2.513,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.52,EUNIS_M_2019,ME1513,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.52,EUNIS_M_2019,MF1513,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME2.52,EUNIS_2012,A6.61,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME6.51,EUNIS_M_2019,ME65,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME6.51,EUNIS_M_2019,ME651,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME6.51,EUNIS_2012,A6.5,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME6.51,EUNIS_2012,A6.51,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME6.512,EUNIS_M_2019,ME6513,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME6.512,EUNIS_2012,A6.513,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME6.513,EUNIS_M_2019,ME6515,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME6.513,EUNIS_M_2019,MF6513,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME6.513,EUNIS_2012,A6.514,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MF1.51,EUNIS_M_2019,MF15,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MF1.51,EUNIS_M_2019,MF151,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MF1.51,EUNIS_2012,A6.1,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,ME6.51,EUNIS_M_2019,MF65,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,ME6.51,EUNIS_M_2019,MF651,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MG1.51,EUNIS_M_2019,MG15,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MG1.51,EUNIS_2012,A6.1,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2019,MG6.51,EUNIS_M_2019,MG65,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MG6.51,EUNIS_2012,A6.5,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
+BARCELONA_2006,III.1.1,BARCELONA_2019,MB5.54,indicative,"SPA/RAC, Italian Ionian / Central Mediterranean Sea subregion: conservation of Mediterranean marine and coastal biodiversity by 2030 and beyond, section 2.2 (https://spa-rac.org/italian-ionian-central-mediterranean-sea-subregion-conservation-of-mediterranean-marine-and-coastal-biodiversity-by-2030-and-beyond/)",Published as indicative; no official correspondence exists.
+BARCELONA_2006,III.5,BARCELONA_2019,MB2.54,indicative,"SPA/RAC, Italian Ionian / Central Mediterranean Sea subregion: conservation of Mediterranean marine and coastal biodiversity by 2030 and beyond, section 2.2 (https://spa-rac.org/italian-ionian-central-mediterranean-sea-subregion-conservation-of-mediterranean-marine-and-coastal-biodiversity-by-2030-and-beyond/)",Published as indicative; no official correspondence exists.
+BARCELONA_2006,II.4.1,BARCELONA_2019,MA1.53,indicative,"SPA/RAC, Italian Ionian / Central Mediterranean Sea subregion: conservation of Mediterranean marine and coastal biodiversity by 2030 and beyond, section 2.2 (https://spa-rac.org/italian-ionian-central-mediterranean-sea-subregion-conservation-of-mediterranean-marine-and-coastal-biodiversity-by-2030-and-beyond/)",Published as indicative; no official correspondence exists.
+BARCELONA_2006,II.4.2,BARCELONA_2019,MA1.54,indicative,"SPA/RAC, Italian Ionian / Central Mediterranean Sea subregion: conservation of Mediterranean marine and coastal biodiversity by 2030 and beyond, section 2.2 (https://spa-rac.org/italian-ionian-central-mediterranean-sea-subregion-conservation-of-mediterranean-marine-and-coastal-biodiversity-by-2030-and-beyond/)",Published as indicative; no official correspondence exists.
+BARCELONA_2006,III.6.1,BARCELONA_2019,MB1.51,indicative,"SPA/RAC, Italian Ionian / Central Mediterranean Sea subregion: conservation of Mediterranean marine and coastal biodiversity by 2030 and beyond, section 2.2 (https://spa-rac.org/italian-ionian-central-mediterranean-sea-subregion-conservation-of-mediterranean-marine-and-coastal-biodiversity-by-2030-and-beyond/)",Published as indicative; no official correspondence exists.
+BARCELONA_2006,IV.3.1,BARCELONA_2019,MC1.51,indicative,"SPA/RAC, Italian Ionian / Central Mediterranean Sea subregion: conservation of Mediterranean marine and coastal biodiversity by 2030 and beyond, section 2.2 (https://spa-rac.org/italian-ionian-central-mediterranean-sea-subregion-conservation-of-mediterranean-marine-and-coastal-biodiversity-by-2030-and-beyond/)",Published as indicative; no official correspondence exists.
+BARCELONA_2006,II.4.1,EUNIS_M_2022,MA153,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.4.1.3,EUNIS_M_2022,MA1533,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.4.2,EUNIS_M_2022,MA154,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.4.2.5,EUNIS_M_2022,MA1541,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.4.2.2,EUNIS_M_2022,MA1542,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.4.2.8,EUNIS_M_2022,MA1546,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.4.2.7,EUNIS_M_2022,MA1548,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.4.3,EUNIS_M_2022,MA155,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.4.3.1,EUNIS_M_2022,MA1551,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2012 UNEP/MAP-RAC/SPA 2012)",
+BARCELONA_2006,II.4.2,EUNIS_M_2022,MA255,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA, 2012)",
+BARCELONA_2006,II.4.1.4,EUNIS_M_2022,MA2552,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",printed as '11.4.1.4' in the EEA file
+BARCELONA_2006,II.3.1.1,EUNIS_M_2022,MA2561,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.3.1,EUNIS_M_2022,MA352,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.3.1,EUNIS_M_2022,MA452,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,I.2.1,EUNIS_M_2022,MA551,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,I.2.1.5,EUNIS_M_2022,MA5514,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.1.1,EUNIS_M_2022,MA553,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.1.1.2,EUNIS_M_2022,MA5532,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.1.1,EUNIS_M_2022,MA651,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,II.1.1.2,EUNIS_M_2022,MA6512,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.6.1,EUNIS_M_2022,MB151,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.6.1.10,EUNIS_M_2022,MB1512,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.6.1.2,EUNIS_M_2022,MB1513,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.6.1.14,EUNIS_M_2022,MB151E,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.6.1.15,EUNIS_M_2022,MB151F,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.6.1.16,EUNIS_M_2022,MB151G,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.6.1.17,EUNIS_M_2022,MB151H,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.6.1.18,EUNIS_M_2022,MB151J,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.6.1.19,EUNIS_M_2022,MB151K,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.6.1.20,EUNIS_M_2022,MB151L,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.1.1,EUNIS_M_2022,MB152,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",printed as 'III1.1' in the EEA file
+BARCELONA_2006,III.5.1,EUNIS_M_2022,MB252,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.5.1.1,EUNIS_M_2022,MB2521,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.5.1.2,EUNIS_M_2022,MB2522,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.3.1,EUNIS_M_2022,MB351,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.3.2,EUNIS_M_2022,MB352,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.3.2.1,EUNIS_M_2022,MB3522,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.2.2,EUNIS_M_2022,MB552,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.2.2.2,EUNIS_M_2022,MB5522,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,III.2.3,EUNIS_M_2022,MB553,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,III.2.3.3,EUNIS_M_2022,MB5533,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.2.3.5,EUNIS_M_2022,MB5535,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.2.3.7,EUNIS_M_2022,MB5537,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.1.1.1,EUNIS_M_2022,MB5541,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.1.1.8,EUNIS_M_2022,MB5543,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.1.1.5,EUNIS_M_2022,MB5545,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.1.1.8,EUNIS_M_2022,MB6523,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,III.1.1.5,EUNIS_M_2022,MB6525,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,IV.3.1,EUNIS_M_2022,MC151,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,IV.3.1.1,EUNIS_M_2022,MC1511,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,IV.3.1.2,EUNIS_M_2022,MC1512,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,IV.3.1.8,EUNIS_M_2022,MC1518,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,IV.3.1.10,EUNIS_M_2022,MC1519,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,IV.3.1.11,EUNIS_M_2022,MC151A,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,IV.3.1.13,EUNIS_M_2022,MC151B,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,IV.3.1.9,EUNIS_M_2022,MC151D,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,IV.3.1.12,EUNIS_M_2022,MC151E,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,IV.3.2,EUNIS_M_2022,MC152,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,IV.3.2.2,EUNIS_M_2022,MC1522,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,IV.3.1.15,EUNIS_M_2022,MC251,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,IV.2.2,EUNIS_M_2022,MC351,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,IV.2.2.10,EUNIS_M_2022,MC3513,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,IV.2.2.7,EUNIS_M_2022,MC3517,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,III.3.2.1,EUNIS_M_2022,MC3523,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,V.3.1,EUNIS_M_2022,ME1511,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA, 2012)",
+BARCELONA_2006,V.3.1,EUNIS_M_2022,ME1512,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA, 2012)",
+BARCELONA_2006,V.3.1,EUNIS_M_2022,ME1513,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,V.3.2,EUNIS_M_2022,ME152,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 and UNEP/MAP-RAC/SPA. Handbook 2015 (edited ETC/BD 2018))",
+BARCELONA_2006,V.1.1,EUNIS_M_2022,ME651,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,V.1.1.3,EUNIS_M_2022,ME6513,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,V.1.1.4,EUNIS_M_2022,ME6515,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,V.3.1,EUNIS_M_2022,MF1513,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (UNEP/MAP-RAC/SPA Handbook (2015))",
+BARCELONA_2006,V.1.1,EUNIS_M_2022,MF651,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,V.1.1.4,EUNIS_M_2022,MF6513,source of,"EEA 2022, EUNIS marine habitat classification 2022 including crosswalks, 'Source classification system code' (EUNIS Habitat Classification Version 2004 & UNEP/MAP-RAC/SPA,  Handbook (2015))",
+BARCELONA_2006,II.4.1,BARCELONA_2019,MA1.53,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA153; to be reviewed by experts
+BARCELONA_2006,II.4.2,BARCELONA_2019,MA1.54,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA154; to be reviewed by experts
+BARCELONA_2006,II.4.2.5,BARCELONA_2019,MA1.544,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA1541; to be reviewed by experts
+BARCELONA_2006,II.4.2.2,BARCELONA_2019,MA2.51,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA1542; to be reviewed by experts
+BARCELONA_2006,II.4.2.8,BARCELONA_2019,MB1.513a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA1546; to be reviewed by experts
+BARCELONA_2006,II.4.2.7,BARCELONA_2019,MA1.542,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA1548; to be reviewed by experts
+BARCELONA_2006,II.4.3,BARCELONA_2019,MA1.52,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA155; to be reviewed by experts
+BARCELONA_2006,II.3.1.1,BARCELONA_2019,MA2.54,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA2561; to be reviewed by experts; to_code not found in BARCELONA_2019
+BARCELONA_2006,II.1.1,BARCELONA_2019,MB1.54,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA553 (manual: partim); to be reviewed by experts
+BARCELONA_2006,II.1.1,BARCELONA_2019,MB5.54,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA553 (manual: partim); to be reviewed by experts
+BARCELONA_2006,II.1.1,BARCELONA_2019,MB6.51,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA553 (manual: partim); to be reviewed by experts
+BARCELONA_2006,II.1.1,BARCELONA_2019,MB1.54,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA651 (manual: partim); to be reviewed by experts
+BARCELONA_2006,II.1.1,BARCELONA_2019,MB5.54,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA651 (manual: partim); to be reviewed by experts
+BARCELONA_2006,II.1.1,BARCELONA_2019,MB6.51,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MA651 (manual: partim); to be reviewed by experts
+BARCELONA_2006,III.6.1,BARCELONA_2019,MB2.51,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151; to be reviewed by experts
+BARCELONA_2006,III.6.1.10,BARCELONA_2019,MB1.511a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB1512; to be reviewed by experts
+BARCELONA_2006,III.6.1.10,BARCELONA_2019,MB1.511c,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB1512; to be reviewed by experts
+BARCELONA_2006,III.6.1.2,BARCELONA_2019,MB1.511a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB1513; to be reviewed by experts
+BARCELONA_2006,III.6.1.2,BARCELONA_2019,MB1.511c,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB1513; to be reviewed by experts
+BARCELONA_2006,III.6.1.14,BARCELONA_2019,MB1.516a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151E (manual: partim); to be reviewed by experts
+BARCELONA_2006,III.6.1.14,BARCELONA_2019,MB1.516c,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151E (manual: partim); to be reviewed by experts
+BARCELONA_2006,III.6.1.14,BARCELONA_2019,MB2.53,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151E (manual: partim); to be reviewed by experts
+BARCELONA_2006,III.6.1.15,BARCELONA_2019,MB1.511a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151F; to be reviewed by experts
+BARCELONA_2006,III.6.1.15,BARCELONA_2019,MB1.511c,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151F; to be reviewed by experts
+BARCELONA_2006,III.6.1.16,BARCELONA_2019,MB1.511a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151G; to be reviewed by experts
+BARCELONA_2006,III.6.1.16,BARCELONA_2019,MB1.511c,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151G; to be reviewed by experts
+BARCELONA_2006,III.6.1.17,BARCELONA_2019,MB1.511a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151H; to be reviewed by experts
+BARCELONA_2006,III.6.1.17,BARCELONA_2019,MB1.511c,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151H; to be reviewed by experts
+BARCELONA_2006,III.6.1.18,BARCELONA_2019,MB1.511a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151J; to be reviewed by experts
+BARCELONA_2006,III.6.1.18,BARCELONA_2019,MB1.511c,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151J; to be reviewed by experts
+BARCELONA_2006,III.6.1.19,BARCELONA_2019,MB1.511a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151K; to be reviewed by experts
+BARCELONA_2006,III.6.1.19,BARCELONA_2019,MB1.511c,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151K; to be reviewed by experts
+BARCELONA_2006,III.6.1.20,BARCELONA_2019,MB1.511a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151L; to be reviewed by experts
+BARCELONA_2006,III.6.1.20,BARCELONA_2019,MB1.511c,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB151L; to be reviewed by experts
+BARCELONA_2006,III.1.1,BARCELONA_2019,MB1.54,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB152 (manual: partim); to be reviewed by experts
+BARCELONA_2006,III.1.1,BARCELONA_2019,MB5.54,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB152 (manual: partim); to be reviewed by experts
+BARCELONA_2006,III.1.1,BARCELONA_2019,MB6.51,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB152 (manual: partim); to be reviewed by experts
+BARCELONA_2006,III.5.1,BARCELONA_2019,MB2.54,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB252; to be reviewed by experts
+BARCELONA_2006,III.5.1,BARCELONA_2019,MB2.541,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB252; to be reviewed by experts
+BARCELONA_2006,III.5.1,BARCELONA_2019,MB2.542,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB252; to be reviewed by experts
+BARCELONA_2006,III.5.1,BARCELONA_2019,MB2.543,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB252; to be reviewed by experts
+BARCELONA_2006,III.2.2,BARCELONA_2019,MB5.52,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB552; to be reviewed by experts
+BARCELONA_2006,III.2.3.5,BARCELONA_2019,MB5.521,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB5535; to be reviewed by experts
+BARCELONA_2006,III.2.3.7,BARCELONA_2019,MB5.539,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB5537; to be reviewed by experts
+BARCELONA_2006,III.1.1.1,BARCELONA_2019,MB6.511,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB5541; to be reviewed by experts
+BARCELONA_2006,III.1.1.5,BARCELONA_2019,MB6.511,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB5545; to be reviewed by experts
+BARCELONA_2006,III.1.1.5,BARCELONA_2019,MB6.511,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MB6525; to be reviewed by experts
+BARCELONA_2006,IV.3.1,BARCELONA_2019,MC1.51,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC151; to be reviewed by experts
+BARCELONA_2006,IV.3.1.1,BARCELONA_2019,MC1.512,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1511; to be reviewed by experts; to_code not found in BARCELONA_2019
+BARCELONA_2006,IV.3.1.1,BARCELONA_2019,ME1.512,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1511; to be reviewed by experts
+BARCELONA_2006,IV.3.1.2,BARCELONA_2019,MC1.512,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1512; to be reviewed by experts; to_code not found in BARCELONA_2019
+BARCELONA_2006,IV.3.1.8,BARCELONA_2019,MC1.512,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1518; to be reviewed by experts; to_code not found in BARCELONA_2019
+BARCELONA_2006,IV.3.1.10,BARCELONA_2019,MC1.514b,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1519; to be reviewed by experts
+BARCELONA_2006,IV.3.1.10,BARCELONA_2019,MC1.514c,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1519; to be reviewed by experts; to_code not found in BARCELONA_2019
+BARCELONA_2006,IV.3.1.11,BARCELONA_2019,MC1.514b,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC151A; to be reviewed by experts
+BARCELONA_2006,IV.3.1.11,BARCELONA_2019,MC1.514c,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC151A; to be reviewed by experts; to_code not found in BARCELONA_2019
+BARCELONA_2006,IV.3.1.13,BARCELONA_2019,MC1.514b,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC151B; to be reviewed by experts
+BARCELONA_2006,IV.3.1.13,BARCELONA_2019,MC1.514c,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC151B; to be reviewed by experts; to_code not found in BARCELONA_2019
+BARCELONA_2006,IV.3.1.12,BARCELONA_2019,MC1.514b,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC151E; to be reviewed by experts
+BARCELONA_2006,IV.3.1.12,BARCELONA_2019,MC1.514c,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC151E; to be reviewed by experts; to_code not found in BARCELONA_2019
+BARCELONA_2006,IV.3.2,BARCELONA_2019,MC1.53,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC152; to be reviewed by experts
+BARCELONA_2006,IV.3.2,BARCELONA_2019,MC1.53a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC152 (manual: partim); to be reviewed by experts
+BARCELONA_2006,IV.3.2,BARCELONA_2019,MC1.53b,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC152 (manual: partim); to be reviewed by experts
+BARCELONA_2006,IV.3.2,BARCELONA_2019,MC1.53d,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC152 (manual: partim); to be reviewed by experts
+BARCELONA_2006,IV.3.2,BARCELONA_2019,MC3.531d,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC152; to be reviewed by experts; to_code not found in BARCELONA_2019
+BARCELONA_2006,IV.3.2.2,BARCELONA_2019,MC1.531a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1522 (manual: partim); to be reviewed by experts
+BARCELONA_2006,IV.3.2.2,BARCELONA_2019,MC1.531b,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1522 (manual: partim); to be reviewed by experts; to_code not found in BARCELONA_2019
+BARCELONA_2006,IV.3.2.2,BARCELONA_2019,MC1.533a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1522; to be reviewed by experts
+BARCELONA_2006,IV.3.2.2,BARCELONA_2019,MC1.533b,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1522; to be reviewed by experts; to_code not found in BARCELONA_2019
+BARCELONA_2006,IV.3.2.2,BARCELONA_2019,MC1.534a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1522 (manual: partim); to be reviewed by experts
+BARCELONA_2006,IV.3.2.2,BARCELONA_2019,MC1.534b,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1522 (manual: partim); to be reviewed by experts; to_code not found in BARCELONA_2019
+BARCELONA_2006,IV.3.2.2,BARCELONA_2019,MC1.536a,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1522 (manual: partim); to be reviewed by experts
+BARCELONA_2006,IV.3.2.2,BARCELONA_2019,MC1.536b,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC1522 (manual: partim); to be reviewed by experts; to_code not found in BARCELONA_2019
+BARCELONA_2006,IV.3.1.15,BARCELONA_2019,MC2.51,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC251; to be reviewed by experts
+BARCELONA_2006,IV.2.2,BARCELONA_2019,MC3.51,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC351; to be reviewed by experts
+BARCELONA_2006,IV.2.2.10,BARCELONA_2019,MC3.518,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC3513; to be reviewed by experts
+BARCELONA_2006,IV.2.2.7,BARCELONA_2019,MC3.511,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC3517; to be reviewed by experts
+BARCELONA_2006,III.3.2.1,BARCELONA_2019,MC3.521,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MC3523; to be reviewed by experts
+BARCELONA_2006,V.3.1,BARCELONA_2019,ME1.513,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS ME1511; to be reviewed by experts
+BARCELONA_2006,V.3.1,BARCELONA_2019,ME1.514,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS ME1511; to be reviewed by experts
+BARCELONA_2006,V.3.1,BARCELONA_2019,ME2.513,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS ME1511; to be reviewed by experts
+BARCELONA_2006,V.3.1,BARCELONA_2019,ME2.513,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS ME1512; to be reviewed by experts
+BARCELONA_2006,V.3.1,BARCELONA_2019,ME2.513,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS ME1513; to be reviewed by experts
+BARCELONA_2006,V.3.1,BARCELONA_2019,ME2.52,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS ME1513; to be reviewed by experts
+BARCELONA_2006,V.3.2,BARCELONA_2019,MC1.52,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS ME152; to be reviewed by experts
+BARCELONA_2006,V.1.1,BARCELONA_2019,ME6.51,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS ME651; to be reviewed by experts
+BARCELONA_2006,V.1.1.3,BARCELONA_2019,ME6.512,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS ME6513; to be reviewed by experts
+BARCELONA_2006,V.1.1.4,BARCELONA_2019,ME6.513,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS ME6515; to be reviewed by experts
+BARCELONA_2006,V.3.1,BARCELONA_2019,ME2.513,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MF1513; to be reviewed by experts
+BARCELONA_2006,V.3.1,BARCELONA_2019,ME2.52,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MF1513; to be reviewed by experts
+BARCELONA_2006,V.1.1,BARCELONA_2019,ME6.51,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MF651; to be reviewed by experts
+BARCELONA_2006,V.1.1.4,BARCELONA_2019,ME6.513,candidate,Derived: EEA EUNIS marine 2022 source codes x Interpretation Manual 2021 reference codes,via EUNIS MF6513; to be reviewed by experts

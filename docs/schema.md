@@ -27,13 +27,14 @@ All tables are CSV, UTF-8, long format. Column lists are defined in
 | group | e.g. benthic / pelagic / ice-associated. |
 | description | Official description, when available. |
 | source | Provenance of the row. |
+| notes | Free text, e.g. corrections of typos found in the source. |
 
 ## crosswalks
 | Column | Meaning |
 |---|---|
 | from_system, from_code | Origin habitat. |
 | to_system, to_code | Target habitat. |
-| relationship | `=` same, `<` from is narrower, `>` from is broader, `#` overlap, or as given by the source. |
+| relationship | `=` same, `<` from is narrower, `>` from is broader, `#` overlap, or as given by the source: `partim` (marked "(partim)" in the source), `unspecified` (listed without qualifier), `source of` (the from habitat is the source the to habitat was derived from), `indicative` (published as indicative), `candidate` (derived, needs expert review). |
 | source | Provenance (file / sheet, or report + page). |
 | notes | Free text. |
 

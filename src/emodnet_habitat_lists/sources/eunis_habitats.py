@@ -64,6 +64,7 @@ def load(rda_path: Path) -> pd.DataFrame:
             "group": raw["group"],
             "description": raw["description"],
             "source": SOURCE_LABEL,
+            "notes": "",
         }
     )
     # the upstream table contains 90 empty rows (no code, no name; 89 in the terrestrial

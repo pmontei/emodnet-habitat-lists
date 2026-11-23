@@ -1,5 +1,10 @@
 system,name,version,authority,scope,source,accessed,notes
-EUNIS_2012,"EUNIS habitat classification 2007, revised descriptions 2012 (amended 2019)",2012,EEA,terrestrial + marine,"eunis.habitats R package (ramiromagno/eunis.habitats), data/eunis_habitats.rda",2026-11-21,
-EUNIS_M_2019,EUNIS marine habitat classification,2019,EEA,marine,"eunis.habitats R package (ramiromagno/eunis.habitats), data/eunis_habitats.rda",2026-11-21,
-EUNIS_M_2022,EUNIS marine habitat classification,2022,EEA,marine,"eunis.habitats R package (ramiromagno/eunis.habitats), data/eunis_habitats.rda",2026-11-21,
-EUNIS_T_2021,EUNIS terrestrial habitat classification,2021,EEA,terrestrial,"eunis.habitats R package (ramiromagno/eunis.habitats), data/eunis_habitats.rda",2026-11-21,
+EUNIS_2012,"EUNIS habitat classification 2007, revised descriptions 2012 (amended 2019)",2012,EEA,terrestrial + marine,"eunis.habitats R package (ramiromagno/eunis.habitats), data/eunis_habitats.rda",2026-11-23,
+EUNIS_M_2019,EUNIS marine habitat classification,2019,EEA,marine,"eunis.habitats R package (ramiromagno/eunis.habitats), data/eunis_habitats.rda",2026-11-23,
+EUNIS_M_2022,EUNIS marine habitat classification,2022,EEA,marine,"eunis.habitats R package (ramiromagno/eunis.habitats), data/eunis_habitats.rda",2026-11-23,
+EUNIS_T_2021,EUNIS terrestrial habitat classification,2021,EEA,terrestrial,"eunis.habitats R package (ramiromagno/eunis.habitats), data/eunis_habitats.rda",2026-11-23,
+BARCELONA_2019,Updated Classification of Benthic Marine Habitat Types for the Mediterranean Region,2019,UNEP/MAP - SPA/RAC,"Mediterranean, benthic","UNEP/MAP 2019, Decision IG.24/7 (UNEP/MED IG.24/22), Annex VI",2026-11-23,
+BARCELONA_RL_2019,Updated Reference List of Marine Habitat Types for the Selection of Sites to be included in the National Inventories of Natural Sites of Conservation Interest in the Mediterranean,2019,UNEP/MAP - SPA/RAC,"Mediterranean, benthic","UNEP/MAP 2019, Decision IG.24/7 (UNEP/MED IG.24/22), Annex VII",2026-11-23,
+BARCELONA_2006,Classification of Benthic Marine Habitat Types for the Mediterranean Region (former),1998/2006,UNEP/MAP - RAC/SPA,"Mediterranean, benthic","UNEP-MAP-RAC/SPA 2006, Classification of Benthic Marine Habitat Types for the Mediterranean Region",2026-11-23,
+ANNEX_I,Habitats Directive (92/43/EEC) Annex I habitat types,,European Commission,EU,not yet loaded; codes appear in crosswalks only,,not loaded in this build
+CORINE,CORINE biotopes,1991,European Commission,Europe,not yet loaded; codes appear in crosswalks only,,not loaded in this build

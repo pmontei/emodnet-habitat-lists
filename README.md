@@ -14,7 +14,7 @@ is correct, traceable (each row has a `source`) and reproducible when a classifi
 |---|---|
 | `systems.csv` | Catalogue of classification systems and lists (name, version, authority, source, date). |
 | `habitats.csv` | All habitats of all systems, long format: system, code, name, level, parent, realm, group, description, source. |
-| `crosswalks.csv` | *(next)* Correspondences between systems, with relationship type (=, <, >, #) and source. |
+| `crosswalks.csv` | Correspondences between systems, with relationship type and source. |
 | `composites.csv` | *(next)* Per composite product: which habitats are included, why, by whom and when. |
 
 Column definitions: [`docs/schema.md`](docs/schema.md).
@@ -24,11 +24,12 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | System | Habitats | Crosswalks |
 |---|---|---|
 | EUNIS 2012, marine 2019, marine 2022, terrestrial 2021 | ✅ (from `{eunis.habitats}`) | planned |
+| Barcelona Convention 2019 classification and Reference List (Decision IG.24/7) | ✅ | ✅ to EUNIS 2019 / 2007, Annex I, CORINE (Interpretation Manual 2021) |
+| Barcelona Convention 2006 (former) classification | ✅ | ✅ to EUNIS marine 2022 (EEA); to Barcelona 2019: indicative / candidates only, see `docs/sources.md` |
 | Habitats Directive Annex I | planned | planned (EEA EUNIS crosswalks) |
 | European Red List of Habitats | planned | planned |
 | Bern Convention Res. 4 / Emerald | planned | planned (EEA Emerald ↔ Annex I) |
 | OSPAR threatened and/or declining habitats | planned | planned |
-| Barcelona Convention / UNEP-MAP SPA/RAC reference list | planned | planned |
 | HELCOM HUB | planned | planned |
 | MSFD broad habitat types | planned | planned |
 | VME (FAO / ICES) | planned | planned |
@@ -37,9 +38,12 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 
 ```bash
 pip install -e ".[dev]"
-ehl-build            # writes data/processed/*.csv
+ehl-build --sources "path/to/classification systems"   # writes data/processed/*.csv
 pytest
 ```
+
+The source files are not part of the repository: see [`docs/sources.md`](docs/sources.md) for
+the folder layout, references and links. PDF sources need `pdftotext` (poppler-utils).
 
 The EUNIS habitats are read directly from the `eunis_habitats.rda` file of the R package
 [`{eunis.habitats}`](https://github.com/ramiromagno/eunis.habitats) (downloaded and cached in

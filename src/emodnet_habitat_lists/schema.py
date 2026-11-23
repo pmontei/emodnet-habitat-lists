@@ -25,6 +25,7 @@ HABITATS_COLUMNS = [
     "group",           # e.g. benthic / pelagic / ice-associated
     "description",
     "source",          # provenance of the row (file, sheet, or report + page)
+    "notes",           # e.g. corrections of typos found in the source
 ]
 
 CROSSWALKS_COLUMNS = [
