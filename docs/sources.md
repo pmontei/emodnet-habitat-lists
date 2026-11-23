@@ -58,3 +58,46 @@ guide exists to compare the former list with the new classification. The `crossw
 
 The Interpretation Manual uses some codes that are not in the adopted classification
 (e.g. `MC1.512`, `MC1.514c`); such rows are flagged in `notes` ("from_code not found in ...").
+
+## 3. HELCOM HUB
+
+Folder: `3.HELCOM HUB/` — not loaded yet. Codes appear only as crosswalk targets (`HELCOM_HUB`).
+
+## 4. OSPAR List of Threatened and/or Declining Habitats
+
+Folder: `4.OSPAR/` (one sub-folder per habitat, named after the OSPAR website slug).
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `01_2021_OSPAR_Agreement-2008-06_List.pdf` | OSPAR Commission, 2008 (amended 2021). OSPAR List of Threatened and/or Declining Species and Habitats. Agreement 2008-06, Part II - Habitats. | `OSPAR_TD_2021` names and OSPAR Regions (**transcribed in `sources/ospar.py`: the PDF has no text layer**) | https://www.ospar.org/documents?v=32794 |
+| Agreement 2008-07 (not in folder) | OSPAR Commission, 2008 (revised 2021 to include Haploops habitat and Kelp forest). Descriptions of habitats on the OSPAR List. | sub-types; Haploops EUNIS / HELCOM relationship (transcribed) | mirror: https://inpn.mnhn.fr/docs-web/docs/download/394918 |
+| `<habitat>/*_definition.pdf` (16) | Per-habitat extracts of Agreement 2008-07 published by OSPAR. | `OSPAR_TD_2021 -> EUNIS_2012 / UK_MNCR_0405` | https://www.ospar.org/site/assets/files/44271/ |
+| `kelp-forest/p00787_kelp_case_report.pdf` | OSPAR, 2021. Case report for kelp forest habitat (publication 787), Appendix I. | `OSPAR_TD_2021 -> EUNIS_2012` (kelp forest, indicative) | https://www.ospar.org/documents?v=46871 |
+| `EMODnet_OSPAR2025_habtype_habsubtype_values.csv` | Distinct `habtype` / `habsubtype` values of the EMODnet Seabed Habitats WFS layers `emodnet_view:ospar2025_points` and `ospar2025_polygons` (queried 2026-11-23; complete counts). | `OSPAR_TD_2021 -> EMODNET_OSPAR2025` | https://ows.emodnet-seabedhabitats.eu/geoserver/emodnet_view/wfs |
+
+Notes:
+
+* **OSPAR habitats have no official codes.** Codes are the OSPAR website slugs (e.g. `zostera-beds`);
+  sub-types are `<habitat>/<sub-type>`; the sub-type numbers of Agreement 2008-07 (8.1, 8.2, 9.1, 9.2)
+  are kept in `notes`.
+* `name` is the official name in Agreement 2008-06. Names differ in a few places: Agreement 2008-07 and
+  the EMODnet dataset use "Modiolus modiolus horse mussel beds"; EMODnet uses "Haploops" for "Haploops
+  habitat". The link to the EMODnet values is in `crosswalks` (`to_system = EMODNET_OSPAR2025`).
+* EMODnet kelp sub-types ("Kelp forests dominated by ...") are not OSPAR sub-types: relationship `>`.
+* Data-quality issues in the EMODnet dataset: "Zostera noltii" / "Zostera noltei"; "Not Applicable" /
+  "Not applicable"; no *Cymodocea meadows* records.
+* The EUNIS codes of Agreement 2008-07 refer to EUNIS 2004; all are present in `EUNIS_2012`.
+* Erratum: Agreement 2008-07 prints the HELCOM HUB code of the Haploops biotope as `AB.H1l2`; the HUB code is `AB.H1I2`.
+
+## 5. Vulnerable Marine Ecosystems (ICES / FAO)
+
+Folder: `VME (FAO  ICES)/`
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `04_2023_ICES_vocab_VME-HabitatType-Subtype.csv` | ICES Vocabulary Server, code types HabitatType (ref 1410) and HabitatSubtype (ref 1411), last modified 2023-09-21; transcribed 2026-11-23. | `ICES_VME` | https://vocab.ices.dk/?ref=1410 ; https://vocab.ices.dk/?ref=1411 |
+| `01_2020_ICES_VME-habitat-types-and-taxa.pdf` | ICES, 2020. A suggestive list of deep-water VMEs and their characteristic taxa. | not used yet (indicator taxa) | https://www.ices.dk/data/Documents/VME/VMEs%20and%20their%20taxa.pdf |
+| `02_2009_FAO_International-Guidelines-Deep-sea-Fisheries-High-Seas.pdf` | FAO, 2009. International Guidelines for the Management of Deep-sea Fisheries in the High Seas. | VME criteria (documentation) | https://openknowledge.fao.org/server/api/core/bitstreams/224f4e53-0c34-4680-ad61-18e497763954/content |
+
+Notes: deprecated ICES codes are kept and flagged in `notes`. ICES does not publish the habitat type
+of each subtype; `parent_code` of subtypes is inferred from codes and names.

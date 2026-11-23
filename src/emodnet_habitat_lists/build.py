@@ -19,7 +19,7 @@ import pandas as pd
 
 from . import pdftext
 from .schema import CROSSWALKS_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
-from .sources import barcelona, eunis_habitats
+from .sources import barcelona, eunis_habitats, ices_vme, ospar
 
 EUNIS_M_2022_XLSX = (
     "1.EUNIS habitat classification/3_eea_t_eunis-hab-m_p_2004-2019_v01_r00/"
@@ -41,6 +41,15 @@ SYSTEMS = [
      "2019", "UNEP/MAP - SPA/RAC", "Mediterranean, benthic", barcelona.SRC_DECISION + ", Annex VII"),
     ("BARCELONA_2006", "Classification of Benthic Marine Habitat Types for the Mediterranean Region (former)",
      "1998/2006", "UNEP/MAP - RAC/SPA", "Mediterranean, benthic", barcelona.SRC_2006),
+    ("OSPAR_TD_2021", "OSPAR List of Threatened and/or Declining Habitats (habitats and sub-types)", "2021",
+     "OSPAR Commission", "North-East Atlantic", ospar.SRC_LIST + "; " + ospar.SRC_DESC),
+    ("ICES_VME", "ICES VME habitat types and subtypes", "2023", "ICES", "North Atlantic, deep sea", ices_vme.SRC),
+    ("HELCOM_HUB", "HELCOM Underwater Biotope and habitat classification", "2013", "HELCOM", "Baltic Sea",
+     "not yet loaded; codes appear in crosswalks only"),
+    ("UK_MNCR_0405", "Marine Habitat Classification for Britain and Ireland", "04.05", "JNCC", "UK and Ireland",
+     "not loaded; codes appear in crosswalks only"),
+    ("EMODNET_OSPAR2025", "EMODnet Seabed Habitats OSPAR habitats dataset: habtype / habsubtype values", "2025",
+     "EMODnet Seabed Habitats", "North-East Atlantic", ospar.SRC_EMODNET + "; codes appear in crosswalks only"),
     ("ANNEX_I", "Habitats Directive (92/43/EEC) Annex I habitat types", "", "European Commission", "EU",
      "not yet loaded; codes appear in crosswalks only"),
     ("CORINE", "CORINE biotopes", "1991", "European Commission", "Europe",
@@ -84,6 +93,18 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
             print(f"skipped BARCELONA_2006 -> EUNIS_M_2022: {eunis22} not found")
     else:
         print(f"skipped Barcelona Convention: {bc_dir} not found or pdftotext not installed")
+
+    if (sources / ospar.FOLDER).is_dir() and pdftext.available():
+        habitats.append(ospar.habitats())
+        crosswalks.append(ospar.crosswalks(sources))
+        loaded.add("OSPAR_TD_2021")
+    else:
+        print(f"skipped OSPAR: {sources / ospar.FOLDER} not found or pdftotext not installed")
+    if (sources / ices_vme.FOLDER / ices_vme.VOCAB_CSV).is_file():
+        habitats.append(ices_vme.habitats(sources))
+        loaded.add("ICES_VME")
+    else:
+        print(f"skipped ICES VME: {sources / ices_vme.FOLDER / ices_vme.VOCAB_CSV} not found")
 
     habitats_df = pd.concat(habitats, ignore_index=True)[HABITATS_COLUMNS]
     crosswalks_df = (

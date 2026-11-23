@@ -29,10 +29,10 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | Habitats Directive Annex I | planned | planned (EEA EUNIS crosswalks) |
 | European Red List of Habitats | planned | planned |
 | Bern Convention Res. 4 / Emerald | planned | planned (EEA Emerald ↔ Annex I) |
-| OSPAR threatened and/or declining habitats | planned | planned |
+| OSPAR threatened and/or declining habitats (Agreements 2008-06 / 2008-07, 2021) | ✅ (18 habitats + 6 sub-types) | ✅ to EUNIS, UK MNCR, HELCOM HUB, EMODnet dataset names |
+| ICES VME habitat types and subtypes | ✅ | planned |
 | HELCOM HUB | planned | planned |
 | MSFD broad habitat types | planned | planned |
-| VME (FAO / ICES) | planned | planned |
 
 ## Usage
 
