@@ -19,7 +19,7 @@ import pandas as pd
 
 from . import pdftext
 from .schema import CROSSWALKS_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
-from .sources import barcelona, eunis_habitats, helcom_hub, ices_vme, ospar
+from .sources import annex_i, barcelona, eunis_habitats, helcom_hub, ices_vme, msfd_bht, ospar
 
 EUNIS_M_2022_XLSX = (
     "1.EUNIS habitat classification/3_eea_t_eunis-hab-m_p_2004-2019_v01_r00/"
@@ -52,8 +52,12 @@ SYSTEMS = [
      "not loaded; codes appear in crosswalks only"),
     ("EMODNET_OSPAR2025", "EMODnet Seabed Habitats OSPAR habitats dataset: habtype / habsubtype values", "2025",
      "EMODnet Seabed Habitats", "North-East Atlantic", ospar.SRC_EMODNET + "; codes appear in crosswalks only"),
-    ("ANNEX_I", "Habitats Directive (92/43/EEC) Annex I habitat types", "", "European Commission", "EU",
-     "not yet loaded; codes appear in crosswalks only"),
+    ("ANNEX_I", "Habitats Directive (92/43/EEC) Annex I natural habitat types", "2013 (EUR28)",
+     "European Commission", "EU", annex_i.SRC_DIRECTIVE + "; " + annex_i.SRC_MANUAL),
+    ("MSFD_BHT", "MSFD benthic broad habitat types", "2017", "European Commission", "EU marine waters, benthic",
+     msfd_bht.SRC),
+    ("PAL_CLASS", "Palaearctic habitat classification (Devillers & Devillers-Terschuren 1996)", "1996/1997",
+     "Council of Europe", "Palaearctic", "not loaded; codes appear in crosswalks only (Interpretation Manual EUR28)"),
     ("CORINE", "CORINE biotopes", "1991", "European Commission", "Europe",
      "not yet loaded; codes appear in crosswalks only"),
 ]
@@ -116,6 +120,22 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
         loaded.add("ICES_VME")
     else:
         print(f"skipped ICES VME: {sources / ices_vme.FOLDER / ices_vme.VOCAB_CSV} not found")
+
+    if (sources / annex_i.FOLDER).is_dir() and pdftext.available():
+        habitats.append(annex_i.habitats(sources))
+        crosswalks.append(annex_i.crosswalk_manual(sources))
+        eunis22 = sources / EUNIS_M_2022_XLSX
+        if eunis22.is_file():
+            crosswalks.append(annex_i.crosswalk_eunis2022(eunis22))
+        loaded.add("ANNEX_I")
+    else:
+        print(f"skipped Annex I: {sources / annex_i.FOLDER} not found or pdftotext not installed")
+    if (sources / msfd_bht.FOLDER).is_dir() and pdftext.available():
+        habitats.append(msfd_bht.habitats(sources))
+        crosswalks.append(msfd_bht.crosswalk_eunis(sources))
+        loaded.add("MSFD_BHT")
+    else:
+        print(f"skipped MSFD broad habitat types: {sources / msfd_bht.FOLDER} not found or pdftotext not installed")
 
     habitats_df = pd.concat(habitats, ignore_index=True)[HABITATS_COLUMNS]
     crosswalks_df = (

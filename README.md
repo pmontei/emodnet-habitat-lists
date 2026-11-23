@@ -26,13 +26,13 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | EUNIS 2012, marine 2019, marine 2022, terrestrial 2021 | ✅ (from `{eunis.habitats}`) | planned |
 | Barcelona Convention 2019 classification and Reference List (Decision IG.24/7) | ✅ | ✅ to EUNIS 2019 / 2007, Annex I, CORINE (Interpretation Manual 2021) |
 | Barcelona Convention 2006 (former) classification | ✅ | ✅ to EUNIS marine 2022 (EEA); to Barcelona 2019: indicative / candidates only, see `docs/sources.md` |
-| Habitats Directive Annex I | planned | planned (EEA EUNIS crosswalks) |
+| Habitats Directive Annex I (consolidated 2013, Interpretation Manual EUR28) | ✅ (233 types + 9 groups + 32 sub-groups, with definitions) | ✅ from EUNIS marine 2022 (EEA); to EUNIS 2012 and Palaearctic classification (Interpretation Manual) |
 | European Red List of Habitats | planned | planned |
 | Bern Convention Res. 4 / Emerald | planned | planned (EEA Emerald ↔ Annex I) |
 | OSPAR threatened and/or declining habitats (Agreements 2008-06 / 2008-07, 2021) | ✅ (18 habitats + 6 sub-types) | ✅ to EUNIS, UK MNCR, HELCOM HUB, EMODnet dataset names |
 | ICES VME habitat types and subtypes | ✅ | planned |
 | HELCOM HUB (BSEP 139) with HELCOM Red List 2013 (BSEP 138) | ✅ (328 biotopes/habitats + 68 higher levels + 10 biotope complexes) | ✅ to EUNIS 2012, HELCOM 1998 (fact sheets) and EUNIS marine 2022 (EEA) |
-| MSFD broad habitat types | planned | planned |
+| MSFD benthic broad habitat types (Decision 2017/848) | ✅ (22) | ✅ to EUNIS marine 2022 level 2 |
 
 ## Usage
 

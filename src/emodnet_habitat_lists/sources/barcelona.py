@@ -281,13 +281,17 @@ def crosswalk_manual(sources: Path) -> pd.DataFrame:
         bc_codes = [c for c, _ in _tokens(block["BARCELONA CONVENTION"], CODE_PATTERNS["BARCELONA CONVENTION"])]
         for fld, target in MANUAL_FIELDS.items():
             for code, partim in _tokens(block.get(fld, ""), CODE_PATTERNS[target]):
+                notes = ["printed as 'EUNIS 2007'"] if fld == "EUNIS 2007" else []
+                if target == "ANNEX_I" and code.endswith("*"):   # priority flag printed after the code
+                    code = code[:-1]
+                    notes.append(f"printed as '{code}*' (priority habitat type)")
                 for bc in bc_codes:
                     rows.append({
                         "from_system": "BARCELONA_2019", "from_code": bc,
                         "to_system": target, "to_code": code,
                         "relationship": "partim" if partim else "unspecified",
                         "source": SRC_MANUAL + ", habitat sheet reference codes",
-                        "notes": "printed as 'EUNIS 2007'" if fld == "EUNIS 2007" else "",
+                        "notes": "; ".join(notes),
                     })
         i = j
     return pd.DataFrame(rows, columns=CROSSWALKS_COLUMNS).drop_duplicates()

@@ -128,3 +128,47 @@ Folder: `5.VME (FAO  ICES)/`
 
 Notes: deprecated ICES codes are kept and flagged in `notes`. ICES does not publish the habitat type
 of each subtype; `parent_code` of subtypes is inferred from codes and names.
+
+## 6. Habitats Directive Annex I (European Commission)
+
+Folder: `6.EU Habitats Directive/` (files are matched by their numeric prefix).
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `01_2013_*consolidated*.pdf` | Council Directive 92/43/EEC, consolidated version 01/07/2013 (CELEX 01992L0043-20130701), Annex I. | `ANNEX_I` (codes, names, groups, priority `*`) | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:01992L0043-20130701 |
+| `02_1992_*original*.pdf` | Council Directive 92/43/EEC, original text (OJ L 206, 22.7.1992). | not used (historical) | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31992L0043 |
+| `03_2013_*Interpretation-Manual*EUR28*.pdf` | European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats – EUR28 (April 2013). The original EC link no longer works; mirror used: Danish EPA. | `ANNEX_I` descriptions (section 1); `ANNEX_I -> PAL_CLASS`; `ANNEX_I -> EUNIS_2012` | https://sgavmst.dk/media/1ydgjxu4/int_manual_eu28.pdf (EEA record: https://eunis.eea.europa.eu/references/2435) |
+| `04_2026_BISE_*.pdf` | BISE, Habitat types distribution and areas (EU27) dashboard (Article 17, 2013-2018). | not used (context) | https://biodiversity.europa.eu/ |
+| EUNIS marine 2022 file (folder 1) | EEA 2022, columns "Annex I relationship" / "Annex I code". | `EUNIS_M_2022 -> ANNEX_I` | see section 1 |
+
+Notes:
+
+* Levels: 1 = habitat group (`1` … `9`), 2 = sub-group (`11`, `12` …), 3 = habitat type (233 types).
+  Group 4 has no sub-groups, so its types have parent `4`. The `*` of priority types is removed from
+  the name and recorded in `notes`.
+* `realm` is assigned by this repository: `marine` for sub-group 11, 1610, 1620, 1650 and 8330;
+  `coastal` for the rest of groups 1–2; `freshwater` for group 3; `terrestrial` for groups 4–9.
+* Only three manual entries give EUNIS codes (1110, 1170, 1180), as "Relevant types within/under …"
+  (EUNIS version 2.3, 2002): relationship `partim`. The EEA EUNIS marine 2022 crosswalk is the main
+  link between EUNIS and Annex I; its relationship lists are paired with the Annex I codes by position.
+* `PAL.CLASS.` items are split on commas and "and"; a trailing `p` (pro parte) gives `partim`.
+  Compound expressions (`22.11 x 22.31`, `16.221 to 16.227`) are kept as printed. Some codes are
+  marked "(1997 version)" in the manual (noted in `notes`).
+* The Barcelona Interpretation Manual prints priority types as `1150*`; the `*` is removed in
+  `BARCELONA_2019 -> ANNEX_I` and recorded in `notes`.
+
+## 7. MSFD broad habitat types (European Commission)
+
+Folder: `7.MSFD broad habitat types/`
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `01_2017_*2017-848*.pdf` | Commission Decision (EU) 2017/848 of 17 May 2017 (OJ L 125, 18.5.2017, p. 43–74), Annex, Part II, theme "Benthic habitats", Table 2. | `MSFD_BHT`; `MSFD_BHT -> EUNIS_M_2022` | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017D0848 |
+
+Notes:
+
+* 22 benthic broad habitat types. **No official codes**: `code` is a slug of the name
+  (e.g. `infralittoral-sand`).
+* The Decision lists the "Relevant EUNIS habitat codes (version 2016)", level 2. Relationship `=`
+  when one code is listed and `>` when several are (the broad habitat type contains each). These
+  level-2 codes are unchanged in EUNIS marine 2022; every code `MA1` … `MG6` is used exactly once.
