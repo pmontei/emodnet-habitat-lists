@@ -31,7 +31,7 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | Bern Convention Res. 4 / Emerald | planned | planned (EEA Emerald ↔ Annex I) |
 | OSPAR threatened and/or declining habitats (Agreements 2008-06 / 2008-07, 2021) | ✅ (18 habitats + 6 sub-types) | ✅ to EUNIS, UK MNCR, HELCOM HUB, EMODnet dataset names |
 | ICES VME habitat types and subtypes | ✅ | planned |
-| HELCOM HUB | planned | planned |
+| HELCOM HUB (BSEP 139) with HELCOM Red List 2013 (BSEP 138) | ✅ (328 biotopes/habitats + 68 higher levels + 10 biotope complexes) | ✅ to EUNIS 2012, HELCOM 1998 (fact sheets) and EUNIS marine 2022 (EEA) |
 | MSFD broad habitat types | planned | planned |
 
 ## Usage

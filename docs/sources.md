@@ -61,7 +61,34 @@ The Interpretation Manual uses some codes that are not in the adopted classifica
 
 ## 3. HELCOM HUB
 
-Folder: `3.HELCOM HUB/` — not loaded yet. Codes appear only as crosswalk targets (`HELCOM_HUB`).
+Folder: `3.HELCOM HUB/`
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `01_2013_HELCOM_BSEP139_HUB-Technical-Report.pdf` | HELCOM, 2013. HELCOM HUB – Technical Report on the HELCOM Underwater Biotope and habitat classification. Baltic Sea Environment Proceedings No. 139. | `HELCOM_HUB`: the 328 units of Annex 1 and the 10 biotope complexes | https://helcom.fi/wp-content/uploads/2019/08/BSEP139.pdf |
+| `02_2013_HELCOM_BSEP138_Red-List-Biotopes.pdf` | HELCOM, 2013. Red List of Baltic Sea underwater biotopes, habitats and biotope complexes. Baltic Sea Environment Proceedings No. 138. | Red List category (`notes`): Annex 2 (biotopes) and Table 13 (complexes) | https://helcom.fi/wp-content/uploads/2019/10/BSEP138.pdf |
+| `fact sheets/*.pdf` (387) | HELCOM HUB biotope fact sheets (HELCOM Red List Biotope Expert Team); file name = HUB code. | names of the higher levels; `HELCOM_HUB -> EUNIS_2012 / HELCOM_1998` | https://maps.helcom.fi/website/hub/PDF/ |
+| EUNIS marine 2022 (EEA, folder 1) | 'Source classification system code' where the source is HELCOM HUB (2013). | `HELCOM_HUB -> EUNIS_M_2022` | see section 1 |
+
+Notes:
+
+* Annex 1 of BSEP 139 lists 328 units: 207 photic and 115 aphotic benthic biotopes, 1 sea-ice
+  habitat and 5 pelagic habitats. The 68 higher levels (`A`, `AA`, `AA.A`, `AA.A1` ...) come from
+  the fact sheets (group `higher level`). Biotope complexes use Habitats Directive Annex I codes
+  (group `biotope complex`, no level).
+* **Code inconsistencies between HELCOM documents:** BSEP 138 (Red List) and the fact sheets use
+  `AA.H3M6` / `AB.H3M6` and `AA.J3M5` / `AB.J3M5` for the biotopes coded `AA.H3M5` / `AB.H3M5` and
+  `AA.J3M4` / `AB.J3M4` in BSEP 139 Annex 1 (matched by name; recorded in `notes`). The fact sheet
+  file `AB.J2K7.pdf` is biotope `AB.J3L7`.
+* 11 Annex 1 biotopes have no fact sheet (AA.H1B3, AA.H1K, AA.H1S, AA.H1S3, AA.H3L1, AA.J1Q2,
+  AA.M1G1, AB.E1F, AB.H3M, AB.H3M5, AB.M1F).
+* Some fact-sheet correspondences look wrong (e.g. `AA.A1C1`, photic rock with *Fucus*, points to
+  HELCOM 1998 2.8.1 and EUNIS A5.412, aphotic mixed sediment). They are loaded as published; only the
+  most specific code of each listed path is kept.
+* The EEA EUNIS marine 2022 file cites 17 HUB codes that do not exist in HELCOM HUB (e.g. `AA.C1E`,
+  `AA.D1E`, `AB.C1E`, `AA.J3M34`); these rows are flagged in `notes`. Codes are printed with spaces
+  and '(modified)' in that file (e.g. `AA.A 1C1(modified)`), normalised here; relationship
+  `source of (modified)`.
 
 ## 4. OSPAR List of Threatened and/or Declining Habitats
 

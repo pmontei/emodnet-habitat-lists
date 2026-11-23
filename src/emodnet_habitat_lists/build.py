@@ -19,7 +19,7 @@ import pandas as pd
 
 from . import pdftext
 from .schema import CROSSWALKS_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
-from .sources import barcelona, eunis_habitats, ices_vme, ospar
+from .sources import barcelona, eunis_habitats, helcom_hub, ices_vme, ospar
 
 EUNIS_M_2022_XLSX = (
     "1.EUNIS habitat classification/3_eea_t_eunis-hab-m_p_2004-2019_v01_r00/"
@@ -44,8 +44,10 @@ SYSTEMS = [
     ("OSPAR_TD_2021", "OSPAR List of Threatened and/or Declining Habitats (habitats and sub-types)", "2021",
      "OSPAR Commission", "North-East Atlantic", ospar.SRC_LIST + "; " + ospar.SRC_DESC),
     ("ICES_VME", "ICES VME habitat types and subtypes", "2023", "ICES", "North Atlantic, deep sea", ices_vme.SRC),
-    ("HELCOM_HUB", "HELCOM Underwater Biotope and habitat classification", "2013", "HELCOM", "Baltic Sea",
-     "not yet loaded; codes appear in crosswalks only"),
+    ("HELCOM_HUB", "HELCOM Underwater Biotope and habitat classification (HUB)", "2013", "HELCOM", "Baltic Sea",
+     helcom_hub.SRC_139 + "; " + helcom_hub.SRC_138 + "; HELCOM HUB fact sheets"),
+    ("HELCOM_1998", "HELCOM Red List of marine and coastal biotopes and biotope complexes (classification of 1998)",
+     "1998", "HELCOM", "Baltic Sea", "not loaded; codes appear in crosswalks only (from HUB fact sheets)"),
     ("UK_MNCR_0405", "Marine Habitat Classification for Britain and Ireland", "04.05", "JNCC", "UK and Ireland",
      "not loaded; codes appear in crosswalks only"),
     ("EMODNET_OSPAR2025", "EMODnet Seabed Habitats OSPAR habitats dataset: habtype / habsubtype values", "2025",
@@ -94,6 +96,15 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
     else:
         print(f"skipped Barcelona Convention: {bc_dir} not found or pdftotext not installed")
 
+    if (sources / helcom_hub.FOLDER).is_dir() and pdftext.available():
+        habitats.append(helcom_hub.habitats(sources))
+        crosswalks.append(helcom_hub.crosswalk_fact_sheets(sources))
+        eunis22 = sources / EUNIS_M_2022_XLSX
+        if eunis22.is_file():
+            crosswalks.append(helcom_hub.crosswalk_eunis2022_sources(eunis22))
+        loaded.add("HELCOM_HUB")
+    else:
+        print(f"skipped HELCOM HUB: {sources / helcom_hub.FOLDER} not found or pdftotext not installed")
     if (sources / ospar.FOLDER).is_dir() and pdftext.available():
         habitats.append(ospar.habitats())
         crosswalks.append(ospar.crosswalks(sources))
