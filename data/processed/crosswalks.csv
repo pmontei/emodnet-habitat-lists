@@ -8790,7 +8790,7 @@ UK_MHC_2204,LS.LMp.LSgr,UK_PMF,seagrass-beds,<,"JNCC, 2026. Marine habitat corre
 UK_MHC_2204,LS.LMp.LSgr,UK_MCZ_BSH,intertidal-sediments-dominated-by-aquatic-angiosperms,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Intertidal sediments dominated by aquatic angiosperms
 UK_MHC_2204,LS.LMp.LSgr,MSFD_BHT,littoral-sediment,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Littoral sediment
 UK_MHC_2204,LS.LMp.LSgr,EMERALD,A2.61,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,LS.LMp.LSgr,GOOS_EOV,seagrass,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Seagrass
+UK_MHC_2204,LS.LMp.LSgr,GOOS_EOV,seagrass-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Seagrass
 UK_MHC_2204,LS.LMp.LSgr,IUCN_GET,M1.1,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,LS.LMp.LSgr.Znol,UK_MHC_1503,LS.LMp.LSgr.Znol,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,LS.LMp.LSgr.Znol,UK_MNCR_0405,LS.LMp.LSgr.Znol,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -8809,7 +8809,7 @@ UK_MHC_2204,LS.LMp.LSgr.Znol,UK_PMF,seagrass-beds,<,"JNCC, 2026. Marine habitat 
 UK_MHC_2204,LS.LMp.LSgr.Znol,UK_MCZ_BSH,intertidal-sediments-dominated-by-aquatic-angiosperms,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Intertidal sediments dominated by aquatic angiosperms
 UK_MHC_2204,LS.LMp.LSgr.Znol,MSFD_BHT,littoral-sediment,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Littoral sediment
 UK_MHC_2204,LS.LMp.LSgr.Znol,EMERALD,A2.61,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,LS.LMp.LSgr.Znol,GOOS_EOV,seagrass,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Seagrass
+UK_MHC_2204,LS.LMp.LSgr.Znol,GOOS_EOV,seagrass-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Seagrass
 UK_MHC_2204,LS.LMp.LSgr.Znol,IUCN_GET,M1.1,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,LS.LBR,UK_MHC_1503,LS.LBR,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,LS.LBR,UK_MNCR_0405,LS.LBR,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -8954,7 +8954,7 @@ UK_MHC_2204,IR.HIR.KFaR,ANNEX_I,1160,#,"JNCC, 2026. Marine habitat correlation t
 UK_MHC_2204,IR.HIR.KFaR,UK_MCZ_BSH,high-energy-infralittoral-rock,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: High energy infralittoral rock
 UK_MHC_2204,IR.HIR.KFaR,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.HIR.KFaR,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.HIR.KFaR,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.HIR.KFaR,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.HIR.KFaR,IUCN_GET,M1.2,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KFaR,IUCN_GET,M1.6,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KFaR.Ala,UK_MHC_1503,IR.HIR.KFaR.Ala,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
@@ -8968,7 +8968,7 @@ UK_MHC_2204,IR.HIR.KFaR.Ala,ANNEX_I,1160,#,"JNCC, 2026. Marine habitat correlati
 UK_MHC_2204,IR.HIR.KFaR.Ala,UK_MCZ_BSH,high-energy-infralittoral-rock,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: High energy infralittoral rock
 UK_MHC_2204,IR.HIR.KFaR.Ala,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.HIR.KFaR.Ala,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.HIR.KFaR.Ala,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.HIR.KFaR.Ala,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.HIR.KFaR.Ala,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KFaR.Ala.Myt,UK_MHC_1503,IR.HIR.KFaR.Ala.Myt,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.HIR.KFaR.Ala.Myt,UK_MNCR_0405,IR.HIR.KFaR.Ala.Myt,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -8981,7 +8981,7 @@ UK_MHC_2204,IR.HIR.KFaR.Ala.Myt,ANNEX_I,1160,#,"JNCC, 2026. Marine habitat corre
 UK_MHC_2204,IR.HIR.KFaR.Ala.Myt,UK_MCZ_BSH,high-energy-infralittoral-rock,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: High energy infralittoral rock
 UK_MHC_2204,IR.HIR.KFaR.Ala.Myt,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.HIR.KFaR.Ala.Myt,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.HIR.KFaR.Ala.Myt,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.HIR.KFaR.Ala.Myt,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.HIR.KFaR.Ala.Myt,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KFaR.Ala.Ldig,UK_MHC_1503,IR.HIR.KFaR.Ala.Ldig,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.HIR.KFaR.Ala.Ldig,UK_MNCR_0405,IR.HIR.KFaR.Ala.Ldig,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -8994,7 +8994,7 @@ UK_MHC_2204,IR.HIR.KFaR.Ala.Ldig,ANNEX_I,1160,#,"JNCC, 2026. Marine habitat corr
 UK_MHC_2204,IR.HIR.KFaR.Ala.Ldig,UK_MCZ_BSH,high-energy-infralittoral-rock,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: High energy infralittoral rock
 UK_MHC_2204,IR.HIR.KFaR.Ala.Ldig,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.HIR.KFaR.Ala.Ldig,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.HIR.KFaR.Ala.Ldig,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.HIR.KFaR.Ala.Ldig,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.HIR.KFaR.Ala.Ldig,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KFaR.AlaAnCrSp,UK_MHC_1503,IR.HIR.KFaR.AlaAnCrSp,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.HIR.KFaR.AlaAnCrSp,UK_MNCR_0405,IR.HIR.KFaR.AlaAnCrSp,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9006,7 +9006,7 @@ UK_MHC_2204,IR.HIR.KFaR.AlaAnCrSp,ANNEX_I,1170,<,"JNCC, 2026. Marine habitat cor
 UK_MHC_2204,IR.HIR.KFaR.AlaAnCrSp,ANNEX_I,1160,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Annex1 ...'",
 UK_MHC_2204,IR.HIR.KFaR.AlaAnCrSp,UK_MCZ_BSH,high-energy-infralittoral-rock,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: High energy infralittoral rock
 UK_MHC_2204,IR.HIR.KFaR.AlaAnCrSp,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
-UK_MHC_2204,IR.HIR.KFaR.AlaAnCrSp,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.HIR.KFaR.AlaAnCrSp,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.HIR.KFaR.AlaAnCrSp,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KFaR.LhypFa,UK_MHC_1503,IR.HIR.KFaR.LhypFa,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.HIR.KFaR.LhypFa,UK_MNCR_0405,IR.HIR.KFaR.LhypFa,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9020,7 +9020,7 @@ UK_MHC_2204,IR.HIR.KFaR.LhypFa,UK_PMF,kelp-beds,<,"JNCC, 2026. Marine habitat co
 UK_MHC_2204,IR.HIR.KFaR.LhypFa,UK_MCZ_BSH,high-energy-infralittoral-rock,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: High energy infralittoral rock
 UK_MHC_2204,IR.HIR.KFaR.LhypFa,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.HIR.KFaR.LhypFa,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.HIR.KFaR.LhypFa,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.HIR.KFaR.LhypFa,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.HIR.KFaR.LhypFa,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KFaR.LhypPar,UK_MHC_1503,IR.HIR.KFaR.LhypPar,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.HIR.KFaR.LhypPar,UK_MNCR_0405,IR.HIR.KFaR.LhypPar,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9044,7 +9044,7 @@ UK_MHC_2204,IR.HIR.KFaR.LhypR,UK_PMF,kelp-beds,<,"JNCC, 2026. Marine habitat cor
 UK_MHC_2204,IR.HIR.KFaR.LhypR,UK_MCZ_BSH,high-energy-infralittoral-rock,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: High energy infralittoral rock
 UK_MHC_2204,IR.HIR.KFaR.LhypR,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.HIR.KFaR.LhypR,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.HIR.KFaR.LhypR,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.HIR.KFaR.LhypR,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.HIR.KFaR.LhypR,IUCN_GET,M1.2,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KFaR.LhypR,IUCN_GET,M1.6,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KFaR.LhypR.Ft,UK_MHC_1503,IR.HIR.KFaR.LhypR.Ft,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
@@ -9059,7 +9059,7 @@ UK_MHC_2204,IR.HIR.KFaR.LhypR.Ft,UK_PMF,kelp-beds,<,"JNCC, 2026. Marine habitat 
 UK_MHC_2204,IR.HIR.KFaR.LhypR.Ft,UK_MCZ_BSH,high-energy-infralittoral-rock,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: High energy infralittoral rock
 UK_MHC_2204,IR.HIR.KFaR.LhypR.Ft,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.HIR.KFaR.LhypR.Ft,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.HIR.KFaR.LhypR.Ft,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.HIR.KFaR.LhypR.Ft,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.HIR.KFaR.LhypR.Ft,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KFaR.LhypR.Pk,UK_MHC_1503,IR.HIR.KFaR.LhypR.Pk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.HIR.KFaR.LhypR.Pk,UK_MNCR_0405,IR.HIR.KFaR.LhypR.Pk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9084,7 +9084,7 @@ UK_MHC_2204,IR.HIR.KFaR.LhypR.Loch,ANNEX_I,1160,#,"JNCC, 2026. Marine habitat co
 UK_MHC_2204,IR.HIR.KFaR.LhypR.Loch,UK_MCZ_BSH,high-energy-infralittoral-rock,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: High energy infralittoral rock
 UK_MHC_2204,IR.HIR.KFaR.LhypR.Loch,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.HIR.KFaR.LhypR.Loch,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.HIR.KFaR.LhypR.Loch,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.HIR.KFaR.LhypR.Loch,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.HIR.KFaR.LhypR.Loch,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KFaR.FoR,UK_MHC_1503,IR.HIR.KFaR.FoR,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.HIR.KFaR.FoR,UK_MNCR_0405,IR.HIR.KFaR.FoR,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9117,7 +9117,7 @@ UK_MHC_2204,IR.HIR.KFaR.LhypRVt,ANNEX_I,1160,#,"JNCC, 2026. Marine habitat corre
 UK_MHC_2204,IR.HIR.KFaR.LhypRVt,UK_MCZ_BSH,high-energy-infralittoral-rock,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: High energy infralittoral rock
 UK_MHC_2204,IR.HIR.KFaR.LhypRVt,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.HIR.KFaR.LhypRVt,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.HIR.KFaR.LhypRVt,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.HIR.KFaR.LhypRVt,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.HIR.KFaR.LhypRVt,IUCN_GET,M1.6,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KSed,UK_MHC_1503,IR.HIR.KSed,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.HIR.KSed,UK_MNCR_0405,IR.HIR.KSed,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9142,7 +9142,7 @@ UK_MHC_2204,IR.HIR.KSed.SlatSac,ANNEX_I,1170,<,"JNCC, 2026. Marine habitat corre
 UK_MHC_2204,IR.HIR.KSed.SlatSac,UK_MCZ_BSH,high-energy-infralittoral-rock,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: High energy infralittoral rock
 UK_MHC_2204,IR.HIR.KSed.SlatSac,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.HIR.KSed.SlatSac,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.HIR.KSed.SlatSac,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.HIR.KSed.SlatSac,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.HIR.KSed.SlatSac,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KSed.Sac,UK_MHC_1503,IR.HIR.KSed.Sac,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.HIR.KSed.Sac,UK_MNCR_0405,IR.HIR.KSed.Sac,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9155,7 +9155,7 @@ UK_MHC_2204,IR.HIR.KSed.Sac,ANNEX_I,1160,#,"JNCC, 2026. Marine habitat correlati
 UK_MHC_2204,IR.HIR.KSed.Sac,UK_MCZ_BSH,high-energy-infralittoral-rock,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: High energy infralittoral rock
 UK_MHC_2204,IR.HIR.KSed.Sac,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.HIR.KSed.Sac,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.HIR.KSed.Sac,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.HIR.KSed.Sac,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.HIR.KSed.Sac,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KSed.ProtAhn,UK_MHC_1503,IR.HIR.KSed.ProtAhn,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.HIR.KSed.ProtAhn,UK_MNCR_0405,IR.HIR.KSed.ProtAhn,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9188,7 +9188,7 @@ UK_MHC_2204,IR.HIR.KSed.XKScrR,ANNEX_I,1160,#,"JNCC, 2026. Marine habitat correl
 UK_MHC_2204,IR.HIR.KSed.XKScrR,ANNEX_I,1170,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Annex1 ...'",
 UK_MHC_2204,IR.HIR.KSed.XKScrR,UK_MCZ_BSH,high-energy-infralittoral-rock,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: High energy infralittoral rock
 UK_MHC_2204,IR.HIR.KSed.XKScrR,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
-UK_MHC_2204,IR.HIR.KSed.XKScrR,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.HIR.KSed.XKScrR,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.HIR.KSed.XKScrR,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.HIR.KSed.XKHal,UK_MHC_1503,IR.HIR.KSed.XKHal,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.HIR.KSed.XKHal,UK_MNCR_0405,IR.HIR.KSed.XKHal,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9238,7 +9238,7 @@ UK_MHC_2204,IR.MIR.KR,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"JNCC, 202
 UK_MHC_2204,IR.MIR.KR,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR,IUCN_GET,M1.2,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR,IUCN_GET,M1.6,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.Ldig,UK_MHC_1503,IR.MIR.KR.Ldig,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
@@ -9253,7 +9253,7 @@ UK_MHC_2204,IR.MIR.KR.Ldig,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"JNCC
 UK_MHC_2204,IR.MIR.KR.Ldig,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR.Ldig,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR.Ldig,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR.Ldig,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR.Ldig,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR.Ldig,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.Ldig.Ldig,UK_MHC_1503,IR.MIR.KR.Ldig.Ldig,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.MIR.KR.Ldig.Ldig,UK_MNCR_0405,IR.MIR.KR.Ldig.Ldig,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9267,7 +9267,7 @@ UK_MHC_2204,IR.MIR.KR.Ldig.Ldig,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,
 UK_MHC_2204,IR.MIR.KR.Ldig.Ldig,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR.Ldig.Ldig,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR.Ldig.Ldig,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR.Ldig.Ldig,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR.Ldig.Ldig,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR.Ldig.Ldig,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.Ldig.Bo,UK_MHC_1503,IR.MIR.KR.Ldig.Bo,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.MIR.KR.Ldig.Bo,UK_MNCR_0405,IR.MIR.KR.Ldig.Bo,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9283,7 +9283,7 @@ UK_MHC_2204,IR.MIR.KR.Ldig.Bo,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"J
 UK_MHC_2204,IR.MIR.KR.Ldig.Bo,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR.Ldig.Bo,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR.Ldig.Bo,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR.Ldig.Bo,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR.Ldig.Bo,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR.Ldig.Bo,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.Ldig.Pid,UK_MHC_1503,IR.MIR.KR.Ldig.Pid,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.MIR.KR.Ldig.Pid,UK_MNCR_0405,IR.MIR.KR.Ldig.Pid,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9299,7 +9299,7 @@ UK_MHC_2204,IR.MIR.KR.Ldig.Pid,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"
 UK_MHC_2204,IR.MIR.KR.Ldig.Pid,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR.Ldig.Pid,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR.Ldig.Pid,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR.Ldig.Pid,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR.Ldig.Pid,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR.Ldig.Pid,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.LhypT,UK_MHC_1503,IR.MIR.KR.LhypT,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.MIR.KR.LhypT,UK_MNCR_0405,IR.MIR.KR.LhypT,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9314,7 +9314,7 @@ UK_MHC_2204,IR.MIR.KR.LhypT,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"JNC
 UK_MHC_2204,IR.MIR.KR.LhypT,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR.LhypT,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR.LhypT,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR.LhypT,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR.LhypT,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR.LhypT,IUCN_GET,M1.2,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.LhypT,IUCN_GET,M1.6,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.LhypT.Ft,UK_MHC_1503,IR.MIR.KR.LhypT.Ft,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
@@ -9332,7 +9332,7 @@ UK_MHC_2204,IR.MIR.KR.LhypT.Ft,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"
 UK_MHC_2204,IR.MIR.KR.LhypT.Ft,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR.LhypT.Ft,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR.LhypT.Ft,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR.LhypT.Ft,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR.LhypT.Ft,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR.LhypT.Ft,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.LhypT.Pk,UK_MHC_1503,IR.MIR.KR.LhypT.Pk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.MIR.KR.LhypT.Pk,UK_MNCR_0405,IR.MIR.KR.LhypT.Pk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9363,7 +9363,7 @@ UK_MHC_2204,IR.MIR.KR.LhypTX,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"JN
 UK_MHC_2204,IR.MIR.KR.LhypTX,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR.LhypTX,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR.LhypTX,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR.LhypTX,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR.LhypTX,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR.LhypTX,IUCN_GET,M1.2,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.LhypTX,IUCN_GET,M1.6,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.LhypTX.Ft,UK_MHC_1503,IR.MIR.KR.LhypTX.Ft,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
@@ -9382,7 +9382,7 @@ UK_MHC_2204,IR.MIR.KR.LhypTX.Ft,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,
 UK_MHC_2204,IR.MIR.KR.LhypTX.Ft,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR.LhypTX.Ft,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR.LhypTX.Ft,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR.LhypTX.Ft,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR.LhypTX.Ft,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR.LhypTX.Ft,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.LhypTX.Pk,UK_MHC_1503,IR.MIR.KR.LhypTX.Pk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.MIR.KR.LhypTX.Pk,UK_MNCR_0405,IR.MIR.KR.LhypTX.Pk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9413,7 +9413,7 @@ UK_MHC_2204,IR.MIR.KR.Lhyp,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"JNCC
 UK_MHC_2204,IR.MIR.KR.Lhyp,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR.Lhyp,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR.Lhyp,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR.Lhyp,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR.Lhyp,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR.Lhyp,IUCN_GET,M1.2,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.Lhyp,IUCN_GET,M1.6,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.Lhyp,IUCN_GET,M1.5,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
@@ -9430,7 +9430,7 @@ UK_MHC_2204,IR.MIR.KR.Lhyp.Ft,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"J
 UK_MHC_2204,IR.MIR.KR.Lhyp.Ft,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR.Lhyp.Ft,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR.Lhyp.Ft,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR.Lhyp.Ft,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR.Lhyp.Ft,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR.Lhyp.Ft,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.Lhyp.Pk,UK_MHC_1503,IR.MIR.KR.Lhyp.Pk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.MIR.KR.Lhyp.Pk,UK_MNCR_0405,IR.MIR.KR.Lhyp.Pk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9458,7 +9458,7 @@ UK_MHC_2204,IR.MIR.KR.Lhyp.GzFt,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,
 UK_MHC_2204,IR.MIR.KR.Lhyp.GzFt,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR.Lhyp.GzFt,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR.Lhyp.GzFt,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR.Lhyp.GzFt,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR.Lhyp.GzFt,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR.Lhyp.GzFt,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.Lhyp.GzPk,UK_MHC_1503,IR.MIR.KR.Lhyp.GzPk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.MIR.KR.Lhyp.GzPk,UK_MNCR_0405,IR.MIR.KR.Lhyp.GzPk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9484,7 +9484,7 @@ UK_MHC_2204,IR.MIR.KR.Lhyp.Sab,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"
 UK_MHC_2204,IR.MIR.KR.Lhyp.Sab,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR.Lhyp.Sab,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR.Lhyp.Sab,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR.Lhyp.Sab,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR.Lhyp.Sab,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR.Lhyp.Sab,IUCN_GET,M1.5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.XFoR,UK_MHC_1503,IR.MIR.KR.XFoR,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.MIR.KR.XFoR,UK_MNCR_0405,IR.MIR.KR.XFoR,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9507,7 +9507,7 @@ UK_MHC_2204,IR.MIR.KR.LhypVt,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"JN
 UK_MHC_2204,IR.MIR.KR.LhypVt,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KR.LhypVt,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KR.LhypVt,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KR.LhypVt,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KR.LhypVt,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KR.LhypVt,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KR.HiaSw,UK_MHC_1503,IR.MIR.KR.HiaSw,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.MIR.KR.HiaSw,UK_MNCR_0405,IR.MIR.KR.HiaSw,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9536,7 +9536,7 @@ UK_MHC_2204,IR.MIR.KT,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"JNCC, 202
 UK_MHC_2204,IR.MIR.KT,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KT,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KT,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KT,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KT,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KT,IUCN_GET,M1.2,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KT,IUCN_GET,M1.5,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KT.LdigT,UK_MHC_1503,IR.MIR.KT.LdigT,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
@@ -9554,7 +9554,7 @@ UK_MHC_2204,IR.MIR.KT.LdigT,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"JNC
 UK_MHC_2204,IR.MIR.KT.LdigT,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KT.LdigT,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KT.LdigT,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KT.LdigT,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KT.LdigT,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KT.LdigT,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KT.XKT,UK_MHC_1503,IR.MIR.KT.XKT,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.MIR.KT.XKT,UK_MNCR_0405,IR.MIR.KT.XKT,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9570,7 +9570,7 @@ UK_MHC_2204,IR.MIR.KT.XKT,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"JNCC,
 UK_MHC_2204,IR.MIR.KT.XKT,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KT.XKT,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KT.XKT,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KT.XKT,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KT.XKT,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KT.XKT,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KT.XKTX,UK_MHC_1503,IR.MIR.KT.XKTX,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.MIR.KT.XKTX,UK_MNCR_0405,IR.MIR.KT.XKTX,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9586,7 +9586,7 @@ UK_MHC_2204,IR.MIR.KT.XKTX,UK_MCZ_BSH,moderate-energy-infralittoral-rock,<,"JNCC
 UK_MHC_2204,IR.MIR.KT.XKTX,UK_MCZ_BSH,moderate-energy-infralittoral-rock-and-thin-mixed-sediments,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Moderate energy infralittoral rock and thin mixed sediments
 UK_MHC_2204,IR.MIR.KT.XKTX,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.MIR.KT.XKTX,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.MIR.KT.XKTX,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.MIR.KT.XKTX,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.MIR.KT.XKTX,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.MIR.KT.SlatT,UK_MHC_1503,IR.MIR.KT.LsacT,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.MIR.KT.SlatT,UK_MNCR_0405,IR.MIR.KT.LsacT,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9640,7 +9640,7 @@ UK_MHC_2204,IR.LIR.K,UK_MCZ_BSH,low-energy-infralittoral-rock,<,"JNCC, 2026. Mar
 UK_MHC_2204,IR.LIR.K,UK_MCZ_BSH,low-energy-infralittoral-rock-and-thin-sandy-sediment,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Low energy infralittoral rock and thin sandy sediment
 UK_MHC_2204,IR.LIR.K,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.LIR.K,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.LIR.K,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.LIR.K,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.LIR.K,IUCN_GET,M1.2,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.K,IUCN_GET,M1.5,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.K.LhypLoch,UK_MHC_1503,IR.LIR.K.LhypLoch,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
@@ -9655,7 +9655,7 @@ UK_MHC_2204,IR.LIR.K.LhypLoch,UK_MCZ_BSH,low-energy-infralittoral-rock,<,"JNCC, 
 UK_MHC_2204,IR.LIR.K.LhypLoch,UK_MCZ_BSH,low-energy-infralittoral-rock-and-thin-sandy-sediment,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Low energy infralittoral rock and thin sandy sediment
 UK_MHC_2204,IR.LIR.K.LhypLoch,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.LIR.K.LhypLoch,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.LIR.K.LhypLoch,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.LIR.K.LhypLoch,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.LIR.K.LhypLoch,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.K.LhypSlat,UK_MHC_1503,IR.LIR.K.LhypLsac,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.LIR.K.LhypSlat,UK_MNCR_0405,IR.LIR.K.LhypLsac,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9669,7 +9669,7 @@ UK_MHC_2204,IR.LIR.K.LhypSlat,UK_MCZ_BSH,low-energy-infralittoral-rock,<,"JNCC, 
 UK_MHC_2204,IR.LIR.K.LhypSlat,UK_MCZ_BSH,low-energy-infralittoral-rock-and-thin-sandy-sediment,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Low energy infralittoral rock and thin sandy sediment
 UK_MHC_2204,IR.LIR.K.LhypSlat,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.LIR.K.LhypSlat,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.LIR.K.LhypSlat,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.LIR.K.LhypSlat,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.LIR.K.LhypSlat,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.K.LhypSlat.Ft,UK_MHC_1503,IR.LIR.K.LhypLsac.Ft,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.LIR.K.LhypSlat.Ft,UK_MNCR_0405,IR.LIR.K.LhypLsac.Ft,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9683,7 +9683,7 @@ UK_MHC_2204,IR.LIR.K.LhypSlat.Ft,UK_MCZ_BSH,low-energy-infralittoral-rock,<,"JNC
 UK_MHC_2204,IR.LIR.K.LhypSlat.Ft,UK_MCZ_BSH,low-energy-infralittoral-rock-and-thin-sandy-sediment,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Low energy infralittoral rock and thin sandy sediment
 UK_MHC_2204,IR.LIR.K.LhypSlat.Ft,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.LIR.K.LhypSlat.Ft,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.LIR.K.LhypSlat.Ft,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.LIR.K.LhypSlat.Ft,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.LIR.K.LhypSlat.Ft,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.K.LhypSlat.Pk,UK_MHC_1503,IR.LIR.K.LhypLsac.Pk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.LIR.K.LhypSlat.Pk,UK_MNCR_0405,IR.LIR.K.LhypLsac.Pk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9708,7 +9708,7 @@ UK_MHC_2204,IR.LIR.K.LhypSlat.Gz,UK_MCZ_BSH,low-energy-infralittoral-rock,<,"JNC
 UK_MHC_2204,IR.LIR.K.LhypSlat.Gz,UK_MCZ_BSH,low-energy-infralittoral-rock-and-thin-sandy-sediment,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Low energy infralittoral rock and thin sandy sediment
 UK_MHC_2204,IR.LIR.K.LhypSlat.Gz,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.LIR.K.LhypSlat.Gz,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.LIR.K.LhypSlat.Gz,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.LIR.K.LhypSlat.Gz,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.LIR.K.LhypSlat.Gz,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.K.Sar,UK_MHC_1503,IR.LIR.K.Sar,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.LIR.K.Sar,UK_MNCR_0405,IR.LIR.K.Sar,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9745,7 +9745,7 @@ UK_MHC_2204,IR.LIR.K.Slat,UK_MCZ_BSH,low-energy-infralittoral-rock,<,"JNCC, 2026
 UK_MHC_2204,IR.LIR.K.Slat,UK_MCZ_BSH,low-energy-infralittoral-rock-and-thin-sandy-sediment,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Low energy infralittoral rock and thin sandy sediment
 UK_MHC_2204,IR.LIR.K.Slat,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.LIR.K.Slat,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.LIR.K.Slat,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.LIR.K.Slat,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.LIR.K.Slat,IUCN_GET,M1.2,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.K.Slat,IUCN_GET,M1.5,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.K.Slat.Ldig,UK_MHC_1503,IR.LIR.K.Lsac.Ldig,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
@@ -9760,7 +9760,7 @@ UK_MHC_2204,IR.LIR.K.Slat.Ldig,UK_MCZ_BSH,low-energy-infralittoral-rock,<,"JNCC,
 UK_MHC_2204,IR.LIR.K.Slat.Ldig,UK_MCZ_BSH,low-energy-infralittoral-rock-and-thin-sandy-sediment,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Low energy infralittoral rock and thin sandy sediment
 UK_MHC_2204,IR.LIR.K.Slat.Ldig,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.LIR.K.Slat.Ldig,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.LIR.K.Slat.Ldig,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.LIR.K.Slat.Ldig,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.LIR.K.Slat.Ldig,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.K.Slat.Ft,UK_MHC_1503,IR.LIR.K.Lsac.Ft,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.LIR.K.Slat.Ft,UK_MNCR_0405,IR.LIR.K.Lsac.Ft,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9774,7 +9774,7 @@ UK_MHC_2204,IR.LIR.K.Slat.Ft,UK_MCZ_BSH,low-energy-infralittoral-rock,<,"JNCC, 2
 UK_MHC_2204,IR.LIR.K.Slat.Ft,UK_MCZ_BSH,low-energy-infralittoral-rock-and-thin-sandy-sediment,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Low energy infralittoral rock and thin sandy sediment
 UK_MHC_2204,IR.LIR.K.Slat.Ft,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.LIR.K.Slat.Ft,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.LIR.K.Slat.Ft,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.LIR.K.Slat.Ft,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.LIR.K.Slat.Ft,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.K.LhypCape,UK_MHC_1503,IR.LIR.K.LhypCape,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.LIR.K.LhypCape,UK_MNCR_0405,IR.LIR.K.LhypCape,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9787,7 +9787,7 @@ UK_MHC_2204,IR.LIR.K.LhypCape,UK_MCZ_BSH,low-energy-infralittoral-rock,<,"JNCC, 
 UK_MHC_2204,IR.LIR.K.LhypCape,UK_MCZ_BSH,low-energy-infralittoral-rock-and-thin-sandy-sediment,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Low energy infralittoral rock and thin sandy sediment
 UK_MHC_2204,IR.LIR.K.LhypCape,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.LIR.K.LhypCape,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.LIR.K.LhypCape,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.LIR.K.LhypCape,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.LIR.K.LhypCape,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.K.Slat.Pk,UK_MHC_1503,IR.LIR.K.Lsac.Pk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.LIR.K.Slat.Pk,UK_MNCR_0405,IR.LIR.K.Lsac.Pk,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9818,7 +9818,7 @@ UK_MHC_2204,IR.LIR.KVS,UK_MCZ_BSH,low-energy-infralittoral-rock,<,"JNCC, 2026. M
 UK_MHC_2204,IR.LIR.KVS,UK_MCZ_BSH,low-energy-infralittoral-rock-and-thin-sandy-sediment,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Low energy infralittoral rock and thin sandy sediment
 UK_MHC_2204,IR.LIR.KVS,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.LIR.KVS,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.LIR.KVS,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.LIR.KVS,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.LIR.KVS,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.KVS.Cod,UK_MHC_1503,IR.LIR.KVS.Cod,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.LIR.KVS.Cod,UK_MNCR_0405,IR.LIR.KVS.Cod,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9853,7 +9853,7 @@ UK_MHC_2204,IR.LIR.KVS.SlatPsaVS,UK_MCZ_BSH,low-energy-infralittoral-rock,<,"JNC
 UK_MHC_2204,IR.LIR.KVS.SlatPsaVS,UK_MCZ_BSH,low-energy-infralittoral-rock-and-thin-sandy-sediment,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Low energy infralittoral rock and thin sandy sediment
 UK_MHC_2204,IR.LIR.KVS.SlatPsaVS,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.LIR.KVS.SlatPsaVS,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.LIR.KVS.SlatPsaVS,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.LIR.KVS.SlatPsaVS,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.LIR.KVS.SlatPsaVS,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.KVS.SlatPhyVS,UK_MHC_1503,IR.LIR.KVS.LsacPhyVS,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.LIR.KVS.SlatPhyVS,UK_MNCR_0405,IR.LIR.KVS.LsacPhyVS,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -9871,7 +9871,7 @@ UK_MHC_2204,IR.LIR.KVS.SlatPhyVS,UK_MCZ_BSH,low-energy-infralittoral-rock,<,"JNC
 UK_MHC_2204,IR.LIR.KVS.SlatPhyVS,UK_MCZ_BSH,low-energy-infralittoral-rock-and-thin-sandy-sediment,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Low energy infralittoral rock and thin sandy sediment
 UK_MHC_2204,IR.LIR.KVS.SlatPhyVS,MSFD_BHT,infralittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral rock and biogenic reef
 UK_MHC_2204,IR.LIR.KVS.SlatPhyVS,EMERALD,A3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,IR.LIR.KVS.SlatPhyVS,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,IR.LIR.KVS.SlatPhyVS,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,IR.LIR.KVS.SlatPhyVS,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,IR.LIR.IFaVS,UK_MHC_1503,IR.LIR.IFaVS,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,IR.LIR.IFaVS,UK_MNCR_0405,IR.LIR.IFaVS,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -12605,7 +12605,7 @@ UK_MHC_2204,SS.SMp.KSwSS,MSFD_BHT,infralittoral-mixed-sediment,#,"JNCC, 2026. Ma
 UK_MHC_2204,SS.SMp.KSwSS,MSFD_BHT,infralittoral-sand,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral sand
 UK_MHC_2204,SS.SMp.KSwSS,MSFD_BHT,infralittoral-mud,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral mud
 UK_MHC_2204,SS.SMp.KSwSS,EMERALD,A5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,SS.SMp.KSwSS,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,SS.SMp.KSwSS,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,SS.SMp.KSwSS,IUCN_GET,FM1.2,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,SS.SMp.KSwSS,IUCN_GET,M1.2,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,SS.SMp.KSwSS.SlatMxVS,UK_MHC_1503,SS.SMp.KSwSS.LsacMxVS,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
@@ -12619,7 +12619,7 @@ UK_MHC_2204,SS.SMp.KSwSS.SlatMxVS,UK_PMF,kelp-and-seaweed-communities-on-sublitt
 UK_MHC_2204,SS.SMp.KSwSS.SlatMxVS,UK_MCZ_BSH,subtidal-macrophyte-dominated-sediment,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Subtidal macrophyte dominated sediment
 UK_MHC_2204,SS.SMp.KSwSS.SlatMxVS,MSFD_BHT,infralittoral-mixed-sediment,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral mixed sediment
 UK_MHC_2204,SS.SMp.KSwSS.SlatMxVS,EMERALD,A5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,SS.SMp.KSwSS.SlatMxVS,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,SS.SMp.KSwSS.SlatMxVS,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,SS.SMp.KSwSS.SlatMxVS,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,SS.SMp.KSwSS.SlatR,UK_MHC_1503,SS.SMp.KSwSS.LsacR,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,SS.SMp.KSwSS.SlatR,UK_MNCR_0405,SS.SMp.KSwSS.LsacR,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -12711,7 +12711,7 @@ UK_MHC_2204,SS.SMp.KSwSS.SlatCho,UK_PMF,kelp-and-seaweed-communities-on-sublitto
 UK_MHC_2204,SS.SMp.KSwSS.SlatCho,UK_MCZ_BSH,subtidal-macrophyte-dominated-sediment,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Subtidal macrophyte dominated sediment
 UK_MHC_2204,SS.SMp.KSwSS.SlatCho,MSFD_BHT,infralittoral-mixed-sediment,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral mixed sediment
 UK_MHC_2204,SS.SMp.KSwSS.SlatCho,EMERALD,A5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,SS.SMp.KSwSS.SlatCho,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,SS.SMp.KSwSS.SlatCho,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,SS.SMp.KSwSS.SlatCho,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,SS.SMp.KSwSS.SlatGraFS,UK_MHC_1503,SS.SMp.KSwSS.LsacGraFS,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,SS.SMp.KSwSS.SlatGraFS,UK_MNCR_0405,SS.SMp.KSwSS.LsacGraFS,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -12724,7 +12724,7 @@ UK_MHC_2204,SS.SMp.KSwSS.SlatGraFS,UK_PMF,kelp-and-seaweed-communities-on-sublit
 UK_MHC_2204,SS.SMp.KSwSS.SlatGraFS,UK_MCZ_BSH,subtidal-macrophyte-dominated-sediment,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Subtidal macrophyte dominated sediment
 UK_MHC_2204,SS.SMp.KSwSS.SlatGraFS,MSFD_BHT,infralittoral-mixed-sediment,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral mixed sediment
 UK_MHC_2204,SS.SMp.KSwSS.SlatGraFS,EMERALD,A5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,SS.SMp.KSwSS.SlatGraFS,GOOS_EOV,macroalgal-canopy,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
+UK_MHC_2204,SS.SMp.KSwSS.SlatGraFS,GOOS_EOV,macroalgal-canopy-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Macroalgal canopy
 UK_MHC_2204,SS.SMp.KSwSS.SlatGraFS,IUCN_GET,M1.2,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,SS.SMp.KSwSS.Tra,UK_MHC_1503,SS.SMp.KSwSS.Tra,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,SS.SMp.KSwSS.Tra,UK_MNCR_0405,SS.SMp.KSwSS.Tra,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -12774,7 +12774,7 @@ UK_MHC_2204,SS.SMp.SSgr,UK_PMF,seagrass-beds,<,"JNCC, 2026. Marine habitat corre
 UK_MHC_2204,SS.SMp.SSgr,UK_MCZ_BSH,subtidal-macrophyte-dominated-sediment,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Subtidal macrophyte dominated sediment
 UK_MHC_2204,SS.SMp.SSgr,MSFD_BHT,infralittoral-sand,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral sand
 UK_MHC_2204,SS.SMp.SSgr,EMERALD,A5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,SS.SMp.SSgr,GOOS_EOV,seagrass,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Seagrass
+UK_MHC_2204,SS.SMp.SSgr,GOOS_EOV,seagrass-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Seagrass
 UK_MHC_2204,SS.SMp.SSgr,IUCN_GET,M1.1,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,SS.SMp.SSgr.Zmar,UK_MHC_1503,SS.SMp.SSgr.Zmar,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,SS.SMp.SSgr.Zmar,UK_MNCR_0405,SS.SMp.SSgr.Zmar,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -12791,7 +12791,7 @@ UK_MHC_2204,SS.SMp.SSgr.Zmar,UK_PMF,seagrass-beds,<,"JNCC, 2026. Marine habitat 
 UK_MHC_2204,SS.SMp.SSgr.Zmar,UK_MCZ_BSH,subtidal-macrophyte-dominated-sediment,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Subtidal macrophyte dominated sediment
 UK_MHC_2204,SS.SMp.SSgr.Zmar,MSFD_BHT,infralittoral-sand,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral sand
 UK_MHC_2204,SS.SMp.SSgr.Zmar,EMERALD,A5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,SS.SMp.SSgr.Zmar,GOOS_EOV,seagrass,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Seagrass
+UK_MHC_2204,SS.SMp.SSgr.Zmar,GOOS_EOV,seagrass-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Seagrass
 UK_MHC_2204,SS.SMp.SSgr.Zmar,IUCN_GET,M1.1,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,SS.SMp.SSgr.Rup,UK_MHC_1503,SS.SMp.SSgr.Rup,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,SS.SMp.SSgr.Rup,UK_MNCR_0405,SS.SMp.SSgr.Rup,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -12808,7 +12808,7 @@ UK_MHC_2204,SS.SMp.SSgr.Rup,UK_PMF,seagrass-beds,<,"JNCC, 2026. Marine habitat c
 UK_MHC_2204,SS.SMp.SSgr.Rup,UK_MCZ_BSH,subtidal-macrophyte-dominated-sediment,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Subtidal macrophyte dominated sediment
 UK_MHC_2204,SS.SMp.SSgr.Rup,MSFD_BHT,infralittoral-sand,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Infralittoral sand
 UK_MHC_2204,SS.SMp.SSgr.Rup,EMERALD,A5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,SS.SMp.SSgr.Rup,GOOS_EOV,seagrass,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Seagrass
+UK_MHC_2204,SS.SMp.SSgr.Rup,GOOS_EOV,seagrass-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Seagrass
 UK_MHC_2204,SS.SMp.SSgr.Rup,IUCN_GET,FM1.3,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,SS.SMp.SSgr.Rup,IUCN_GET,M1.1,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,SS.SMp.Ang,UK_MHC_1503,SS.SMp.Ang,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
@@ -13030,7 +13030,7 @@ UK_MHC_2204,SS.SBR.Crl,UK_MCZ_BSH,subtidal-biogenic-reefs,<,"JNCC, 2026. Marine 
 UK_MHC_2204,SS.SBR.Crl,MSFD_BHT,circalittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Circalittoral rock and biogenic reef
 UK_MHC_2204,SS.SBR.Crl,MSFD_BHT,offshore-circalittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Offshore circalittoral rock and biogenic reef
 UK_MHC_2204,SS.SBR.Crl,EMERALD,A5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,SS.SBR.Crl,GOOS_EOV,hard-coral-cover,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
+UK_MHC_2204,SS.SBR.Crl,GOOS_EOV,coral-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
 UK_MHC_2204,SS.SBR.Crl,IUCN_GET,M1.5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,SS.SBR.Crl.Lop,UK_MHC_1503,SS.SBR.Crl.Lop,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,SS.SBR.Crl.Lop,UK_MNCR_0405,SS.SBR.Crl.Lop,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
@@ -13047,7 +13047,7 @@ UK_MHC_2204,SS.SBR.Crl.Lop,UK_MCZ_BSH,subtidal-biogenic-reefs,<,"JNCC, 2026. Mar
 UK_MHC_2204,SS.SBR.Crl.Lop,MSFD_BHT,circalittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Circalittoral rock and biogenic reef
 UK_MHC_2204,SS.SBR.Crl.Lop,MSFD_BHT,offshore-circalittoral-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Offshore circalittoral rock and biogenic reef
 UK_MHC_2204,SS.SBR.Crl.Lop,EMERALD,A5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,SS.SBR.Crl.Lop,GOOS_EOV,hard-coral-cover,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
+UK_MHC_2204,SS.SBR.Crl.Lop,GOOS_EOV,coral-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
 UK_MHC_2204,SS.SBR.Crl.Lop,IUCN_GET,M1.5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,M.AtUB,UK_MHC_1503,M.AtUB,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,M.AtUB,EUNIS_M_2022,ME1,#,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'EUNIS2022 ...'",
@@ -13507,7 +13507,7 @@ UK_MHC_2204,M.AtUB.Bi.CorRee,UK_PMF,cold-water-coral-reefs,<,"JNCC, 2026. Marine
 UK_MHC_2204,M.AtUB.Bi.CorRee,UK_MCZ_BSH,deep-sea-bed,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Deep-sea bed
 UK_MHC_2204,M.AtUB.Bi.CorRee,MSFD_BHT,upper-bathyal-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Upper bathyal rock and biogenic reef
 UK_MHC_2204,M.AtUB.Bi.CorRee,EMERALD,A6.61,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,M.AtUB.Bi.CorRee,GOOS_EOV,hard-coral-cover,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
+UK_MHC_2204,M.AtUB.Bi.CorRee,GOOS_EOV,coral-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
 UK_MHC_2204,M.AtUB.Bi.CorRee,ICES_VME,CC,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Cold-water coral reef
 UK_MHC_2204,M.AtUB.Bi.CorRee,ICES_VME,LMR,>,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Lophelia pertusa /Madrepora oculata reef
 UK_MHC_2204,M.AtUB.Bi.CorRee,IUCN_GET,M3.5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
@@ -13524,7 +13524,7 @@ UK_MHC_2204,M.AtUB.Bi.CorRee.LopFra,UK_PMF,coral-gardens,<,"JNCC, 2026. Marine h
 UK_MHC_2204,M.AtUB.Bi.CorRee.LopFra,UK_PMF,cold-water-coral-reefs,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'PMF ...'",JNCC name: Cold-water coral reefs
 UK_MHC_2204,M.AtUB.Bi.CorRee.LopFra,UK_MCZ_BSH,deep-sea-bed,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Deep-sea bed
 UK_MHC_2204,M.AtUB.Bi.CorRee.LopFra,MSFD_BHT,upper-bathyal-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Upper bathyal rock and biogenic reef
-UK_MHC_2204,M.AtUB.Bi.CorRee.LopFra,GOOS_EOV,hard-coral-cover,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
+UK_MHC_2204,M.AtUB.Bi.CorRee.LopFra,GOOS_EOV,coral-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
 UK_MHC_2204,M.AtUB.Bi.CorRee.LopFra,ICES_VME,HBCG,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Hard-bottom coral garden
 UK_MHC_2204,M.AtUB.Bi.CorRee.LopFra,ICES_VME,LMR,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Lophelia pertusa /Madrepora oculata reef
 UK_MHC_2204,M.AtUB.Bi.CorRee.LopFra,ICES_VME,CG,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Coral garden
@@ -13540,7 +13540,7 @@ UK_MHC_2204,M.AtUB.Bi.CorRee.LopPer,UK_MCZ_FOCI,cold-water-coral-reefs,<,"JNCC, 
 UK_MHC_2204,M.AtUB.Bi.CorRee.LopPer,UK_PMF,cold-water-coral-reefs,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'PMF ...'",JNCC name: Cold-water coral reefs
 UK_MHC_2204,M.AtUB.Bi.CorRee.LopPer,UK_MCZ_BSH,deep-sea-bed,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Deep-sea bed
 UK_MHC_2204,M.AtUB.Bi.CorRee.LopPer,MSFD_BHT,upper-bathyal-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Upper bathyal rock and biogenic reef
-UK_MHC_2204,M.AtUB.Bi.CorRee.LopPer,GOOS_EOV,hard-coral-cover,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
+UK_MHC_2204,M.AtUB.Bi.CorRee.LopPer,GOOS_EOV,coral-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
 UK_MHC_2204,M.AtUB.Bi.CorRee.LopPer,ICES_VME,LMR,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Lophelia pertusa /Madrepora oculata reef
 UK_MHC_2204,M.AtUB.Bi.CorRee.LopPer,ICES_VME,CC,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Cold-water coral reef
 UK_MHC_2204,M.AtUB.Bi.CorRee.LopPer,IUCN_GET,M3.5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
@@ -14072,7 +14072,7 @@ UK_MHC_2204,M.AtMB.Bi.CorRee,UK_PMF,cold-water-coral-reefs,<,"JNCC, 2026. Marine
 UK_MHC_2204,M.AtMB.Bi.CorRee,UK_MCZ_BSH,deep-sea-bed,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Deep-sea bed
 UK_MHC_2204,M.AtMB.Bi.CorRee,MSFD_BHT,upper-bathyal-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Upper bathyal rock and biogenic reef
 UK_MHC_2204,M.AtMB.Bi.CorRee,EMERALD,A6.61,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,M.AtMB.Bi.CorRee,GOOS_EOV,hard-coral-cover,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
+UK_MHC_2204,M.AtMB.Bi.CorRee,GOOS_EOV,coral-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
 UK_MHC_2204,M.AtMB.Bi.CorRee,ICES_VME,CC,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Cold-water coral reef
 UK_MHC_2204,M.AtMB.Bi.CorRee,IUCN_GET,M3.5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
 UK_MHC_2204,M.AtMB.Bi.CorRee.LopFra,UK_MHC_1503,M.AtMB.Bi.CorRee.LopFra,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
@@ -14088,7 +14088,7 @@ UK_MHC_2204,M.AtMB.Bi.CorRee.LopFra,UK_PMF,coral-gardens,<,"JNCC, 2026. Marine h
 UK_MHC_2204,M.AtMB.Bi.CorRee.LopFra,UK_PMF,cold-water-coral-reefs,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'PMF ...'",JNCC name: Cold-water coral reefs
 UK_MHC_2204,M.AtMB.Bi.CorRee.LopFra,UK_MCZ_BSH,deep-sea-bed,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Deep-sea bed
 UK_MHC_2204,M.AtMB.Bi.CorRee.LopFra,MSFD_BHT,upper-bathyal-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Upper bathyal rock and biogenic reef
-UK_MHC_2204,M.AtMB.Bi.CorRee.LopFra,GOOS_EOV,hard-coral-cover,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
+UK_MHC_2204,M.AtMB.Bi.CorRee.LopFra,GOOS_EOV,coral-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
 UK_MHC_2204,M.AtMB.Bi.CorRee.LopFra,ICES_VME,LMR,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Lophelia pertusa /Madrepora oculata reef
 UK_MHC_2204,M.AtMB.Bi.CorRee.LopFra,ICES_VME,HBCG,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Hard-bottom coral garden
 UK_MHC_2204,M.AtMB.Bi.CorRee.LopFra,ICES_VME,CG,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Coral garden
@@ -14494,7 +14494,7 @@ UK_MHC_2204,M.AtLB.Bi.CorRee,UK_PMF,cold-water-coral-reefs,<,"JNCC, 2026. Marine
 UK_MHC_2204,M.AtLB.Bi.CorRee,UK_MCZ_BSH,deep-sea-bed,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Deep-sea bed
 UK_MHC_2204,M.AtLB.Bi.CorRee,MSFD_BHT,lower-bathyal-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Lower bathyal rock and biogenic reef
 UK_MHC_2204,M.AtLB.Bi.CorRee,EMERALD,A6.61,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,M.AtLB.Bi.CorRee,GOOS_EOV,hard-coral-cover,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
+UK_MHC_2204,M.AtLB.Bi.CorRee,GOOS_EOV,coral-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
 UK_MHC_2204,M.AtLB.Bi.CorRee,ICES_VME,CC,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Cold-water coral reef
 UK_MHC_2204,M.AtLB.Bi.CorRee,ICES_VME,SVR,>,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Solenosmilia variabilis reef
 UK_MHC_2204,M.AtLB.Bi.CorRee,IUCN_GET,M3.5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
@@ -14512,7 +14512,7 @@ UK_MHC_2204,M.AtLB.Bi.CorRee.SolFra,UK_PMF,cold-water-coral-reefs,<,"JNCC, 2026.
 UK_MHC_2204,M.AtLB.Bi.CorRee.SolFra,UK_MCZ_BSH,deep-sea-bed,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Deep-sea bed
 UK_MHC_2204,M.AtLB.Bi.CorRee.SolFra,MSFD_BHT,lower-bathyal-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Lower bathyal rock and biogenic reef
 UK_MHC_2204,M.AtLB.Bi.CorRee.SolFra,EMERALD,A6.61,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,M.AtLB.Bi.CorRee.SolFra,GOOS_EOV,hard-coral-cover,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
+UK_MHC_2204,M.AtLB.Bi.CorRee.SolFra,GOOS_EOV,coral-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
 UK_MHC_2204,M.AtLB.Bi.CorRee.SolFra,ICES_VME,SVR,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Solenosmilia variabilis reef
 UK_MHC_2204,M.AtLB.Bi.CorRee.SolFra,ICES_VME,HBCG,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Hard-bottom coral garden
 UK_MHC_2204,M.AtLB.Bi.CorRee.SolFra,ICES_VME,CG,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Coral garden
@@ -14529,7 +14529,7 @@ UK_MHC_2204,M.AtLB.Bi.CorRee.SolVar,UK_PMF,cold-water-coral-reefs,<,"JNCC, 2026.
 UK_MHC_2204,M.AtLB.Bi.CorRee.SolVar,UK_MCZ_BSH,deep-sea-bed,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MCZBSH ...'",JNCC name: Deep-sea bed
 UK_MHC_2204,M.AtLB.Bi.CorRee.SolVar,MSFD_BHT,lower-bathyal-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Lower bathyal rock and biogenic reef
 UK_MHC_2204,M.AtLB.Bi.CorRee.SolVar,EMERALD,A6.61,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Emerald Habitat ...'",
-UK_MHC_2204,M.AtLB.Bi.CorRee.SolVar,GOOS_EOV,hard-coral-cover,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
+UK_MHC_2204,M.AtLB.Bi.CorRee.SolVar,GOOS_EOV,coral-cover-and-composition,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GOOSEOV ...'",JNCC name: Hard coral cover
 UK_MHC_2204,M.AtLB.Bi.CorRee.SolVar,ICES_VME,SVR,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Solenosmilia variabilis reef
 UK_MHC_2204,M.AtLB.Bi.CorRee.SolVar,ICES_VME,CC,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'VME ...'",JNCC name: Cold-water coral reef
 UK_MHC_2204,M.AtLB.Bi.CorRee.SolVar,IUCN_GET,M3.5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",

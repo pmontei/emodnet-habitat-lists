@@ -31,6 +31,7 @@ from pathlib import Path
 import pandas as pd
 
 from ..schema import CROSSWALKS_COLUMNS, HABITATS_COLUMNS
+from .goos_eov import code_for as eov_code
 from .msfd_bht import slug
 
 FOLDER = "8.Marine Habitat Classification for Britain and Ireland"
@@ -56,7 +57,7 @@ TARGETS = {
     "MCZBSH": ("UK_MCZ_BSH", "Names", "slug"),
     "MSFDBroadHabitat": ("MSFD_BHT", "Names", "slug"),
     "Emerald Habitat": ("EMERALD", "Codes", "code"),
-    "GOOSEOV": ("GOOS_EOV", "Names", "slug"),
+    "GOOSEOV": ("GOOS_EOV", "Names", "eov"),
     "VME": ("ICES_VME", "Names", "vme"),
     "GET": ("IUCN_GET", "Codes", "code"),
 }
@@ -134,6 +135,9 @@ def crosswalks(sources: Path, ospar_habitats: pd.DataFrame | None = None,
                 notes = []
                 if how == "code":
                     code = v
+                elif how == "eov":
+                    code = eov_code(v) or slug(v)
+                    notes.append(f"JNCC name: {v}")
                 elif how == "slug":
                     code = slug(v)
                     notes.append(f"JNCC name: {v}")

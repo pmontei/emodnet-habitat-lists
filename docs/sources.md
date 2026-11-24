@@ -354,3 +354,27 @@ Notes:
 * `RAMSAR -> IUCN_GET` (75 rows, relationship `indicative`): each EFG printed against a Ramsar type in
   the EO4WI draft. A (shallow marine waters < 6 m), B (subtidal aquatic beds), C (coral reefs),
   Ga (bivalve reefs, not in its source list), Zk(a) and Zk(c) have no EFG there.
+
+## 16. GOOS Essential Ocean Variables
+
+Folder: `16.GOOS EOV/` (specification sheets, version August 2026)
+
+| File | Reference | Used for |
+|---|---|---|
+| `01_2026_*Coral*.pdf` | GOOS (2026). EOV Specification Sheet: Coral Cover and Composition. GOOS Document No. 325. | `GOOS_EOV` |
+| `02_2026_*Seagrass*.pdf` | GOOS (2026). EOV Specification Sheet: Seagrass Cover and Composition. GOOS Document No. 322. | `GOOS_EOV` |
+| `03_2026_*Macroalgal*.pdf` | GOOS (2026). EOV Specification Sheet: Macroalgal Canopy Cover and Composition. GOOS Document No. 329. | `GOOS_EOV` |
+| `04_2026_*Mangrove*.pdf` | GOOS (2026). EOV Specification Sheet: Mangrove Cover and Composition. GOOS Document No. 323. | `GOOS_EOV` |
+
+List of sheets: https://goosocean.org/document-list/168
+
+Notes:
+
+* 4 EOVs (level 1, with definition) and their 14 sub-variables (level 2, code `<eov>/<sub-variable>`),
+  transcribed and checked against the PDF text by the tests.
+* The coral EOV is now **Coral Cover and Composition** and covers shallow and deep-water corals
+  (hard, soft and black corals); it replaces "Hard coral cover and composition". The JNCC correlation
+  tables still use the old names ("Hard coral cover", "Seagrass", "Macroalgal canopy"), which are
+  mapped to the new codes (JNCC name kept in `notes`).
+* The coral sheet prints the sub-variable "Coral Reef Benthic Area (the total spatial footprint"
+  truncated; its DEFINITION field repeats the sub-variables, so no definition is stored.

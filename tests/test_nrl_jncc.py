@@ -35,5 +35,5 @@ def test_jncc_mhc():
     assert set(cw.relationship) <= {"=", "<", ">", "#", "unspecified"}
     assert not cw.notes.str.contains("not matched").any()
     assert set(cw[cw.to_system == "OSPAR_TD_2021"].to_code) <= set(o.code)
-    assert set(cw[cw.to_system == "GOOS_EOV"].to_code) == {"seagrass", "macroalgal-canopy", "hard-coral-cover"}
+    assert set(cw[cw.to_system == "GOOS_EOV"].to_code) == {"seagrass-cover-and-composition", "macroalgal-canopy-cover-and-composition", "coral-cover-and-composition"}
     assert set(cw[(cw.from_code == "LR") & (cw.to_system == "EUNIS_M_2022")].to_code) == {"MA1", "MA12"}
