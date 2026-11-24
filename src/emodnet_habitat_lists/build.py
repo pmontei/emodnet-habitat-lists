@@ -19,7 +19,7 @@ import pandas as pd
 
 from . import pdftext
 from .schema import CROSSWALKS_COLUMNS, EXTRACTION_RULES_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
-from .sources import annex_i, barcelona, bern, biogenic, carib, goos_eov, iucn_get, ramsar, redlist, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
+from .sources import annex_i, barcelona, bern, biogenic, carib, eo_maps, goos_eov, iucn_get, ramsar, redlist, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
 
 EUNIS_M_2022_XLSX = (
     "1.EUNIS habitat classification/3_eea_t_eunis-hab-m_p_2004-2019_v01_r00/"
@@ -73,6 +73,10 @@ SYSTEMS = [
     ("GOOS_EOV", "GOOS Biology and Ecosystems Essential Ocean Variables (habitat EOVs)", "August 2026",
      "Global Ocean Observing System (GOOS)", "global", "GOOS EOV Specification Sheets, GOOS Documents No. 322, 323, "
      "325, 329 (version August 2026)"),
+    ("ALLEN_CORAL_ATLAS_BENTHIC", "Allen Coral Atlas global benthic habitat map classes", "v3", "Allen Coral Atlas",
+     "global shallow coral reefs", eo_maps.SRC_ACA),
+    ("GMW_V3", "Global Mangrove Watch extent and change classes", "3.0 (2022)", "Global Mangrove Watch", "global",
+     eo_maps.SRC_GMW),
     ("IUCN_GET", "IUCN Global Ecosystem Typology (realms, biomes, ecosystem functional groups)", "2.0 (2020)", "IUCN",
      "global", iucn_get.SRC),
     ("EMODNET_BIOGENIC_2021", "EMODnet Seabed Habitats biogenic substrate types (composite data product D3.05/D3.06)",
@@ -219,6 +223,11 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
         habitats.append(iucn_get.habitats(sources))
         loaded.add("IUCN_GET")
     habitats.append(goos_eov.habitats())
+    eo = eo_maps.habitats(sources)
+    if len(eo):
+        habitats.append(eo)
+        crosswalks.append(eo_maps.crosswalks(sources))
+        loaded.update(set(eo.system))
     loaded.add("GOOS_EOV")
     if (sources / jncc_mhc.FOLDER).is_dir():
         habitats.append(jncc_mhc.habitats(sources))

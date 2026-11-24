@@ -399,3 +399,22 @@ Notes:
   with membership values (summing to 1) and their uncertainty, rather than single deterministic links.
   The current crosswalks to GET (JNCC, EO4WI) give no membership values; a `membership` field could be
   added if the WP3 products need it.
+
+## 18. Allen Coral Atlas and 19. Global Mangrove Watch
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `18.Allen Coral Atlas/01_2020_*benthic-maps-v3.pdf` | Allen Coral Atlas. Benthic map classes (v3), after Roelfsema et al. 2013 (Int. J. Remote Sensing 34(18): 6367-6388). | `ALLEN_CORAL_ATLAS_BENTHIC` | https://storage.googleapis.com/coral-atlas-static-files/download-package-materials/Class-Descriptions-Benthic-Maps-v3.pdf |
+| `19.Global Mangrove Watch/01_2022_*Global-Mangrove-Watch-v3.pdf` | Bunting, P. et al., 2022. Global Mangrove Extent Change 1996-2020: Global Mangrove Watch Version 3.0. Remote Sensing 14(15): 3657. | `GMW_V3` | https://doi.org/10.3390/rs14153657 |
+
+Notes:
+
+* Allen Coral Atlas: 6 benthic classes (Coral/Algae, Sand, Rubble, Rock, Seagrass, Microalgal Mat) and
+  Unknown, with their one-line definitions (checked against the PDF) and "also goes by" names. Benthic
+  classes are mapped only to ~10 m depth (geomorphic zones to 15 m). The geomorphic zone classes are a
+  separate document (not yet in the folder).
+* GMW v3.0 is a binary map (mangrove / non-mangrove) with gain / loss change classes.
+* Crosswalks from these classes to `GOOS_EOV`, `IUCN_GET` and `RAMSAR` are **proposed by this repository**
+  (relationship `candidate`, intended relation in `notes`) for the WP3 EOV products; they need review.
+  Note that the "Coral/Algae" class also includes algae-dominated hard bottom, so it overlaps (`#`) the
+  coral EOV rather than being equal to it.

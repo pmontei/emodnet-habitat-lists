@@ -7083,6 +7083,15 @@ NRL_2024,G7-MED,EUNIS_M_2022,MF35,>,"Regulation (EU) 2024/1991 of 24 June 2024 o
 NRL_2024,G7-MED,EUNIS_M_2022,MF45,>,"Regulation (EU) 2024/1991 of 24 June 2024 on nature restoration (OJ L, 2024/1991, 29.7.2024), Annex II 'Marine ecosystems - habitat types and groups of habitat types referred to in Article 5(1) and (2)', group 7",name in Annex II: Mediterranean lower bathyal mixed sediment
 NRL_2024,G7-MED,EUNIS_M_2022,MF55,>,"Regulation (EU) 2024/1991 of 24 June 2024 on nature restoration (OJ L, 2024/1991, 29.7.2024), Annex II 'Marine ecosystems - habitat types and groups of habitat types referred to in Article 5(1) and (2)', group 7",name in Annex II: Mediterranean lower bathyal sand
 NRL_2024,G7-MED,EUNIS_M_2022,MF65,>,"Regulation (EU) 2024/1991 of 24 June 2024 on nature restoration (OJ L, 2024/1991, 29.7.2024), Annex II 'Marine ecosystems - habitat types and groups of habitat types referred to in Article 5(1) and (2)', group 7",name in Annex II: Mediterranean lower bathyal mud
+ALLEN_CORAL_ATLAS_BENTHIC,coral-algae,GOOS_EOV,coral-cover-and-composition,candidate,"this repository (proposal for the WP3 EOV products, to be reviewed)",proposed relationship '#'; class includes algae-dominated hard bottom; shallow reefs only (<~10-15 m)
+ALLEN_CORAL_ATLAS_BENTHIC,seagrass,GOOS_EOV,seagrass-cover-and-composition,candidate,"this repository (proposal for the WP3 EOV products, to be reviewed)",proposed relationship '<'
+ALLEN_CORAL_ATLAS_BENTHIC,coral-algae,IUCN_GET,M1.3,candidate,"this repository (proposal for the WP3 EOV products, to be reviewed)",proposed relationship '#'; Photic coral reefs
+ALLEN_CORAL_ATLAS_BENTHIC,seagrass,IUCN_GET,M1.1,candidate,"this repository (proposal for the WP3 EOV products, to be reviewed)",proposed relationship '<'; Seagrass meadows
+ALLEN_CORAL_ATLAS_BENTHIC,coral-algae,RAMSAR,C,candidate,"this repository (proposal for the WP3 EOV products, to be reviewed)",proposed relationship '#'; Coral reefs
+ALLEN_CORAL_ATLAS_BENTHIC,seagrass,RAMSAR,B,candidate,"this repository (proposal for the WP3 EOV products, to be reviewed)",proposed relationship '<'; Marine subtidal aquatic beds
+GMW_V3,mangrove,GOOS_EOV,mangrove-cover-and-composition,candidate,"this repository (proposal for the WP3 EOV products, to be reviewed)",proposed relationship '<'; GMW gives extent only
+GMW_V3,mangrove,IUCN_GET,MFT1.2,candidate,"this repository (proposal for the WP3 EOV products, to be reviewed)",proposed relationship '='; Intertidal forests and shrublands
+GMW_V3,mangrove,RAMSAR,I,candidate,"this repository (proposal for the WP3 EOV products, to be reviewed)",proposed relationship '<'; Intertidal forested wetlands (also nipah and tidal freshwater swamps)
 UK_MHC_2204,LR,UK_MHC_1503,LR,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv1503 ...'",
 UK_MHC_2204,LR,UK_MNCR_0405,LR,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv0405 ...'",
 UK_MHC_2204,LR,UK_MHC_9706,LR,=,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'JNCCv9706 ...'",
