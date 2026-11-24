@@ -37,6 +37,7 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | Nature Restoration Regulation (EU) 2024/1991, Annex II | ✅ (7 groups × regions) | ✅ to EUNIS marine 2022 (231 types) and EUNIS 2022 → Annex I |
 | Black Sea | via EUNIS marine 2022 (Black Sea units) | — |
 | EMODnet biogenic substrate types (D3.06, 2021) | ✅ (29 types, 4 levels) | ✅ from EUNIS 2007-11, Annex I, HELCOM HUB, OSPAR, UK lists; to EUNIS 2019 by biological zone and region; extraction rules (data source + query) in `extraction_rules.csv` |
+| European Red List of Habitats 2016, marine (Part 1) | ✅ (257 types with EU28/EU28+ categories) | ✅ from EUNIS marine 2022 (EEA) |
 | Bern Convention Resolution No. 4 / Emerald (revised Annex I, 2019) | ✅ (213 types, with manual descriptions) | ✅ to EUNIS 2012 and Annex I (Interpretation Manual 2019) |
 | Caribbean: Typologie des habitats benthiques de la Martinique (Andres et al. 2022) | ✅ (245 units, 5 levels) | ✅ to French Antilles APHN habitats; EUNIS via EUSeaMap planned |
 

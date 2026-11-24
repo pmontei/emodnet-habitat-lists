@@ -310,3 +310,26 @@ Notes:
   otherwise `unspecified`. Only codes that exist in `ANNEX_I` are kept.
 * `E1.13` and `X35` (Inland sand dunes) are not in EUNIS 2012 as loaded from eunis.habitats (flagged).
   `F2.2` has no description extracted from the manual.
+
+## 14. European Red List of Habitats (2016)
+
+Folder: `14.European Red List of Habitats/`
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `01_2016_*Part1-Marine.pdf` | Gubbay, S., Sanders, N., Haynes, T. et al., 2016. European Red List of Habitats. Part 1. Marine habitats. European Commission. | `EU_REDLIST_2016` (Annex A) | https://doi.org/10.2779/032638 |
+| `02_2016_*Part2-Terrestrial-freshwater.pdf` | Janssen, J.A.M., Rodwell, J.S. et al., 2016. European Red List of Habitats. Part 2. Terrestrial and freshwater habitats. | not used | https://doi.org/10.2779/091372 |
+| EUNIS marine 2022 file (folder 1) | EEA 2022, columns "Red List relationship" / "Red List code (for EEA publication)". | `EUNIS_M_2022 -> EU_REDLIST_2016` | see section 1 |
+
+Notes:
+
+* 257 benthic habitat types (Baltic 61, North-East Atlantic 86, Mediterranean 47, Black Sea 63 incl.
+  Sea of Marmara), with EU28 and EU28+ category and criteria in `notes`. Category totals checked
+  against the report's Table 3.1.1 by the tests.
+* **Codes:** the working codes printed in Annex A are not unique (`A5.62` twice in the NE Atlantic,
+  `A5.53` twice, `A3.2x` twice in the Black Sea; one Marmara habitat has no code). The repository uses
+  the EEA "code for EEA publication" (sea prefix + code, e.g. `NEAA5.67` for the *Modiolus* beds that
+  Annex A prints as `A5.62`, `NEAA5.53A` for the Macaronesian seagrass beds, `BLSA1.4C` for the Marmara
+  caves), assigned by sea, working code and name; the Annex A code is kept in `notes`.
+* The EEA crosswalk also cites `RLA2.5a`–`RLA2.5d` (coastal salt marshes), which belong to Part 2
+  (not loaded; flagged "not found").
