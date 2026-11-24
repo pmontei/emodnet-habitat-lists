@@ -12,13 +12,23 @@ pytestmark = pytest.mark.skipif(not list((SOURCES / ramsar.FOLDER).glob(ramsar.C
 
 
 def test_type_lists():
-    assert len(ramsar.MARINE_COASTAL) == 12 and len(ramsar.INLAND) == 20 and len(ramsar.HUMAN_MADE) == 10
+    assert len(ramsar.MARINE_COASTAL) == 13 and len(ramsar.INLAND) == 20 and len(ramsar.HUMAN_MADE) == 10
 
 
 @pytest.mark.skipif(not pdftext.available(), reason="pdftotext not available")
 def test_get_crosswalk():
     cw = ramsar.crosswalk_get(SOURCES)
     allc = set(ramsar.MARINE_COASTAL + ramsar.INLAND + ramsar.HUMAN_MADE)
-    assert allc - set(cw.from_code) == {"A", "B", "C", "Zk(a)", "Zk(c)"}
+    assert allc - set(cw.from_code) == {"A", "B", "C", "Ga", "Zk(a)", "Zk(c)"}
     g = cw.groupby("from_code").to_code.apply(set)
     assert g["I"] == {"MFT1.1", "MFT1.2"} and g["K"] == {"MFT1.1", "F2.1", "F2.2"} and g["J"] == {"FM1.3"}
+
+
+@pytest.mark.skipif(not pdftext.available(), reason="pdftotext not available")
+def test_ramsar_list():
+    if not list((SOURCES / ramsar.FOLDER).glob(ramsar.FRAMEWORK_GLOB)):
+        pytest.skip("Strategic Framework not available")
+    h = ramsar.habitats(SOURCES)
+    types = h[h.level == 2]
+    assert list(types.code) == ramsar.MARINE_COASTAL + ramsar.INLAND + ramsar.HUMAN_MADE
+    assert h.set_index("code").loc["Ga", "name"] == "Bivalve (shellfish) reefs"
