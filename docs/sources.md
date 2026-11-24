@@ -342,7 +342,7 @@ Folder: `15.Ramsar/`
 |---|---|---|---|
 | `01_2022_*Resolution-XI8*.pdf` | Ramsar COP11 Resolution XI.8 Annex 2 (Rev. COP14), Strategic Framework, Appendix B: Ramsar Classification System for Wetland Type. | `RAMSAR` | https://www.ramsar.org/sites/default/files/documents/library/cop11-res08-e-anx2_revcop14.pdf |
 | `02_2024_*SC63-Doc19*.pdf` | Ramsar SC63 Doc. 19 Annex 1: Ramsar wetland classification system (STRP advice). | context | https://www.ramsar.org/sites/default/files/2024-11/SC63%20Doc.19%20Annex%201%20Ramsar%20wetland%20classification%20system.pdf |
-| `03_2024_*Crosswalk-Ramsar-IUCN-GET*.pdf` | DHI et al., 2024. Classification cross-walk V0.2, Ramsar → IUCN GET and SDG 6.6.1 (EO4WI, ESA). | `RAMSAR -> IUCN_GET` | — |
+| `03_2024_*Crosswalk-Ramsar-IUCN-GET*.pdf` | DHI et al., 2024. Classification cross-walk V0.2, Ramsar → IUCN GET and SDG 6.6.1 (EO4WI, ESA). | `RAMSAR -> IUCN_GET` | https://www.ramsar.org/sites/default/files/2024-11/DHI%20classification%20cross-walk.pdf |
 
 Notes:
 
