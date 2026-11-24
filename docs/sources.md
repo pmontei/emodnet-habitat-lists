@@ -378,3 +378,24 @@ Notes:
   mapped to the new codes (JNCC name kept in `notes`).
 * The coral sheet prints the sub-variable "Coral Reef Benthic Area (the total spatial footprint"
   truncated; its DEFINITION field repeats the sub-variables, so no definition is stored.
+
+## 17. IUCN Global Ecosystem Typology
+
+Folder: `17.IUCN Global Ecosystem Typology/`
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `01_2020_*Global-Ecosystem-Typology*.pdf` | Keith, D.A., Ferrer-Paris, J.R., Nicholson, E. and Kingsford, R.T. (eds.) (2020). The IUCN Global Ecosystem Typology 2.0: Descriptive profiles for biomes and ecosystem functional groups. IUCN. | `IUCN_GET` | https://doi.org/10.2305/IUCN.CH.2020.13.en |
+| `02_2025_*cross-referencing*.pdf` | IUCN (2025). Standards, methods and guidelines for cross-referencing ecosystem classifications and maps to the IUCN Global Ecosystem Typology. Version 1.0. | method (see notes) | https://doi.org/10.2305/CPPC6126 |
+
+Notes:
+
+* Levels 1-3 of GET 2.0 from the contents of Part II: 10 realms (4 core with EFGs + 6 transitional;
+  names as printed in the EFG profiles), 25 biomes, 108 ecosystem functional groups (EFG).
+* GET 2.1 (2022, https://global-ecosystems.org) adds EFGs; `M1.10` "Rhodolith/Maerl beds", used by the
+  JNCC correlation tables, is added and flagged "GET v2.1 EFG, not in v2.0". All GET codes used in the
+  crosswalks (JNCC, Ramsar) now resolve.
+* The 2025 guidelines recommend recording **membership** of a classification unit to one or more EFGs
+  with membership values (summing to 1) and their uncertainty, rather than single deterministic links.
+  The current crosswalks to GET (JNCC, EO4WI) give no membership values; a `membership` field could be
+  added if the WP3 products need it.

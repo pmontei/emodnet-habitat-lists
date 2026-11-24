@@ -37,6 +37,7 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | Nature Restoration Regulation (EU) 2024/1991, Annex II | ✅ (7 groups × regions) | ✅ to EUNIS marine 2022 (231 types) and EUNIS 2022 → Annex I |
 | Black Sea | via EUNIS marine 2022 (Black Sea units) | — |
 | EMODnet biogenic substrate types (D3.06, 2021) | ✅ (29 types, 4 levels) | ✅ from EUNIS 2007-11, Annex I, HELCOM HUB, OSPAR, UK lists; to EUNIS 2019 by biological zone and region; extraction rules (data source + query) in `extraction_rules.csv` |
+| IUCN Global Ecosystem Typology 2.0 | ✅ (10 realms, 25 biomes, 108 EFGs + M1.10 from v2.1) | ✅ from UK MHC (JNCC) and Ramsar (EO4WI) |
 | GOOS habitat EOVs (specification sheets, Aug 2026) | ✅ (4 EOVs, 14 sub-variables) | ✅ from UK MHC (JNCC correlation tables) |
 | Ramsar wetland types (Rev. COP14) | ✅ (43 types) | ✅ to IUCN GET (EO4WI draft crosswalk) |
 | European Red List of Habitats 2016, marine (Part 1) | ✅ (257 types with EU28/EU28+ categories) | ✅ from EUNIS marine 2022 (EEA) |

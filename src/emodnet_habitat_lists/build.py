@@ -19,7 +19,7 @@ import pandas as pd
 
 from . import pdftext
 from .schema import CROSSWALKS_COLUMNS, EXTRACTION_RULES_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
-from .sources import annex_i, barcelona, bern, biogenic, carib, goos_eov, ramsar, redlist, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
+from .sources import annex_i, barcelona, bern, biogenic, carib, goos_eov, iucn_get, ramsar, redlist, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
 
 EUNIS_M_2022_XLSX = (
     "1.EUNIS habitat classification/3_eea_t_eunis-hab-m_p_2004-2019_v01_r00/"
@@ -73,8 +73,8 @@ SYSTEMS = [
     ("GOOS_EOV", "GOOS Biology and Ecosystems Essential Ocean Variables (habitat EOVs)", "August 2026",
      "Global Ocean Observing System (GOOS)", "global", "GOOS EOV Specification Sheets, GOOS Documents No. 322, 323, "
      "325, 329 (version August 2026)"),
-    ("IUCN_GET", "IUCN Global Ecosystem Typology", "2.x", "IUCN", "global",
-     "not yet loaded; codes appear in crosswalks only"),
+    ("IUCN_GET", "IUCN Global Ecosystem Typology (realms, biomes, ecosystem functional groups)", "2.0 (2020)", "IUCN",
+     "global", iucn_get.SRC),
     ("EMODNET_BIOGENIC_2021", "EMODnet Seabed Habitats biogenic substrate types (composite data product D3.05/D3.06)",
      "2021", "EMODnet Seabed Habitats", "European seas", biogenic.SRC),
     ("CARIB_MARTINIQUE_2022", "Typologie des habitats benthiques de la Martinique (Andres et al.)", "2022",
@@ -215,6 +215,9 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
         loaded.add("NRL_2024")
     else:
         print(f"skipped Nature Restoration Regulation: {sources / nrl.FOLDER} not found or pdftotext not installed")
+    if (sources / iucn_get.FOLDER).is_dir() and pdftext.available():
+        habitats.append(iucn_get.habitats(sources))
+        loaded.add("IUCN_GET")
     habitats.append(goos_eov.habitats())
     loaded.add("GOOS_EOV")
     if (sources / jncc_mhc.FOLDER).is_dir():
