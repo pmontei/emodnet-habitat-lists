@@ -15,7 +15,7 @@ is correct, traceable (each row has a `source`) and reproducible when a classifi
 | `systems.csv` | Catalogue of classification systems and lists (name, version, authority, source, date). |
 | `habitats.csv` | All habitats of all systems, long format: system, code, name, level, parent, realm, group, description, source. |
 | `crosswalks.csv` | Correspondences between systems, with relationship type and source. |
-| `composites.csv` | *(next)* Per composite product: which habitats are included, why, by whom and when. |
+| `composites.csv` | Per composite product: which habitats are included, why, by whom and when. First entry: `BIOGENIC_SUBSTRATE` (D3.10), 70 EUNIS 2022 codes (proposal, pending WP3 review). |
 
 Column definitions: [`docs/schema.md`](docs/schema.md).
 

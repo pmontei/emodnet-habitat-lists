@@ -293,11 +293,18 @@ Notes:
   `UK_MCZ_FOCI -> EMODNET_BIOGENIC_2021` crosswalks. Queries are transcribed and checked word by
   word against the PDF by the tests. As printed: 'Modiolous modiolus' (OSPAR 2020 dataset value) and
   a missing '=' in one FOCI query (noted).
-* **EUNIS 2022 vs the report's corrections:** EUNIS 2022 adopted `MC223` "Bivalve reefs in the
-  Atlantic circalittoral zone" and the name fixes of `MB2211` and `MD22`, but codes the circalittoral
-  *Mytilus edulis* and *Hiatella arctica* beds as `MC2235` and `MC2236` (the report proposed `MC2237`
-  and `MC2238`), and has no `MB2224`. To be taken into account when updating the product to EUNIS 2022
-  (D3.10).
+* **EUNIS 2022 list for D3.10** (`composites.csv`, composite `BIOGENIC_SUBSTRATE`; built by
+  `composites.biogenic_eunis2022`): Appendix 2 converted to EUNIS 2022 with the `EUNIS_M_2019 ->
+  EUNIS_M_2022` crosswalk; also written as `EMODNET_BIOGENIC_2021 -> EUNIS_M_2022` crosswalks.
+  70 EUNIS 2022 codes: 66 Appendix 2 codes are unchanged in 2022; the report's corrections are
+  resolved as `MC223` (adopted), `MC2237` → `MC2235` and `MC2238` → `MC2236` (adopted with other
+  codes, same names), `MB2224` → `MB2223` "Mussel beds on Atlantic infralittoral sediment" (new in
+  2022, probable equivalent: `review`). Codes whose sub-tree changed between 2019 and 2022 are set to
+  `review`, with the units that entered or left: in particular *Sabellaria spinulosa* encrusted
+  Atlantic circalittoral rock (2019 `MC2213`, `MC22131`, under the biogenic worm reefs `MC221`) moved
+  to rock in 2022 (`MC1281`, `MC12811`, under `MC128` "Sabellaria on Atlantic circalittoral rock"),
+  and *Modiolus modiolus* beds with hydroids and red seaweeds (2019 rock `MC1222`) moved to the
+  biogenic `MC2231`. All rows are proposals pending WP3 review (`decided_by`).
 
 ## 12. Caribbean
 
