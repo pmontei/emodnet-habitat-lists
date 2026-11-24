@@ -1,7 +1,7 @@
-"""Habitat lists of the composite data products (``composites`` table).
+"""Members of the composite-product lists that are derived (proposed) rather than published.
 
-BIOGENIC_SUBSTRATE (D3.10)
---------------------------
+EMODNET_BIOGENIC in EUNIS 2022 (D3.10)
+--------------------------------------
 Proposal of the EUNIS 2022 habitats that make up the biogenic substrate product, obtained by
 converting the list published in EUNIS 2019 (D3.06, Appendix 2: ``EMODNET_BIOGENIC_2021 ->
 EUNIS_M_2019``, ``maps to (with biological zone)``) with the ``EUNIS_M_2019 -> EUNIS_M_2022``
@@ -12,20 +12,18 @@ crosswalk (matched by name, see ``sources/eunis_eea.py``).
   EUNIS 2022 in ``REPORT_CORRECTIONS`` (adopted, recoded, or a probable equivalent to review).
 * For each code the EUNIS 2022 sub-tree is compared with the 2019 sub-tree: units that entered
   or left the sub-tree in 2022 (e.g. *Sabellaria spinulosa* encrusted rock moved from the
-  biogenic ``MC221`` to rock ``MC128``) are listed in ``rationale`` and the row is set to
-  ``review``.
+  biogenic ``MC221`` to rock ``MC128``) are returned as review reasons, which end up in the
+  ``notes`` of the ``list_members`` rows ("TO REVIEW: ...").
 
-Every row is a proposal (``decided_by``) until reviewed by WP3.
+All rows are ``proposed`` members until reviewed by WP3.
 """
 
 from __future__ import annotations
 
 import pandas as pd
 
-from .schema import COMPOSITES_COLUMNS, CROSSWALKS_COLUMNS
+from .schema import CROSSWALKS_COLUMNS
 
-BIOGENIC = "BIOGENIC_SUBSTRATE"
-D310 = "D3.10"
 REL_APP2 = "maps to (with biological zone)"
 
 # report code (not in EUNIS 2019) -> (EUNIS 2022 code, include, why)
@@ -60,16 +58,14 @@ def _descendants(habitats: pd.DataFrame, system: str) -> dict[str, set[str]]:
     return out
 
 
-def biogenic_eunis2022(habitats: pd.DataFrame, crosswalks: pd.DataFrame, today: str
-                       ) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Return (composites rows, crosswalk rows EMODNET_BIOGENIC_2021 -> EUNIS_M_2022)."""
+def biogenic_eunis2022(habitats: pd.DataFrame, crosswalks: pd.DataFrame
+                       ) -> tuple[dict[tuple[str, str], str], pd.DataFrame]:
+    """Return ({("EUNIS_M_2022", code): reason to review}, rows EMODNET_BIOGENIC_2021 -> EUNIS_M_2022)."""
     app2 = crosswalks[(crosswalks.from_system == "EMODNET_BIOGENIC_2021") &
                       (crosswalks.to_system == "EUNIS_M_2019")]
     m = crosswalks[(crosswalks.from_system == "EUNIS_M_2019") & (crosswalks.to_system == "EUNIS_M_2022")]
     to22 = dict(zip(m.from_code, m.to_code))
     to19 = dict(zip(m.to_code, m.from_code))
-    name22 = dict(zip(habitats[habitats.system == "EUNIS_M_2022"].code,
-                      habitats[habitats.system == "EUNIS_M_2022"].name))
     d19, d22 = _descendants(habitats, "EUNIS_M_2019"), _descendants(habitats, "EUNIS_M_2022")
 
     cw_rows, per_code = [], {}
@@ -86,7 +82,7 @@ def biogenic_eunis2022(habitats: pd.DataFrame, crosswalks: pd.DataFrame, today: 
         cw_rows.append({"from_system": "EMODNET_BIOGENIC_2021", "from_code": r.from_code,
                         "to_system": "EUNIS_M_2022", "to_code": c22, "relationship": REL_APP2,
                         "source": "D3.06 Appendix 2 converted with EUNIS_M_2019 -> EUNIS_M_2022",
-                        "notes": f"{region_zone}; {why}" + ("; to review" if include == "review" else "")})
+                        "notes": f"{region_zone}; {why}"})
         e = per_code.setdefault(c22, {"types": [], "why": set(), "include": "yes", "region_zone": set()})
         e["types"].append(r.from_code)
         e["why"].add(why)
@@ -94,32 +90,21 @@ def biogenic_eunis2022(habitats: pd.DataFrame, crosswalks: pd.DataFrame, today: 
         if include == "review":
             e["include"] = "review"
 
-    rows = []
+    review: dict[tuple[str, str], str] = {}
     for c22, e in per_code.items():
-        why = sorted(e["why"])
+        reasons = [w for w in sorted(e["why"]) if e["include"] == "review" and "probable equivalent" in w]
         c19 = to19.get(c22)
         if c19 is not None:
             sub22 = d22.get(c22, set())
             sub19_as22 = {to22[x] for x in d19.get(c19, set()) if x in to22}
-            gained = sorted(x for x in sub22 - sub19_as22 if x in to19 or x in name22)
-            lost = sorted(sub19_as22 - sub22)
-            if gained or lost:
-                e["include"] = "review"
-                if gained:
-                    why.append("sub-tree changed in 2022, entered: " +
+            gained, lost = sorted(sub22 - sub19_as22), sorted(sub19_as22 - sub22)
+            if gained:
+                reasons.append("sub-tree changed in 2022, entered: " +
                                ", ".join(f"{x} ({'new in 2022' if x not in to19 else 'EUNIS 2019 ' + to19[x]})"
                                          for x in gained))
-                if lost:
-                    why.append("sub-tree changed in 2022, left: " +
+            if lost:
+                reasons.append("sub-tree changed in 2022, left: " +
                                ", ".join(f"{x} (EUNIS 2019 {to19.get(x, '?')})" for x in lost))
-        rows.append({
-            "composite": BIOGENIC, "deliverable": D310, "system": "EUNIS_M_2022", "code": c22,
-            "include": e["include"],
-            "rationale": (f"{name22.get(c22, '')}. Biogenic substrate types: {', '.join(sorted(set(e['types'])))} "
-                          f"({' | '.join(sorted(e['region_zone']))}). " + "; ".join(why)),
-            "decided_by": "proposal: D3.06 (Lillis et al. 2021) Appendix 2 converted to EUNIS 2022; pending WP3 review",
-            "decided_on": today,
-            "source": "D3.06 Appendix 2 (Tables 17-21); EUNIS_M_2019 -> EUNIS_M_2022 crosswalk",
-        })
-    comp = pd.DataFrame(rows, columns=COMPOSITES_COLUMNS).sort_values("code").reset_index(drop=True)
-    return comp, pd.DataFrame(cw_rows, columns=CROSSWALKS_COLUMNS).drop_duplicates()
+        if reasons:
+            review[("EUNIS_M_2022", c22)] = "; ".join(reasons)
+    return review, pd.DataFrame(cw_rows, columns=CROSSWALKS_COLUMNS).drop_duplicates()

@@ -17,8 +17,8 @@ from pathlib import Path
 
 import pandas as pd
 
-from . import composites, pdftext
-from .schema import COMPOSITES_COLUMNS, CROSSWALKS_COLUMNS, EXTRACTION_RULES_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
+from . import composites, lists, pdftext
+from .schema import CROSSWALKS_COLUMNS, EXTRACTION_RULES_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
 from .sources import annex_i, barcelona, bern, biogenic, carib, eo_maps, eunis_eea, goos_eov, iucn_get, ramsar, redlist, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
 
 EUNIS_M_2022_XLSX = (
@@ -253,24 +253,27 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
         print(f"skipped JNCC Marine Habitat Classification: {sources / jncc_mhc.FOLDER} not found")
 
     habitats_df = pd.concat(habitats, ignore_index=True)[HABITATS_COLUMNS]
-    comp: list[pd.DataFrame] = []
+    review: dict = {}
     so_far_cw = pd.concat(crosswalks, ignore_index=True) if crosswalks else pd.DataFrame(columns=CROSSWALKS_COLUMNS)
     if ((so_far_cw.from_system == "EMODNET_BIOGENIC_2021") & (so_far_cw.to_system == "EUNIS_M_2019")).any() and \
             ((so_far_cw.from_system == "EUNIS_M_2019") & (so_far_cw.to_system == "EUNIS_M_2022")).any():
-        bio_comp, bio_cw = composites.biogenic_eunis2022(habitats_df, so_far_cw, today)
-        comp.append(bio_comp)
+        review, bio_cw = composites.biogenic_eunis2022(habitats_df, so_far_cw)
         crosswalks.append(bio_cw)
     else:
-        print("skipped BIOGENIC_SUBSTRATE (D3.10) list: Appendix 2 or EUNIS 2019 -> 2022 crosswalk not loaded")
+        print("skipped EMODNET_BIOGENIC members in EUNIS 2022 (D3.10): Appendix 2 or EUNIS 2019 -> 2022 not loaded")
     crosswalks_df = (
         validate_crosswalks(pd.concat(crosswalks, ignore_index=True), habitats_df)[CROSSWALKS_COLUMNS]
         if crosswalks else pd.DataFrame(columns=CROSSWALKS_COLUMNS)
     )
+    list_meta = {s: src for s, n, v, a, sc, src in SYSTEMS if s in lists.LISTS}
+    habitats_df, crosswalks_df, lists_df, items_df, members_df = lists.split(
+        habitats_df, crosswalks_df, list_meta, today, review)
+    members_df = lists.validate_members(members_df, items_df, habitats_df)
     systems = pd.DataFrame(
         [
             {"system": s, "name": n, "version": v, "authority": a, "scope": sc, "source": src,
              "accessed": today if s in loaded else "", "notes": "" if s in loaded else "not loaded in this build"}
-            for s, n, v, a, sc, src in SYSTEMS
+            for s, n, v, a, sc, src in SYSTEMS if s not in lists.LISTS
         ],
         columns=SYSTEMS_COLUMNS,
     )
@@ -280,10 +283,14 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
     systems.to_csv(out / "systems.csv", index=False)
     rules_df = pd.concat(rules, ignore_index=True) if rules else pd.DataFrame(columns=EXTRACTION_RULES_COLUMNS)
     rules_df.to_csv(out / "extraction_rules.csv", index=False)
-    comp_df = pd.concat(comp, ignore_index=True) if comp else pd.DataFrame(columns=COMPOSITES_COLUMNS)
-    comp_df.to_csv(out / "composites.csv", index=False)
+    lists_df.to_csv(out / "lists.csv", index=False)
+    items_df.to_csv(out / "list_items.csv", index=False)
+    members_df.to_csv(out / "list_members.csv", index=False)
+    stale = out / "composites.csv"
+    if stale.exists():
+        stale.unlink()
     return {"habitats": habitats_df, "crosswalks": crosswalks_df, "systems": systems, "extraction_rules": rules_df,
-            "composites": comp_df}
+            "lists": lists_df, "list_items": items_df, "list_members": members_df}
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -298,6 +305,8 @@ def main(argv: list[str] | None = None) -> None:
     print(tables["habitats"]["system"].value_counts().to_string())
     if len(tables["crosswalks"]):
         print(tables["crosswalks"].groupby(["from_system", "to_system", "relationship"]).size().to_string())
+    if len(tables["list_members"]):
+        print(tables["list_members"].groupby(["list_id", "system", "link_type", "status"]).size().to_string())
 
 
 if __name__ == "__main__":

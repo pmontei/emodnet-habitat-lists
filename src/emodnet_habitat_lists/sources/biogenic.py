@@ -2,6 +2,9 @@
 
 System produced
 ---------------
+(Parsed as a system, then stored by ``lists.split`` as the list ``EMODNET_BIOGENIC``: the units below become
+``list_items`` and the crosswalks become ``list_members``.)
+
 ``EMODNET_BIOGENIC_2021``
     The four-level hierarchy of biogenic substrate types of Table 5 of the report (level 1
     "biogenic substrate"; level 2 e.g. "bivalve reefs"; level 3 e.g. "mussel beds"; level 4 e.g.
@@ -349,8 +352,7 @@ UK_LIST_QUERIES = [("UK_PMF", "Flame shell beds", "Limaria hians beds"),
 
 
 def extraction_rules() -> pd.DataFrame:
-    rows = [{"composite": "EMODNET_BIOGENIC_2021", "region": _RULE_REGION[t], "target_system": "EMODNET_BIOGENIC_2021",
-             "target_code": type_code(typ), "data_source": ds, "spatial_scope": scope, "query": q, "result": res,
+    rows = [{"list_id": "EMODNET_BIOGENIC", "region": _RULE_REGION[t], "item": type_code(typ), "data_source": ds, "spatial_scope": scope, "query": q, "result": res,
              "source": SRC + f", Table {t}", "notes": note} for t, typ, ds, scope, q, res, note in RULES]
     return pd.DataFrame(rows, columns=EXTRACTION_RULES_COLUMNS)
 

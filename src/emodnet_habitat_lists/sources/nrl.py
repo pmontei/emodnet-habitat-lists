@@ -2,6 +2,9 @@
 
 System produced
 ---------------
+(Parsed as a system, then stored by ``lists.split`` as the list ``NRL_2024_MARINE``: the units below become
+``list_items`` and the crosswalks become ``list_members``.)
+
 ``NRL_2024``
     The seven groups of marine habitat types of Annex II (level 1, codes ``G1`` ... ``G7``) and,
     within each group, the marine regions under which the habitat types are listed (level 2,

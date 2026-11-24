@@ -2,6 +2,9 @@
 
 System produced
 ---------------
+(Parsed as a system, then stored by ``lists.split`` as the list ``GOOS_EOV``: the units below become
+``list_items`` and the crosswalks become ``list_members``.)
+
 ``GOOS_EOV``
     The four habitat EOVs of the GOOS specification sheets (version August 2026), level 1, with their
     definition; their sub-variables ("key measurements that are used to estimate the EOV") as level 2,

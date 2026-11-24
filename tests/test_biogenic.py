@@ -46,7 +46,7 @@ def test_appendix2():
 
 def test_extraction_rules():
     r = biogenic.extraction_rules()
-    assert len(r) == 51 and r.target_code.notna().all()
+    assert len(r) == 51 and r.item.notna().all()
     assert set(r.region) == {biogenic.ATL, biogenic.MED, biogenic.BAL, biogenic.BLS}
     assert set(r.result) <= {"y", "n", "miscoded", "not applicable"}
 

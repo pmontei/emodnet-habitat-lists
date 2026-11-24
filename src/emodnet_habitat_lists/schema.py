@@ -38,23 +38,52 @@ CROSSWALKS_COLUMNS = [
     "notes",
 ]
 
-COMPOSITES_COLUMNS = [
-    "composite",       # e.g. EOV_SEAGRASS, VME, BIOGENIC_SUBSTRATE
-    "deliverable",     # e.g. D3.03
-    "system",
-    "code",
-    "include",         # yes / no / review
-    "rationale",
+LISTS_COLUMNS = [
+    "list_id",         # e.g. EMODNET_BIOGENIC, GOOS_EOV, NRL_2024_MARINE
+    "name",
+    "kind",            # policy | observing variable | product | functional
+    "version",
+    "authority",
+    "deliverable",     # WP3 deliverable(s) that use the list, e.g. D3.10
+    "scope",
+    "source",
+    "accessed",        # date the source was obtained (ISO 8601); blank if not loaded
+    "status",          # loaded | planned
+    "notes",
+]
+
+LIST_ITEMS_COLUMNS = [
+    "list_id",         # FK -> lists.list_id
+    "item",            # item id within the list (e.g. mussel-beds, G1-MED, coral-cover-and-composition)
+    "name",
+    "level",           # hierarchical level within the list
+    "parent_item",
+    "definition",
+    "attributes",      # e.g. regions; for EFH: species (AphiaID), life stage, function
+    "source",
+    "notes",
+]
+
+LIST_MEMBERS_COLUMNS = [
+    "list_id",         # FK -> lists.list_id
+    "item",            # FK -> list_items.item
+    "region",          # region where the link applies (blank = all)
+    "zone",            # biological zone where the link applies (blank = all)
+    "system",          # classification of the member habitat (FK -> systems.system)
+    "code",            # member habitat code (FK -> habitats.code)
+    "link_type",       # member | partial | supports function | excluded
+    "status",          # published | proposed | reviewed | rejected
+    "source_relationship",  # relationship as given by the source (e.g. 'maps to', '>', '<')
     "decided_by",
     "decided_on",
-    "source",          # report + page, meeting, or decision note
+    "source",
+    "notes",
 ]
 
 EXTRACTION_RULES_COLUMNS = [
-    "composite",          # e.g. EMODNET_BIOGENIC_2021
+    "list_id",            # FK -> lists.list_id, e.g. EMODNET_BIOGENIC
+    "item",               # list item obtained by the rule
     "region",
-    "target_system",      # system of the composite type
-    "target_code",        # composite type obtained
     "data_source",        # data product queried (name, version, classification system)
     "spatial_scope",      # e.g. 'within the UK EEZ', blank = whole region
     "query",              # query string as published
