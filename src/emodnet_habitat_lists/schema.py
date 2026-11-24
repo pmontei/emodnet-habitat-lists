@@ -49,3 +49,16 @@ COMPOSITES_COLUMNS = [
     "decided_on",
     "source",          # report + page, meeting, or decision note
 ]
+
+EXTRACTION_RULES_COLUMNS = [
+    "composite",          # e.g. EMODNET_BIOGENIC_2021
+    "region",
+    "target_system",      # system of the composite type
+    "target_code",        # composite type obtained
+    "data_source",        # data product queried (name, version, classification system)
+    "spatial_scope",      # e.g. 'within the UK EEZ', blank = whole region
+    "query",              # query string as published
+    "result",             # whether polygons were returned (as published)
+    "source",
+    "notes",
+]

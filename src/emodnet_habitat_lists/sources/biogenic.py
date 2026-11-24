@@ -33,7 +33,7 @@ from pathlib import Path
 import pandas as pd
 
 from .. import pdftext
-from ..schema import CROSSWALKS_COLUMNS, HABITATS_COLUMNS
+from ..schema import CROSSWALKS_COLUMNS, EXTRACTION_RULES_COLUMNS, HABITATS_COLUMNS
 from .msfd_bht import slug
 
 FOLDER = "11.Biogenic substrate"
@@ -268,3 +268,95 @@ def crosswalk_appendix2(sources: Path) -> pd.DataFrame:
                          "to_code": r["code"], "relationship": "maps to (with biological zone)",
                          "source": SRC + f", Appendix 2, Table {tab}", "notes": "; ".join(notes)})
     return pd.DataFrame(rows, columns=CROSSWALKS_COLUMNS)
+
+
+# ---------------------------------------------------------------------------------------------
+# Tables 6-9: most detailed biogenic substrate type, data source and query used to extract polygons
+# ---------------------------------------------------------------------------------------------
+EUNIS07 = "Individual habitat maps from surveys - EUNIS classification system (version 2007-11)"
+ANNEX = "Individual habitat maps from surveys - Habitats Directive Annex I"
+HUB = "Individual habitat maps from surveys - Other classification systems (i.e. HELCOM HUB)"
+OSPAR20 = "OSPAR habitats - official 2020 public reference dataset"
+GEMS = "Geodatabase of Marine features adjacent to Scotland (GeMS) V9 (i25) - Scottish Priority Marine Features (PMFs)"
+NE_FOCI = "Natural England Marine Evidence Base - MCZ Habitat Features of Conservation Importance June 2021"
+WALES = "Environment (Wales) Act Section 7 and OSPAR: Marine Habitats July 2020"
+EOV_SG = "Essential Ocean Variables in Europe - seagrass cover (polygons, v2019)"
+GEOLOGY = "EMODnet Geology seabed substrate (draft) July 2021"
+NONE = "none"
+
+# (table, type, data source, spatial scope, query, result, note); queries as printed (straight quotes)
+RULES = [
+    ("6", "biogenic substrate", EUNIS07, "", "HAB_TYPE = 'A5.6' (Sublittoral biogenic reefs) OR HAB_TYPE = 'A6.6' (Deep sea bioherms)", "y", ""),
+    ("6", "Ostrea edulis beds", OSPAR20, "", "HabType = 'Ostrea edulis beds'", "y", ""),
+    ("6", "Hiatella arctica beds", EUNIS07, "", "HAB_TYPE = 'A5.626' (Hiatella arctica beds on silty clay with small pebbles and shells)", "n", ""),
+    ("6", "Limaria hians beds", GEMS, "within the UK EEZ", "PMF = 'Flame shell beds'", "y", ""),
+    ("6", "Limaria hians beds", EUNIS07, "outside the UK EEZ", "HAB_TYPE = 'A5.434' (Limaria hians beds in tide-swept sublittoral muddy mixed sediment)", "n", ""),
+    ("6", "mussel beds", EUNIS07, "", "HAB_TYPE = 'A5.62' (Sublittoral mussel beds on sediment)", "y", ""),
+    ("6", "Modiolus modiolus beds", OSPAR20, "", "HabType = 'Modiolous modiolus Horse mussel beds'", "y", "'Modiolous' as printed"),
+    ("6", "Mytilus edulis beds", GEMS, "within the Scottish part of the UK EEZ", "PMF = 'Blue mussel beds'", "y", ""),
+    ("6", "Mytilus edulis beds", NE_FOCI, "within the English part of the UK EEZ", "FOCI_name = 'Blue Mussel beds' OR FOCI_name = 'Blue Mussel Beds' OR FOCI_name = 'Blue Mussel (Mytilus edulis) beds'", "y", ""),
+    ("6", "Mytilus edulis beds", WALES, "within the Welsh part of the UK EEZ", "\"layer_id\" = 'CCW_Blue_Mussel_Beds_01' AND \"zone\" <> 'Intertidal'", "n", ""),
+    ("6", "Mytilus edulis beds", EUNIS07, "outside the Scottish, English and Welsh parts of the UK EEZ", "HAB_TYPE = 'A5.625' (Mytilus edulis beds on sublittoral sediment)", "y", ""),
+    ("6", "worm reefs", EUNIS07, "", "HAB_TYPE = 'A5.61' (Sublittoral polychaete worm reefs on sediment)", "y", ""),
+    ("6", "Sabellaria alveolata reefs", NE_FOCI, "within the English part of the UK EEZ", "\"FOCI_name\" = 'Honeycomb worm (Sabellaria alveolata) reefs' OR \"FOCI_name\" = 'Sabellaria alveolata reefs'", "y", "'=' missing after the first FOCI_name in the report"),
+    ("6", "Sabellaria alveolata reefs", WALES, "within the Welsh part of the UK EEZ", "\"Habitat_na\" = 'Honeycomb worm (Sabellaria alveolata) reefs' AND \"zone\" <> 'Intertidal'", "n", ""),
+    ("6", "Sabellaria alveolata reefs", EUNIS07, "outside the English and Welsh parts of the UK EEZ", "HAB_TYPE = 'A5.612' (Sabellaria alveolata on variable salinity sublittoral mixed sediment)", "n", ""),
+    ("6", "Sabellaria spinulosa reefs", OSPAR20, "", "HabType = 'Sabellaria spinulosa reefs'", "y", ""),
+    ("6", "Serpula vermicularis reefs", GEMS, "within the UK EEZ", "PMF = 'Serpulid aggregations'", "y", ""),
+    ("6", "Serpula vermicularis reefs", EUNIS07, "outside the UK EEZ", "HAB_TYPE = 'A5.613' (Serpula vermicularis reefs on very sheltered circalittoral muddy sand)", "n", ""),
+    ("6", "cold water coral reefs", EUNIS07, "", "HAB_TYPE = 'A5.63' (Circalittoral coral reefs)", "n", ""),
+    ("6", "Desmophyllum pertusum (Lophelia pertusa) reefs", OSPAR20, "", "HabType = 'Lophelia pertusa reefs'", "y", ""),
+    ("6", "Madrepora oculata reefs", NONE, "", "", "n", "no known sources of polygon data: EUNIS 2007-11 has no Madrepora oculata reef biotopes"),
+    ("6", "Solenosmilia variabilis reefs", NONE, "", "", "n", "no known sources of polygon data: EUNIS 2007-11 has no Solenosmilia variabilis reef biotopes (EUNIS 2019 does)"),
+    ("7", "biogenic substrate", EUNIS07, "", "HAB_TYPE = 'A5.6' (Sublittoral biogenic reefs) OR HAB_TYPE = 'A6.6' (Deep sea bioherms)", "n", ""),
+    ("7", "Posidonia oceanica meadows", ANNEX, "", "Annex I feature = '1120'", "y", ""),
+    ("7", "Posidonia oceanica meadows", EUNIS07, "", "HAB_TYPE = 'A5.535'", "y", ""),
+    ("7", "Posidonia oceanica meadows", EOV_SG, "", "eunis_code = 'A5.535'", "y", ""),
+    ("7", "Posidonia oceanica meadows", GEOLOGY, "", "Surface_feature = 'Posidonia meadow' OR Surface_feature = 'Posidonia meadow ; Bio-lithoclastic sediment (50%<CaCO3<75%)' OR (Surface_feature = 'Seagrass meadow' AND 'comments' contains 'posidonia oceanica')", "y", ""),
+    ("7", "live Posidonia oceanica meadows", EOV_SG, "", "\"eunis_code\" = 'A5.5351' OR \"eunis_code\" = 'A5.5354'", "n", ""),
+    ("7", "live Posidonia oceanica meadows", EUNIS07, "", "HAB_TYPE = 'A5.5351' OR HAB_TYPE = 'A5.5354'", "n", ""),
+    ("7", "dead mattes of Posidonia oceanica", EUNIS07, "", "HAB_TYPE = 'A5.5353'", "y", ""),
+    ("7", "dead mattes of Posidonia oceanica", EOV_SG, "", "\"eunis_code\" = 'A5.5353'", "y", ""),
+    ("7", "dead mattes of Posidonia oceanica", GEOLOGY, "", "Surface_feature = 'Seagrass matte (degraded)'", "y", ""),
+    ("7", 'Posidonia oceanica "Barrier-reef"', EUNIS07, "", "HAB_TYPE = 'A5.5352'", "n", ""),
+    ("7", 'Posidonia oceanica "Barrier-reef"', EOV_SG, "", "Habitat subtype = 'Posidonia oceanica \"Barrier-reef\"'", "n", ""),
+    ("7", "Sabellaria alveolata reefs", EUNIS07, "", "HAB_TYPE = 'A5.612' (Sabellaria alveolata on variable salinity sublittoral mixed sediment)", "miscoded", "a polygon was returned but on further inspection it appears to have been miscoded"),
+    ("7", "coralligenous platforms", EUNIS07, "", "HAB_TYPE = 'A4.26D'", "y", ""),
+    ("7", "Madrepora oculata reefs", NONE, "", "", "n", "no known sources of polygon data: EUNIS 2007-11 has no Madrepora oculata reef biotopes"),
+    ("7", "Facies with Vermetus of the infralittoral algae biocenosis", NONE, "", "", "not applicable", "very limited extension in the Mediterranean: can only be represented by points or lines"),
+    ("7", "Facies with Ficopomatus enigmaticus of the euryhaline and/or eurythermal lagoon biocenosis", EUNIS07, "", "HAB_TYPE = 'A5.529' (Facies with Ficopomatus enigmaticus)", "y", ""),
+    ("8", "biogenic substrate", ANNEX, "", "Annex I = '1170' (Reefs) AND subtype = 'Biogenic concretions'", "y", ""),
+    ("8", "bivalve reefs", HUB, "", "ORIG_HAB is one of 'A[A or B].[A, B, E, H, I, J or M]1E' (Baltic [photic or aphotic] [various substrates] dominated by bivalves), e.g. AA.A1E, AB.E1E, etc.", "n", ""),
+    ("8", "mussel beds", HUB, "", "ORIG_HAB is one of 'A[A or B].[A, B, E, H, I, J or M]1E1' (Baltic [photic or aphotic] [various substrates] dominated by Mytilidae), e.g. AA.A1E1, AB.E1E1, etc.", "n", ""),
+    ("8", "dominated by zebra mussel", HUB, "", "ORIG_HAB = 'AA.A1E2' OR ORIG_HAB = 'AA.H1E2' OR ORIG_HAB = 'AA.M1E2'", "n", ""),
+    ("8", "dominated by valve snails", HUB, "", "ORIG_HAB = 'AA.H1E3' (Baltic photic muddy sediment dominated by valve snails (Valvata spp.))", "n", ""),
+    ("8", "shell gravel", HUB, "", "ORIG_HAB contains 'AA.E*' (Baltic photic shell gravel), except AA.E1E and AA.E1E1 OR ORIG_HAB contains 'AB.E*' (Baltic aphotic shell gravel), AB.E1E and AB.E1E1", "n", ""),
+    ("8", "worm reefs", HUB, "", "ORIG_HAB = 'AA.H1K' OR ORIG_HAB = 'AB.H1K'", "n", ""),
+    ("8", "peat bottoms", NONE, "", "", "n", "no known sources of polygons for this habitat"),
+    ("9", "biogenic substrate", EUNIS07, "", "HAB_TYPE = 'A5.6' (Sublittoral biogenic reefs) OR HAB_TYPE = 'A6.6' (Deep sea bioherms)", "n", ""),
+    ("9", "Ostrea edulis beds", EUNIS07, "", "HAB_TYPE = 'A5.64' (Pontic Ostrea edulis biogenic reefs on mobile seabottom)", "n", ""),
+    ("9", "mussel beds", EUNIS07, "", "HAB_TYPE = 'A5.62' (Sublittoral mussel beds on sediment)", "n", ""),
+    ("9", "worm reefs", EUNIS07, "", "HAB_TYPE = 'A5.61' (Sublittoral polychaete worm reefs on sediment)", "n", ""),
+]
+_RULE_REGION = {"6": ATL, "7": MED, "8": BAL, "9": BLS}
+# UK lists queried by name: crosswalks to the systems used by the JNCC correlation tables
+UK_LIST_QUERIES = [("UK_PMF", "Flame shell beds", "Limaria hians beds"),
+                   ("UK_PMF", "Blue mussel beds", "Mytilus edulis beds"),
+                   ("UK_PMF", "Serpulid aggregations", "Serpula vermicularis reefs"),
+                   ("UK_MCZ_FOCI", "Blue Mussel beds", "Mytilus edulis beds"),
+                   ("UK_MCZ_FOCI", "Honeycomb worm (Sabellaria alveolata) reefs", "Sabellaria alveolata reefs"),
+                   ("UK_MCZ_FOCI", "Sabellaria alveolata reefs", "Sabellaria alveolata reefs")]
+
+
+def extraction_rules() -> pd.DataFrame:
+    rows = [{"composite": "EMODNET_BIOGENIC_2021", "region": _RULE_REGION[t], "target_system": "EMODNET_BIOGENIC_2021",
+             "target_code": type_code(typ), "data_source": ds, "spatial_scope": scope, "query": q, "result": res,
+             "source": SRC + f", Table {t}", "notes": note} for t, typ, ds, scope, q, res, note in RULES]
+    return pd.DataFrame(rows, columns=EXTRACTION_RULES_COLUMNS)
+
+
+def crosswalk_uk_lists() -> pd.DataFrame:
+    rows = [{"from_system": sys_, "from_code": slug(name), "to_system": "EMODNET_BIOGENIC_2021", "to_code": type_code(t),
+             "relationship": "maps to", "source": SRC + ", Table 6 (query strings)",
+             "notes": f"region: {ATL}; name in query: {name}"} for sys_, name, t in UK_LIST_QUERIES]
+    return pd.DataFrame(rows, columns=CROSSWALKS_COLUMNS).drop_duplicates(["from_system", "from_code", "to_code"])

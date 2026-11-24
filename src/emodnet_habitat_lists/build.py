@@ -18,8 +18,8 @@ from pathlib import Path
 import pandas as pd
 
 from . import pdftext
-from .schema import CROSSWALKS_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
-from .sources import annex_i, barcelona, biogenic, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
+from .schema import CROSSWALKS_COLUMNS, EXTRACTION_RULES_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
+from .sources import annex_i, barcelona, biogenic, carib, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
 
 EUNIS_M_2022_XLSX = (
     "1.EUNIS habitat classification/3_eea_t_eunis-hab-m_p_2004-2019_v01_r00/"
@@ -72,6 +72,11 @@ SYSTEMS = [
      "not yet loaded; codes appear in crosswalks only"),
     ("EMODNET_BIOGENIC_2021", "EMODnet Seabed Habitats biogenic substrate types (composite data product D3.05/D3.06)",
      "2021", "EMODnet Seabed Habitats", "European seas", biogenic.SRC),
+    ("CARIB_MARTINIQUE_2022", "Typologie des habitats benthiques de la Martinique (Andres et al.)", "2022",
+     "PatriNat (OFB-CNRS-MNHN)", "Martinique (used by EUSeaMap for the Caribbean)", carib.SRC),
+    ("FR_APHN_ANTILLES", "Habitats eligible for French prefectoral habitat protection orders (APHN), Antilles "
+     "(typology of Hoff 1997)", "2019", "French Ministry of Ecology", "Guadeloupe, Martinique, Saint-Martin",
+     "not loaded; codes appear in crosswalks only (" + carib.SRC_APHN + ")"),
     ("NRL_2024", "Nature Restoration Regulation (EU) 2024/1991, Annex II: groups of marine habitat types", "2024",
      "European Parliament and Council", "EU marine waters", nrl.SRC),
     ("EMODNET_OSPAR2025", "EMODnet Seabed Habitats OSPAR habitats dataset: habtype / habsubtype values", "2025",
@@ -106,6 +111,7 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
     today = date.today().isoformat()
     habitats = [eunis_habitats.load(eunis_habitats.fetch_rda(raw / "eunis_habitats.rda"))]
     crosswalks: list[pd.DataFrame] = []
+    rules: list[pd.DataFrame] = []
     loaded = {"EUNIS_2012", "EUNIS_M_2019", "EUNIS_M_2022", "EUNIS_T_2021"}
 
     bc_dir = sources / barcelona.FOLDER
@@ -163,10 +169,19 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
 
     if (sources / biogenic.FOLDER).is_dir() and pdftext.available():
         habitats.append(biogenic.habitats(sources))
-        crosswalks += [biogenic.crosswalk_appendix1(sources), biogenic.crosswalk_appendix2(sources)]
+        crosswalks += [biogenic.crosswalk_appendix1(sources), biogenic.crosswalk_appendix2(sources),
+                       biogenic.crosswalk_uk_lists()]
+        rules.append(biogenic.extraction_rules())
         loaded.add("EMODNET_BIOGENIC_2021")
     else:
         print(f"skipped biogenic substrate: {sources / biogenic.FOLDER} not found or pdftotext not installed")
+    if (sources / carib.FOLDER).is_dir() and list((sources / carib.FOLDER).glob(carib.TYPOLOGY_GLOB)) \
+            and pdftext.available():
+        habitats.append(carib.habitats(sources))
+        crosswalks.append(carib.crosswalk_aphn(sources))
+        loaded.add("CARIB_MARTINIQUE_2022")
+    else:
+        print(f"skipped Caribbean (Martinique): {sources / carib.FOLDER} not found or pdftotext not installed")
     if (sources / nrl.FOLDER).is_dir() and pdftext.available():
         habitats.append(nrl.habitats(sources))
         crosswalks.append(nrl.crosswalks(sources))
@@ -199,7 +214,9 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
     habitats_df.to_csv(out / "habitats.csv", index=False)
     crosswalks_df.to_csv(out / "crosswalks.csv", index=False)
     systems.to_csv(out / "systems.csv", index=False)
-    return {"habitats": habitats_df, "crosswalks": crosswalks_df, "systems": systems}
+    rules_df = pd.concat(rules, ignore_index=True) if rules else pd.DataFrame(columns=EXTRACTION_RULES_COLUMNS)
+    rules_df.to_csv(out / "extraction_rules.csv", index=False)
+    return {"habitats": habitats_df, "crosswalks": crosswalks_df, "systems": systems, "extraction_rules": rules_df}
 
 
 def main(argv: list[str] | None = None) -> None:

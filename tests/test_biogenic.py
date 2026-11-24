@@ -42,3 +42,20 @@ def test_appendix2():
     corr = cw[cw.notes.str.contains("report correction")]
     assert set(corr.to_code) == {"MB2211", "MB2212", "MB2224", "MC223", "MC2237", "MC2238", "MD22"}
     assert not cw.notes.str.contains("name in report: ;").any()
+
+
+def test_extraction_rules():
+    r = biogenic.extraction_rules()
+    assert len(r) == 51 and r.target_code.notna().all()
+    assert set(r.region) == {biogenic.ATL, biogenic.MED, biogenic.BAL, biogenic.BLS}
+    assert set(r.result) <= {"y", "n", "miscoded", "not applicable"}
+
+
+@needs
+def test_extraction_rules_in_report():
+    text = biogenic._norm(biogenic._text(SOURCES))
+    import re
+    values = {v for q in biogenic.extraction_rules()["query"] for v in re.findall(r"'([^']+)'", q)}
+    # layout wraps cells, so compare word by word within each quoted value
+    missing = [v for v in values if not all(w in text for w in biogenic._norm(v).split())]
+    assert missing == []

@@ -252,6 +252,12 @@ Notes:
   `maps to (with biological zone)`; zone, region, EUNIS 2007-11 code and the report's "unofficial
   corrections" in `notes`. The corrections add codes that are not in EUNIS 2019 (flagged "not found"):
   `MB2224`, `MC223`, `MC2237`, `MC2238`.
+* Tables 6-9 (data source and query used to extract polygons for each type, by region) are in
+  `extraction_rules.csv` (51 rules; result `y`/`n` as published, `miscoded`, `not applicable`).
+  The UK list values used in the queries (Scottish PMFs, MCZ FOCI) also give `UK_PMF` /
+  `UK_MCZ_FOCI -> EMODNET_BIOGENIC_2021` crosswalks. Queries are transcribed and checked word by
+  word against the PDF by the tests. As printed: 'Modiolous modiolus' (OSPAR 2020 dataset value) and
+  a missing '=' in one FOCI query (noted).
 * **EUNIS 2022 vs the report's corrections:** EUNIS 2022 adopted `MC223` "Bivalve reefs in the
   Atlantic circalittoral zone" and the name fixes of `MB2211` and `MD22`, but codes the circalittoral
   *Mytilus edulis* and *Hiatella arctica* beds as `MC2235` and `MC2236` (the report proposed `MC2237`
@@ -260,6 +266,24 @@ Notes:
 
 ## 12. Caribbean
 
-Folder: `12.Caribbean/` (sources being collected). EUSeaMap Caribbean uses the benthic broad habitat
-types of Andres et al. (2022), *Typologie des habitats benthiques de la Martinique* (PatriNat), also
-published as a HabRef table (INPN, https://inpn.mnhn.fr/habitat/cd_hab/34410).
+Folder: `12.Caribbean/`
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `01_2022_*Andres-et-al*.pdf` | Andres, S., Ferry, R., Gaudillat, V. & Dirberg, G., 2022. Typologie des habitats benthiques de la Martinique. PatriNat (OFB-CNRS-MNHN), 207 p. | `CARIB_MARTINIQUE_2022` (section 2, hierarchical tree); `-> FR_APHN_ANTILLES` (Annex 2) | https://mnhn.hal.science/mnhn-04136364v1 |
+| `02_2023_*HabRef*.pdf` | Gaudillat, V. et al., 2023. HabRef v7.0, guide méthodologique. PatriNat. | documentation | https://mnhn.hal.science/mnhn-04077190 |
+
+Notes:
+
+* EUSeaMap Caribbean uses this typology ("the most comprehensive EUNIS-like classification of the
+  Caribbean seabed habitats", EUSeaMap metadata). Names are kept in French.
+* Levels: 1 zone (`A` supralittoral … `F` abyssal), 2 substrate (`C2`), 3 geomorphology (`C2-5`),
+  4 assemblage (`C2-51`), 5 habitat (`C2-51.1`): 6 + 14 + 39 + 68 + 118 units. Bathyal and abyssal
+  have only the substrate level.
+* Inconsistencies in the publication: geomorphology `C2-11b` printed with a 'b' (C2-11 is also an
+  assemblage code); `C4-42.3` listed under `C4-41` in the tree; Annex 2 prints `C4.33.1` for `C4-33.1`
+  and `D1-31.1`/`D1-31.2` for the tree's `D1-11.1`/`D1-11.2` (matched by name); `C4-23.2` is missing
+  from Annex 2; `C4-34.8` has no APHN equivalent (`X`).
+* No crosswalk to EUNIS is published in the typology; the EUSeaMap Caribbean translation to EUNIS 2022
+  level 2 / MSFD is to be documented from the EUSeaMap technical report. The HabRef table
+  (https://inpn.mnhn.fr/habitat/cd_hab/34410) can replace the PDF parsing when available.

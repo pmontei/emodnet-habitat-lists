@@ -36,8 +36,8 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | Marine Habitat Classification for Britain and Ireland v22.04 (JNCC) | ✅ (694 units) | ✅ JNCC correlation tables 2026: earlier versions, EUNIS 2022/2007, Annex I, OSPAR, MSFD, VME, Emerald, GOOS EOV, IUCN GET, UK lists |
 | Nature Restoration Regulation (EU) 2024/1991, Annex II | ✅ (7 groups × regions) | ✅ to EUNIS marine 2022 (231 types) and EUNIS 2022 → Annex I |
 | Black Sea | via EUNIS marine 2022 (Black Sea units) | — |
-| EMODnet biogenic substrate types (D3.06, 2021) | ✅ (29 types, 4 levels) | ✅ from EUNIS 2007-11, Annex I, HELCOM HUB, OSPAR; to EUNIS 2019 by biological zone and region |
-| Caribbean (Andres et al. 2022, Martinique) | planned | planned |
+| EMODnet biogenic substrate types (D3.06, 2021) | ✅ (29 types, 4 levels) | ✅ from EUNIS 2007-11, Annex I, HELCOM HUB, OSPAR, UK lists; to EUNIS 2019 by biological zone and region; extraction rules (data source + query) in `extraction_rules.csv` |
+| Caribbean: Typologie des habitats benthiques de la Martinique (Andres et al. 2022) | ✅ (245 units, 5 levels) | ✅ to French Antilles APHN habitats; EUNIS via EUSeaMap planned |
 
 ## Usage
 

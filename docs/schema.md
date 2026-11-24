@@ -48,3 +48,20 @@ All tables are CSV, UTF-8, long format. Column lists are defined in
 | rationale | Why. |
 | decided_by, decided_on | Who and when. |
 | source | Report + page, meeting, or decision note. |
+
+## extraction_rules.csv
+
+Rules used to build composite products from habitat maps: which data source and query give each
+composite type, by region, as published in the product reports.
+
+| column | description |
+|---|---|
+| composite | composite product (system of the types), e.g. `EMODNET_BIOGENIC_2021` |
+| region | region where the rule applies |
+| target_system / target_code | composite type obtained |
+| data_source | data product queried (name, version, classification system) |
+| spatial_scope | restriction within the region (e.g. "within the UK EEZ"); blank = whole region |
+| query | query string as published |
+| result | whether polygons were returned (as published) |
+| source | report and table |
+| notes | |
