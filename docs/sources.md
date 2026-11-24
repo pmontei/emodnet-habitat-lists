@@ -287,3 +287,26 @@ Notes:
 * No crosswalk to EUNIS is published in the typology; the EUSeaMap Caribbean translation to EUNIS 2022
   level 2 / MSFD is to be documented from the EUSeaMap technical report. The HabRef table
   (https://inpn.mnhn.fr/habitat/cd_hab/34410) can replace the PDF parsing when available.
+
+## 13. Bern Convention, Resolution No. 4 (Emerald Network)
+
+Folder: `13.Bern Convention/`
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `01_2019_*Resolution-4*.pdf` | Resolution No. 4 (1996), Revised Annex I using the EUNIS habitat classification (adopted 6 December 2019). | `EMERALD`; `EMERALD -> EUNIS_2012` | https://rm.coe.int/16807469e7 |
+| `02_2019_*Interpretation-manual*.pdf` | Interpretation manual of the habitats listed in Resolution No. 4 (1996), 4th edition, T-PVS/PA (2019) 18. | `description`; `EMERALD -> ANNEX_I` | https://www.coe.int/en/web/bern-convention/documents1 |
+| `03_2019_*Addition-marine-habitats*.pdf` | Evans, D., 2019. Addition of marine habitats to Resolution No. 4 (1996), T-PVS/PA (2019) 6. | background | https://rm.coe.int/addition-of-marine-habitats-to-resolution-no-4-1996-/168097199c |
+
+Notes:
+
+* 213 habitat types (17 marine, `A…`), coded with EUNIS 2012 codes and names, plus 9 group headings
+  (level 1) and the `X` habitat complexes. The marine list is coarse: `A3`, `A4`, `A5` are whole
+  EUNIS level-2 classes (A5 defined as the near-shore sublittoral down to 200 m), and `A6.1` and
+  `A6.61` were added in 2019 so that all of Annex I 1170 Reefs is covered (deep-sea reefs of UK
+  offshore SACs). The same codes are used by the JNCC correlation tables ("Emerald Habitat").
+* `EMERALD -> ANNEX_I` follows the manual's wording, which the manual calls indicative: "Same as" `=`,
+  "Included in"/"Part of" `<`, "Includes" `>`, "Can occur as part of the following" `occurs within`,
+  otherwise `unspecified`. Only codes that exist in `ANNEX_I` are kept.
+* `E1.13` and `X35` (Inland sand dunes) are not in EUNIS 2012 as loaded from eunis.habitats (flagged).
+  `F2.2` has no description extracted from the manual.
