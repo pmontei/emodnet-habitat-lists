@@ -333,3 +333,21 @@ Notes:
   caves), assigned by sea, working code and name; the Annex A code is kept in `notes`.
 * The EEA crosswalk also cites `RLA2.5a`–`RLA2.5d` (coastal salt marshes), which belong to Part 2
   (not loaded; flagged "not found").
+
+## 15. Ramsar Convention, wetland types
+
+Folder: `15.Ramsar/`
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `01_…` (to obtain) | Resolution XI.8 Annex 2 (Rev. COP14), Appendix B: Ramsar Classification System for Wetland Type. | `RAMSAR` (planned) | https://www.ramsar.org/sites/default/files/documents/library/cop11-res08-e-anx2_revcop14.pdf |
+| `02_2024_*SC63-Doc19*.pdf` | Ramsar SC63 Doc. 19 Annex 1: Ramsar wetland classification system (STRP advice). | context | https://www.ramsar.org/sites/default/files/2024-11/SC63%20Doc.19%20Annex%201%20Ramsar%20wetland%20classification%20system.pdf |
+| `03_2024_*Crosswalk-Ramsar-IUCN-GET*.pdf` | DHI et al., 2024. Classification cross-walk V0.2, Ramsar → IUCN GET and SDG 6.6.1 (EO4WI, ESA). | `RAMSAR -> IUCN_GET` | — |
+
+Notes:
+
+* 42 wetland types: 12 marine/coastal (A–K, Zk(a)), 20 inland, 10 human-made (1–9, Zk(c)).
+  Code lists are in `ramsar.py`; names and definitions will come from Appendix B.
+* `RAMSAR -> IUCN_GET` (75 rows, relationship `indicative`): each EFG printed against a Ramsar type in
+  the EO4WI draft. A (shallow marine waters < 6 m), B (subtidal aquatic beds), C (coral reefs),
+  Zk(a) and Zk(c) have no EFG there.

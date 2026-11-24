@@ -19,7 +19,7 @@ import pandas as pd
 
 from . import pdftext
 from .schema import CROSSWALKS_COLUMNS, EXTRACTION_RULES_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
-from .sources import annex_i, barcelona, bern, biogenic, carib, redlist, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
+from .sources import annex_i, barcelona, bern, biogenic, carib, ramsar, redlist, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
 
 EUNIS_M_2022_XLSX = (
     "1.EUNIS habitat classification/3_eea_t_eunis-hab-m_p_2004-2019_v01_r00/"
@@ -64,6 +64,9 @@ SYSTEMS = [
      "not loaded; names (slugs) appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
     ("UK_MCZ_BSH", "Marine Conservation Zone Broad-Scale Habitats", "", "Defra / JNCC", "England, Wales, UK offshore",
      "not loaded; names (slugs) appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
+    ("RAMSAR", "Ramsar Classification System for Wetland Type", "1990 (amended 1996, 1999)", "Ramsar Convention",
+     "global wetlands", "not yet loaded (Appendix B of Resolution XI.8 Annex 2 to obtain); codes appear in crosswalks "
+     "only (" + ramsar.SRC_DHI + ")"),
     ("EU_REDLIST_2016", "European Red List of Habitats, marine habitats (EU28 / EU28+ assessments)", "2016",
      "European Commission", "EU28+ seas (Baltic, North-East Atlantic, Mediterranean, Black Sea)", redlist.SRC),
     ("EMERALD", "Bern Convention Resolution No. 4 (1996) habitats (Emerald Network), revised Annex I using EUNIS",
@@ -177,6 +180,9 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
         loaded.add("EMODNET_BIOGENIC_2021")
     else:
         print(f"skipped biogenic substrate: {sources / biogenic.FOLDER} not found or pdftotext not installed")
+    if (sources / ramsar.FOLDER).is_dir() and list((sources / ramsar.FOLDER).glob(ramsar.CROSSWALK_GLOB)) \
+            and pdftext.available():
+        crosswalks.append(ramsar.crosswalk_get(sources))
     if (sources / redlist.FOLDER).is_dir() and list((sources / redlist.FOLDER).glob(redlist.REPORT_GLOB)) \
             and pdftext.available():
         eunis22 = sources / EUNIS_M_2022_XLSX
