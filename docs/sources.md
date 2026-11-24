@@ -26,8 +26,30 @@ Folder: `1.EUNIS habitat classification/`
   (`ME2`); row `MA223T` with the 2012 code (`A2.531J`) in the relationship column and the 2012 name in
   the code column (relationship `unspecified`); rows with one relationship for several 2012 codes
   (applied to all; `MA253` is "=" to both `A2.54` and `A2.55`).
-* Not loaded: EUNIS marine 2019 ↔ 2022 (EEA change list) and EUNIS terrestrial 2021 ↔ 2012 (EEA
-  crosswalks by terrestrial group); the files are not in the folder.
+* `EUNIS_M_2019 -> EUNIS_2012` (2 349 links, 1 934 units) and `EUNIS_T_2021 -> EUNIS_2012` (3 887 links,
+  3 793 units): same columns of the EEA files "EUNIS marine habitat classification 2019 including
+  crosswalks" and "EUNIS terrestrial habitat classification 2021_1 including crosswalks" (sheets Coastal,
+  Grassland, Heathland, Forest, Sparsely vegetated, Wetlands). Lists may be separated by `;`, `,` or line
+  breaks (e.g. `U11`). The terrestrial "Man-made" sheet (`V` codes, columns "Code 2018") is skipped: the
+  `{eunis.habitats}` table has no `V` codes (its 89 empty "man-made" rows; to report upstream). Three
+  2012 codes cited by the terrestrial file are not in EUNIS 2012 (`E1.13`, `E5.415`, `E5.424`).
+* `EUNIS_M_2019 -> EUNIS_M_2022` (1 939 links, all `=`): the EEA publishes no table. The "Read me" sheet
+  of the 2022 file ("Updated version March 2022") lists the changes: 3 new units (`MA223T`, `MB2223`,
+  `MC128`), about 30 recoded Atlantic units, 2 renamed units (`MA432`, `MD33`), 7 units moved from the
+  Atlantic to the Arctic. The crosswalk is derived by comparing the two files:
+  1. units are matched by name (letters only, case-insensitive): 1 888 keep code and name, 30 were recoded;
+  2. a 2022 unit with no name match keeps its 2019 code if that 2019 unit was not matched to another
+     code (21 units with edited names: typos, plurals, `MB2211`/`MB2212` "littoral" → "infralittoral",
+     `MA432` "coarse" → "mixed sediment" with the same description);
+  3. the 3 remaining 2022 units are new and have no 2019 equivalent.
+  **Several codes were re-used with another meaning** (e.g. `MC1222`: *Modiolus modiolus* beds in 2019,
+  *Caryophyllia smithii*, sponges and crustose communities in 2022; `MC128`: Bivalve reefs in 2019,
+  *Sabellaria* on Atlantic circalittoral rock in 2022), so 2019 and 2022 codes must not be matched by
+  code alone. `notes` record recoded, re-used, renamed units and changes of regional sea.
+* Files: the 2022 file is in `1.EUNIS habitat classification/`; the 2019 and terrestrial files (and a
+  copy of the 2022 file, same content) are fetched by the build from `data-raw/` of
+  `{eunis.habitats}` (CC0), https://github.com/ramiromagno/eunis.habitats/tree/main/data-raw, and
+  cached in `data/raw/eunis_eea/`. EEA source: https://www.eea.europa.eu/en/datahub/datahubitem-view/638330ea-90e6-4e41-81ea-e70f25ae7117
 
 ## 2. Barcelona Convention (UNEP/MAP – SPA/RAC)
 

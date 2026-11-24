@@ -127,6 +127,16 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
         crosswalks.append(eunis_eea.crosswalk_m2022_2012(sources / EUNIS_M_2022_XLSX))
     else:
         print(f"skipped EUNIS_M_2022 -> EUNIS_2012: {sources / EUNIS_M_2022_XLSX} not found")
+    try:
+        eea = {s: eunis_eea.fetch_eea_file(s, raw / "eunis_eea") for s in ("EUNIS_M_2019", "EUNIS_M_2022", "EUNIS_T_2021")}
+    except OSError as e:
+        eea = {}
+        print(f"skipped EUNIS_M_2019 / EUNIS_T_2021 crosswalks: EEA files not available ({e})")
+    if eea:
+        crosswalks.append(eunis_eea.crosswalk_to_2012(eea["EUNIS_M_2019"], "EUNIS_M_2019"))
+        crosswalks.append(eunis_eea.crosswalk_to_2012(eea["EUNIS_T_2021"], "EUNIS_T_2021"))
+        m19_22, _new = eunis_eea.crosswalk_m2019_m2022(eea["EUNIS_M_2019"], eea["EUNIS_M_2022"])
+        crosswalks.append(m19_22)
     bc_dir = sources / barcelona.FOLDER
     if bc_dir.is_dir() and pdftext.available():
         habitats.append(barcelona.habitats(sources))
