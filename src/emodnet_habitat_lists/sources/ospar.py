@@ -129,9 +129,22 @@ def crosswalk_definitions(sources: Path) -> pd.DataFrame:
                          "to_code": e, "relationship": EUNIS_QUALIFIER.get(code, "unspecified"),
                          "source": src, "notes": "EUNIS code as given in Agreement 2008-07 (EUNIS version of February 2004)"})
         for u in dict.fromkeys(uk):
+            fixed = UK_0405_FIXES.get(u, u)
             rows.append({"from_system": "OSPAR_TD_2021", "from_code": code, "to_system": "UK_MNCR_0405",
-                         "to_code": u, "relationship": "unspecified", "source": src, "notes": ""})
+                         "to_code": fixed, "relationship": "unspecified", "source": src,
+                         "notes": f"printed as '{u}' in Agreement 2008-07; v04.05 code is '{fixed}'"
+                         if fixed != u else ""})
     return pd.DataFrame(rows, columns=CROSSWALKS_COLUMNS)
+
+
+# UK v04.05 codes as printed in Agreement 2008-07 that are not v04.05 codes (checked against the
+# v04.05 units named in the JNCC correlation tables)
+UK_0405_FIXES = {
+    "LS.LMX.LMus.Myt.Mx": "LS.LBR.LMus.Myt.Mx",   # Mytilus edulis beds on littoral mixed substrata
+    "LS.LMX.LMus.Myt.Sa": "LS.LBR.LMus.Myt.Sa",   # Mytilus edulis beds on littoral sand
+    "LS.LMP.LSgr": "LS.LMp.LSgr",                 # Seagrass beds on littoral sediments
+    "SS.SMP.SSgr": "SS.SMp.SSgr",                 # Sublittoral seagrass beds
+}
 
 
 def crosswalk_kelp(sources: Path) -> pd.DataFrame:

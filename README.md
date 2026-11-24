@@ -54,8 +54,9 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | OSPAR threatened and/or declining habitats (Agreements 2008-06 / 2008-07, 2021) | ✅ (18 habitats + 6 sub-types) | ✅ to EUNIS, UK MNCR, HELCOM HUB, EMODnet dataset names |
 | ICES VME habitat types and subtypes | ✅ | planned |
 | HELCOM HUB (BSEP 139) with HELCOM Red List 2013 (BSEP 138) | ✅ (328 biotopes/habitats + 68 higher levels + 10 biotope complexes) | ✅ to EUNIS 2012, HELCOM 1998 (fact sheets) and EUNIS marine 2022 (EEA) |
+| HELCOM 1998 classification (BSEP 75, Table 5) | ✅ (202 biotopes, 101 marine) | ✅ from HELCOM HUB (fact sheets) |
 | MSFD benthic broad habitat types (Decision 2017/848) | ✅ (22) | ✅ to EUNIS marine 2022 level 2 |
-| Marine Habitat Classification for Britain and Ireland v22.04 (JNCC) | ✅ (694 units) | ✅ JNCC correlation tables 2026: earlier versions, EUNIS 2022/2007, Annex I, OSPAR, MSFD, VME, Emerald, GOOS EOV, IUCN GET, UK lists |
+| Marine Habitat Classification for Britain and Ireland v22.04 (JNCC) | ✅ (694 units); former versions 15.03 (690), 04.05 (474), 97.06 (322 of 364) from the correlation tables | ✅ JNCC correlation tables 2026: earlier versions, EUNIS 2022/2007, Annex I, OSPAR, MSFD, VME, Emerald, GOOS EOV, IUCN GET, UK lists |
 | Black Sea | via EUNIS marine 2022 (Black Sea units) | — |
 | Allen Coral Atlas benthic classes (v3); Global Mangrove Watch v3.0 | ✅ (7 + 4 classes) | candidate links to IUCN GET and Ramsar, and to GOOS EOV list items (to review) |
 | IUCN Global Ecosystem Typology 2.0 | ✅ (10 realms, 25 biomes, 108 EFGs + M1.10 from v2.1) | ✅ from UK MHC (JNCC) and Ramsar (EO4WI) |

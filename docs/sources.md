@@ -109,6 +109,7 @@ Folder: `3.HELCOM HUB/`
 | `02_2013_HELCOM_BSEP138_Red-List-Biotopes.pdf` | HELCOM, 2013. Red List of Baltic Sea underwater biotopes, habitats and biotope complexes. Baltic Sea Environment Proceedings No. 138. | Red List category (`notes`): Annex 2 (biotopes) and Table 13 (complexes) | https://helcom.fi/wp-content/uploads/2019/10/BSEP138.pdf |
 | `fact sheets/*.pdf` (387) | HELCOM HUB biotope fact sheets (HELCOM Red List Biotope Expert Team); file name = HUB code. | names of the higher levels; `HELCOM_HUB -> EUNIS_2012 / HELCOM_1998` | https://maps.helcom.fi/website/hub/PDF/ |
 | EUNIS marine 2022 (EEA, folder 1) | 'Source classification system code' where the source is HELCOM HUB (2013). | `HELCOM_HUB -> EUNIS_M_2022` | see section 1 |
+| `03_1998_HELCOM_BSEP75_Red-List-Biotopes-classification.pdf` | HELCOM, 1998. Red List of marine and coastal biotopes and biotope complexes of the Baltic Sea, Belt Sea and Kattegat. Baltic Sea Environment Proceedings No. 75. | `HELCOM_1998`: the 202 numbered biotopes of Table 5 (101 marine: 1 pelagic, 2 benthic; 101 coastal, lakes and riverine) | copy from https://doczz.net/download/6196077 |
 
 Notes:
 
@@ -129,6 +130,14 @@ Notes:
   `AA.D1E`, `AB.C1E`, `AA.J3M34`); these rows are flagged in `notes`. Codes are printed with spaces
   and '(modified)' in that file (e.g. `AA.A 1C1(modified)`), normalised here; relationship
   `source of (modified)`.
+* **HELCOM 1998 (BSEP 75):** codes and names from Table 5 (the national threat categories are not
+  loaded; the biotope complexes A-J are not loaded). In the copy used, printed page 102 is missing
+  (page 102 of the PDF repeats page 101): its 13 entries (`2.2.3.3`, `2.3` to `2.4.2.3`: stony
+  reefs of the hydrolittoral, hard clay and gravel bottoms) are taken from the red lists by threat
+  category (pp. 95-97) and, for headings, from the description chapter (pp. 72-73). Four names cut
+  by the table layout (`2.7.2.1`, `3.1`, `3.5.1.1`, `3.6.2.1`) are completed from the same lists.
+  The tests check these names against the PDF text. All 42 HELCOM 1998 codes cited by the HUB fact
+  sheets resolve.
 
 ## 4. OSPAR List of Threatened and/or Declining Habitats
 
@@ -223,7 +232,9 @@ Folder: `8.Marine Habitat Classification for Britain and Ireland/`
 | `02_2026_JNCC_*correlation*.xlsm` | JNCC, 2026. Marine habitat correlation tables v2026.02 ("Read Me" says 2026.01). | `UK_MHC_2204 ->` 16 systems (see below) | https://jncc.gov.uk/resources/ea153999-2892-4c62-919e-c33b33c65fda |
 | `03_2026_*user-guide.pdf` | JNCC, 2026. Correlation tables user guide (March 2026). | relationship types | https://data.jncc.gov.uk/data/ea153999-2892-4c62-919e-c33b33c65fda/UserGuide-MarineHabitatsCorrelations.pdf |
 | `04_2023_*`, `05_2019_*` | How to use MHC v22.04 (2023); Parry 2019, JNCC Report 546 (assigning biotopes using EUNIS or MHC). | documentation | https://mhc.jncc.gov.uk/resources/ |
-| `06_2004_*` to `09_2004_*` | Connor et al., 2004. MHC v04.05 (introduction, biotope sections, comparative tables). | not used (v04.05 codes come from the correlation tables) | ISBN 1 861 07561 8 |
+| `06_2004_*` to `09_2004_*` | Connor et al., 2004. MHC v04.05 (introduction, biotope sections, comparative tables). | count check of `UK_MNCR_0405` (introduction: 5 + 24 + 75 + 370 types) | ISBN 1 861 07561 8 |
+| `10_1997_*`, `11_1997_*` | Connor et al., 1997. MNCR marine biotope classification for Britain and Ireland, v97.06. JNCC Reports 229 (littoral) and 230 (sublittoral). | count check of `UK_MHC_9706` (Table 2.4: 7 + 21 + 60 + 196 + 80 types) | JNCC Resource Hub, https://hub.jncc.gov.uk/ |
+| `12_2015_*`, `13_2020_*` | Parry et al., 2015. A Deep-sea Section for the MHC v15.03. JNCC Report 530; Appendix 2 (structure, rev. 2020). | `UK_MHC_1503`: 2 deep-sea units missing from the correlation tables (`M`, `M.AtMB.Bi`) | JNCC Resource Hub, https://hub.jncc.gov.uk/ |
 
 Notes:
 
@@ -235,6 +246,15 @@ Notes:
   "Seapen and burrowing megafauna communities", "Modiolus modiolus horse mussel beds", "Seapen fields",
   "Lophelia pertusa /Madrepora oculata reef", "Solenosmilia variabilis reef"). The JNCC name is kept in `notes`.
   Other name-only lists (GOOS EOV, UK lists) are coded with a slug of the name.
+* **Former versions** (`UK_MHC_1503`, `UK_MNCR_0405`, `UK_MHC_9706`): units, names and levels as
+  named in the correlation tables (columns "JNCCvNNNN Codes / Names / Levels"), i.e. every former
+  unit that JNCC correlates with v22.04. v04.05: 474 units, complete. v15.03: 688 + 2 from Report 530
+  = 690, complete (v04.05 + the 216 units of the deep-sea section). v97.06: 322 of the 364 types of
+  Report 229 Table 2.4; the types that JNCC does not correlate are not loaded. Codes use the JNCC
+  correlation-table convention (major habitat prefix, `_` for an empty level, e.g. `LR._.L.YG`).
+* OSPAR Agreement 2008-07 prints four v04.05 codes that are not v04.05 codes; they are corrected in
+  `OSPAR_TD_2021 -> UK_MNCR_0405` with the printed code in `notes`: `LS.LMX.LMus.Myt.Mx/Sa` →
+  `LS.LBR.LMus.Myt.Mx/Sa`, `LS.LMP.LSgr` → `LS.LMp.LSgr`, `SS.SMP.SSgr` → `SS.SMp.SSgr`.
 * Inconsistencies between the two JNCC files (flagged as "from_code not found"):
   the correlation tables use `LR.FLR.CvOv.RpurPlac`, the biotope list `LR.FLR.CvOv.RpurPil`;
   `M.AtMB.Sa.InfPol` is in the correlation tables but not in the biotope list. In the biotope list,

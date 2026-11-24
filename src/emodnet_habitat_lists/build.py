@@ -19,7 +19,7 @@ import pandas as pd
 
 from . import composites, lists, pdftext
 from .schema import CROSSWALKS_COLUMNS, EXTRACTION_RULES_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
-from .sources import annex_i, barcelona, bern, biogenic, carib, eo_maps, eunis_eea, goos_eov, iucn_get, ramsar, redlist, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
+from .sources import annex_i, barcelona, bern, biogenic, carib, eo_maps, eunis_eea, goos_eov, iucn_get, ramsar, redlist, eunis_habitats, helcom1998, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
 
 EUNIS_M_2022_XLSX = (
     "1.EUNIS habitat classification/3_eea_t_eunis-hab-m_p_2004-2019_v01_r00/"
@@ -47,23 +47,23 @@ SYSTEMS = [
     ("HELCOM_HUB", "HELCOM Underwater Biotope and habitat classification (HUB)", "2013", "HELCOM", "Baltic Sea",
      helcom_hub.SRC_139 + "; " + helcom_hub.SRC_138 + "; HELCOM HUB fact sheets"),
     ("HELCOM_1998", "HELCOM Red List of marine and coastal biotopes and biotope complexes (classification of 1998)",
-     "1998", "HELCOM", "Baltic Sea", "not loaded; codes appear in crosswalks only (from HUB fact sheets)"),
+     "1998", "HELCOM", "Baltic Sea", helcom1998.SRC),
     ("UK_MHC_2204", "Marine Habitat Classification for Britain and Ireland", "22.04", "JNCC", "UK and Ireland",
      jncc_mhc.SRC_LIST),
     ("UK_MHC_1503", "Marine Habitat Classification for Britain and Ireland", "15.03", "JNCC", "UK and Ireland",
-     "not loaded; codes appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
+     jncc_mhc.SRC_CORR + "; " + jncc_mhc.SRC_DEEP),
     ("UK_MNCR_0405", "Marine Habitat Classification for Britain and Ireland", "04.05", "JNCC", "UK and Ireland",
-     "not loaded; codes appear in crosswalks only (OSPAR Agreement 2008-07; " + jncc_mhc.SRC_CORR + ")"),
+     jncc_mhc.SRC_CORR + " (codes also used in OSPAR Agreement 2008-07)"),
     ("UK_MHC_9706", "Marine Habitat Classification for Britain and Ireland (MNCR BioMar)", "97.06", "JNCC",
-     "UK and Ireland", "not loaded; codes appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
+     "UK and Ireland", jncc_mhc.SRC_CORR + " (322 of the 364 types of JNCC Report 229, Table 2.4)"),
     ("UK_HPI", "Habitats of Principal Importance (UK)", "", "UK nature conservation bodies", "UK",
-     "not loaded; names (slugs) appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
+     "referenced only: no list of units loaded; names (slugs) appear in crosswalks (" + jncc_mhc.SRC_CORR + ")"),
     ("UK_MCZ_FOCI", "Marine Conservation Zone habitat Features of Conservation Importance", "", "Defra / JNCC",
-     "England, Wales, UK offshore", "not loaded; names (slugs) appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
+     "England, Wales, UK offshore", "referenced only: no list of units loaded; names (slugs) appear in crosswalks (" + jncc_mhc.SRC_CORR + ")"),
     ("UK_PMF", "Priority Marine Features (Scotland)", "", "NatureScot / JNCC", "Scotland",
-     "not loaded; names (slugs) appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
+     "referenced only: no list of units loaded; names (slugs) appear in crosswalks (" + jncc_mhc.SRC_CORR + ")"),
     ("UK_MCZ_BSH", "Marine Conservation Zone Broad-Scale Habitats", "", "Defra / JNCC", "England, Wales, UK offshore",
-     "not loaded; names (slugs) appear in crosswalks only (" + jncc_mhc.SRC_CORR + ")"),
+     "referenced only: no list of units loaded; names (slugs) appear in crosswalks (" + jncc_mhc.SRC_CORR + ")"),
     ("RAMSAR", "Ramsar Classification System for Wetland Type", "Rev. COP14 (2022)", "Ramsar Convention",
      "global wetlands", ramsar.SRC),
     ("EU_REDLIST_2016", "European Red List of Habitats, marine habitats (EU28 / EU28+ assessments)", "2016",
@@ -85,7 +85,7 @@ SYSTEMS = [
      "PatriNat (OFB-CNRS-MNHN)", "Martinique (used by EUSeaMap for the Caribbean)", carib.SRC),
     ("FR_APHN_ANTILLES", "Habitats eligible for French prefectoral habitat protection orders (APHN), Antilles "
      "(typology of Hoff 1997)", "2019", "French Ministry of Ecology", "Guadeloupe, Martinique, Saint-Martin",
-     "not loaded; codes appear in crosswalks only (" + carib.SRC_APHN + ")"),
+     "referenced only: no list of units loaded; codes appear in crosswalks (" + carib.SRC_APHN + ")"),
     ("NRL_2024", "Nature Restoration Regulation (EU) 2024/1991, Annex II: groups of marine habitat types", "2024",
      "European Parliament and Council", "EU marine waters", nrl.SRC),
     ("EMODNET_OSPAR2025", "EMODnet Seabed Habitats OSPAR habitats dataset: habtype / habsubtype values", "2025",
@@ -95,9 +95,9 @@ SYSTEMS = [
     ("MSFD_BHT", "MSFD benthic broad habitat types", "2017", "European Commission", "EU marine waters, benthic",
      msfd_bht.SRC),
     ("PAL_CLASS", "Palaearctic habitat classification (Devillers & Devillers-Terschuren 1996)", "1996/1997",
-     "Council of Europe", "Palaearctic", "not loaded; codes appear in crosswalks only (Interpretation Manual EUR28)"),
+     "Council of Europe", "Palaearctic", "referenced only: no list of units loaded; codes appear in crosswalks (Interpretation Manual EUR28)"),
     ("CORINE", "CORINE biotopes", "1991", "European Commission", "Europe",
-     "not yet loaded; codes appear in crosswalks only"),
+     "referenced only: no list of units loaded; codes appear in crosswalks"),
 ]
 
 
@@ -160,6 +160,11 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
         if eunis22.is_file():
             crosswalks.append(helcom_hub.crosswalk_eunis2022_sources(eunis22))
         loaded.add("HELCOM_HUB")
+        if helcom1998.find_pdf(sources) is not None:
+            habitats.append(helcom1998.habitats(sources))
+            loaded.add("HELCOM_1998")
+        else:
+            print("skipped HELCOM_1998 habitats: BSEP 75 PDF not found")
     else:
         print(f"skipped HELCOM HUB: {sources / helcom_hub.FOLDER} not found or pdftotext not installed")
     if (sources / ospar.FOLDER).is_dir() and pdftext.available():
@@ -245,6 +250,7 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
     loaded.add("GOOS_EOV")
     if (sources / jncc_mhc.FOLDER).is_dir():
         habitats.append(jncc_mhc.habitats(sources))
+        habitats.append(jncc_mhc.old_versions_habitats(sources))
         so_far = pd.concat(habitats, ignore_index=True)
         crosswalks.append(jncc_mhc.crosswalks(sources, so_far[so_far.system == "OSPAR_TD_2021"],
                                               so_far[so_far.system == "ICES_VME"]))
@@ -269,10 +275,17 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
     habitats_df, crosswalks_df, lists_df, items_df, members_df = lists.split(
         habitats_df, crosswalks_df, list_meta, today, review)
     members_df = lists.validate_members(members_df, items_df, habitats_df)
+    loaded |= set(habitats_df.system)
+
+    def _status(s: str, src: str) -> str:
+        if s in loaded:
+            return ""
+        return "referenced only" if src.startswith("referenced only") else "not loaded in this build"
+
     systems = pd.DataFrame(
         [
             {"system": s, "name": n, "version": v, "authority": a, "scope": sc, "source": src,
-             "accessed": today if s in loaded else "", "notes": "" if s in loaded else "not loaded in this build"}
+             "accessed": today if s in loaded else "", "notes": _status(s, src)}
             for s, n, v, a, sc, src in SYSTEMS if s not in lists.LISTS
         ],
         columns=SYSTEMS_COLUMNS,
