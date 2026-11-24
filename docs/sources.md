@@ -16,6 +16,19 @@ Folder: `1.EUNIS habitat classification/`
 | EUNIS marine 2022 (used for `BARCELONA_2006 -> EUNIS_M_2022`) | EEA, 2022. EUNIS marine habitat classification 2022 including crosswalks (published 28 Mar 2022). Path: `3_eea_t_eunis-hab-m_p_2004-2019_v01_r00/eea_t_eunis-hab-m_p_2004-2019_v01_r00/EUNIS marine habitat classification 2022 including crosswalks.xlsx` | https://www.eea.europa.eu/data-and-maps/data/eunis-habitat-classification-1/eunis-marine-habitat-classification-review-2022/eunis-marine-habitats-classification-2022 |
 | All EUNIS versions | EEA Datahub, EUNIS habitat classification | https://www.eea.europa.eu/en/datahub/datahubitem-view/638330ea-90e6-4e41-81ea-e70f25ae7117 |
 
+### Crosswalks between EUNIS versions
+
+* `EUNIS_M_2022 -> EUNIS_2012` (2 504 links, 1 938 EUNIS 2022 units): columns "EUNIS 2012 relation(ship)" /
+  "EUNIS 2012 code" of the three sheets (benthic, pelagic, ice-associated) of the EEA file
+  "EUNIS marine habitat classification 2022 including crosswalks". Relationships as given, read from
+  the 2022 unit. Only `MB233`, `MB63E`, `MC234` and `MC63D` have no EUNIS 2012 code in the file.
+* Fixes (recorded in `notes`): Greek capital alpha typed for "A" (`Α5.4`, row `MB4`); `A.6` for `A6`
+  (`ME2`); row `MA223T` with the 2012 code (`A2.531J`) in the relationship column and the 2012 name in
+  the code column (relationship `unspecified`); rows with one relationship for several 2012 codes
+  (applied to all; `MA253` is "=" to both `A2.54` and `A2.55`).
+* Not loaded: EUNIS marine 2019 ↔ 2022 (EEA change list) and EUNIS terrestrial 2021 ↔ 2012 (EEA
+  crosswalks by terrestrial group); the files are not in the folder.
+
 ## 2. Barcelona Convention (UNEP/MAP – SPA/RAC)
 
 Folder: `2.Barcelona Convention/` (files are matched by their numeric prefix).

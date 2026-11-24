@@ -19,7 +19,7 @@ import pandas as pd
 
 from . import pdftext
 from .schema import CROSSWALKS_COLUMNS, EXTRACTION_RULES_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
-from .sources import annex_i, barcelona, bern, biogenic, carib, eo_maps, goos_eov, iucn_get, ramsar, redlist, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
+from .sources import annex_i, barcelona, bern, biogenic, carib, eo_maps, eunis_eea, goos_eov, iucn_get, ramsar, redlist, eunis_habitats, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
 
 EUNIS_M_2022_XLSX = (
     "1.EUNIS habitat classification/3_eea_t_eunis-hab-m_p_2004-2019_v01_r00/"
@@ -123,6 +123,10 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
     rules: list[pd.DataFrame] = []
     loaded = {"EUNIS_2012", "EUNIS_M_2019", "EUNIS_M_2022", "EUNIS_T_2021"}
 
+    if (sources / EUNIS_M_2022_XLSX).is_file():
+        crosswalks.append(eunis_eea.crosswalk_m2022_2012(sources / EUNIS_M_2022_XLSX))
+    else:
+        print(f"skipped EUNIS_M_2022 -> EUNIS_2012: {sources / EUNIS_M_2022_XLSX} not found")
     bc_dir = sources / barcelona.FOLDER
     if bc_dir.is_dir() and pdftext.available():
         habitats.append(barcelona.habitats(sources))

@@ -23,7 +23,7 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 
 | System | Habitats | Crosswalks |
 |---|---|---|
-| EUNIS 2012, marine 2019, marine 2022, terrestrial 2021 | ✅ (from `{eunis.habitats}`) | planned |
+| EUNIS 2012, marine 2019, marine 2022, terrestrial 2021 | ✅ (from `{eunis.habitats}`) | ✅ marine 2022 → 2012 (EEA, 2 504 links); marine 2019 ↔ 2022 and terrestrial 2021 ↔ 2012 not loaded (source files not in the folder) |
 | Barcelona Convention 2019 classification and Reference List (Decision IG.24/7) | ✅ | ✅ to EUNIS 2019 / 2007, Annex I, CORINE (Interpretation Manual 2021) |
 | Barcelona Convention 2006 (former) classification | ✅ | ✅ to EUNIS marine 2022 (EEA); to Barcelona 2019: indicative / candidates only, see `docs/sources.md` |
 | Habitats Directive Annex I (consolidated 2013, Interpretation Manual EUR28) | ✅ (233 types + 9 groups + 32 sub-groups, with definitions) | ✅ from EUNIS marine 2022 (EEA); to EUNIS 2012 and Palaearctic classification (Interpretation Manual) |
