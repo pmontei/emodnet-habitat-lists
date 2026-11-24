@@ -9,7 +9,10 @@ PDF sources are read with `pdftotext` (poppler-utils), which must be installed.
 Note: the GOOS EOVs (section 16), the Nature Restoration Regulation groups (section 9) and the
 EMODnet biogenic substrate types (section 11) are **lists**, not classifications: they are stored
 in `lists` / `list_items` / `list_members` (ids `GOOS_EOV`, `NRL_2024_MARINE`, `EMODNET_BIOGENIC`),
-and the links described in those sections are list members. See `docs/schema.md`.
+and the links described in those sections are list members. The same holds for the UK conservation
+lists named in the JNCC correlation tables (`UK_PMF`, `UK_MCZ_FOCI`, `UK_HPI`, `UK_MCZ_BSH`, section 8),
+the Barcelona Convention Reference List (`BARCELONA_RL_2019`, section 2) and the habtype / habsubtype
+values of the EMODnet OSPAR 2025 dataset (`EMODNET_OSPAR2025`, section 4). See `docs/schema.md`.
 
 ## 1. EUNIS (EEA)
 

@@ -48,7 +48,7 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | System | Habitats | Crosswalks |
 |---|---|---|
 | EUNIS 2012, marine 2019, marine 2022, terrestrial 2021 | ✅ (from `{eunis.habitats}`) | ✅ marine 2022 → 2012 (2 504 links), marine 2019 → 2012 (2 349), terrestrial 2021 → 2012 (3 887), all from the EEA files; marine 2019 → 2022 (1 939, derived by comparing the two EEA files) |
-| Barcelona Convention 2019 classification and Reference List (Decision IG.24/7) | ✅ | ✅ to EUNIS 2019 / 2007, Annex I, CORINE (Interpretation Manual 2021) |
+| Barcelona Convention 2019 classification (Decision IG.24/7); its Reference List is a list (see below) | ✅ | ✅ to EUNIS 2019 / 2007, Annex I, CORINE (Interpretation Manual 2021) |
 | Barcelona Convention 2006 (former) classification | ✅ | ✅ to EUNIS marine 2022 (EEA); to Barcelona 2019: indicative / candidates only, see `docs/sources.md` |
 | Habitats Directive Annex I (consolidated 2013, Interpretation Manual EUR28) | ✅ (233 types + 9 groups + 32 sub-groups, with definitions) | ✅ from EUNIS marine 2022 (EEA); to EUNIS 2012 and Palaearctic classification (Interpretation Manual) |
 | OSPAR threatened and/or declining habitats (Agreements 2008-06 / 2008-07, 2021) | ✅ (18 habitats + 6 sub-types) | ✅ to EUNIS, UK MNCR, HELCOM HUB, EMODnet dataset names |
@@ -56,7 +56,7 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | HELCOM HUB (BSEP 139) with HELCOM Red List 2013 (BSEP 138) | ✅ (328 biotopes/habitats + 68 higher levels + 10 biotope complexes) | ✅ to EUNIS 2012, HELCOM 1998 (fact sheets) and EUNIS marine 2022 (EEA) |
 | HELCOM 1998 classification (BSEP 75, Table 5) | ✅ (202 biotopes, 101 marine) | ✅ from HELCOM HUB (fact sheets) |
 | MSFD benthic broad habitat types (Decision 2017/848) | ✅ (22) | ✅ to EUNIS marine 2022 level 2 |
-| Marine Habitat Classification for Britain and Ireland v22.04 (JNCC) | ✅ (694 units); former versions 15.03 (690), 04.05 (474), 97.06 (322 of 364) from the correlation tables | ✅ JNCC correlation tables 2026: earlier versions, EUNIS 2022/2007, Annex I, OSPAR, MSFD, VME, Emerald, GOOS EOV, IUCN GET, UK lists |
+| Marine Habitat Classification for Britain and Ireland v22.04 (JNCC) | ✅ (694 units); former versions 15.03 (690), 04.05 (474), 97.06 (322 of 364) from the correlation tables | ✅ JNCC correlation tables 2026: earlier versions, EUNIS 2022/2007, Annex I, OSPAR, MSFD, VME, Emerald, IUCN GET; GOOS EOV and UK lists as list members |
 | Black Sea | via EUNIS marine 2022 (Black Sea units) | — |
 | Allen Coral Atlas benthic classes (v3); Global Mangrove Watch v3.0 | ✅ (7 + 4 classes) | candidate links to IUCN GET and Ramsar, and to GOOS EOV list items (to review) |
 | IUCN Global Ecosystem Typology 2.0 | ✅ (10 realms, 25 biomes, 108 EFGs + M1.10 from v2.1) | ✅ from UK MHC (JNCC) and Ramsar (EO4WI) |
@@ -72,6 +72,9 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | `EMODNET_BIOGENIC`: biogenic substrate types (D3.06, 2021; D3.10) | 29 types, 4 levels | published: EUNIS 2007-11, Annex I (1170 partial), HELCOM HUB, OSPAR, UK lists (Appendix 1, Table 6); EUNIS 2019 by biological zone and region (Appendix 2). **Proposed for D3.10:** EUNIS 2022 (70 codes, 6 to review). Extraction rules in `extraction_rules.csv` |
 | `NRL_2024_MARINE`: Nature Restoration Regulation (EU) 2024/1991, Annex II | 7 groups × regions | published: 231 EUNIS 2022 types (the Annex II related Annex I types are EUNIS 2022 → Annex I crosswalks) |
 | `GOOS_EOV`: GOOS habitat EOVs (specification sheets, Aug 2026) | 4 EOVs, 14 sub-variables | published: UK MHC (JNCC correlation tables); proposed: Allen Coral Atlas and GMW classes |
+| `UK_PMF`, `UK_MCZ_FOCI`, `UK_HPI`, `UK_MCZ_BSH`: UK conservation lists (names in the JNCC correlation tables) | 26, 21, 29, 28 (item ids are slugs of the names) | published: UK MHC v22.04 units (JNCC correlation tables) |
+| `BARCELONA_RL_2019`: Barcelona Convention Reference List for the selection of sites (Decision IG.24/7, Annex VII) | 267 | published: the same codes of the Barcelona 2019 classification |
+| `EMODNET_OSPAR2025`: habtype / habsubtype values of the EMODnet OSPAR habitats dataset | 30 | published: OSPAR threatened and/or declining habitats |
 | `CORALLIGENOUS` (D3.09a) | planned | planned |
 | `EFH` (D3.07) | planned: species × life stage × function | planned (`supports function`) |
 

@@ -13,10 +13,13 @@ def _read(name):
 
 def test_lists_are_not_systems():
     systems, habitats, cw = _read("systems"), _read("habitats"), _read("crosswalks")
-    lists = {"EMODNET_BIOGENIC_2021", "GOOS_EOV", "NRL_2024"}
+    lists = {"EMODNET_BIOGENIC_2021", "GOOS_EOV", "NRL_2024", "UK_PMF", "UK_MCZ_FOCI", "UK_HPI", "UK_MCZ_BSH",
+             "BARCELONA_RL_2019", "EMODNET_OSPAR2025"}
     assert not set(systems.system) & lists and not set(habitats.system) & lists
     assert not (set(cw.from_system) | set(cw.to_system)) & lists
-    assert set(_read("lists").list_id) >= {"EMODNET_BIOGENIC", "GOOS_EOV", "NRL_2024_MARINE", "CORALLIGENOUS", "EFH"}
+    assert set(_read("lists").list_id) >= {"EMODNET_BIOGENIC", "GOOS_EOV", "NRL_2024_MARINE", "CORALLIGENOUS", "EFH",
+                                           "UK_PMF", "UK_MCZ_FOCI", "UK_HPI", "UK_MCZ_BSH", "BARCELONA_RL_2019",
+                                           "EMODNET_OSPAR2025"}
 
 
 def test_members_resolve():
@@ -26,7 +29,8 @@ def test_members_resolve():
     assert set(m.status) <= {"published", "proposed", "reviewed", "rejected"}
     # only the report's own corrections of EUNIS 2019 are unresolved codes
     bad = m[m.notes.fillna("").str.contains("not found in")]
-    assert set(bad.code) == {"MB2224", "MC223", "MC2237", "MC2238"} and set(bad.system) == {"EUNIS_M_2019"}
+    # the report's own corrections of EUNIS 2019, and the JNCC v22.04 code missing from the biotope list
+    assert set(bad.code) == {"MB2224", "MC223", "MC2237", "MC2238", "M.AtMB.Sa.InfPol"}
 
 
 def test_nrl_marine():
@@ -48,3 +52,15 @@ def test_biogenic_eunis2022_proposal():
     # Annex I 1170 only for its biogenic subtype
     a = m[(m.list_id == "EMODNET_BIOGENIC") & (m.system == "ANNEX_I") & (m.code == "1170")]
     assert set(a.link_type) == {"partial"}
+
+
+def test_former_systems_now_lists():
+    m, items = _read("list_members"), _read("list_items")
+    rl = m[m.list_id == "BARCELONA_RL_2019"]
+    assert len(rl) == 267 and set(rl.system) == {"BARCELONA_2019"} and (rl["item"] == rl.code).all()
+    pmf = items[items.list_id == "UK_PMF"]
+    assert "blue-mussel-beds" in set(pmf["item"]) and "Blue mussel beds" in set(pmf.name)
+    # list-to-list link: UK PMF item as member of a biogenic type
+    assert ((m.list_id == "EMODNET_BIOGENIC") & (m.system == "UK_PMF") & (m.code == "blue-mussel-beds")).any()
+    o = m[m.list_id == "EMODNET_OSPAR2025"]
+    assert len(o) == 30 and set(o.system) == {"OSPAR_TD_2021"}

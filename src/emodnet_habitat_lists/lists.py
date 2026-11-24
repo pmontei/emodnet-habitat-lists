@@ -44,6 +44,29 @@ LISTS = {
         version="2024", authority="European Parliament and Council", scope="EU marine waters"),
 }
 
+_UK = dict(kind="policy", deliverable="", version="as in JNCC correlation tables v2026.02")
+LISTS |= {
+    "UK_PMF": dict(list_id="UK_PMF", name="Priority Marine Features (Scotland): habitats",
+                   authority="NatureScot / JNCC", scope="Scotland", **_UK),
+    "UK_MCZ_FOCI": dict(list_id="UK_MCZ_FOCI", name="Marine Conservation Zone habitat Features of Conservation Importance",
+                        authority="Defra / JNCC", scope="England, Wales, UK offshore", **_UK),
+    "UK_HPI": dict(list_id="UK_HPI", name="Habitats of Principal Importance (UK)",
+                   authority="UK nature conservation bodies", scope="UK", **_UK),
+    "UK_MCZ_BSH": dict(list_id="UK_MCZ_BSH", name="Marine Conservation Zone Broad-Scale Habitats",
+                       authority="Defra / JNCC", scope="England, Wales, UK offshore", **_UK),
+    "BARCELONA_RL_2019": dict(
+        list_id="BARCELONA_RL_2019", kind="policy", deliverable="", version="2019",
+        name="Barcelona Convention: Reference List of marine habitat types for the selection of sites "
+             "(Decision IG.24/7, Annex VII)", authority="UNEP/MAP - SPA/RAC", scope="Mediterranean, benthic"),
+    "EMODNET_OSPAR2025": dict(
+        list_id="EMODNET_OSPAR2025", kind="dataset vocabulary", deliverable="", version="2025",
+        name="EMODnet Seabed Habitats OSPAR habitats dataset: habtype / habsubtype values",
+        authority="EMODnet Seabed Habitats", scope="North-East Atlantic"),
+}
+# lists whose items share the codes of a classification: item -> same code in that classification
+SAME_CODE_MEMBERS = {"BARCELONA_RL_2019": "BARCELONA_2019"}
+_ITEM_NAME = re.compile(r"(?:^|; )JNCC name: ([^;]+)")
+
 PLANNED = [
     dict(list_id="CORALLIGENOUS", kind="product", deliverable="D3.09a",
          name="Coralligenous and other calcareous bio-concretions", version="", authority="EMODnet Seabed Habitats",
@@ -108,11 +131,35 @@ def split(habitats: pd.DataFrame, crosswalks: pd.DataFrame, systems_meta: dict[s
         "source": items.source,
         "notes": items.notes.fillna("").str.replace(r"(; )?regions: [^;]+", "", regex=True).str.strip("; ")},
         columns=LIST_ITEMS_COLUMNS)
+    # lists given only by name in the crosswalks (UK lists, EMODnet dataset values): items from there
+    extra = []
+    for sys_id, meta in LISTS.items():
+        if (items.system == sys_id).any():
+            continue
+        side = pd.concat([
+            crosswalks.loc[crosswalks.to_system == sys_id, ["to_code", "notes", "source"]]
+            .rename(columns={"to_code": "code"}),
+            crosswalks.loc[crosswalks.from_system == sys_id, ["from_code", "notes", "source"]]
+            .rename(columns={"from_code": "code"})])
+        for code, g in side.groupby("code", sort=True):
+            m = _ITEM_NAME.search(str(g.notes.iloc[0]))
+            name = m.group(1).strip() if m else re.sub(r"^habtype=", "", code).replace(" | habsubtype=", " / ")
+            extra.append({"list_id": meta["list_id"], "item": code, "name": name, "level": None,
+                          "parent_item": None, "definition": None, "attributes": "",
+                          "source": g.source.iloc[0], "notes": "item named in the source of the links only"})
+    if extra:
+        items_df = pd.concat([items_df, pd.DataFrame(extra, columns=LIST_ITEMS_COLUMNS)], ignore_index=True)
+        for x in extra:
+            lists_rows_status = lists_df.list_id == x["list_id"]
+            lists_df.loc[lists_rows_status, ["status", "accessed"]] = ["loaded", today]
 
     is_from, is_to = crosswalks.from_system.isin(LISTS), crosswalks.to_system.isin(LISTS)
     rows = []
     for _, r in crosswalks[is_from | is_to].iterrows():
-        if r.from_system in LISTS:
+        if r.from_system in LISTS and r.to_system in LISTS:
+            # link between two lists (e.g. UK PMF -> biogenic type): the member is an item of the other list
+            lsys, item, msys, mcode = r.to_system, r.to_code, LISTS[r.from_system]["list_id"], r.from_code
+        elif r.from_system in LISTS:
             lsys, item, msys, mcode = r.from_system, r.from_code, r.to_system, r.to_code
         else:
             lsys, item, msys, mcode = r.to_system, r.to_code, r.from_system, r.from_code
@@ -128,6 +175,14 @@ def split(habitats: pd.DataFrame, crosswalks: pd.DataFrame, systems_meta: dict[s
             "source_relationship": r.relationship,
             "decided_by": ("proposal (repository), pending WP3 review" if proposed else ""),
             "decided_on": today if proposed else "", "source": r.source, "notes": notes})
+    for lsys, csys in SAME_CODE_MEMBERS.items():
+        known = set(habitats.loc[habitats.system == csys, "code"])
+        for _, it in items[items.system == lsys].iterrows():
+            if it.code in known:
+                rows.append({"list_id": LISTS[lsys]["list_id"], "item": it.code, "region": "", "zone": "",
+                             "system": csys, "code": it.code, "link_type": "member", "status": "published",
+                             "source_relationship": "same code", "decided_by": "", "decided_on": "",
+                             "source": it.source, "notes": "the list uses the codes of the classification"})
     members_df = pd.DataFrame(rows, columns=LIST_MEMBERS_COLUMNS)
     return habitats[~in_list], crosswalks[~(is_from | is_to)], lists_df, items_df, members_df
 
@@ -135,7 +190,7 @@ def split(habitats: pd.DataFrame, crosswalks: pd.DataFrame, systems_meta: dict[s
 def validate_members(members: pd.DataFrame, items: pd.DataFrame, habitats: pd.DataFrame) -> pd.DataFrame:
     """Flag members whose item or habitat code does not exist."""
     known = {s: set(g["code"]) for s, g in habitats.groupby("system")}
-    known_items = set(zip(items.list_id, items.item))
+    known_items = set(zip(items.list_id, items["item"]))
     m = members.copy()
     for i, r in m.iterrows():
         flags = []
@@ -143,6 +198,8 @@ def validate_members(members: pd.DataFrame, items: pd.DataFrame, habitats: pd.Da
             flags.append(f"item not found in {r.list_id}")
         if r.system in known and r.code not in known[r.system] and f"not found in {r.system}" not in str(r.notes):
             flags.append(f"code not found in {r.system}")
+        elif r.system not in known and (r.system, r.code) not in known_items:
+            flags.append(f"member not found in {r.system}")
         if flags:
             m.at[i, "notes"] = "; ".join([x for x in [r.notes if isinstance(r.notes, str) else ""] + flags if x])
     return m

@@ -52,7 +52,7 @@ several classifications at once (e.g. biogenic `mussel-beds` in EUNIS 2007-11, E
 |---|---|
 | list_id | Short id (e.g. `EMODNET_BIOGENIC`, `GOOS_EOV`, `NRL_2024_MARINE`, `EFH`). |
 | name | Full name. |
-| kind | `policy` (legal list), `observing variable` (EOV), `product` (EMODnet composite product), `functional` (EFH). |
+| kind | `policy` (legal or conservation list), `observing variable` (EOV), `product` (EMODnet composite product), `functional` (EFH), `dataset vocabulary` (values used in a dataset, e.g. the EMODnet OSPAR habitats dataset). |
 | version | Version or year. |
 | authority | Issuing body. |
 | deliverable | WP3 deliverable(s) that use the list. |
@@ -80,7 +80,7 @@ several classifications at once (e.g. biogenic `mussel-beds` in EUNIS 2007-11, E
 | list_id, item | FK to `list_items`. |
 | region | Region where the link applies (blank = all). |
 | zone | Biological zone where the link applies (blank = all), e.g. Appendix 2 of the biogenic report. |
-| system, code | Member habitat (FK to `habitats`). |
+| system, code | Member habitat (FK to `habitats`). When the member is an item of another list (e.g. a UK PMF item linked to a biogenic type), `system` is that `list_id` and `code` its item. |
 | link_type | How the habitat belongs to the item: `member` (the whole habitat), `partial` (only part of it, e.g. Annex I 1170 only for its biogenic subtype; also when the habitat is broader than or overlaps the item), `supports function` (the habitat supports the function of the item, e.g. a nursery for an EFH item; not an equivalence), `excluded` (examined and left out on purpose). |
 | status | Stage of the decision: `published` (as in the source), `proposed` (derived in this repository), `reviewed` (accepted by WP3), `rejected`. |
 | source_relationship | Relationship as given by the source (`maps to`, `>`, `<`, `candidate`…). |
