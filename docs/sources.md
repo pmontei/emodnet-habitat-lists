@@ -488,3 +488,35 @@ Notes:
   (relationship `candidate`, intended relation in `notes`) for the WP3 EOV products; they need review.
   Note that the "Coral/Algae" class also includes algae-dominated hard bottom, so it overlaps (`#`) the
   coral EOV rather than being equal to it.
+
+## 20. CORINE biotopes and 21. Palaearctic Habitat Classification
+
+Folders: `20.CORINE Biotopes/`, `21.Palaearctic Habitat Classification/`
+
+| File | Reference | Used for | Link |
+|---|---|---|---|
+| `02_2001_IRSNB-INPN_PHYSIS-Palaearctic-classification_TYPO-PAL-2001.xls` | Devillers, P., Devillers-Terschuren, J. & Vander Linden, C., 2001. PHYSIS Palaearctic Habitat Classification, updated to 10 December 2001. IRSNB, Brussels. Table TYPO_PAL_PHYSIS_2001, SPN-MNHN / INPN (2010). | `PAL_CLASS`: 6228 codes (levels 1-8), English names, descriptions | INPN habitat typologies: https://inpn.mnhn.fr/habitat/ |
+| `01_1996_CoE_Devillers_Classification-of-Palaearctic-habitats_NE78.pdf` | Devillers, P. & Devillers-Terschuren, J., 1996. A classification of Palaearctic habitats. Nature and environment No. 78. Council of Europe. | reference only (113 of 157 pages of this copy are web-viewer placeholders) | ISBN 92-871-2989-4 |
+| `01_1991_EC_CORINE-Biotopes-Manual_Vol3-Habitats-of-the-EC.pdf` | Commission of the European Communities, 1991. CORINE biotopes manual. Habitats of the European Community. Data specifications - Part 2 (Vol. 3). EUR 12587/3 EN. | `CORINE`: chapters 1 (coastal and halophytic communities) and 2 (non-marine waters), 325 units | EU Publications Office, catalogue CD-NC-12587-EN-C |
+
+Notes:
+
+* PAL codes have one level per digit (`11.121` → `11.12` → `11.1` → `11` → `1`); `parent_code` and
+  level are given by the INPN table. Names keep the square brackets of PHYSIS around taxa
+  (e.g. `[Posidonia] beds`).
+* The Annex I Interpretation Manual (section 6) gives PAL codes as expressions (`16.221 to 16.227`,
+  `22.11 x 22.31`, `(22.12 or 22.15) x 22.44`; `x` = combination of two units). They are split into
+  one crosswalk row per PAL code (ranges expanded to the PAL codes of the same level in between),
+  with the expression in `notes`. Four codes cited by the manual are not in PHYSIS 2001 (`42C51`,
+  `44.A14` "Palaearctic classification 1997 version", `36.44`, `61.15`) and are flagged.
+* **CORINE is a scan with an OCR text layer.** Only chapters 1-2 are loaded (the ones cited by the
+  marine sources). Entries are the lines starting with a code (contents lines, ending with a page
+  number, are skipped); codes alone on their line take the heading on the next line; headings in
+  capitals followed by a syntaxon keep the syntaxon in `notes`. OCR spacing errors are repaired with
+  the vocabulary of the PAL names; when the PAL unit with the same code has a near-identical name
+  (similarity >= 0.85) its spelling is used (`notes` keep the OCR text). Eight names still damaged by
+  the OCR were read on the page images (`OCR_FIXES`, e.g. `15`, `16.272`, `18.22`).
+* The CORINE manual codes sea inlets (12) and estuaries (13.2) by transposing the subdivisions of 11
+  and 11.2; those transposed codes are not printed. `12.7`, cited by the Barcelona Interpretation
+  Manual for `MA1.52`, is one of them and is flagged.
+

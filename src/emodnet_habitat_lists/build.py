@@ -19,7 +19,7 @@ import pandas as pd
 
 from . import composites, lists, pdftext
 from .schema import CROSSWALKS_COLUMNS, EXTRACTION_RULES_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
-from .sources import annex_i, barcelona, bern, biogenic, carib, eo_maps, eunis_eea, goos_eov, iucn_get, ramsar, redlist, eunis_habitats, helcom1998, helcom_hub, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
+from .sources import annex_i, barcelona, bern, biogenic, carib, eo_maps, eunis_eea, goos_eov, iucn_get, ramsar, redlist, eunis_habitats, helcom1998, helcom_hub, pal_corine, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
 
 EUNIS_M_2022_XLSX = (
     "1.EUNIS habitat classification/3_eea_t_eunis-hab-m_p_2004-2019_v01_r00/"
@@ -94,10 +94,10 @@ SYSTEMS = [
      "European Commission", "EU", annex_i.SRC_DIRECTIVE + "; " + annex_i.SRC_MANUAL),
     ("MSFD_BHT", "MSFD benthic broad habitat types", "2017", "European Commission", "EU marine waters, benthic",
      msfd_bht.SRC),
-    ("PAL_CLASS", "Palaearctic habitat classification (Devillers & Devillers-Terschuren 1996)", "1996/1997",
-     "Council of Europe", "Palaearctic", "referenced only: no list of units loaded; codes appear in crosswalks (Interpretation Manual EUR28)"),
-    ("CORINE", "CORINE biotopes", "1991", "European Commission", "Europe",
-     "referenced only: no list of units loaded; codes appear in crosswalks"),
+    ("PAL_CLASS", "Palaearctic Habitat Classification (PHYSIS)", "2001 (Devillers & Devillers-Terschuren 1996, updated)",
+     "Council of Europe / IRSNB", "Palaearctic", pal_corine.SRC_PAL),
+    ("CORINE", "CORINE biotopes (chapters 1-2: coastal and halophytic communities, non-marine waters)", "1991",
+     "European Commission", "Europe", pal_corine.SRC_CORINE),
 ]
 
 
@@ -267,6 +267,15 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
         crosswalks.append(bio_cw)
     else:
         print("skipped EMODNET_BIOGENIC members in EUNIS 2022 (D3.10): Appendix 2 or EUNIS 2019 -> 2022 not loaded")
+    if (sources / pal_corine.PAL_FOLDER).is_dir():
+        pal = pal_corine.pal_habitats(sources)
+        habitats_df = pd.concat([habitats_df, pal], ignore_index=True)
+        crosswalks = [pal_corine.expand_pal_expressions(pd.concat(crosswalks, ignore_index=True), set(pal.code))]
+        if (sources / pal_corine.CORINE_FOLDER).is_dir() and pdftext.available():
+            cor = pal_corine.corine_habitats(sources)
+            habitats_df = pd.concat([habitats_df, cor], ignore_index=True)
+    else:
+        print(f"skipped PAL_CLASS / CORINE: {sources / pal_corine.PAL_FOLDER} not found")
     crosswalks_df = (
         validate_crosswalks(pd.concat(crosswalks, ignore_index=True), habitats_df)[CROSSWALKS_COLUMNS]
         if crosswalks else pd.DataFrame(columns=CROSSWALKS_COLUMNS)

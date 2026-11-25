@@ -10689,7 +10689,7 @@ BARCELONA_2019,MA1.51a,CORINE,18.17,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpre
 BARCELONA_2019,MA1.52,EUNIS_M_2019,MA155,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
 BARCELONA_2019,MA1.52,EUNIS_2012,A1.44,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
 BARCELONA_2019,MA1.52,ANNEX_I,8330,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
-BARCELONA_2019,MA1.52,CORINE,12.7,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
+BARCELONA_2019,MA1.52,CORINE,12.7,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",to_code not found in CORINE
 BARCELONA_2019,MA1.53,EUNIS_M_2019,MA153,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
 BARCELONA_2019,MA1.53,EUNIS_2012,A1.13,unspecified,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",printed as 'EUNIS 2007'
 BARCELONA_2019,MA1.53,ANNEX_I,1170,partim,"UNEP/MAP-SPA/RAC 2021, Interpretation Manual (UNEP/MED WG.502/Inf.4), habitat sheet reference codes",
@@ -12783,7 +12783,6 @@ ANNEX_I,1610,PAL_CLASS,16.133,unspecified,"European Commission DG ENV, 2013. Int
 ANNEX_I,1610,PAL_CLASS,17.21,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,1610,PAL_CLASS,17.31,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,1610,PAL_CLASS,19,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,1610,PAL_CLASS,42C51,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",Palaearctic classification 1997 version
 ANNEX_I,1620,PAL_CLASS,11.23,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,1620,PAL_CLASS,11.28,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,1620,PAL_CLASS,11.29,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
@@ -12799,14 +12798,12 @@ ANNEX_I,1640,PAL_CLASS,16.2133,unspecified,"European Commission DG ENV, 2013. In
 ANNEX_I,1650,PAL_CLASS,12.51,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",Palaearctic classification 1997 version
 ANNEX_I,2110,PAL_CLASS,16.211,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,2120,PAL_CLASS,16.212,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,2130,PAL_CLASS,16.221 to 16.227,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,2130,PAL_CLASS,16.22B,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,2140,PAL_CLASS,16.23,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,2150,PAL_CLASS,16.24,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,2160,PAL_CLASS,16.251,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,2170,PAL_CLASS,16.26,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,2180,PAL_CLASS,16.29,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,2190,PAL_CLASS,16.3 = 16.31 to 16.35,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,21A0,PAL_CLASS,1A,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,2210,PAL_CLASS,16.223,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,2220,PAL_CLASS,16.224,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
@@ -12815,16 +12812,7 @@ ANNEX_I,2240,PAL_CLASS,16.229,unspecified,"European Commission DG ENV, 2013. Int
 ANNEX_I,2250,PAL_CLASS,16.27,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,2250,PAL_CLASS,64.613,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,2260,PAL_CLASS,16.28,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,2270,PAL_CLASS,16.29 x 42.8,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
-ANNEX_I,2310,PAL_CLASS,64.1 x 31.223,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
-ANNEX_I,2320,PAL_CLASS,64.1 x 31.227,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
-ANNEX_I,2330,PAL_CLASS,(64.11 or 64.12) x 35.2,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,2340,PAL_CLASS,64.71,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,3110,PAL_CLASS,22.11 x 22.31,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
-ANNEX_I,3120,PAL_CLASS,22.11 x 22.34,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
-ANNEX_I,3130,PAL_CLASS,22.12 x (22.31 and 22.32),unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
-ANNEX_I,3140,PAL_CLASS,(22.12 or 22.15) x 22.44,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
-ANNEX_I,3150,PAL_CLASS,22.13 x (22.41 or 22.421),unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,3160,PAL_CLASS,22.14,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,3170,PAL_CLASS,22.34,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,3180,PAL_CLASS,22.5,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
@@ -12832,8 +12820,6 @@ ANNEX_I,3190,PAL_CLASS,22.12,partim,"European Commission DG ENV, 2013. Interpret
 ANNEX_I,31A0,PAL_CLASS,22.43113,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,3220,PAL_CLASS,24.221,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,3220,PAL_CLASS,24.222,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,3230,PAL_CLASS,24.223 x 44.111,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
-ANNEX_I,3240,PAL_CLASS,24.224 x 44.112,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,3250,PAL_CLASS,24.225,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,3260,PAL_CLASS,24.4,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,3270,PAL_CLASS,24.52,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
@@ -12863,33 +12849,27 @@ ANNEX_I,5110,PAL_CLASS,31.82,unspecified,"European Commission DG ENV, 2013. Inte
 ANNEX_I,5120,PAL_CLASS,31.842,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,5130,PAL_CLASS,31.88,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,5140,PAL_CLASS,32.2B,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,5210,PAL_CLASS,32.131 to 32.136,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,5220,PAL_CLASS,32.17,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,5230,PAL_CLASS,32.18,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,5310,PAL_CLASS,32.216,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,5320,PAL_CLASS,32.217,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,5330,PAL_CLASS,32.21G1,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,5330,PAL_CLASS,32.22 to 32.26,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,5330,PAL_CLASS,32.441,partim,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,5410,PAL_CLASS,33.1,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,5420,PAL_CLASS,33.3,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,5430,PAL_CLASS,33.4 to 33.A,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,6110,PAL_CLASS,34.11,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6120,PAL_CLASS,34.12,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6130,PAL_CLASS,34.2,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,6130,PAL_CLASS,36.44,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6140,PAL_CLASS,36.314,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6150,PAL_CLASS,36.11,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6150,PAL_CLASS,36.32,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6150,PAL_CLASS,36.34,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6160,PAL_CLASS,36.361,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6170,PAL_CLASS,36.12,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,6170,PAL_CLASS,36.41 to 36.43,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,6170,PAL_CLASS,36.37,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6170,PAL_CLASS,36.38,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6180,PAL_CLASS,38.5,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6190,PAL_CLASS,34.35,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,6210,PAL_CLASS,34.31 to 34.34,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,6220,PAL_CLASS,34.5,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6230,PAL_CLASS,35.1,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6230,PAL_CLASS,36.31,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
@@ -12907,7 +12887,6 @@ ANNEX_I,6280,PAL_CLASS,34.3173,unspecified,"European Commission DG ENV, 2013. In
 ANNEX_I,62A0,PAL_CLASS,34.75,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,62C0,PAL_CLASS,34.92,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,62D0,PAL_CLASS,36.39,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,6310,PAL_CLASS,32.11 x 91.2,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,6410,PAL_CLASS,37.31,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6420,PAL_CLASS,37.4,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,6430,PAL_CLASS,37.7,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
@@ -12941,7 +12920,6 @@ ANNEX_I,8220,PAL_CLASS,62.2,unspecified,"European Commission DG ENV, 2013. Inter
 ANNEX_I,8230,PAL_CLASS,62.42,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,8240,PAL_CLASS,62.3,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,8310,PAL_CLASS,65,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,8320,PAL_CLASS,66.1 to 66.6,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,8330,PAL_CLASS,12.7,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,8330,PAL_CLASS,11.26,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,8330,PAL_CLASS,11.294,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
@@ -12963,7 +12941,6 @@ ANNEX_I,9050,PAL_CLASS,42.C4,unspecified,"European Commission DG ENV, 2013. Inte
 ANNEX_I,9050,PAL_CLASS,42.C3,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",Palaearctic classification 1997 version
 ANNEX_I,9080,PAL_CLASS,44.9112,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9080,PAL_CLASS,44.915,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,9080,PAL_CLASS,44.A14,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",Palaearctic classification 1997 version
 ANNEX_I,9110,PAL_CLASS,41.11,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9120,PAL_CLASS,41.12,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9130,PAL_CLASS,41.13,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
@@ -12978,7 +12955,6 @@ ANNEX_I,9190,PAL_CLASS,41.54,unspecified,"European Commission DG ENV, 2013. Inte
 ANNEX_I,91A0,PAL_CLASS,41.53,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,91B0,PAL_CLASS,41.86,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,91C0,PAL_CLASS,42.51,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,91D0,PAL_CLASS,44.A1 to 44.A4,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,91E0,PAL_CLASS,44.3,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,91E0,PAL_CLASS,44.2,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,91E0,PAL_CLASS,44.13,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
@@ -13000,7 +12976,6 @@ ANNEX_I,91Q0,PAL_CLASS,42.5C8,unspecified,"European Commission DG ENV, 2013. Int
 ANNEX_I,91R0,PAL_CLASS,42.5C52,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,91S0,PAL_CLASS,41.1E1,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,91T0,PAL_CLASS,42.52112,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,91T0,PAL_CLASS,61.15,partim,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,91U0,PAL_CLASS,42.5232,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,91V0,PAL_CLASS,41.1D2,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,91W0,PAL_CLASS,41.19,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
@@ -13031,28 +13006,23 @@ ANNEX_I,92B0,PAL_CLASS,44.52,unspecified,"European Commission DG ENV, 2013. Inte
 ANNEX_I,92B0,PAL_CLASS,44.54,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,92C0,PAL_CLASS,44.71,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,92C0,PAL_CLASS,44.72,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,92D0,PAL_CLASS,44.81 to 44.84,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,9310,PAL_CLASS,41.735,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9320,PAL_CLASS,45.1,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9330,PAL_CLASS,45.2,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9340,PAL_CLASS,45.3,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9350,PAL_CLASS,41.79,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,9360,PAL_CLASS,45.61 to 45.63,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,9370,PAL_CLASS,45.7,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9380,PAL_CLASS,45.8,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9390,PAL_CLASS,45.48,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,93A0,PAL_CLASS,45.46,partim,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,9410,PAL_CLASS,42.21 to 42.25,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,9420,PAL_CLASS,42.31,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9420,PAL_CLASS,42.32,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9420,PAL_CLASS,42.35,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9430,PAL_CLASS,42.4,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9510,PAL_CLASS,42.15,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9520,PAL_CLASS,42.19,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,9530,PAL_CLASS,42.61 to 42.66,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,9540,PAL_CLASS,42.8,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9550,PAL_CLASS,42.9,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
-ANNEX_I,9560,PAL_CLASS,42.A2 to 42.A5 and 42.A8,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",compound expression as printed ('x' = combination)
 ANNEX_I,9570,PAL_CLASS,42.A6,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9580,PAL_CLASS,42.A72,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
 ANNEX_I,9580,PAL_CLASS,42.A73,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",
@@ -23893,3 +23863,105 @@ UK_MHC_2204,M.AAUB.Bi,OSPAR_TD_2021,lophelia-pertusa-reefs,<,"JNCC, 2026. Marine
 UK_MHC_2204,M.AAUB.Bi,ANNEX_I,1170,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'Annex1 ...'",
 UK_MHC_2204,M.AAUB.Bi,MSFD_BHT,upper-bathyal-rock-and-biogenic-reef,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'MSFDBroadHabitat ...'",JNCC name: Upper bathyal rock and biogenic reef
 UK_MHC_2204,M.AAUB.Bi,IUCN_GET,M3.5,<,"JNCC, 2026. Marine habitat correlation tables v2026.02, sheet 'Correlation Data', columns 'GET ...'",
+ANNEX_I,1610,PAL_CLASS,42C51,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",Palaearctic classification 1997 version; to_code not found in PAL_CLASS
+ANNEX_I,2130,PAL_CLASS,16.221,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.221 to 16.227' ('x' = combination of two units)
+ANNEX_I,2130,PAL_CLASS,16.222,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.221 to 16.227' ('x' = combination of two units)
+ANNEX_I,2130,PAL_CLASS,16.223,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.221 to 16.227' ('x' = combination of two units)
+ANNEX_I,2130,PAL_CLASS,16.224,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.221 to 16.227' ('x' = combination of two units)
+ANNEX_I,2130,PAL_CLASS,16.225,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.221 to 16.227' ('x' = combination of two units)
+ANNEX_I,2130,PAL_CLASS,16.226,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.221 to 16.227' ('x' = combination of two units)
+ANNEX_I,2130,PAL_CLASS,16.227,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.221 to 16.227' ('x' = combination of two units)
+ANNEX_I,2190,PAL_CLASS,16.31,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.3 = 16.31 to 16.35' ('x' = combination of two units)
+ANNEX_I,2190,PAL_CLASS,16.32,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.3 = 16.31 to 16.35' ('x' = combination of two units)
+ANNEX_I,2190,PAL_CLASS,16.33,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.3 = 16.31 to 16.35' ('x' = combination of two units)
+ANNEX_I,2190,PAL_CLASS,16.34,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.3 = 16.31 to 16.35' ('x' = combination of two units)
+ANNEX_I,2190,PAL_CLASS,16.35,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.3 = 16.31 to 16.35' ('x' = combination of two units)
+ANNEX_I,2270,PAL_CLASS,16.29,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.29 x 42.8' ('x' = combination of two units)
+ANNEX_I,2270,PAL_CLASS,42.8,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '16.29 x 42.8' ('x' = combination of two units)
+ANNEX_I,2310,PAL_CLASS,64.1,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '64.1 x 31.223' ('x' = combination of two units)
+ANNEX_I,2310,PAL_CLASS,31.223,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '64.1 x 31.223' ('x' = combination of two units)
+ANNEX_I,2320,PAL_CLASS,64.1,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '64.1 x 31.227' ('x' = combination of two units)
+ANNEX_I,2320,PAL_CLASS,31.227,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '64.1 x 31.227' ('x' = combination of two units)
+ANNEX_I,2330,PAL_CLASS,64.11,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '(64.11 or 64.12) x 35.2' ('x' = combination of two units)
+ANNEX_I,2330,PAL_CLASS,64.12,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '(64.11 or 64.12) x 35.2' ('x' = combination of two units)
+ANNEX_I,2330,PAL_CLASS,35.2,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '(64.11 or 64.12) x 35.2' ('x' = combination of two units)
+ANNEX_I,3110,PAL_CLASS,22.11,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '22.11 x 22.31' ('x' = combination of two units)
+ANNEX_I,3110,PAL_CLASS,22.31,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '22.11 x 22.31' ('x' = combination of two units)
+ANNEX_I,3120,PAL_CLASS,22.11,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '22.11 x 22.34' ('x' = combination of two units)
+ANNEX_I,3120,PAL_CLASS,22.34,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '22.11 x 22.34' ('x' = combination of two units)
+ANNEX_I,3130,PAL_CLASS,22.12,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '22.12 x (22.31 and 22.32)' ('x' = combination of two units)
+ANNEX_I,3130,PAL_CLASS,22.31,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '22.12 x (22.31 and 22.32)' ('x' = combination of two units)
+ANNEX_I,3130,PAL_CLASS,22.32,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '22.12 x (22.31 and 22.32)' ('x' = combination of two units)
+ANNEX_I,3140,PAL_CLASS,22.12,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '(22.12 or 22.15) x 22.44' ('x' = combination of two units)
+ANNEX_I,3140,PAL_CLASS,22.15,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '(22.12 or 22.15) x 22.44' ('x' = combination of two units)
+ANNEX_I,3140,PAL_CLASS,22.44,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '(22.12 or 22.15) x 22.44' ('x' = combination of two units)
+ANNEX_I,3150,PAL_CLASS,22.13,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '22.13 x (22.41 or 22.421)' ('x' = combination of two units)
+ANNEX_I,3150,PAL_CLASS,22.41,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '22.13 x (22.41 or 22.421)' ('x' = combination of two units)
+ANNEX_I,3150,PAL_CLASS,22.421,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '22.13 x (22.41 or 22.421)' ('x' = combination of two units)
+ANNEX_I,3230,PAL_CLASS,24.223,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '24.223 x 44.111' ('x' = combination of two units)
+ANNEX_I,3230,PAL_CLASS,44.111,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '24.223 x 44.111' ('x' = combination of two units)
+ANNEX_I,3240,PAL_CLASS,24.224,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '24.224 x 44.112' ('x' = combination of two units)
+ANNEX_I,3240,PAL_CLASS,44.112,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '24.224 x 44.112' ('x' = combination of two units)
+ANNEX_I,5210,PAL_CLASS,32.131,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '32.131 to 32.136' ('x' = combination of two units)
+ANNEX_I,5210,PAL_CLASS,32.132,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '32.131 to 32.136' ('x' = combination of two units)
+ANNEX_I,5210,PAL_CLASS,32.133,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '32.131 to 32.136' ('x' = combination of two units)
+ANNEX_I,5210,PAL_CLASS,32.134,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '32.131 to 32.136' ('x' = combination of two units)
+ANNEX_I,5210,PAL_CLASS,32.135,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '32.131 to 32.136' ('x' = combination of two units)
+ANNEX_I,5210,PAL_CLASS,32.136,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '32.131 to 32.136' ('x' = combination of two units)
+ANNEX_I,5330,PAL_CLASS,32.22,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '32.22 to 32.26' ('x' = combination of two units)
+ANNEX_I,5330,PAL_CLASS,32.23,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '32.22 to 32.26' ('x' = combination of two units)
+ANNEX_I,5330,PAL_CLASS,32.24,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '32.22 to 32.26' ('x' = combination of two units)
+ANNEX_I,5330,PAL_CLASS,32.25,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '32.22 to 32.26' ('x' = combination of two units)
+ANNEX_I,5330,PAL_CLASS,32.26,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '32.22 to 32.26' ('x' = combination of two units)
+ANNEX_I,5430,PAL_CLASS,33.4,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '33.4 to 33.A' ('x' = combination of two units)
+ANNEX_I,5430,PAL_CLASS,33.5,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '33.4 to 33.A' ('x' = combination of two units)
+ANNEX_I,5430,PAL_CLASS,33.6,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '33.4 to 33.A' ('x' = combination of two units)
+ANNEX_I,5430,PAL_CLASS,33.7,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '33.4 to 33.A' ('x' = combination of two units)
+ANNEX_I,5430,PAL_CLASS,33.8,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '33.4 to 33.A' ('x' = combination of two units)
+ANNEX_I,5430,PAL_CLASS,33.9,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '33.4 to 33.A' ('x' = combination of two units)
+ANNEX_I,5430,PAL_CLASS,33.A,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '33.4 to 33.A' ('x' = combination of two units)
+ANNEX_I,6130,PAL_CLASS,36.44,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",to_code not found in PAL_CLASS
+ANNEX_I,6170,PAL_CLASS,36.41,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '36.41 to 36.43' ('x' = combination of two units)
+ANNEX_I,6170,PAL_CLASS,36.42,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '36.41 to 36.43' ('x' = combination of two units)
+ANNEX_I,6170,PAL_CLASS,36.43,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '36.41 to 36.43' ('x' = combination of two units)
+ANNEX_I,6210,PAL_CLASS,34.31,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '34.31 to 34.34' ('x' = combination of two units)
+ANNEX_I,6210,PAL_CLASS,34.32,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '34.31 to 34.34' ('x' = combination of two units)
+ANNEX_I,6210,PAL_CLASS,34.33,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '34.31 to 34.34' ('x' = combination of two units)
+ANNEX_I,6210,PAL_CLASS,34.34,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '34.31 to 34.34' ('x' = combination of two units)
+ANNEX_I,6310,PAL_CLASS,32.11,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '32.11 x 91.2' ('x' = combination of two units)
+ANNEX_I,6310,PAL_CLASS,91.2,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '32.11 x 91.2' ('x' = combination of two units)
+ANNEX_I,8320,PAL_CLASS,66.1,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '66.1 to 66.6' ('x' = combination of two units)
+ANNEX_I,8320,PAL_CLASS,66.2,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '66.1 to 66.6' ('x' = combination of two units)
+ANNEX_I,8320,PAL_CLASS,66.3,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '66.1 to 66.6' ('x' = combination of two units)
+ANNEX_I,8320,PAL_CLASS,66.4,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '66.1 to 66.6' ('x' = combination of two units)
+ANNEX_I,8320,PAL_CLASS,66.5,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '66.1 to 66.6' ('x' = combination of two units)
+ANNEX_I,8320,PAL_CLASS,66.6,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '66.1 to 66.6' ('x' = combination of two units)
+ANNEX_I,9080,PAL_CLASS,44.A14,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",Palaearctic classification 1997 version; to_code not found in PAL_CLASS
+ANNEX_I,91D0,PAL_CLASS,44.A1,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '44.A1 to 44.A4' ('x' = combination of two units)
+ANNEX_I,91D0,PAL_CLASS,44.A2,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '44.A1 to 44.A4' ('x' = combination of two units)
+ANNEX_I,91D0,PAL_CLASS,44.A3,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '44.A1 to 44.A4' ('x' = combination of two units)
+ANNEX_I,91D0,PAL_CLASS,44.A4,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '44.A1 to 44.A4' ('x' = combination of two units)
+ANNEX_I,91T0,PAL_CLASS,61.15,partim,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",to_code not found in PAL_CLASS
+ANNEX_I,92D0,PAL_CLASS,44.81,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '44.81 to 44.84' ('x' = combination of two units)
+ANNEX_I,92D0,PAL_CLASS,44.82,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '44.81 to 44.84' ('x' = combination of two units)
+ANNEX_I,92D0,PAL_CLASS,44.83,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '44.81 to 44.84' ('x' = combination of two units)
+ANNEX_I,92D0,PAL_CLASS,44.84,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '44.81 to 44.84' ('x' = combination of two units)
+ANNEX_I,9360,PAL_CLASS,45.61,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '45.61 to 45.63' ('x' = combination of two units)
+ANNEX_I,9360,PAL_CLASS,45.62,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '45.61 to 45.63' ('x' = combination of two units)
+ANNEX_I,9360,PAL_CLASS,45.63,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '45.61 to 45.63' ('x' = combination of two units)
+ANNEX_I,9410,PAL_CLASS,42.21,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.21 to 42.25' ('x' = combination of two units)
+ANNEX_I,9410,PAL_CLASS,42.22,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.21 to 42.25' ('x' = combination of two units)
+ANNEX_I,9410,PAL_CLASS,42.23,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.21 to 42.25' ('x' = combination of two units)
+ANNEX_I,9410,PAL_CLASS,42.24,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.21 to 42.25' ('x' = combination of two units)
+ANNEX_I,9410,PAL_CLASS,42.25,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.21 to 42.25' ('x' = combination of two units)
+ANNEX_I,9530,PAL_CLASS,42.61,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.61 to 42.66' ('x' = combination of two units)
+ANNEX_I,9530,PAL_CLASS,42.62,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.61 to 42.66' ('x' = combination of two units)
+ANNEX_I,9530,PAL_CLASS,42.63,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.61 to 42.66' ('x' = combination of two units)
+ANNEX_I,9530,PAL_CLASS,42.64,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.61 to 42.66' ('x' = combination of two units)
+ANNEX_I,9530,PAL_CLASS,42.65,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.61 to 42.66' ('x' = combination of two units)
+ANNEX_I,9530,PAL_CLASS,42.66,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.61 to 42.66' ('x' = combination of two units)
+ANNEX_I,9560,PAL_CLASS,42.A2,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.A2 to 42.A5 and 42.A8' ('x' = combination of two units)
+ANNEX_I,9560,PAL_CLASS,42.A3,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.A2 to 42.A5 and 42.A8' ('x' = combination of two units)
+ANNEX_I,9560,PAL_CLASS,42.A4,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.A2 to 42.A5 and 42.A8' ('x' = combination of two units)
+ANNEX_I,9560,PAL_CLASS,42.A5,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.A2 to 42.A5 and 42.A8' ('x' = combination of two units)
+ANNEX_I,9560,PAL_CLASS,42.A8,unspecified,"European Commission DG ENV, 2013. Interpretation Manual of European Union Habitats - EUR28 (April 2013), PAL.CLASS.",from the PAL.CLASS expression '42.A2 to 42.A5 and 42.A8' ('x' = combination of two units)
