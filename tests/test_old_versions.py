@@ -37,6 +37,8 @@ def test_jncc_former_versions():
     assert n["UK_MNCR_0405"] == 474          # 5 + 24 + 75 + 370 (v04.05 introduction)
     assert n["UK_MHC_9706"] == 322           # of 364 types (Report 229, Table 2.4)
     assert n["UK_MHC_1503"] in (688, 690)    # + M and M.AtMB.Bi from Report 530 Appendix 2
+    v1503 = h[h.system == "UK_MHC_1503"]
+    assert v1503[v1503.code.str.startswith("M.")].description.notna().sum() >= 200   # Report 530, Appendix 3
     v0405 = h[h.system == "UK_MNCR_0405"]
     assert v0405.level.value_counts().to_dict() == {5: 262, 6: 108, 4: 75, 3: 24, 2: 5}
 

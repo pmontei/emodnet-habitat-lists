@@ -237,7 +237,7 @@ Folder: `8.Marine Habitat Classification for Britain and Ireland/`
 | `04_2023_*`, `05_2019_*` | How to use MHC v22.04 (2023); Parry 2019, JNCC Report 546 (assigning biotopes using EUNIS or MHC). | documentation | https://mhc.jncc.gov.uk/resources/ |
 | `06_2004_*` to `09_2004_*` | Connor et al., 2004. MHC v04.05 (introduction, biotope sections, comparative tables). | count check of `UK_MNCR_0405` (introduction: 5 + 24 + 75 + 370 types) | ISBN 1 861 07561 8 |
 | `10_1997_*`, `11_1997_*` | Connor et al., 1997. MNCR marine biotope classification for Britain and Ireland, v97.06. JNCC Reports 229 (littoral) and 230 (sublittoral). | count check of `UK_MHC_9706` (Table 2.4: 7 + 21 + 60 + 196 + 80 types) | JNCC Resource Hub, https://hub.jncc.gov.uk/ |
-| `12_2015_*`, `13_2020_*` | Parry et al., 2015. A Deep-sea Section for the MHC v15.03. JNCC Report 530; Appendix 2 (structure, rev. 2020). | `UK_MHC_1503`: 2 deep-sea units missing from the correlation tables (`M`, `M.AtMB.Bi`) | JNCC Resource Hub, https://hub.jncc.gov.uk/ |
+| `12_2015_*`, `13_2020_*`, `14_2020_*` | Parry et al., 2015. A Deep-sea Section for the MHC v15.03. JNCC Report 530; Appendix 2 (structure) and Appendix 3 (biotope descriptions), rev. 2020. | `UK_MHC_1503`: 2 deep-sea units missing from the correlation tables (`M`, `M.AtMB.Bi`); descriptions of the 215 deep-sea units | JNCC Resource Hub, https://hub.jncc.gov.uk/ |
 
 Notes:
 
@@ -497,7 +497,8 @@ Folders: `20.CORINE Biotopes/`, `21.Palaearctic Habitat Classification/`
 |---|---|---|---|
 | `02_2001_IRSNB-INPN_PHYSIS-Palaearctic-classification_TYPO-PAL-2001.xls` | Devillers, P., Devillers-Terschuren, J. & Vander Linden, C., 2001. PHYSIS Palaearctic Habitat Classification, updated to 10 December 2001. IRSNB, Brussels. Table TYPO_PAL_PHYSIS_2001, SPN-MNHN / INPN (2010). | `PAL_CLASS`: 6228 codes (levels 1-8), English names, descriptions | INPN habitat typologies: https://inpn.mnhn.fr/habitat/ |
 | `01_1996_CoE_Devillers_Classification-of-Palaearctic-habitats_NE78.pdf` | Devillers, P. & Devillers-Terschuren, J., 1996. A classification of Palaearctic habitats. Nature and environment No. 78. Council of Europe. | reference only (113 of 157 pages of this copy are web-viewer placeholders) | ISBN 92-871-2989-4 |
-| `01_1991_EC_CORINE-Biotopes-Manual_Vol3-Habitats-of-the-EC.pdf` | Commission of the European Communities, 1991. CORINE biotopes manual. Habitats of the European Community. Data specifications - Part 2 (Vol. 3). EUR 12587/3 EN. | `CORINE`: chapters 1 (coastal and halophytic communities) and 2 (non-marine waters), 325 units | EU Publications Office, catalogue CD-NC-12587-EN-C |
+| `01_1991_EC_CORINE-Biotopes-Manual_Vol3-Habitats-of-the-EC.pdf` | Commission of the European Communities, 1991. CORINE biotopes manual. Habitats of the European Community. Data specifications - Part 2 (Vol. 3). EUR 12587/3 EN. | `CORINE`: chapters 1 (coastal and halophytic communities) and 2 (non-marine waters), 330 units | EU Publications Office, catalogue CD-NC-12587-EN-C |
+| `02_1997_ENGREF-ATEN_Bissardon-Guibal-Rameau_CORINE-Biotopes-Types-habitats-francais.pdf` | Bissardon, M., Guibal, L. & Rameau, J.-C., 1997. CORINE Biotopes, version originale. Types d'habitats français. ENGREF / ATEN. | completeness check of the CORINE codes (French adaptation, text PDF) | - |
 
 Notes:
 
@@ -514,8 +515,12 @@ Notes:
   number, are skipped); codes alone on their line take the heading on the next line; headings in
   capitals followed by a syntaxon keep the syntaxon in `notes`. OCR spacing errors are repaired with
   the vocabulary of the PAL names; when the PAL unit with the same code has a near-identical name
-  (similarity >= 0.85) its spelling is used (`notes` keep the OCR text). Eight names still damaged by
-  the OCR were read on the page images (`OCR_FIXES`, e.g. `15`, `16.272`, `18.22`).
+  (similarity >= 0.85) its spelling is used (`notes` keep the OCR text). Names still damaged by
+  the OCR were read on the page images (`OCR_FIXES`, e.g. `15`, `16.272`, `18.22`, `24.224`).
+* Completeness check against the French adaptation (Bissardon et al. 1997, a clean text PDF): two
+  entries are missing from the OCR text layer (`22.2`, heading without code; `24.42`, whole block)
+  and were read on the page images (`MISSING_FROM_OCR`). The French codes still absent (`15.811`,
+  `15.8114`, `22.3113`, `22.344`, `22.416`) are French extensions, not printed in the 1991 manual.
 * The CORINE manual codes sea inlets (12) and estuaries (13.2) by transposing the subdivisions of 11
   and 11.2; those transposed codes are not printed. `12.7`, cited by the Barcelona Interpretation
   Manual for `MA1.52`, is one of them and is flagged.

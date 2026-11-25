@@ -24,12 +24,14 @@ def test_pal():
                     reason="CORINE source not available")
 def test_corine_chapters_1_2():
     c = pc.corine_habitats(SOURCES)
-    assert len(c) == 325 and c.code.is_unique
+    assert len(c) == 330 and c.code.is_unique
     assert set(c.code.str[0]) == {"1", "2"}
     assert set(c.parent_code.dropna()) <= set(c.code)
     n = dict(zip(c.code, c.name))
     assert n["11.34"] == "Posidonia beds" and n["13.11"] == "Brackish water" and n["16.272"] == "Lycian juniper woods"
     assert n["15"] == "Salt marshes, salt steppes and gypsum scrubs"
+    assert n["16.2122"] == "Mediterranean white dunes" and n["17.3"] == "Sea kale communities"
+    assert n["22.2"] == "Unvegetated muds or shingles" and n["24.42"] == "Lime-rich oligotrophic river vegetation"
     assert dict(zip(c.code, c.parent_code))["11.121"] == "11.12"
     assert not c.notes.str.contains("to check").any()
 

@@ -57,9 +57,17 @@ OCR_FIXES = {
     "16.28": ("Dune sclerophyllous scrubs", ""),
     "16.272": ("Lycian juniper woods", ""),
     "15.56": ("Mediterranean saltmarsh driftlines", "Thero-Suaedion"),
+    "24.224": ("Gravel bank thickets and woods", ""),
     "18.22": ("Mediterranean cliff communities", "Crithmo-Limonietalia"),
     "22.431": ("Floating broad-leaved carpets", "Nymphaeion albae"),
     "23.211": ("Tasselweed communities", "Ruppion maritimae p."),
+}
+
+
+# entries whose code or whole block is missing from the OCR text layer, read on the page images
+MISSING_FROM_OCR = {
+    "22.2": "Unvegetated muds or shingles",                   # p. 39 of the manual (heading without code in OCR)
+    "24.42": "Lime-rich oligotrophic river vegetation",       # p. 47 (block missing in OCR)
 }
 
 
@@ -119,21 +127,32 @@ def corine_habitats(sources: Path) -> pd.DataFrame:
         if m:
             code, name = m.group(2), m.group(3).strip()
         else:
-            # code alone on its line, heading in capitals on the next line (e.g. 13.11 / BRACKISH WATER)
+            # code alone on its line: the heading is the next line in capitals (13.11 / BRACKISH WATER), or a
+            # short title after a blank line within the next 6 lines (16.2122 ... Mediterranean white dunes)
             mo = _CODE_ONLY.match(s)
-            nxt = lines[i + 1].strip() if mo and i + 1 < len(lines) else ""
-            if not (mo and re.fullmatch(r"[A-Z][A-Z ,\-'()/]{3,}", nxt)):
+            if not mo:
                 continue
-            code, name = mo.group(1), nxt
+            name, name_at = None, i
+            for k in range(i + 1, min(i + 7, len(lines))):
+                t = lines[k].strip()
+                if re.fullmatch(r"[A-Z][A-Z ,\-'()/]{3,}", t) or (
+                        t and len(t) < 60 and not lines[k - 1].strip() and t[0].isupper()
+                        and not t.endswith(".") and not t.startswith("(") and not _CODE_ONLY.match(lines[k])):
+                    name, name_at = t, k
+                    break
+            if name is None:
+                continue
+            code = mo.group(1)
         code = code.replace("l", "1").replace("£", "").rstrip(".")
         if code.split(".")[0][0] not in CORINE_CHAPTERS or code in entries:
             continue
         if not (len(code.split(".")[0]) == 1 or code[:2] in {"11", "12", "13", "14", "15", "16", "17", "18", "19",
                                                              "21", "22", "23", "24"}):
             continue
-        if re.search(r"\s{3,}\d+\s*$", name) or re.match(r"^[\d,(]", name) or "biotopes manual" in name.lower():
+        if re.search(r"\s{3,}\d+\s*$", name) or re.match(r"^[\d,]|^\((?![a-z]{3,} )", name) \
+                or "biotopes manual" in name.lower():
             continue
-        j = i + 1 if m else i + 2
+        j = i + 1 if m else name_at + 1
         while j < len(lines) and lines[j].strip() and len(lines[j].strip()) <= 20 and not _LINE.match(lines[j]) \
                 and not _CODE_ONLY.match(lines[j]) and not re.fullmatch(r"[A-Z][A-Z ,\-'()/]{3,}", lines[j].strip()):
             name += " " + lines[j].strip()
@@ -158,6 +177,9 @@ def corine_habitats(sources: Path) -> pd.DataFrame:
             notes = [f"OCR text '{name}', corrected from the page image"] + ([f"syntaxon: {syn}"] if syn else [])
             name = fixed
         entries[code] = (name, "; ".join(notes))
+
+    for code, name in MISSING_FROM_OCR.items():
+        entries.setdefault(code, (name, "missing from the OCR text layer; read on the page image"))
 
     def key(c: str) -> tuple[int, ...]:
         return tuple(int(x) for x in c.split("."))

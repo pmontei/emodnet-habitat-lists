@@ -64,7 +64,7 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | European Red List of Habitats 2016, marine (Part 1) | ✅ (257 types with EU28/EU28+ categories) | ✅ from EUNIS marine 2022 (EEA) |
 | Bern Convention Resolution No. 4 / Emerald (revised Annex I, 2019) | ✅ (213 types, with manual descriptions) | ✅ to EUNIS 2012 and Annex I (Interpretation Manual 2019) |
 | Palaearctic Habitat Classification (PHYSIS 2001) | ✅ (6228 codes) | ✅ from Annex I (Interpretation Manual; compound expressions split) |
-| CORINE biotopes (1991), chapters 1-2 | ✅ (325 units; scan with OCR, names checked) | ✅ from Barcelona 2019 (Interpretation Manual) |
+| CORINE biotopes (1991), chapters 1-2 | ✅ (330 units; scan with OCR, names and codes checked) | ✅ from Barcelona 2019 (Interpretation Manual) |
 | Caribbean: Typologie des habitats benthiques de la Martinique (Andres et al. 2022) | ✅ (245 units, 5 levels) | ✅ to French Antilles APHN habitats; EUNIS via EUSeaMap planned |
 
 ### Lists

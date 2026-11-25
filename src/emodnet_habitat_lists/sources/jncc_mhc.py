@@ -13,7 +13,8 @@ System produced
     every former unit that JNCC correlates with v22.04. Checked against the published counts:
     v04.05 474 units (introduction: 5 + 24 + 75 + 370, complete); v15.03 688 units = v04.05 +
     214 of the 216 units of the deep-sea section, the 2 missing ones (``M``, ``M.AtMB.Bi``) are
-    added from JNCC Report 530, Appendix 2 (complete); v97.06 322 of the 364 types of JNCC Report
+    added from JNCC Report 530, Appendix 2 (complete), and the deep-sea descriptions come from
+    Appendix 3; v97.06 322 of the 364 types of JNCC Report
     229, Table 2.4 (7 + 21 + 60 + 196 + 80): the ~40 types that JNCC does not correlate (mostly
     littoral: lichens, rockpools, overhangs) are not loaded.
 
@@ -47,6 +48,7 @@ FOLDER = "8.Marine Habitat Classification for Britain and Ireland"
 BIOTOPE_LIST_GLOB = "01_2022_JNCC_MHC-v22-04_*.xlsx"
 CORRELATION_GLOB = "02_2026_JNCC_*correlation*.xls*"
 DEEP_SEA_GLOBS = ("13_*Report-530-Appendix2*.xlsx", "JNCC-Report-530-appendix2*.xlsx")
+DEEP_SEA_DESC_GLOBS = ("14_*Report-530-Appendix3*.xlsx", "JNCC-Report-530-appendix3*.xlsx")
 SRC_DEEP = ("Parry, M.E.V. et al., 2015. A Deep-sea Section for the Marine Habitat Classification of Britain and "
             "Ireland. JNCC Report No. 530, Appendix 2 (deep-sea classification structure, rev. 10/02/2020)")
 OLD_VERSIONS = {"JNCCv1503": "UK_MHC_1503", "JNCCv0405": "UK_MNCR_0405", "JNCCv9706": "UK_MHC_9706"}
@@ -160,6 +162,16 @@ def old_versions_habitats(sources: Path) -> pd.DataFrame:
                                                "notes": "not in the correlation tables; from the deep-sea "
                                                         "section (Report 530, Appendix 2)"}
                 rows = list(seen.values())
+            desc_file = next((f for g in DEEP_SEA_DESC_GLOBS for f in sorted((sources / FOLDER).glob(g))), None)
+            if desc_file is not None:
+                dd = pd.read_excel(desc_file, sheet_name=0, dtype=str)
+                dd.columns = [re.sub(r"\s+", " ", str(c)).strip() for c in dd.columns]
+                desc = {str(c).strip(): str(t).strip() for c, t in zip(dd["Habitat code"], dd["Habitat description"])
+                        if isinstance(c, str) and isinstance(t, str) and t.strip()}
+                for x in rows:
+                    if x["code"] in desc:
+                        x["description"] = desc[x["code"]]
+                        x["source"] += "; description: JNCC Report 530, Appendix 3 (rev. 10/02/2020)"
         _parents(rows)
         out += rows
     o = pd.DataFrame(out, columns=HABITATS_COLUMNS)
