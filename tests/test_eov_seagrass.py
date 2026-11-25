@@ -32,7 +32,8 @@ def test_item_for():
     assert sg.item_for("Herbiers à Halophila stipulacea sur sables", "CARIB_MARTINIQUE_2022") == "tropical-seagrass-beds"
     assert sg.item_for("Temperate [Halophila] and [Thalassia] beds") == "halophila-beds"
     assert sg.link_for_name("Sarmatic [Iris halophila] saline meadows")[0] == "excluded"
-    assert sg.link_for_name("Dead matte of Posidonia oceanica")[0] == "excluded"
+    assert sg.link_for_name("Dead matte of Posidonia oceanica")[0] == "member"
+    assert sg.link_for_name("Association with [Caulerpa prolifera] on [Posidonia] beds")[0] == "excluded"
     assert sg.link_for_name("Association of Cymodocea nodosa or Caulerpa spp. with dead matte of Posidonia "
                             "oceanica")[0] == "partial"
 
@@ -64,12 +65,16 @@ def test_filter(tables):
                 ("UK_MHC_2204", "SS.SMp.SSgr.Zmar"), ("CARIB_MARTINIQUE_2022", "C4-34.2")]:
         assert use.get(key) == "yes", key
     assert use[("ANNEX_I", "1110")] == "broader"
-    for key in [("BARCELONA_2019", "MB2.53"), ("BARCELONA_2019", "MB2.544"), ("EUNIS_M_2022", "MB2523"),
-                ("EUNIS_M_2022", "MA2561"), ("EUNIS_2012", "A5.5353"), ("EUNIS_2012", "E6.2273")]:
+    for key in [("BARCELONA_2019", "MB2.53"), ("EUNIS_2012", "E6.2273"), ("EUNIS_2012", "A5.5354"),
+                ("EUNIS_M_2022", "MB2524"), ("BARCELONA_2006", "III.5.1.4")]:
         assert use[key] == "no", key
+    for key in [("BARCELONA_2019", "MB2.544"), ("EUNIS_M_2022", "MB2523"), ("EUNIS_M_2022", "MA2561"),
+                ("EUNIS_2012", "A5.5353"), ("EUNIS_2012", "A2.131")]:   # WP3 decision: dead Posidonia included
+        assert use[key] == "yes", key
     assert set(members["item"]) <= set(items["item"])
     assert f.set_index(["system", "code"]).index.is_unique
     # no proposed member without a reason to be there
+    assert (members[members.status == "reviewed"].decided_by == sg.DECIDED_BY).all()
     prop = members[members.status == "proposed"]
     assert (prop.notes != "").all() and (prop.decided_by != "").all()
 

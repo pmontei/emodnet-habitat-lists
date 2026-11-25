@@ -27,9 +27,12 @@ Members come in three layers
    classification whose name names seagrass taxa or seagrass beds and was not reached otherwise
    (``TO REVIEW: found by name only``).
 
-Names that describe dead plants (dead leaves, dead *matte*, plants washed ashore), inland
-(athalassic) seagrass communities or homonyms (*Iris halophila*) give ``excluded`` rows. Mixed
-habitats (seagrass with algae, halophytes, corals...) give ``partial`` rows.
+Names that describe plants washed ashore, inland (athalassic) seagrass communities or homonyms
+(*Iris halophila*) give ``excluded`` rows. Mixed habitats (seagrass with algae, halophytes,
+corals...) give ``partial`` rows.
+
+WP3 decisions (``DECISIONS``, status ``reviewed``): dead *Posidonia* leaves and dead *matte* are
+included; associations with *Caulerpa prolifera* (an alga) are excluded.
 
 Items are the seagrass bed types of D3.11 (2025), Appendix Table 3, plus ``seagrass-beds`` for
 generic or mixed seagrass habitats; the item of a member is decided from its name (genus named),
@@ -159,8 +162,17 @@ TROPICAL = r"thalassia testudinum|syringodium|halodule|tropical sea-?grass|tropi
 SEAGRASS_NAME = re.compile(
     r"zostera|posidoni|cymodoce|halophila|ruppia|zannichellia|thalassia|syringodium|halodule|sea-?grass|eel-?grass|"
     r"herbier|marine angiosperm|aquatic angiosperm|angiosperm communit|marine phanerogam", re.I)
-EXCLUDED_NAME = re.compile(
-    r"dead leaves|dead\W+(?:«\s*)?mattes?\b|washed ashore|iris halophila|athalassic|deposit of dead", re.I)
+EXCLUDED_NAME = re.compile(r"washed ashore|iris halophila|athalassic|deposit of dead", re.I)
+
+# WP3 decisions (Pedro Monteiro, CCMAR, 2026-11-25): name pattern -> (link_type, reason). They apply to
+# every row of the habitat (published or proposed), which becomes ``reviewed``.
+DECIDED_BY, DECIDED_ON = "Pedro Monteiro (WP3, CCMAR)", "2026-11-25"
+DECISIONS = [
+    (re.compile(r"association with \W*caulerpa prolifera", re.I), "excluded",
+     "WP3 decision: Caulerpa prolifera is an alga, not a seagrass; associations with it are left out"),
+    (re.compile(r"dead leaves|dead\W+(?:«\s*)?mattes?\b", re.I), "member",
+     "WP3 decision: dead Posidonia leaves and dead matte are included"),
+]
 PARTIAL_NAME = re.compile(
     r"halophyte|algal|algae|algues|coraux|coral|gorgon|caulerpa spp|or caulerpa|angiosperm communit|"
     r"dominated by aquatic angiosperms|rhizomatous", re.I)
@@ -183,16 +195,43 @@ def item_for(name: str, system: str = "", default: str = "seagrass-beds") -> str
     return "seagrass-beds" if hits or SEAGRASS_NAME.search(n) else default
 
 
-def link_for_name(name: str) -> tuple[str, str]:
-    """(link_type, reason) from the habitat name alone."""
+def decision_for(name: str) -> tuple[str, str] | None:
     n = name if isinstance(name, str) else ""
+    for pattern, link, why in DECISIONS:
+        if pattern.search(n):
+            if link == "member" and re.search(r"caulerpa spp|or caulerpa|cymodocea", n, re.I):
+                return None   # living seagrass or algae on dead matte: mixed, left to the name rules
+            return link, why
+    return None
+
+
+def link_for_name(name: str) -> tuple[str, str]:
+    """(link_type, reason) from the habitat name alone (WP3 decisions first)."""
+    n = name if isinstance(name, str) else ""
+    d = decision_for(n)
+    if d:
+        return d
     if EXCLUDED_NAME.search(n):
-        if re.search(r"cymodocea|zostera", n, re.I):   # living seagrass on dead matte
-            return "partial", "living seagrass on dead Posidonia matte"
-        return "excluded", "dead plants, plants washed ashore, inland or homonym (not living marine seagrass)"
+        return "excluded", "plants washed ashore, inland or homonym (not living marine seagrass)"
+    if re.search(r"dead\W+(?:«\s*)?mattes?\b", n, re.I):
+        return "partial", "mixed habitat (seagrass or algae on dead Posidonia matte)"
     if PARTIAL_NAME.search(n):
         return "partial", "mixed habitat (seagrass with algae, halophytes or other communities)"
     return "member", ""
+
+
+def apply_decisions(members: pd.DataFrame, habitats: pd.DataFrame) -> pd.DataFrame:
+    """Set the WP3 decisions on every row of the habitats they concern (status ``reviewed``)."""
+    names = dict(zip(zip(habitats.system, habitats.code), habitats.name))
+    m = members.copy()
+    for i, r in m.iterrows():
+        d = decision_for(names.get((r.system, r.code), ""))
+        if d and r.status != "rejected":
+            m.at[i, "link_type"], m.at[i, "status"] = d[0], "reviewed"
+            m.at[i, "decided_by"], m.at[i, "decided_on"] = DECIDED_BY, DECIDED_ON
+            notes = re.sub(r"(; )?TO REVIEW: [^;]*(; the 2019 layer[^;]*)?", "", str(r.notes or "")).strip("; ")
+            m.at[i, "notes"] = "; ".join(x for x in [notes, d[1]] if x)
+    return m
 
 
 def _norm(s: str) -> str:
@@ -229,9 +268,7 @@ def published_members(habitats: pd.DataFrame, members: pd.DataFrame, today: str)
     rows = []
     for code in REPORT_2019_EUNIS:
         name = names.get(("EUNIS_2012", code), "")
-        link, why = link_for_name(name)
-        notes = f"TO REVIEW: {why}; the 2019 layer kept only live Posidonia where mosaics of live and dead " \
-                "Posidonia occurred" if link == "excluded" else ""
+        notes = ""
         rows.append(_row(item_for(name), "EUNIS_2012", code, "member", "published", "listed",
                          f"{SRC_2019}, Table 2", notes, today))
     for system, code, printed, table in REPORT_2019_OTHER:
@@ -363,11 +400,12 @@ def build(habitats: pd.DataFrame, crosswalks: pd.DataFrame, members: pd.DataFram
     seeds = published_members(habitats, members, today)
     prop = proposed_members(seeds, habitats, crosswalks, today)
     lists_row = {**LIST_META, "accessed": today, "status": "loaded"}
-    return lists_row, items_table(), pd.concat([seeds, prop], ignore_index=True)
+    return lists_row, items_table(), apply_decisions(pd.concat([seeds, prop], ignore_index=True), habitats)
 
 
-RANK = {("member", "published"): 0, ("member", "reviewed"): 0, ("member", "proposed"): 1,
-        ("partial", "published"): 2, ("partial", "reviewed"): 2, ("partial", "proposed"): 3,
+RANK = {("member", "reviewed"): -1, ("excluded", "reviewed"): -1, ("partial", "reviewed"): -1,
+        ("member", "published"): 0, ("member", "proposed"): 1,
+        ("partial", "published"): 2, ("partial", "proposed"): 3,
         ("excluded", "proposed"): 4, ("excluded", "published"): 4, ("excluded", "rejected"): 5}
 
 
@@ -395,10 +433,10 @@ def filter_table(members: pd.DataFrame, habitats: pd.DataFrame) -> pd.DataFrame:
         name = name if isinstance(name, str) else ""
         use = {"member": "yes", "partial": "partial" if SEAGRASS_NAME.search(name) else "broader"}.get(
             best.link_type, "no")
-        if use == "yes" and link_for_name(name)[0] == "excluded":
+        if use == "yes" and best.status != "reviewed" and link_for_name(name)[0] == "excluded":
             use = "no"
-            review = "; ".join(x for x in [review, "published as member, but the name describes dead or washed-up "
-                                                   "plants: excluded from the filter until WP3 decides"] if x)
+            review = "; ".join(x for x in [review, "listed as member, but the name says excluded: left out until "
+                                                   "WP3 decides"] if x)
         out.append({"system": s, "code": c, "name": name, "item": item_for(name, s, best["item"]),
                     "link_type": best.link_type, "status": best.status, "use": use,
                     "sources": "; ".join(sorted(set(g.source))), "n_rows": len(g), "review": review,

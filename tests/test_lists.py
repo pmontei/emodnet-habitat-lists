@@ -30,7 +30,12 @@ def test_members_resolve():
     # only the report's own corrections of EUNIS 2019 are unresolved codes
     bad = m[m.notes.fillna("").str.contains("not found in")]
     # the report's own corrections of EUNIS 2019, and the JNCC v22.04 code missing from the biotope list
-    assert set(bad.code) == {"MB2224", "MC223", "MC2237", "MC2238", "M.AtMB.Sa.InfPol"}
+    others = bad[bad.list_id != "EOV_SEAGRASS"]
+    assert set(others.code) == {"MB2224", "MC223", "MC2237", "MC2238", "M.AtMB.Sa.InfPol"}
+    # EOV_SEAGRASS: wrong codes of the D3.11 (2025) table, kept as rejected rows
+    sg = bad[bad.list_id == "EOV_SEAGRASS"]
+    assert set(sg.status) == {"rejected"} and set(sg.code) == {"III.5.2", "III.5.3", "III.5.4", "III.5.5", "III.5.6",
+                                                               "MB2.55", "MB2.56"}
 
 
 def test_nrl_marine():
