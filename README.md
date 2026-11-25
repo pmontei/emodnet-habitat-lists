@@ -39,6 +39,7 @@ is correct, traceable (each row has a `source`) and reproducible when a classifi
 | `list_members.csv` | Habitats of any classification linked to each list item: region, biological zone, `link_type` (`member`, `partial`, `supports function`, `excluded`), `status` (`published`, `proposed`, `reviewed`, `rejected`), who decided, source. |
 | `templates/*.csv` | Attribute table templates of the EMODnet habitat maps (DEF) and of the WP3 composite products, compiled from the product reports, with a field × template matrix (see `docs/templates.md`). |
 | `extraction_rules.csv` | Data source and query used to extract polygons for each list item, by region (as published). |
+| `eov_seagrass_filter.csv` | One row per habitat (system, code) of `EOV_SEAGRASS`: the link used to filter the map library (`use` = `yes` / `partial` / `broader` / `no`), its item, sources and what to review. |
 
 Column definitions: [`docs/schema.md`](docs/schema.md).
 
@@ -78,6 +79,7 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 | `UK_PMF`, `UK_MCZ_FOCI`, `UK_HPI`, `UK_MCZ_BSH`: UK conservation lists (names in the JNCC correlation tables) | 26, 21, 29, 28 (item ids are slugs of the names) | published: UK MHC v22.04 units (JNCC correlation tables) |
 | `BARCELONA_RL_2019`: Barcelona Convention Reference List for the selection of sites (Decision IG.24/7, Annex VII) | 267 | published: the same codes of the Barcelona 2019 classification |
 | `EMODNET_OSPAR2025`: habtype / habsubtype values of the EMODnet OSPAR habitats dataset | 30 | published: OSPAR threatened and/or declining habitats |
+| `EOV_SEAGRASS`: habitats of the Seagrass cover EOV composite (D3.03), `src/emodnet_habitat_lists/eov_seagrass.py` | 8 (Zostera, Posidonia, Cymodocea, Ruppia, Halophila, tropical, generic/mixed beds) | published: 2019 EOV report (EUNIS 2007-11, OSPAR, Annex I), D3.11 2025 Appendix Table 3, GOOS_EOV (JNCC); 9 codes of the 2025 table rejected (wrong Barcelona codes, e.g. `MB2.53` = *Cladocora* reefs). **Proposed:** crosswalks, sub-units and names in all classifications. Filter: 330 habitats (253 `yes`, 18 `partial`, 36 `broader`, 23 `no`), 91 to review. Update without the sources: `ehl-seagrass` |
 | `CORALLIGENOUS` (D3.09a) | planned | planned |
 | `EFH` (D3.07) | planned: species × life stage × function | planned (`supports function`) |
 

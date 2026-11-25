@@ -88,6 +88,22 @@ several classifications at once (e.g. biogenic `mussel-beds` in EUNIS 2007-11, E
 | source | Provenance. |
 | notes | Free text; proposed members that need attention start their reason with `TO REVIEW:`. |
 
+## eov_seagrass_filter
+
+Filter of the map library for the Seagrass cover EOV composite: one row per member habitat of
+`EOV_SEAGRASS` (all its `list_members` rows reduced to the strongest link).
+
+| Column | Meaning |
+|---|---|
+| system, code, name | Habitat (FK to `habitats`). |
+| item | `EOV_SEAGRASS` item (bed type), from the habitat name or inherited from the member it was reached from. |
+| link_type, status | Strongest link: published member > proposed member > partial > excluded > rejected. |
+| use | `yes` (member: all its polygons), `partial` (mixed habitat that names seagrass), `broader` (contains seagrass among other habitats, e.g. Annex I 1110), `no` (excluded or rejected). How `partial` and `broader` are used is a WP3 decision. |
+| sources | Sources of all its rows. |
+| n_rows | Number of `list_members` rows. |
+| review | Reasons to review (from `TO REVIEW:` notes and conflicts). |
+| notes | Notes of the strongest row. |
+
 ## extraction_rules
 
 Rules used to build composite products from habitat maps: which data source and query give each

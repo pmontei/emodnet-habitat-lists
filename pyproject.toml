@@ -16,6 +16,7 @@ dev = ["pytest>=7"]
 
 [project.scripts]
 ehl-build = "emodnet_habitat_lists.build:main"
+ehl-seagrass = "emodnet_habitat_lists.eov_seagrass:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

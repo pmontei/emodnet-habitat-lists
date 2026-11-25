@@ -17,7 +17,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from . import composites, lists, pdftext
+from . import composites, eov_seagrass, lists, pdftext
 from .schema import CROSSWALKS_COLUMNS, EXTRACTION_RULES_COLUMNS, HABITATS_COLUMNS, SYSTEMS_COLUMNS
 from .sources import annex_i, barcelona, bern, biogenic, carib, eo_maps, eunis_eea, goos_eov, iucn_get, ramsar, redlist, eunis_habitats, helcom1998, helcom_hub, pal_corine, ices_vme, jncc_mhc, msfd_bht, nrl, ospar
 
@@ -283,6 +283,10 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
     list_meta = {s: src for s, n, v, a, sc, src in SYSTEMS if s in lists.LISTS}
     habitats_df, crosswalks_df, lists_df, items_df, members_df = lists.split(
         habitats_df, crosswalks_df, list_meta, today, review)
+    sg_list, sg_items, sg_members = eov_seagrass.build(habitats_df, crosswalks_df, members_df, today)
+    lists_df = pd.concat([lists_df, pd.DataFrame([sg_list])], ignore_index=True)
+    items_df = pd.concat([items_df, sg_items], ignore_index=True)
+    members_df = pd.concat([members_df, sg_members], ignore_index=True)
     members_df = lists.validate_members(members_df, items_df, habitats_df)
     loaded |= set(habitats_df.system)
 
@@ -308,11 +312,14 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
     lists_df.to_csv(out / "lists.csv", index=False)
     items_df.to_csv(out / "list_items.csv", index=False)
     members_df.to_csv(out / "list_members.csv", index=False)
+    sg_filter = eov_seagrass.filter_table(members_df, habitats_df)
+    sg_filter.to_csv(out / "eov_seagrass_filter.csv", index=False)
     stale = out / "composites.csv"
     if stale.exists():
         stale.unlink()
     return {"habitats": habitats_df, "crosswalks": crosswalks_df, "systems": systems, "extraction_rules": rules_df,
-            "lists": lists_df, "list_items": items_df, "list_members": members_df}
+            "lists": lists_df, "list_items": items_df, "list_members": members_df,
+            "eov_seagrass_filter": sg_filter}
 
 
 def main(argv: list[str] | None = None) -> None:
