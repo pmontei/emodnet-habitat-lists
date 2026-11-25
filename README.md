@@ -43,6 +43,12 @@ is correct, traceable (each row has a `source`) and reproducible when a classifi
 
 Column definitions: [`docs/schema.md`](docs/schema.md).
 
+## Scripts
+
+| Script | What it does |
+|---|---|
+| `scripts/inventory_maplibrary.py` | Inventory of the map library shapefiles (DEF): reads only the `.dbf` attribute tables (Python standard library), writes `maps.csv`, `class_values.csv` (input of `class_aliases`), `habitat_values.csv` and, with `--filter data/processed/eov_seagrass_filter.csv`, `candidates.csv`. |
+
 ## Status
 
 ### Classifications
