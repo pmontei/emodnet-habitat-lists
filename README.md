@@ -37,6 +37,7 @@ is correct, traceable (each row has a `source`) and reproducible when a classifi
 | `lists.csv` | Catalogue of thematic lists (kind, version, authority, WP3 deliverable, source, status). |
 | `list_items.csv` | Items of each list, with definitions (e.g. biogenic type `mussel-beds`, NRL group `G1-MED`, EOV `seagrass-cover-and-composition`). |
 | `list_members.csv` | Habitats of any classification linked to each list item: region, biological zone, `link_type` (`member`, `partial`, `supports function`, `excluded`), `status` (`published`, `proposed`, `reviewed`, `rejected`), who decided, source. |
+| `templates/*.csv` | Attribute table templates of the EMODnet habitat maps (DEF) and of the WP3 composite products, compiled from the product reports, with a field × template matrix (see `docs/templates.md`). |
 | `extraction_rules.csv` | Data source and query used to extract polygons for each list item, by region (as published). |
 
 Column definitions: [`docs/schema.md`](docs/schema.md).

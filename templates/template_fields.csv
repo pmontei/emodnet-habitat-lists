@@ -1,0 +1,232 @@
+template_id,order,field,data_type,length,description,where
+DEF_MAP_2022,1,GUI,Text,8,Map identifier: 2-letter ISO 3166-1 country code + 6 digits; same for all features of a map (M),DEF document v4.1; dbf template
+DEF_MAP_2022,2,POLYGON,Text,10,"Permanent identifier of each polygon, or of a polygon group (M)",DEF document v4.1; dbf template
+DEF_MAP_2022,3,ORIG_HAB,Text,254,"Original habitat of the polygon, code or description (C: if different from HAB_TYPE or HAB_TYPE empty)",DEF document v4.1; dbf template
+DEF_MAP_2022,4,ORIG_CLASS,Text,150,Classification system or vocabulary of ORIG_HAB (C: if ORIG_HAB not empty),DEF document v4.1; dbf template
+DEF_MAP_2022,5,HAB_TYPE,Text,100,Habitat type in an accepted standard classification (M),DEF document v4.1; dbf template
+DEF_MAP_2022,6,HAB_CLASS,Text,150,"Classification system of HAB_TYPE, e.g. 'EUNIS version 2007-11' (M; VERSION in the old Annex I DEF)",DEF document v4.1; dbf template
+DEF_MAP_2022,7,DET_MTHD,Text,254,Method used to translate ORIG_HAB into HAB_TYPE (O),DEF document v4.1; dbf template
+DEF_MAP_2022,8,DET_NAME,Text,254,Organisation that determined HAB_TYPE (M),DEF document v4.1; dbf template
+DEF_MAP_2022,9,DET_DATE,Date,8,Date HAB_TYPE was determined (M),DEF document v4.1; dbf template
+DEF_MAP_2022,10,TRAN_COM,Text,254,Comments justifying the translation (O),DEF document v4.1; dbf template
+DEF_MAP_2022,11,T_RELATE,Text,1,Relationship ORIG_HAB / HAB_TYPE: = ~ > < # S (C: mandatory if translated),DEF document v4.1; dbf template
+DEF_MAP_2022,12,VAL_COMM,Text,254,Validation comments (O),DEF document v4.1; dbf template
+DEF_MAP_2022,13,COMP,Text,10,"Composition of habitats within a polygon group: proportion 0-1, primary/secondary, unknown; '1.0' if not in a group (M)",DEF document v4.1; dbf template
+DEF_MAP_2022,14,COMP_TYPE,Text,20,single habitat / heterogeneous / transition / data inconclusive / no information (M),DEF document v4.1; dbf template
+DEF_MAP_2022,15,SUM_CONF,Number,5,Total MESH confidence score (C: if assessed),DEF document v4.1; dbf template
+DEF_MAP_2022,16,TEXT_CONF,Text,100,Text description of confidence (O),DEF document v4.1; dbf template
+DEF_STUDYAREA_2022,1,GUI,Text,8,Must match the GUI of the habitat map (M),DEF document v4.1; dbf template
+DEF_STUDYAREA_2022,2,UUID,Text,36,ICES GeoNetwork metadata UUID (M),DEF document v4.1; dbf template
+DEF_STUDYAREA_2022,3,AVAILABLE,Text,13,"View/Download, View only or Not available (M)",DEF document v4.1; dbf template
+POINTS_SAMPLE,1,measurementid,,,Unique identifier of the measurement carried out at the sampling point,"Table 2, rows 1-23"
+POINTS_SAMPLE,2,eventid,,,Unique identifier of each sampling point of the dataset,"Table 2, rows 1-23"
+POINTS_SAMPLE,3,datasetid,,,Unique identifier of the dataset,"Table 2, rows 1-23"
+POINTS_SAMPLE,4,shorttitle,,,Title of the dataset,"Table 2, rows 1-23"
+POINTS_SAMPLE,5,expectedcitation,,,Citation for the dataset,"Table 2, rows 1-23"
+POINTS_SAMPLE,6,restriction,,,Usage constraints on the dataset,"Table 2, rows 1-23"
+POINTS_SAMPLE,7,contactpoints,,,Contact point for the dataset,"Table 2, rows 1-23"
+POINTS_SAMPLE,8,eventdate,,,Sampling date,"Table 2, rows 1-23"
+POINTS_SAMPLE,9,mindepth,,,Depth in metres (positive),"Table 2, rows 1-23"
+POINTS_SAMPLE,10,maxdepth,,,Depth in metres (positive),"Table 2, rows 1-23"
+POINTS_SAMPLE,11,seabedclassificationsystem,,,Name of habitat classification system,"Table 2, rows 1-23"
+POINTS_SAMPLE,12,seabedclassificationsystem_uri,,,URI of habitat classification system,"Table 2, rows 1-23"
+POINTS_SAMPLE,13,seabedtype,,,Name of habitat type,"Table 2, rows 1-23"
+POINTS_SAMPLE,14,seabedtype_uri,,,URI of habitat type,"Table 2, rows 1-23"
+POINTS_SAMPLE,15,seabedstatus,,,"Health status of the habitat according to WFD, Habitats Directive and MSFD (if available)","Table 2, rows 1-23"
+POINTS_SAMPLE,16,samplingmethod,,,Sampling method,"Table 2, rows 1-23"
+POINTS_SAMPLE,17,samplingmethod_uri,,,Sampling method URI,"Table 2, rows 1-23"
+POINTS_SAMPLE,18,seabedtypedetermineddate,,,When the habitat type was determined,"Table 2, rows 1-23"
+POINTS_SAMPLE,19,seabedtypedeterminedmethod,,,How the habitat type was determined,"Table 2, rows 1-23"
+POINTS_SAMPLE,20,sourcehabitatoccurrenceid,,,If seabedtype is a translation of an existing record: measurementid of the original record,"Table 2, rows 1-23"
+POINTS_SAMPLE,21,relationshiptosourcehabitat,,,If seabedtype is a translation: relationship to the original seabed type determination,"Table 2, rows 1-23"
+POINTS_SAMPLE,22,comments,,,,"Table 2, rows 1-23"
+POINTS_SAMPLE,23,eventenddate,,,,"Table 2, rows 1-23"
+EOV_PTS_2021,1,measurementid,,,Unique identifier of the measurement carried out at the sampling point,Table 2
+EOV_PTS_2021,2,eventid,,,Unique identifier of each sampling point of the dataset,Table 2
+EOV_PTS_2021,3,datasetid,,,Unique identifier of the dataset,Table 2
+EOV_PTS_2021,4,shorttitle,,,Title of the dataset,Table 2
+EOV_PTS_2021,5,expectedcitation,,,Citation for the dataset,Table 2
+EOV_PTS_2021,6,restriction,,,Usage constraints on the dataset,Table 2
+EOV_PTS_2021,7,contactpoints,,,Contact point for the dataset,Table 2
+EOV_PTS_2021,8,eventdate,,,Sampling date,Table 2
+EOV_PTS_2021,9,mindepth,,,Depth in metres (positive),Table 2
+EOV_PTS_2021,10,maxdepth,,,Depth in metres (positive),Table 2
+EOV_PTS_2021,11,seabedclassificationsystem,,,Name of habitat classification system,Table 2
+EOV_PTS_2021,12,seabedclassificationsystem_uri,,,URI of habitat classification system,Table 2
+EOV_PTS_2021,13,seabedtype,,,Name of habitat type,Table 2
+EOV_PTS_2021,14,seabedtype_uri,,,URI of habitat type,Table 2
+EOV_PTS_2021,15,seabedstatus,,,"Health status of the habitat according to WFD, Habitats Directive and MSFD (if available)",Table 2
+EOV_PTS_2021,16,samplingmethod,,,Sampling method,Table 2
+EOV_PTS_2021,17,samplingmethod_uri,,,Sampling method URI,Table 2
+EOV_PTS_2021,18,seabedtypedetermineddate,,,When the habitat type was determined,Table 2
+EOV_PTS_2021,19,seabedtypedeterminedmethod,,,How the habitat type was determined,Table 2
+EOV_PTS_2021,20,sourcehabitatoccurrenceid,,,If seabedtype is a translation of an existing record: measurementid of the original record,Table 2
+EOV_PTS_2021,21,relationshiptosourcehabitat,,,If seabedtype is a translation: relationship to the original seabed type determination,Table 2
+EOV_PTS_2021,22,comments,,,,Table 2
+EOV_PTS_2021,23,eventenddate,,,,Table 2
+EOV_PTS_2021,24,EOV,,,Essential ocean variable,Table 2
+EOV_PTS_2021,25,EOVsubtype,,,Essential ocean variable subtype,Table 2
+EOV_PTS_2021,26,Source,,,"Source database, e.g. 'EMODnet Seabed Habitats survey sample points' or 'OSPAR habitats - official 2020 public reference dataset'",Table 2
+EOV_PTS_2025,1,measurementID,Text,,Unique identifier of the measurement carried out at the sampling point,Appendix Table 2
+EOV_PTS_2025,2,eventid,Text,,Unique identifier of each sampling point of the dataset,Appendix Table 2
+EOV_PTS_2025,3,datasetid,Text,,Unique identifier of the dataset,Appendix Table 2
+EOV_PTS_2025,4,shorttitle,Text,,Title of the dataset,Appendix Table 2
+EOV_PTS_2025,5,ExpectedCitation,Text,,Citation for the dataset,Appendix Table 2
+EOV_PTS_2025,6,Restriction,Text,,Usage constraints on the dataset,Appendix Table 2
+EOV_PTS_2025,7,contactpoints,Text,,Contact point for the dataset,Appendix Table 2
+EOV_PTS_2025,8,eventdate,Text,,Sampling date,Appendix Table 2
+EOV_PTS_2025,9,mindepth,Text,,Depth in metres (positive),Appendix Table 2
+EOV_PTS_2025,10,maxdepth,Text,,Depth in metres (positive),Appendix Table 2
+EOV_PTS_2025,11,seabedclassificationsystem,Text,,Name of habitat classification system,Appendix Table 2
+EOV_PTS_2025,12,seabedclassificationsystem_uri,Text,,URI of habitat classification system,Appendix Table 2
+EOV_PTS_2025,13,seabedtype,Text,,Name of habitat type,Appendix Table 2
+EOV_PTS_2025,14,seabedtype_uri,Text,,URI of habitat type,Appendix Table 2
+EOV_PTS_2025,15,seabedstatus,Text,,"Health status of the habitat according to WFD, Habitats Directive and MSFD (if available)",Appendix Table 2
+EOV_PTS_2025,16,samplingmethod,Text,,Sampling method,Appendix Table 2
+EOV_PTS_2025,17,samplingmethod_uri,Text,,Sampling method URI,Appendix Table 2
+EOV_PTS_2025,18,seabedtypedetermineddate,Text,,When the habitat type was determined,Appendix Table 2
+EOV_PTS_2025,19,seabedtypedeterminedmethod,Text,,How the habitat type was determined,Appendix Table 2
+EOV_PTS_2025,20,sourcehabitatoccurrenceid,Text,,If seabedtype is a translation of an existing record: measurementid of the original record,Appendix Table 2
+EOV_PTS_2025,21,relationshiptosourcehabitat,Text,,If seabedtype is a translation: relationship to the original seabed type determination,Appendix Table 2
+EOV_PTS_2025,22,Comments,Text,,Important additional information about the sample point,Appendix Table 2
+EOV_PTS_2025,23,Eventenddate,Text,,The date-time or interval during which an Event occurred,Appendix Table 2
+EOV_PTS_2025,24,EOV,Text,,Essential Ocean Variables (EOV),Appendix Table 2
+EOV_PTS_2025,25,EOVsubtype,Text,,Essential ocean variable subtype,Appendix Table 2
+EOV_PTS_2025,26,Source,Text,,"Source database, e.g. 'EMODnet Seabed Habitats survey sample points' or 'OSPAR habitats - official 2020 public reference dataset'",Appendix Table 2
+EOV_POLY_2025,1,objectid,Text,,AutoNumber,Appendix Table 1
+EOV_POLY_2025,2,Map_id,Text,,Unique identifier of the dataset,Appendix Table 1
+EOV_POLY_2025,3,Hab_origin,Text,,Original habitat as listed in the source dataset,Appendix Table 1
+EOV_POLY_2025,4,Eunis_code,Text,,EUNIS classification system code (version 2007-2011 or 2022),Appendix Table 1
+EOV_POLY_2025,5,Eunis_name,Text,,EUNIS habitat name,Appendix Table 1
+EOV_POLY_2025,6,Anxi_code,Text,,Habitats Directive Annex 1 code,Appendix Table 1
+EOV_POLY_2025,7,Anxi_name,Text,,Habitats Directive Annex 1 name,Appendix Table 1
+EOV_POLY_2025,8,Ai_subtype,Text,,Habitats Directive Annex 1 subtype,Appendix Table 1
+EOV_POLY_2025,9,Ospar_hab,Text,,OSPAR habitat type,Appendix Table 1
+EOV_POLY_2025,10,determiner,Text,,Organization/Researcher that determined the dataset,Appendix Table 1
+EOV_POLY_2025,11,Det_date,Text,,Date of determination of the original habitat,Appendix Table 1
+EOV_POLY_2025,12,Source,Text,,Source of the datasets,Appendix Table 1
+EOV_MANGROVE_2023,1,map_id,string,,Unique identifier of the dataset,Table 1
+EOV_MANGROVE_2023,2,hab_origin,string,,Original habitat as listed in the source dataset,Table 1
+EOV_MANGROVE_2023,3,Eunis_code,string,,Eunis classification system code,Table 1
+EOV_MANGROVE_2023,4,Eunis_name,string,,Eunis habitat name,Table 1
+EOV_MANGROVE_2023,5,Anxi_code,string,,Habitats directive habitat code,Table 1
+EOV_MANGROVE_2023,6,Anxi_name,string,,Habitats directive habitat name,Table 1
+EOV_MANGROVE_2023,7,Ai_subtype,string,,Habitats directive habitat subtype,Table 1
+EOV_MANGROVE_2023,8,Ospar_hab,string,,OSPAR habitat type,Table 1
+EOV_MANGROVE_2023,9,habsubtype,string,,OSPAR habitat sub-type,Table 1
+EOV_MANGROVE_2023,10,determiner,string,,Organization that determined the dataset,Table 1
+EOV_MANGROVE_2023,11,Det_date,string,,Date of determination of the original habitat,Table 1
+EOV_MANGROVE_2023,12,source,string,,Source of the datasets,Table 1
+BIOGENIC_2021,1,BIO_DETAIL,Text,,Biogenic most detailed level: most detailed level of information on biogenic substrate type (see the biogenic types table),Table 3
+BIOGENIC_2021,2,SRC_NAME,Text,,Source data product name: name and version of the source data product,Table 3
+BIOGENIC_PTS_CARIB_2023,1,GUI,,,A globally unique identifier (GUI) for the map,Table 3
+BIOGENIC_PTS_CARIB_2023,2,ORIG_HAB,,,Original habitat as listed in the source dataset,Table 3
+BIOGENIC_PTS_CARIB_2023,3,ORIG_CLASS,,,The name of the habitat classification system,Table 3
+BIOGENIC_PTS_CARIB_2023,4,DET_NAME,,,The name of the organisation or institute who determined the habitat,Table 3
+BIOGENIC_PTS_CARIB_2023,5,DET_DATE,,,Date of determination of the original habitat,Table 3
+BIOGENIC_PTS_CARIB_2023,6,SOURCE,,,Source of the datasets,Table 3
+CORAL_PTS_2023,1,measurementID,,,Unique identifier of the measurement carried out at the sampling point,Table 1
+CORAL_PTS_2023,2,eventid,,,Unique identifier of each sampling point of the dataset,Table 1
+CORAL_PTS_2023,3,datasetid,,,Unique identifier of the dataset,Table 1
+CORAL_PTS_2023,4,shorttitle,,,Title of the dataset,Table 1
+CORAL_PTS_2023,5,ExpectedCitation,,,Citation for the dataset,Table 1
+CORAL_PTS_2023,6,Restriction,,,Usage constraints on the dataset,Table 1
+CORAL_PTS_2023,7,contactpoints,,,Contact point for the dataset,Table 1
+CORAL_PTS_2023,8,eventdate,,,Sampling date,Table 1
+CORAL_PTS_2023,9,mindepth,,,Depth in metres (positive),Table 1
+CORAL_PTS_2023,10,maxdepth,,,Depth in metres (positive),Table 1
+CORAL_PTS_2023,11,seabedclassificationsystem,,,Name of habitat classification system,Table 1
+CORAL_PTS_2023,12,seabedclassificationsystem_uri,,,URI of habitat classification system,Table 1
+CORAL_PTS_2023,13,seabedtype,,,Name of habitat type,Table 1
+CORAL_PTS_2023,14,seabedtype_uri,,,URI of habitat type,Table 1
+CORAL_PTS_2023,15,seabedstatus,,,"Health status of the habitat according to WFD, Habitats Directive and MSFD (if available)",Table 1
+CORAL_PTS_2023,16,samplingmethod,,,Sampling method,Table 1
+CORAL_PTS_2023,17,samplingmethod_uri,,,Sampling method URI,Table 1
+CORAL_PTS_2023,18,seabedtypedetermineddate,,,When the habitat type was determined,Table 1
+CORAL_PTS_2023,19,seabedtypedeterminedmethod,,,How the habitat type was determined,Table 1
+CORAL_PTS_2023,20,sourcehabitatoccurrenceid,,,If seabedtype is a translation of an existing record: measurementid of the original record,Table 1
+CORAL_PTS_2023,21,relationshiptosourcehabitat,,,If seabedtype is a translation: relationship to the original seabed type determination,Table 1
+CORAL_PTS_2023,22,comments,,,Important additional information about the sample point,Table 1
+CORAL_PTS_2023,23,eventenddate,,,The date-time or interval during which an Event occurred,Table 1
+CORAL_PTS_2023,24,EOV,,,Essential ocean variable,Table 1
+CORAL_PTS_2023,25,EOVsubtype,,,Essential ocean variable subtype,Table 1
+CORAL_PTS_2023,26,Source,,,"Source database, e.g. 'EMODnet Seabed Habitats survey sample points' or 'OSPAR habitats - official 2020 public reference dataset'",Table 1
+CORAL_POLY_2023,1,orig_hab,,,Original habitat type assigned to the polygon,Table 2
+CORAL_POLY_2023,2,hab_type,,,Habitat type in one of the standard classification systems,Table 2
+CORAL_POLY_2023,3,tran_com,,,Comments on the translation from ORIG_HAB to HAB_TYPE,Table 2
+CORAL_POLY_2023,4,t_relate,,,Relationship between ORIG_HAB and HAB_TYPE,Table 2
+CORAL_POLY_2023,5,comp,,,Composition of the habitats (as defined in HAB_TYPE) within polygon groups,Table 2
+CORAL_POLY_2023,6,comp_type,,,"Type of composition within the polygon group (e.g. single habitat, heterogeneous)",Table 2
+CORAL_POLY_2023,7,orig_id,,,Unique identifier of the dataset,Table 2
+CORAL_POLY_2023,8,Coralligen,,,Generic coralligenous name,Table 2
+CORAL_PTS_2025,1,measurementid,,,Unique identifier of the measurement carried out at the sampling point,"Appendix 2, Table 3"
+CORAL_PTS_2025,2,eventid,,,Unique identifier of each sampling point of the dataset,"Appendix 2, Table 3"
+CORAL_PTS_2025,3,datasetid,,,Unique identifier of the dataset,"Appendix 2, Table 3"
+CORAL_PTS_2025,4,shorttitle,,,Title of the dataset,"Appendix 2, Table 3"
+CORAL_PTS_2025,5,expectedcitation,,,Citation for the dataset,"Appendix 2, Table 3"
+CORAL_PTS_2025,6,restriction,,,Usage constraints on the dataset,"Appendix 2, Table 3"
+CORAL_PTS_2025,7,contactpoints,,,Contact point for the dataset,"Appendix 2, Table 3"
+CORAL_PTS_2025,8,eventdate,,,Sampling date,"Appendix 2, Table 3"
+CORAL_PTS_2025,9,mindepth,,,Depth in metres (positive),"Appendix 2, Table 3"
+CORAL_PTS_2025,10,maxdepth,,,Depth in metres (positive),"Appendix 2, Table 3"
+CORAL_PTS_2025,11,seabedclassificationsystem,,,Name of habitat classification system,"Appendix 2, Table 3"
+CORAL_PTS_2025,12,seabedclassificationsystem_uri,,,URI of habitat classification system,"Appendix 2, Table 3"
+CORAL_PTS_2025,13,seabedtype,,,Name of habitat type,"Appendix 2, Table 3"
+CORAL_PTS_2025,14,seabedtype_uri,,,URI of habitat type,"Appendix 2, Table 3"
+CORAL_PTS_2025,15,seabedstatus,,,"Health status of the habitat according to WFD, Habitats Directive and MSFD (if available)","Appendix 2, Table 3"
+CORAL_PTS_2025,16,samplingmethod,,,Sampling method,"Appendix 2, Table 3"
+CORAL_PTS_2025,17,samplingmethod_uri,,,Sampling method URI,"Appendix 2, Table 3"
+CORAL_PTS_2025,18,seabedtypedetermineddate,,,When the habitat type was determined,"Appendix 2, Table 3"
+CORAL_PTS_2025,19,seabedtypedeterminedmethod,,,How the habitat type was determined,"Appendix 2, Table 3"
+CORAL_PTS_2025,20,sourcehabitatoccurrenceid,,,If seabedtype is a translation of an existing record: measurementid of the original record,"Appendix 2, Table 3"
+CORAL_PTS_2025,21,relationshiptosourcehabitat,,,If seabedtype is a translation: relationship to the original seabed type determination,"Appendix 2, Table 3"
+CORAL_PTS_2025,22,comments,,,Comments on the event,"Appendix 2, Table 3"
+CORAL_PTS_2025,23,eventenddate,,,Sampling end date,"Appendix 2, Table 3"
+CORAL_PTS_2025,24,Coralligen,,,Generic coralligenous name,"Appendix 2, Table 3"
+CORAL_PTS_2025,25,Source,,,"Source database, e.g. 'EMODnet Seabed Habitats survey sample points' or 'OSPAR habitats - official 2020 public reference dataset'","Appendix 2, Table 3"
+CORAL_POLY_2025,1,measurementid,,,Unique identifier of the measurement carried out at the sampling point,"Appendix 2, Table 2 (point fields, truncated: see notes)"
+CORAL_POLY_2025,2,eventid,,,Unique identifier of each sampling point of the dataset,"Appendix 2, Table 2 (point fields, truncated: see notes)"
+CORAL_POLY_2025,3,datasetid,,,Unique identifier of the dataset,"Appendix 2, Table 2 (point fields, truncated: see notes)"
+CORAL_POLY_2025,4,shorttitle,,,Title of the dataset,"Appendix 2, Table 2 (point fields, truncated: see notes)"
+CORAL_POLY_2025,5,expectedcitation,,,Citation for the dataset,"Appendix 2, Table 2 (point fields, truncated: see notes)"
+CORAL_POLY_2025,6,restriction,,,Usage constraints on the dataset,"Appendix 2, Table 2 (point fields, truncated: see notes)"
+CORAL_POLY_2025,7,contactpoints,,,Contact point for the dataset,"Appendix 2, Table 2 (point fields, truncated: see notes)"
+CORAL_POLY_2025,8,eventdate,,,Sampling date,"Appendix 2, Table 2 (point fields, truncated: see notes)"
+CORAL_POLY_2025,9,mindepth,,,Depth in metres (positive),"Appendix 2, Table 2 (point fields, truncated: see notes)"
+CORAL_POLY_2025,10,maxdepth,,,Depth in metres (positive),"Appendix 2, Table 2 (point fields, truncated: see notes)"
+CORAL_POLY_2025,11,seabedclassificationsystem,,,Name of habitat classification system,"Appendix 2, Table 2 (point fields, truncated: see notes)"
+VME_2025,1,objectid,,,"Permanent identifier, unique for each polygon within a dataset",Appendix 1
+VME_2025,2,map_id,,,Unique identifier of the dataset,Appendix 1
+VME_2025,3,hab_origin,,,Original habitat as listed in the source dataset,Appendix 1
+VME_2025,4,Eunis_code,,,Eunis classification system code,Appendix 1
+VME_2025,5,Eunis_name,,,Eunis habitat name,Appendix 1
+VME_2025,6,Anxi_code,,,Habitats directive habitat code,Appendix 1
+VME_2025,7,Anxi_name,,,Habitats directive habitat name,Appendix 1
+VME_2025,8,Ospar_hab,,,OSPAR habitat type,Appendix 1
+VME_2025,9,habsubtype,,,OSPAR habitat sub-type,Appendix 1
+VME_2025,10,Helcom_cod,,,HELCOM classification system code,Appendix 1
+VME_2025,11,Helcom_nam,,,HELCOM habitat name,Appendix 1
+VME_2025,12,determiner,,,Organization that determined the dataset,Appendix 1
+VME_2025,13,Det_date,,,Date of determination of the original habitat,Appendix 1
+VME_2025,14,source,,,Source of the datasets,Appendix 1
+VME_2025,15,VME_Habita,,,Proposed VME habitat type,Appendix 1
+VME_2025,16,HabitatTyp,,,Proposed VME habitat subtype,Appendix 1
+VME_2025,17,VME_Indica,,,Corresponding VME indicator,Appendix 1
+VME_2025,18,Taxa,,,Representative taxa,Appendix 1
+VME_2025,19,Shape_leng,,,Polygon perimeter,Appendix 1
+VME_2025,20,Shape_area,,,Polygon area,Appendix 1
+VME_2025,21,Sum_fsh_int,,,Total fishing intensity within each polygon (sum over C-squares),Appendix 1
+VME_2025,22,Harm_fsh_int_m2,,,Harmonized fishing intensity per square metre (avg mW fishing hours / m2),Appendix 1
+VME_2025,23,Harm_fsh_int_km2,,,Harmonized fishing intensity per square kilometre (avg mW fishing hours / km2),Appendix 1
+VME_2025,24,Class_fsh_int,,,No Fishing / Low / Medium / High Fishing Intensity,Appendix 1
+EUSEAMAP_HAB,1,Oxygen,,,Oxygenation level at the seabed (Black Sea only),Appendix 4
+EUSEAMAP_HAB,2,Salinity,,,Salinity level at the seabed (Baltic Sea only),Appendix 4
+EUSEAMAP_HAB,3,Energy,,,Combined current- and wave-induced energy at the seabed,Appendix 4
+EUSEAMAP_HAB,4,Biozone,,,Biological zones,Appendix 4
+EUSEAMAP_HAB,5,Substrate,,,Seabed substrate type,Appendix 4
+EUSEAMAP_HAB,6,EUNIScomb,,,EUNIS 2007-2011 code (e.g. 'A5.35'); Na where not applicable,Appendix 4
+EUSEAMAP_HAB,7,EUNIScombD,,,EUNIS 2007-2011 full description; Na where not applicable,Appendix 4
+EUSEAMAP_HAB,8,Allcomb,,,"EUNIS 2007-2011 code where applicable, or other unpublished classification",Appendix 4
+EUSEAMAP_HAB,9,AllcombD,,,"Full description, EUNIS 2007-2011 or other unpublished classification",Appendix 4
+EUSEAMAP_HAB,10,SalcombD,,,Baltic only: description with salinity level,Appendix 4
+EUSEAMAP_HAB,11,MSFD_BBHT,,,MSFD Benthic Broad Habitat type (Decision (EU) 2017/848); Na where not applicable,Appendix 4
