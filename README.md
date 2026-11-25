@@ -47,6 +47,7 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 
 | Script | What it does |
 |---|---|
+| `scripts/composite_eov.py` | EOV polygon composite from the map library (test, D3.03): selects the polygons of the items of a product filter (`HAB_TYPE` / `ORIG_HAB` codes with provisional class aliases, or text), repairs and snaps geometries to the INSPIRE 1 m grid (EPSG:3035), resolves overlaps tile by tile (INSPIRE 10 km cells from `standardgrid`; rank = source priority, `SUM_CONF`, date), writes the EOV polygon template plus provenance fields, an INSPIRE 1 km cover grid and a comparison with the 2025 composite. Needs geopandas, shapely 2, pyogrio, standardgrid. |
 | `scripts/inventory_maplibrary.py` | Inventory of the map library shapefiles (DEF): reads only the `.dbf` attribute tables (Python standard library), writes `maps.csv`, `class_values.csv` (input of `class_aliases`), `habitat_values.csv` and, with `--filter data/processed/eov_seagrass_filter.csv`, `candidates.csv`. |
 
 ## Status
