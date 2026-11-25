@@ -45,10 +45,12 @@ LISTS_COLUMNS = [
     "version",
     "authority",
     "deliverable",     # WP3 deliverable(s) that use the list, e.g. D3.10
+    "role",            # objective (list of a WP3 deliverable, Work Plan 2025-2027) | possible (other list that
+                       # could become a product; not an objective of the project)
     "scope",
     "source",
     "accessed",        # date the source was obtained (ISO 8601); blank if not loaded
-    "status",          # loaded | planned
+    "status",          # loaded | planned | not loaded in this build
     "notes",
 ]
 

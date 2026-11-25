@@ -55,11 +55,12 @@ several classifications at once (e.g. biogenic `mussel-beds` in EUNIS 2007-11, E
 | kind | `policy` (legal or conservation list), `observing variable` (EOV), `product` (EMODnet composite product), `functional` (EFH), `dataset vocabulary` (values used in a dataset, e.g. the EMODnet OSPAR habitats dataset). |
 | version | Version or year. |
 | authority | Issuing body. |
-| deliverable | WP3 deliverable(s) that use the list. |
+| deliverable | WP3 deliverable(s) that use the list; "(reference)" when the list is only an input of the deliverable's own list. |
+| role | `objective`: list of a WP3 deliverable (Updated Work Plan 2025–2027). `possible`: other list that could become a product (e.g. at a stakeholder's request, D3.09), not an objective of the project. |
 | scope | Geographic / thematic scope. |
 | source | Official source used. |
 | accessed | Date the source was obtained (blank if not loaded). |
-| status | `loaded`, `planned`, or `not loaded in this build`. |
+| status | `loaded`, `planned` (objective list not built yet), or `not loaded in this build`. |
 | notes | Free text. |
 
 ## list_items

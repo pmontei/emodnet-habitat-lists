@@ -30,21 +30,22 @@ from .schema import LIST_ITEMS_COLUMNS, LIST_MEMBERS_COLUMNS, LISTS_COLUMNS
 # system id used by the source module -> list metadata
 LISTS = {
     "EMODNET_BIOGENIC_2021": dict(
-        list_id="EMODNET_BIOGENIC", kind="product", deliverable="D3.10",
+        list_id="EMODNET_BIOGENIC", kind="product", deliverable="D3.10", role="objective",
         name="EMODnet Seabed Habitats biogenic substrate types",
         version="2021 typology (D3.06); EUNIS 2022 members proposed for D3.10",
         authority="EMODnet Seabed Habitats", scope="European seas"),
     "GOOS_EOV": dict(
-        list_id="GOOS_EOV", kind="observing variable", deliverable="",
+        list_id="GOOS_EOV", kind="observing variable", deliverable="D3.02, D3.03, D3.04, D3.05 (reference)",
+        role="possible",
         name="GOOS Biology and Ecosystems Essential Ocean Variables (habitat EOVs)",
         version="August 2026", authority="Global Ocean Observing System (GOOS)", scope="global"),
     "NRL_2024": dict(
-        list_id="NRL_2024_MARINE", kind="policy", deliverable="",
+        list_id="NRL_2024_MARINE", kind="policy", deliverable="D3.08 (reference)", role="possible",
         name="Nature Restoration Regulation (EU) 2024/1991: groups of marine habitat types (Annex II)",
         version="2024", authority="European Parliament and Council", scope="EU marine waters"),
 }
 
-_UK = dict(kind="policy", deliverable="", version="as in JNCC correlation tables v2026.02")
+_UK = dict(kind="policy", deliverable="", role="possible", version="as in JNCC correlation tables v2026.02")
 LISTS |= {
     "UK_PMF": dict(list_id="UK_PMF", name="Priority Marine Features (Scotland): habitats",
                    authority="NatureScot / JNCC", scope="Scotland", **_UK),
@@ -55,11 +56,11 @@ LISTS |= {
     "UK_MCZ_BSH": dict(list_id="UK_MCZ_BSH", name="Marine Conservation Zone Broad-Scale Habitats",
                        authority="Defra / JNCC", scope="England, Wales, UK offshore", **_UK),
     "BARCELONA_RL_2019": dict(
-        list_id="BARCELONA_RL_2019", kind="policy", deliverable="", version="2019",
+        list_id="BARCELONA_RL_2019", kind="policy", deliverable="", role="possible", version="2019",
         name="Barcelona Convention: Reference List of marine habitat types for the selection of sites "
              "(Decision IG.24/7, Annex VII)", authority="UNEP/MAP - SPA/RAC", scope="Mediterranean, benthic"),
     "EMODNET_OSPAR2025": dict(
-        list_id="EMODNET_OSPAR2025", kind="dataset vocabulary", deliverable="", version="2025",
+        list_id="EMODNET_OSPAR2025", kind="dataset vocabulary", deliverable="", role="possible", version="2025",
         name="EMODnet Seabed Habitats OSPAR habitats dataset: habtype / habsubtype values",
         authority="EMODnet Seabed Habitats", scope="North-East Atlantic"),
 }
@@ -67,17 +68,41 @@ LISTS |= {
 SAME_CODE_MEMBERS = {"BARCELONA_RL_2019": "BARCELONA_2019"}
 _ITEM_NAME = re.compile(r"(?:^|; )JNCC name: ([^;]+)")
 
+# notes of the lists, kept in the code (the build writes them to lists.csv)
+LIST_NOTES = {
+    "GOOS_EOV": "reference for the EOV product lists (EOV_SEAGRASS, EOV_CORAL, EOV_MACROALGAE, EOV_MANGROVE)",
+    "NRL_2024_MARINE": "reference for D3.08 (habitats to restore) and for the WP4 thematic filter "
+                       "'Nature Restoration Law'; a NRL composite product is not in the Work Plan",
+    "EMODNET_OSPAR2025": "existing EMODnet Seabed Habitats dataset; used to check the OSPAR members",
+}
+
+_EMODNET = dict(version="", authority="EMODnet Seabed Habitats", source="", status="planned", role="objective")
+# lists of WP3 deliverables (Updated Work Plan 2025-2027, 15/04/2026) not built yet
 PLANNED = [
-    dict(list_id="CORALLIGENOUS", kind="product", deliverable="D3.09a",
-         name="Coralligenous and other calcareous bio-concretions", version="", authority="EMODnet Seabed Habitats",
-         scope="Mediterranean", source="", status="planned",
-         notes="update of the coralligenous composite product (SPA/RAC request)"),
-    dict(list_id="EFH", kind="functional", deliverable="D3.07",
-         name="Essential Fish Habitat", version="", authority="EMODnet Seabed Habitats", scope="European seas",
-         source="", status="planned",
+    dict(list_id="EOV_CORAL", kind="product", deliverable="D3.02", name="Live hard coral cover EOV composite",
+         scope="European seas and Caribbean", **_EMODNET,
+         notes="cold-water corals and tropical corals of the European Caribbean (decision 18/11/2026)"),
+    dict(list_id="EOV_MACROALGAE", kind="product", deliverable="D3.04", name="Macroalgal canopy cover EOV composite",
+         scope="European seas", **_EMODNET, notes=""),
+    dict(list_id="EOV_MANGROVE", kind="product", deliverable="D3.05", name="Mangrove cover EOV composite",
+         scope="Caribbean", **_EMODNET, notes="lead: SAERI (CCMAR contributes)"),
+    dict(list_id="COASTAL_WETLANDS", kind="product", deliverable="D3.06, D3.13", name="Coastal wetland types",
+         scope="European seas and Caribbean", **_EMODNET, notes="lead: Syke"),
+    dict(list_id="EFH", kind="functional", deliverable="D3.07, D3.15", name="Essential Fish Habitat",
+         scope="European seas", **_EMODNET,
          notes="items = species (AphiaID) x life stage x function (spawning, nursery, feeding, migration); "
                "links to habitat types, when any, are 'supports function', never equivalences"),
+    dict(list_id="VME", kind="product", deliverable="D3.08, D3.16",
+         name="Potential Vulnerable Marine Ecosystems and potentially degraded habitats", scope="European seas",
+         **_EMODNET, notes="VME habitat types as in the FAO / ICES classification (decision 18/11/2026)"),
+    dict(list_id="CORALLIGENOUS", kind="product", deliverable="D3.09a",
+         name="Coralligenous and other calcareous bio-concretions", scope="Mediterranean", **_EMODNET,
+         notes="update of the coralligenous composite product (SPA/RAC request)"),
+    dict(list_id="ANNEX_I_HELCOM", kind="product", deliverable="D3.09b",
+         name="Habitats Directive Annex I habitat types for HELCOM (Article 17)", scope="Baltic Sea", **_EMODNET,
+         notes="lead: Syke"),
 ]
+ROLES = {"objective", "possible"}
 
 PROPOSED_RELATIONSHIPS = {"candidate"}
 _REGION = re.compile(r"(?:^|; )region: ([^;]+)")
@@ -120,7 +145,8 @@ def split(habitats: pd.DataFrame, crosswalks: pd.DataFrame, systems_meta: dict[s
     for sys_id, meta in LISTS.items():
         loaded = (items.system == sys_id).any()
         lists_rows.append({**meta, "source": systems_meta.get(sys_id, ""), "accessed": today if loaded else "",
-                           "status": "loaded" if loaded else "not loaded in this build", "notes": ""})
+                           "status": "loaded" if loaded else "not loaded in this build",
+                           "notes": LIST_NOTES.get(meta["list_id"], "")})
     lists_rows += [{**p, "accessed": ""} for p in PLANNED]
     lists_df = pd.DataFrame(lists_rows, columns=LISTS_COLUMNS)
 

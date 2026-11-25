@@ -69,3 +69,13 @@ def test_former_systems_now_lists():
     assert ((m.list_id == "EMODNET_BIOGENIC") & (m.system == "UK_PMF") & (m.code == "blue-mussel-beds")).any()
     o = m[m.list_id == "EMODNET_OSPAR2025"]
     assert len(o) == 30 and set(o.system) == {"OSPAR_TD_2021"}
+
+
+def test_list_roles():
+    from emodnet_habitat_lists.lists import ROLES
+    lists = _read("lists")
+    assert set(lists.role) == ROLES
+    obj = lists[lists.role == "objective"]
+    assert (obj.deliverable.str.match(r"D3\.\d")).all()
+    assert {"EMODNET_BIOGENIC", "EOV_SEAGRASS", "EOV_CORAL", "EOV_MACROALGAE", "VME", "EFH"} <= set(obj.list_id)
+    assert not (lists[lists.role == "possible"].status == "planned").any()

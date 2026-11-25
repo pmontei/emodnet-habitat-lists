@@ -66,6 +66,7 @@ SRC_2025 = ("Gonçalves, J., Monteiro, P., O'Keeffe, E., Mcgrath, F., Woods, H.,
 
 LIST_META = dict(
     list_id=LIST_ID, name="EMODnet Seabed Habitats Seagrass cover EOV composite: habitats used", kind="product",
+    role="objective",
     version="2026 (D3.03): 2019 and 2025 lists, extended by crosswalks (proposed)",
     authority="EMODnet Seabed Habitats", deliverable="D3.03", scope="European seas and Caribbean",
     source=f"{SRC_2019}, Tables 2, 5, 6; {SRC_2025}, Appendix Table 3; GOOS_EOV seagrass members",

@@ -77,17 +77,34 @@ Column definitions: [`docs/schema.md`](docs/schema.md).
 
 ### Lists
 
+Each list has a `role` in `lists.csv`: **`objective`** when it is the list of a WP3 deliverable (Updated Work Plan 2025–2027), **`possible`** for the other lists, which could become a product (e.g. at a stakeholder's request, D3.09) but are not objectives of the project. `GOOS_EOV` and `NRL_2024_MARINE` are also references of objective lists (EOVs; D3.08).
+
+#### Objectives of the project (WP3 deliverables)
+
 | List (`list_id`) | Items | Members |
 |---|---|---|
 | `EMODNET_BIOGENIC`: biogenic substrate types (D3.06, 2021; D3.10) | 29 types, 4 levels | published: EUNIS 2007-11, Annex I (1170 partial), HELCOM HUB, OSPAR, UK lists (Appendix 1, Table 6); EUNIS 2019 by biological zone and region (Appendix 2). **Proposed for D3.10:** EUNIS 2022 (70 codes, 6 to review). Extraction rules in `extraction_rules.csv` |
-| `NRL_2024_MARINE`: Nature Restoration Regulation (EU) 2024/1991, Annex II | 7 groups × regions | published: 231 EUNIS 2022 types (the Annex II related Annex I types are EUNIS 2022 → Annex I crosswalks) |
+| `EOV_SEAGRASS`: habitats of the Seagrass cover EOV composite (D3.03), `src/emodnet_habitat_lists/eov_seagrass.py` | 8 (Zostera, Posidonia, Cymodocea, Ruppia, Halophila, tropical, generic/mixed beds) | published: 2019 EOV report (EUNIS 2007-11, OSPAR, Annex I), D3.11 2025 Appendix Table 3, GOOS_EOV (JNCC); 9 codes of the 2025 table rejected (wrong Barcelona codes, e.g. `MB2.53` = *Cladocora* reefs). **Proposed:** crosswalks, sub-units and names in all classifications. **Reviewed (WP3, 25/11/2026):** dead *Posidonia* leaves and *matte* included; *Caulerpa prolifera* associations excluded. Filter: 330 habitats (258 `yes`, 18 `partial`, 36 `broader`, 18 `no`), 88 to review. Update without the sources: `ehl-seagrass` |
+| `EOV_CORAL` (D3.02, Europe and Caribbean, cold-water and tropical corals) | planned | planned |
+| `EOV_MACROALGAE` (D3.04) | planned | planned |
+| `EOV_MANGROVE` (D3.05, Caribbean; lead SAERI) | planned | planned |
+| `COASTAL_WETLANDS` (D3.06, D3.13; lead Syke) | planned | planned |
+| `EFH` (D3.07, D3.15) | planned: species × life stage × function | planned (`supports function`) |
+| `VME` (D3.08, D3.16): potential VME (FAO / ICES) and potentially degraded habitats | planned | planned |
+| `CORALLIGENOUS` (D3.09a) | planned | planned |
+| `ANNEX_I_HELCOM` (D3.09b): Annex I habitat types for HELCOM, Article 17 (lead Syke) | planned | planned |
+
+D3.09c (EUNIS 2022 dataset without overlaps for OSPAR, JNCC) and D3.09d (Sargassum history, SAERI) are not built from a habitat list.
+
+#### Other possible lists
+
+| List (`list_id`) | Items | Members |
+|---|---|---|
 | `GOOS_EOV`: GOOS habitat EOVs (specification sheets, Aug 2026) | 4 EOVs, 14 sub-variables | published: UK MHC (JNCC correlation tables); proposed: Allen Coral Atlas and GMW classes |
+| `NRL_2024_MARINE`: Nature Restoration Regulation (EU) 2024/1991, Annex II | 7 groups × regions | published: 231 EUNIS 2022 types (the Annex II related Annex I types are EUNIS 2022 → Annex I crosswalks) |
 | `UK_PMF`, `UK_MCZ_FOCI`, `UK_HPI`, `UK_MCZ_BSH`: UK conservation lists (names in the JNCC correlation tables) | 26, 21, 29, 28 (item ids are slugs of the names) | published: UK MHC v22.04 units (JNCC correlation tables) |
 | `BARCELONA_RL_2019`: Barcelona Convention Reference List for the selection of sites (Decision IG.24/7, Annex VII) | 267 | published: the same codes of the Barcelona 2019 classification |
 | `EMODNET_OSPAR2025`: habtype / habsubtype values of the EMODnet OSPAR habitats dataset | 30 | published: OSPAR threatened and/or declining habitats |
-| `EOV_SEAGRASS`: habitats of the Seagrass cover EOV composite (D3.03), `src/emodnet_habitat_lists/eov_seagrass.py` | 8 (Zostera, Posidonia, Cymodocea, Ruppia, Halophila, tropical, generic/mixed beds) | published: 2019 EOV report (EUNIS 2007-11, OSPAR, Annex I), D3.11 2025 Appendix Table 3, GOOS_EOV (JNCC); 9 codes of the 2025 table rejected (wrong Barcelona codes, e.g. `MB2.53` = *Cladocora* reefs). **Proposed:** crosswalks, sub-units and names in all classifications. **Reviewed (WP3, 25/11/2026):** dead *Posidonia* leaves and *matte* included; *Caulerpa prolifera* associations excluded. Filter: 330 habitats (258 `yes`, 18 `partial`, 36 `broader`, 18 `no`), 88 to review. Update without the sources: `ehl-seagrass` |
-| `CORALLIGENOUS` (D3.09a) | planned | planned |
-| `EFH` (D3.07) | planned: species × life stage × function | planned (`supports function`) |
 
 ## Usage
 
