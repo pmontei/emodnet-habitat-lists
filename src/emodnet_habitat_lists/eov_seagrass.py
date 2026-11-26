@@ -32,7 +32,8 @@ Names that describe plants washed ashore, inland (athalassic) seagrass communiti
 corals...) give ``partial`` rows.
 
 WP3 decisions (``DECISIONS``, status ``reviewed``): dead *Posidonia* leaves and dead *matte* are
-included; associations with *Caulerpa prolifera* (an alga) are excluded.
+included (25/11/2026); associations with *Caulerpa* are kept whenever seagrass is present (26/11/2026,
+replacing the exclusion of 25/11/2026).
 
 Items are the seagrass bed types of D3.11 (2025), Appendix Table 3, plus ``seagrass-beds`` for
 generic or mixed seagrass habitats; the item of a member is decided from its name (genus named),
@@ -197,17 +198,21 @@ SEAGRASS_NAME = re.compile(
     r"herbier|marine angiosperm|aquatic angiosperm|angiosperm communit|marine phanerogam", re.I)
 EXCLUDED_NAME = re.compile(r"washed ashore|iris halophila|athalassic|deposit of dead", re.I)
 
-# WP3 decisions (Pedro Monteiro, CCMAR, 2026-11-25): name pattern -> (link_type, reason). They apply to
-# every row of the habitat (published or proposed), which becomes ``reviewed``.
-DECIDED_BY, DECIDED_ON = "Pedro Monteiro (WP3, CCMAR)", "2026-11-25"
+# WP3 decisions (Pedro Monteiro, CCMAR, 25 and 26/11/2026): name pattern -> (link_type, reason). They
+# apply to every row of the habitat (published or proposed), which becomes ``reviewed``.
+DECIDED_BY, DECIDED_ON = "Pedro Monteiro (WP3, CCMAR)", "2026-11-26"
+SEAGRASS_TAXA = re.compile(r"zostera|posidoni|cymodoce|halophila|ruppia|zannichellia|thalassia|syringodium|"
+                           r"halodule|sea-?grass|eel-?grass|phanerogam|angiosperm", re.I)
 DECISIONS = [
-    (re.compile(r"association with \W*caulerpa prolifera", re.I), "excluded",
-     "WP3 decision: Caulerpa prolifera is an alga, not a seagrass; associations with it are left out"),
+    # 26/11/2026 (replaces the exclusion of 25/11/2026): Caulerpa is an alga, but a habitat where it
+    # occurs with seagrass is kept; only applies to names that also name seagrass
+    (re.compile(r"caulerpa", re.I), "member",
+     "WP3 decision (26/11/2026): associations with Caulerpa are kept whenever seagrass is present"),
     (re.compile(r"dead leaves|dead\W+(?:«\s*)?mattes?\b", re.I), "member",
-     "WP3 decision: dead Posidonia leaves and dead matte are included"),
+     "WP3 decision (25/11/2026): dead Posidonia leaves and dead matte are included"),
 ]
 PARTIAL_NAME = re.compile(
-    r"halophyte|algal|algae|algues|coraux|coral|gorgon|caulerpa spp|or caulerpa|angiosperm communit|"
+    r"halophyte|algal|algae|algues|coraux|coral|gorgon|angiosperm communit|"
     r"dominated by aquatic angiosperms|rhizomatous", re.I)
 # sub-trees not followed from a member (the parent is mixed)
 CARIB_SYSTEMS = {"CARIB_MARTINIQUE_2022", "FR_APHN_ANTILLES", "ALLEN_CORAL_ATLAS_BENTHIC"}
@@ -232,8 +237,8 @@ def decision_for(name: str) -> tuple[str, str] | None:
     n = name if isinstance(name, str) else ""
     for pattern, link, why in DECISIONS:
         if pattern.search(n):
-            if link == "member" and re.search(r"caulerpa spp|or caulerpa|cymodocea", n, re.I):
-                return None   # living seagrass or algae on dead matte: mixed, left to the name rules
+            if "aulerpa" in pattern.pattern and not SEAGRASS_TAXA.search(n):
+                continue   # Caulerpa without seagrass: not a seagrass habitat
             return link, why
     return None
 

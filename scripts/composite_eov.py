@@ -11,7 +11,7 @@ Steps (``--steps``, default all):
     * or ``ORIG_HAB`` / ``HAB_TYPE`` text naming the item (e.g. "posidoni" for Posidonia beds).
 
     Polygons whose code is excluded for the item (``use = no``), or whose text names an excluded
-    association (e.g. *Caulerpa prolifera*), are left out. The classification names of the maps are
+    association, are left out (none for Posidonia since 26/11/2026: Caulerpa with seagrass is kept). The classification names of the maps are
     translated with ``CLASS_ALIASES`` (provisional ``class_aliases``). Geometries are reprojected to
     EPSG:3035, repaired (``make_valid``) and snapped to the INSPIRE 1 m grid (``set_precision(1.0)``,
     the INSPIRE grid has its origin at 0, 0), and written to ``selected/<map>.fgb``. Resumable
@@ -80,7 +80,7 @@ CLASS_ALIASES = {
 }
 # item -> (text naming the item, text naming an excluded association)
 ITEM_TEXT = {
-    "posidonia-beds": (r"posidoni", r"caulerpa prolifera"),
+    "posidonia-beds": (r"posidoni", r"$^"),   # Caulerpa with seagrass is kept (WP3, 26/11/2026)
     "cymodocea-beds": (r"cymodoce", r"$^"),
     "zostera-beds": (r"zostera|eel-?grass", r"$^"),
     "halophila-beds": (r"(?<!iris )halophila", r"$^"),
