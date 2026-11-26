@@ -195,7 +195,8 @@ def step_select(a, keep, drop, names) -> None:
         if g.crs is None:
             g = g.set_crs("EPSG:4326")
         g = g.to_crs(CRS)
-        g["geometry"] = polygons_only(shapely.set_precision(shapely.make_valid(g.geometry.values), PRECISION))
+        g["geometry"] = polygons_only(shapely.set_precision(shapely.make_valid(shapely.force_2d(g.geometry.values)),
+                                                            PRECISION))
         g = g.explode(index_parts=False)
         g = g[g.geometry.geom_type.isin(["Polygon", "MultiPolygon"]) & ~g.geometry.is_empty]
         g = g[g.geometry.area >= 1.0]
