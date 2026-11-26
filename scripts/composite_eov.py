@@ -19,13 +19,20 @@ Steps (``--steps``, default all):
 ``resolve``
     Overlaps are resolved tile by tile (INSPIRE 10 km cells generated with ``standardgrid``): each
     polygon keeps only the part not covered by a polygon of higher rank. Rank: source priority
-    (D3.11 2025, Table 3: OSPAR 1, Annex I maps 2, EUNIS maps 3, other maps 4), then ``SUM_CONF``
-    (higher first), then determination date (more recent first). Output: ``composite.gpkg``, layer
+    (D3.11 2025, Table 3: OSPAR 1, Annex I maps 2, EUNIS maps 3, other maps 4), then live before
+    dead Posidonia (O'Keeffe & Lillis 2019), then ``SUM_CONF`` (higher first; maps without it last),
+    then determination date (more recent first). In each tile (or 1 km cell) the boundaries of all
+    the polygons are noded together on the 1 m grid and each face goes to the polygon of highest rank
+    containing it, so neighbouring pieces share exactly the same edges (no overlaps, no slivers). Output: ``composite.gpkg``, layer
     ``polygons``, in the EOV polygon template (D3.11 2025, Appendix Table 1) plus provenance fields.
 ``dissolve``
     Polygons with the same information (all template and provenance fields except the source
     polygon id and the tile) are merged (layer ``polygons_dissolved``).
-``grid``
+``check``
+    Overlapping pairs left in the dissolved layer (should be 0).
+``export``
+    Final product in WGS84 (``composite_wgs84.gpkg``).
+``grid`` (optional)
     Cover of the composite in INSPIRE 1 km cells (layer ``inspire_1km``: area and percentage).
 ``compare``
     Area by map compared with the 2025 composite (``--old``), for the same items.
@@ -144,6 +151,18 @@ def polygons_only(geoms) -> np.ndarray:
     return np.array(out, dtype=object)
 
 
+DEAD_CODES = {"A2.131", "A5.5353", "MA2561", "MB2523", "MB2.544", "III.5.1.3", "II.3.1.1"}
+DEAD_TEXT = r"dead|morte|mort[ae]s?\b|feuilles mortes|banquette"
+
+
+def condition(df: pd.DataFrame) -> np.ndarray:
+    """'dead' for dead Posidonia (dead matte, banks of dead leaves), else 'live'. 2019 rule: where
+    live and dead Posidonia overlap, live Posidonia is kept."""
+    code = df.Eunis_code.astype(str).map(lambda t: any(c in DEAD_CODES for c in codes_in(t)))
+    text = (df.Hab_origin.astype(str) + " " + df.Eunis_name.astype(str)).str.contains(DEAD_TEXT, case=False)
+    return np.where(code | text, "dead", "live")
+
+
 def year(value) -> int:
     m = re.search(r"(19|20)\d{2}", str(value))
     return int(m.group(0)) if m else 0
@@ -254,39 +273,39 @@ MAX_PER_TILE = 2000   # above this, a 10 km tile is processed by its 1 km cells
 
 
 def resolve_cell(geoms, idx, cell) -> tuple[list, list]:
-    """Pieces of ``geoms[idx]`` inside ``cell`` without overlaps: each part loses what the parts of
-    higher rank (earlier in ``idx``, which is sorted by rank) cover. Only the parts that touch it
-    are used, so the cost grows with the local overlaps, not with the cell."""
-    parts = shapely.intersection(geoms[idx], cell)
+    """Pieces of ``geoms[idx]`` inside ``cell`` without overlaps, by a single noded overlay: the
+    boundaries of all the parts are noded together on the 1 m grid, the faces of that linework are
+    built (polygonize), and each face goes to the part of highest rank that contains it (``idx`` is
+    sorted by rank). Neighbouring pieces share exactly the same edges, so no overlap and no sliver is
+    left; the union of the pieces equals the union of the parts."""
+    parts = polygons_only(shapely.intersection(geoms[idx], cell, grid_size=PRECISION))
     ok = ~shapely.is_empty(parts)
     idx, parts = idx[ok], parts[ok]
     if not len(parts):
         return [], []
+    if len(parts) == 1:
+        return [parts[0]], [int(idx[0])]
+    lines = shapely.union_all(shapely.boundary(parts), grid_size=PRECISION)   # noded linework
+    faces = np.array(shapely.get_parts(shapely.polygonize(shapely.get_parts(lines))), dtype=object)
+    faces = faces[shapely.area(faces) > 0]
+    if not len(faces):
+        return [], []
+    pts = shapely.point_on_surface(faces)
     shapely.prepare(parts)
-    left, right = STRtree(parts).query(parts, predicate="intersects")
-    higher = left > right            # right has a higher rank than left
-    by_part: dict[int, list[int]] = {}
-    for l, r in zip(left[higher], right[higher]):
-        by_part.setdefault(int(l), []).append(int(r))
+    f_i, p_i = STRtree(parts).query(pts, predicate="within")
+    owner = np.full(len(faces), -1)
+    for f, pp in zip(f_i, p_i):   # lowest part index = highest rank
+        if owner[f] < 0 or pp < owner[f]:
+            owner[f] = pp
     kept_geom, kept_idx = [], []
-    for i_part, (j, gpart) in enumerate(zip(idx, parts)):
-        over = by_part.get(i_part)
-        if over:
-            hs = parts[over]
-            if shapely.covers(hs, gpart).any():   # fully covered by a higher rank: dropped
-                continue
-            try:   # clip the higher-rank parts to the extent of this part before the difference
-                clipped = shapely.intersection(hs, box(*gpart.bounds))
-                piece = shapely.difference(gpart, shapely.union_all(clipped))
-            except shapely.errors.GEOSException:
-                piece = shapely.difference(gpart, shapely.union_all(shapely.make_valid(hs)))
-        else:
-            piece = gpart
-        piece = polygons_only([shapely.set_precision(shapely.make_valid(piece), PRECISION)])[0]
+    for pp in np.unique(owner[owner >= 0]):
+        mine = faces[owner == pp]
+        piece = mine[0] if len(mine) == 1 else shapely.coverage_union_all(mine)
+        piece = polygons_only([piece])[0]
         if piece.is_empty or piece.area < 1.0:
             continue
         kept_geom.append(piece)
-        kept_idx.append(int(j))
+        kept_idx.append(int(idx[pp]))
     return kept_geom, kept_idx
 
 
@@ -295,8 +314,13 @@ def step_resolve(a) -> None:
     sel = pd.concat([pyogrio.read_dataframe(f) for f in files], ignore_index=True)
     sel = gpd.GeoDataFrame(sel, geometry="geometry", crs=CRS)
     log(f"resolve: {len(sel)} polygons")
-    sel = sel.sort_values(["Priority", "Sum_conf", "Year", "Map_id", "Polygon"],
-                          ascending=[True, False, False, True, True]).reset_index(drop=True)
+    sel["Condition"] = condition(sel)
+    sel["_dead"] = (sel.Condition == "dead").astype(int)
+    sel = sel.sort_values(["Priority", "_dead", "Sum_conf", "Year", "Map_id", "Polygon"],
+                          ascending=[True, True, False, False, True, True]).reset_index(drop=True)
+    sel = sel.drop(columns="_dead")
+    log("rank: source priority, live before dead, SUM_CONF, year; "
+        f"{(sel.Sum_conf < 0).sum()} polygons without SUM_CONF, {(sel.Condition == 'dead').sum()} dead")
     sel["rank"] = np.arange(len(sel))
     tree = STRtree(sel.geometry.values)
     tiles = tiles_for(sel.total_bounds, TILE)
@@ -342,7 +366,7 @@ def step_resolve(a) -> None:
 # polygons with the same values in all these fields are merged by ``dissolve``
 DISSOLVE_KEYS = ["Map_id", "Hab_origin", "Orig_class", "Eunis_code", "Hab_class", "Eunis_ver", "Eunis_name",
                  "Anxi_code", "Anxi_name", "Ai_subtype", "Ospar_hab", "determiner", "Det_date", "Source", "Item",
-                 "Match_rule", "Comp", "Comp_type", "Sum_conf", "Priority", "Year"]
+                 "Condition", "Match_rule", "Comp", "Comp_type", "Sum_conf", "Priority", "Year"]
 
 
 def step_dissolve(a) -> None:
@@ -379,6 +403,33 @@ def step_dissolve(a) -> None:
     pyogrio.write_dataframe(out, src, layer="polygons_dissolved")
     log(f"dissolve done: {len(comp)} -> {len(out)} polygons, {out.area.sum() / 1e6:.1f} km2 "
         f"(before {comp.area.sum() / 1e6:.1f} km2)")
+
+
+def step_export(a) -> None:
+    """Final product in WGS84 (EPSG:4326): ``composite_wgs84.gpkg``, layer ``polygons`` (the
+    dissolved polygons). Processing stays in EPSG:3035 (areas, INSPIRE grid); the reprojected
+    geometries are repaired, and the area in km2 (EPSG:3035) is kept in ``Area_km2``."""
+    src = a.out / "composite.gpkg"
+    d = pyogrio.read_dataframe(src, layer="polygons_dissolved")
+    d["Area_km2"] = (d.area / 1e6).round(6)
+    w = d.to_crs("EPSG:4326")
+    w["geometry"] = polygons_only(shapely.make_valid(w.geometry.values))
+    w = w[~w.geometry.is_empty]
+    out = a.out / "composite_wgs84.gpkg"
+    if out.exists():
+        out.unlink()
+    pyogrio.write_dataframe(w, out, layer="polygons")
+    log(f"export: {len(w)} polygons in EPSG:4326 -> {out} (invalid: {(~w.is_valid).sum()})")
+
+
+def step_check(a) -> None:
+    """Pairs of polygons that overlap (interiors), in the dissolved layer (EPSG:3035)."""
+    d = pyogrio.read_dataframe(a.out / "composite.gpkg", layer="polygons_dissolved")
+    g = d.geometry.values
+    left, right = STRtree(g).query(g, predicate="overlaps")
+    m = left < right
+    area = shapely.area(shapely.intersection(g[left[m]], g[right[m]]))
+    log(f"check: {int(m.sum())} overlapping pairs, {area.sum():.1f} m2 (> 1 m2: {(area > 1).sum()})")
 
 
 def step_grid(a) -> None:
@@ -438,7 +489,7 @@ def main(argv=None):
     p.add_argument("--items", nargs="+", default=["posidonia-beds"])
     p.add_argument("--only", help="text file with the map file names to read (default: all)")
     p.add_argument("--old", type=Path, help="2025 composite polygons, for the comparison")
-    p.add_argument("--steps", nargs="+", default=["select", "resolve", "dissolve", "grid", "compare"])
+    p.add_argument("--steps", nargs="+", default=["select", "resolve", "dissolve", "check", "export", "compare"])
     p.add_argument("--time-limit", type=float, default=0, help="select: stop after this many seconds (resumable)")
     a = p.parse_args(argv)
     a.out.mkdir(parents=True, exist_ok=True)
@@ -451,6 +502,10 @@ def main(argv=None):
         step_resolve(a)
     if "dissolve" in a.steps:
         step_dissolve(a)
+    if "check" in a.steps:
+        step_check(a)
+    if "export" in a.steps:
+        step_export(a)
     if "grid" in a.steps:
         step_grid(a)
     if "compare" in a.steps and a.old:

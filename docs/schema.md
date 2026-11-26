@@ -108,7 +108,10 @@ Filter of the map library for the Seagrass cover EOV composite: one row per memb
 ## extraction_rules
 
 Rules used to build composite products from habitat maps: which data source and query give each
-list item, by region, as published in the product reports.
+list item, by region, as published in the product reports. `EMODNET_BIOGENIC`: D3.06 Tables 6–9
+(queries as published). `EOV_SEAGRASS`: data sources in the priority order of D3.11 (2025) Table 3
+and the overlap rules of O'Keeffe & Lillis (2019), with the priority in `notes`; the queries on the
+map library are this repository's (members of the list).
 
 | Column | Meaning |
 |---|---|

@@ -203,6 +203,7 @@ def build(raw: Path, sources: Path, out: Path) -> dict[str, pd.DataFrame]:
         loaded.add("EMODNET_BIOGENIC_2021")
     else:
         print(f"skipped biogenic substrate: {sources / biogenic.FOLDER} not found or pdftotext not installed")
+    rules.append(eov_seagrass.extraction_rules())   # transcribed in the code, no source files needed
     if (sources / ramsar.FOLDER).is_dir() and list((sources / ramsar.FOLDER).glob(ramsar.CROSSWALK_GLOB)) \
             and pdftext.available():
         crosswalks.append(ramsar.crosswalk_get(sources))

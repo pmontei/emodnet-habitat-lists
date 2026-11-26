@@ -94,3 +94,17 @@ def test_codes_in_reports():
             if printed in {"zostera-beds", "cymodocea-meadows"}:
                 continue
             assert squash(printed) in t25, printed
+
+
+@pytest.mark.skipif(not REPORTS.is_dir() or not pdftext.available(), reason="EOV reports or pdftotext not available")
+def test_extraction_sources_in_report():
+    squash = lambda x: "".join(sg._norm(x).split()).replace("-", "").lower()
+    t25 = squash(sg.report_text(REPORTS, sg.REPORT_2025_GLOB, layout=False))
+    for region, ds, scope, q, src, notes in sg.EXTRACTION_RULES:
+        if src.endswith("Table 3"):
+            assert squash(ds) in t25, ds
+
+
+def test_extraction_rules_table():
+    r = sg.extraction_rules()
+    assert set(r.list_id) == {sg.LIST_ID} and set(r["item"]) == {"seagrass"} and len(r) == len(sg.EXTRACTION_RULES)

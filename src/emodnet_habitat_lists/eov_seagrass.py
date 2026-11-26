@@ -152,6 +152,38 @@ REPORT_2025_ERRORS = {
     ("BARCELONA_2006", "III.5.6"): "not a Barcelona 2006 code; Halophila stipulacea is III.2.2.2",
 }
 
+# Extraction rules: data sources in the priority order of D3.11 (2025), Table 3 (polygons; from
+# O'Keeffe & Lillis 2019), and the 2019 overlap rules. The queries on the map library are this
+# repository's (habitats of the list), the sources and priorities are as published.
+_Q_LIB = ("HAB_TYPE + HAB_CLASS, or ORIG_HAB + ORIG_CLASS, is a member of EOV_SEAGRASS "
+          "(eov_seagrass_filter.csv, use = yes)")
+_T3 = SRC_2025 + ", Table 3"
+EXTRACTION_RULES = [  # region, data source (as printed), spatial scope, query, source, notes
+    ("Atlantic/Arctic", "OSPAR Threatened and Declining Habitats", "Northeast Atlantic",
+     "HabType = 'Zostera beds' OR HabType = 'Cymodocea meadows'", _T3,
+     "priority 1; query from " + SRC_2019 + ", Table 5"),
+    ("Atlantic/Arctic", "Natural England Marine Evidence Base", "England", "seagrass habitat features", _T3,
+     "priority 1"),
+    ("Atlantic/Arctic", "Geodatabase of Marine features adjacent to Scotland", "Scotland",
+     "seagrass Priority Marine Features", _T3, "priority 1"),
+    ("Mediterranean", "Essential Ocean Variables (EOV)", "Mediterranean", "seagrass EOV polygons", _T3,
+     "priority 1"),
+    ("all", "Individual habitat maps from surveys - Habitats Directive Annex I", "", _Q_LIB, _T3, "priority 2"),
+    ("all", "Individual habitat maps from surveys - EUNIS classification system", "", _Q_LIB, _T3,
+     "priority 3; between maps of equal priority, the higher confidence score is kept, then the most recent "
+     "map (D3.11 2025, section 2.3.2)"),
+    ("all", "Other non-EUNIS habitat maps (e.g. HELCOM)", "", _Q_LIB, _T3, "priority 4"),
+    ("all", "EMODnet Geology seabed substrate surface features", "", "seagrass features", _T3, "priority 5"),
+    ("all", "seagrass meadows(UNEP-WCMC and Short, 2021)", "", "all polygons", _T3,
+     "priority 6 (Global Distribution of Seagrasses, UNEP-WCMC and Short 2021)"),
+    ("all", "EUSeaMap (broad-scale predictive map)", "", _Q_LIB, SRC_2019,
+     "lowest priority (coarse resolution, 250 m model); not in D3.11 Table 3, but the 2025 composite includes "
+     "EUSeaMap 2016 polygons"),
+    ("Mediterranean", "live Posidonia and dead Posidonia (mosaics)", "", "live Posidonia kept where live and "
+     "dead Posidonia overlap", SRC_2019, "overlap rule; dead Posidonia is a member of the list (WP3 decision "
+     "25/11/2026), it only loses to live Posidonia where both overlap"),
+]
+
 GENERA = {  # item -> pattern on habitat names (English, French)
     "posidonia-beds": r"posidoni",
     "cymodocea-beds": r"cymodoce",
@@ -388,6 +420,13 @@ def proposed_members(seeds: pd.DataFrame, habitats: pd.DataFrame, crosswalks: pd
     return pd.DataFrame(rows, columns=LIST_MEMBERS_COLUMNS)
 
 
+def extraction_rules() -> pd.DataFrame:
+    from .schema import EXTRACTION_RULES_COLUMNS
+    return pd.DataFrame([{"list_id": LIST_ID, "item": "seagrass", "region": r, "data_source": ds,
+                          "spatial_scope": sc, "query": q, "result": "", "source": src, "notes": n}
+                         for r, ds, sc, q, src, n in EXTRACTION_RULES], columns=EXTRACTION_RULES_COLUMNS)
+
+
 def items_table() -> pd.DataFrame:
     return pd.DataFrame([{"list_id": LIST_ID, "item": i, "name": n, "level": 1 if not p else 2, "parent_item": p,
                           "definition": d, "attributes": "", "source": s, "notes": ""} for i, n, p, d, s in ITEMS],
@@ -460,6 +499,9 @@ def update_processed(processed: Path, today: str | None = None) -> dict[str, pd.
     items = pd.concat([items, new_items.astype(str).replace("nan", "")], ignore_index=True)
     members = pd.concat([members, new_members.fillna("")], ignore_index=True)
     members = validate_members(members, items, habitats)
+    rules = rd("extraction_rules.csv")
+    rules = pd.concat([rules[rules.list_id != LIST_ID], extraction_rules()], ignore_index=True)
+    rules.to_csv(processed / "extraction_rules.csv", index=False)
     filt = filter_table(members, habitats)
     lists_df.to_csv(processed / "lists.csv", index=False)
     items.to_csv(processed / "list_items.csv", index=False)
