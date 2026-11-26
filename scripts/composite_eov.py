@@ -16,6 +16,14 @@ Steps (``--steps``, default all):
     EPSG:3035, repaired (``make_valid``) and snapped to the INSPIRE 1 m grid (``set_precision(1.0)``,
     the INSPIRE grid has its origin at 0, 0), and written to ``selected/<map>.fgb``. Resumable
     (``select_done.txt``) and with ``--time-limit``, for machines that stop long jobs.
+``select_geology``
+    EMODnet Geology seabed substrate (``--geology`` .gdb files, e.g. 1:100k, 1:250k, 1:1M): polygons
+    whose surface feature names seagrass; Posidonia where it says Posidonia or in the Mediterranean
+    (WP3 decision 26/11/2026); priority 5, finer scale first.
+
+The Habitats Directive maps of the library (fields ``ANNEXI``, ``SUBTYPE``, ``CONFIDENCE``) are read
+too: ``ANNEXI`` as the Annex I code (priority 2), ``CONFIDENCE`` High/Medium/Low as 3/2/1.
+
 ``resolve``
     Overlaps are resolved tile by tile (INSPIRE 10 km cells generated with ``standardgrid``): each
     polygon keeps only the part not covered by a polygon of higher rank. Rank: source priority
@@ -90,6 +98,28 @@ EUNIS_VERSION = {"EUNIS_2012": "2007-11", "EUNIS_M_2019": "2019", "EUNIS_M_2022"
 ANNEX_I_OF_ITEM = {"posidonia-beds": ("1120", "Posidonia beds (Posidonion oceanicae)")}
 DEF_COLS = ["GUI", "POLYGON", "ORIG_HAB", "ORIG_CLASS", "HAB_TYPE", "HAB_CLASS", "DET_NAME", "DET_DATE",
             "COMP", "COMP_TYPE", "SUM_CONF"]
+# Habitats Directive maps of the library have their own format (ANNEXI, SUBTYPE, CONFIDENCE)
+ANNEX_COLS = ["ANNEXI", "SUBTYPE", "CONFIDENCE"]
+ANNEX_CONF = {"high": 3, "medium": 2, "low": 1}   # compared only between Annex I maps (same priority)
+
+
+def normalize(df: pd.DataFrame) -> pd.DataFrame:
+    """Upper-case field names; Annex I format -> DEF fields (HAB_TYPE = ANNEXI, HAB_CLASS = Annex I,
+    SUM_CONF = CONFIDENCE as 3/2/1, SUBTYPE kept)."""
+    df = df.rename(columns={c: c.upper() for c in df.columns if c != "geometry"})
+    for c in DEF_COLS + ANNEX_COLS:
+        if c not in df:
+            df[c] = ""
+    df[DEF_COLS + ANNEX_COLS] = df[DEF_COLS + ANNEX_COLS].fillna("").astype(str)
+    annex = (df.HAB_TYPE.str.strip() == "") & (df.ANNEXI.str.strip() != "")
+    if annex.any():
+        df.loc[annex, "HAB_TYPE"] = df.loc[annex, "ANNEXI"]
+        df.loc[annex, "HAB_CLASS"] = "Habitats Directive Annex I Habitats"
+        df.loc[annex, "SUM_CONF"] = df.loc[annex, "CONFIDENCE"].str.lower().str.strip().map(ANNEX_CONF).fillna(-1) \
+            .astype(int).astype(str)
+    return df
+
+
 TOKEN = re.compile(r"[A-Z]{1,3}\d?[\d.]*\d|[IVX]+(?:\.\d+)+|\d{4}")
 
 
@@ -140,6 +170,58 @@ def match_rows(df: pd.DataFrame, keep, drop, item_re, excl_re) -> tuple[np.ndarr
     return np.array([bool(r) for r in rules]), rules
 
 
+GEOLOGY_SCALES = {"100k": 0, "250k": 1, "1M": 2}   # finer scale first where they overlap
+GEOLOGY_SEAGRASS = r"seagrass|posidonia|zostera|cymodocea"
+
+
+def in_mediterranean(geoms) -> np.ndarray:
+    """Approximate Mediterranean (EPSG:4326 points): 5.6 W to 36.5 E, 30 to 46 N, without the Bay of
+    Biscay (west of 3 E and north of 43 N) and the Black Sea (east of 27 E and north of 40.9 N)."""
+    p = shapely.point_on_surface(geoms)
+    x, y = shapely.get_x(p), shapely.get_y(p)
+    return (x > -5.6) & (x < 36.5) & (y > 30) & (y < 46) & ~((x < 3) & (y > 43)) & ~((x > 27) & (y > 40.9))
+
+
+def step_select_geology(a) -> None:
+    """EMODnet Geology seabed substrate: polygons whose Surface_feature names seagrass. Posidonia beds:
+    features naming Posidonia anywhere, and seagrass features in the Mediterranean (WP3 decision
+    26/11/2026). Priority 5 (D3.11 2025, Table 3); between scales, the finer scale first (Subprio);
+    Sum_conf = Conf_TOT. One FlatGeobuf per scale in ``out/selected/``."""
+    sel_dir = a.out / "selected"
+    sel_dir.mkdir(exist_ok=True)
+    for gdb in a.geology:
+        scale = next((k for k in GEOLOGY_SCALES if f"_{k}" in gdb.name), "")
+        cols = ["Code", "Country", "Name", "Data_Holder", "Scale", "Surface_feature", "Conf_TOT"]
+        d = pyogrio.read_dataframe(gdb, columns=cols, where="Surface_feature IS NOT NULL")
+        d = d[d.Surface_feature.astype(str).str.contains(GEOLOGY_SEAGRASS, case=False)]
+        if d.crs is None:
+            d = d.set_crs("EPSG:4326")
+        d = d[d.geometry.notna()]
+        posid = d.Surface_feature.str.contains("posidonia", case=False) | in_mediterranean(d.geometry.values)
+        d = d[posid].to_crs(CRS)
+        d["geometry"] = polygons_only(shapely.set_precision(shapely.make_valid(shapely.force_2d(d.geometry.values)),
+                                                            PRECISION))
+        d = d.explode(index_parts=False)
+        d = d[d.geometry.geom_type.isin(["Polygon"]) & (d.area >= 1.0)]
+        dead = d.Surface_feature.str.contains("matte|degraded|dead", case=False)
+        out = gpd.GeoDataFrame({
+            "Map_id": f"EMODnet Geology substrate {scale}", "Polygon": d.Code.astype(str),
+            "Hab_origin": d.Surface_feature.astype(str) + np.where(dead, " (dead)", ""),
+            "Orig_class": "EMODnet Geology surface feature", "Eunis_code": "", "Hab_class": "", "Eunis_ver": "",
+            "Eunis_name": "", "Anxi_code": ANNEX_I_OF_ITEM["posidonia-beds"][0],
+            "Anxi_name": ANNEX_I_OF_ITEM["posidonia-beds"][1], "Ai_subtype": "", "Ospar_hab": "",
+            "Library": "EMODnet Geology seabed substrate", "determiner": d.Data_Holder.astype(str), "Det_date": "",
+            "Source": "EMODnet Geology seabed substrate " + scale + " (" + d.Country.astype(str) + ", "
+                      + d.Name.astype(str) + ")",
+            "Item": "posidonia-beds", "Match_rule": "Geology surface feature", "Comp": "", "Comp_type": "",
+            "Sum_conf": pd.to_numeric(d.Conf_TOT, errors="coerce").fillna(-1).astype(int), "Priority": 5,
+            "Year": 0, "Subprio": GEOLOGY_SCALES.get(scale, 9),
+        }, geometry=d.geometry.values, crs=CRS)
+        pyogrio.write_dataframe(out, sel_dir / f"GEOLOGY_{scale}.fgb", driver="FlatGeobuf")
+        log(f"geology {scale}: {len(out)} polygons, {out.area.sum() / 1e6:.1f} km2 "
+            f"({int(dead.sum())} dead/degraded)")
+
+
 def polygons_only(geoms) -> np.ndarray:
     """Polygons of each geometry, as one (Multi)Polygon per input: lines and points left by an
     intersection or a difference (GeometryCollection) are dropped, never the polygons."""
@@ -152,7 +234,7 @@ def polygons_only(geoms) -> np.ndarray:
 
 
 DEAD_CODES = {"A2.131", "A5.5353", "MA2561", "MB2523", "MB2.544", "III.5.1.3", "II.3.1.1"}
-DEAD_TEXT = r"dead|morte|mort[ae]s?\b|feuilles mortes|banquette"
+DEAD_TEXT = r"dead|morte|mort[ae]s?\b|feuilles mortes|banquette|tanatoc|thanatoc"
 
 
 def condition(df: pd.DataFrame) -> np.ndarray:
@@ -192,27 +274,19 @@ def step_select(a, keep, drop, names) -> None:
             return
         try:
             info = pyogrio.read_info(shp)["fields"]
-            cols = [f for f in info if f.upper() in DEF_COLS]
+            cols = [f for f in info if f.upper() in DEF_COLS + ANNEX_COLS]
             attrs = pyogrio.read_dataframe(shp, read_geometry=False, columns=cols)
         except Exception as e:  # noqa: BLE001
             log(f"skip {shp.name}: {e}")
             continue
-        attrs.columns = [c.upper() for c in attrs.columns]
-        for c in DEF_COLS:
-            if c not in attrs:
-                attrs[c] = ""
-        attrs = attrs.fillna("").astype(str)
+        attrs = normalize(attrs)
         mask, rules = match_rows(attrs, keep, drop, item_re, excl_re)
         if not mask.any():
             _done(done_file, done, shp.stem)
             continue
         fids = np.flatnonzero(mask)
         g = pyogrio.read_dataframe(shp, fids=fids, columns=cols)
-        g = g.rename(columns={c: c.upper() for c in g.columns if c != "geometry"})
-        for c in DEF_COLS:
-            if c not in g:
-                g[c] = ""
-        g[DEF_COLS] = g[DEF_COLS].fillna("").astype(str)
+        g = normalize(g)
         g["Match_rule"] = [rules[j] for j in fids]
         if g.crs is None:
             g = g.set_crs("EPSG:4326")
@@ -233,12 +307,13 @@ def step_select(a, keep, drop, names) -> None:
             "Hab_class": g.HAB_CLASS.astype(str), "Eunis_ver": hs.map(EUNIS_VERSION).fillna(""),
             "Eunis_name": [names.get((s, c), "") for s, c in zip(hs, hab_code)],
             "Anxi_code": ANNEX_I_OF_ITEM.get(item, ("", ""))[0], "Anxi_name": ANNEX_I_OF_ITEM.get(item, ("", ""))[1],
-            "Ai_subtype": "", "Ospar_hab": "", "determiner": g.DET_NAME.astype(str), "Det_date": g.DET_DATE.astype(str),
+            "Ai_subtype": g.SUBTYPE.where(~g.SUBTYPE.str.lower().isin(["not applicable", "none"]), ""),
+            "Ospar_hab": "", "Library": a.maps.name, "determiner": g.DET_NAME.astype(str), "Det_date": g.DET_DATE.astype(str),
             "Source": "EMODnet Seabed Habitats map library (" + g.GUI.astype(str) + ")",
             "Item": item, "Match_rule": g.Match_rule, "Comp": g.COMP.astype(str), "Comp_type": g.COMP_TYPE.astype(str),
             "Sum_conf": pd.to_numeric(g.SUM_CONF, errors="coerce").fillna(-1).astype(int),
             "Priority": np.where(hs == "ANNEX_I", 2, np.where(hs.str.startswith("EUNIS"), 3, 4)),
-            "Year": [year(d) for d in g.DET_DATE],
+            "Year": [year(d) for d in g.DET_DATE], "Subprio": 0,
         }, geometry=g.geometry.values, crs=CRS)
         pyogrio.write_dataframe(out_df, sel_dir / f"{shp.stem}.fgb", driver="FlatGeobuf")
         n_total += len(out_df)
@@ -316,8 +391,11 @@ def step_resolve(a) -> None:
     log(f"resolve: {len(sel)} polygons")
     sel["Condition"] = condition(sel)
     sel["_dead"] = (sel.Condition == "dead").astype(int)
-    sel = sel.sort_values(["Priority", "_dead", "Sum_conf", "Year", "Map_id", "Polygon"],
-                          ascending=[True, True, False, False, True, True]).reset_index(drop=True)
+    if "Subprio" not in sel:
+        sel["Subprio"] = 0
+    sel["Subprio"] = sel.Subprio.fillna(0).astype(int)
+    sel = sel.sort_values(["Priority", "Subprio", "_dead", "Sum_conf", "Year", "Map_id", "Polygon"],
+                          ascending=[True, True, True, False, False, True, True]).reset_index(drop=True)
     sel = sel.drop(columns="_dead")
     log("rank: source priority, live before dead, SUM_CONF, year; "
         f"{(sel.Sum_conf < 0).sum()} polygons without SUM_CONF, {(sel.Condition == 'dead').sum()} dead")
@@ -364,9 +442,9 @@ def step_resolve(a) -> None:
 
 
 # polygons with the same values in all these fields are merged by ``dissolve``
-DISSOLVE_KEYS = ["Map_id", "Hab_origin", "Orig_class", "Eunis_code", "Hab_class", "Eunis_ver", "Eunis_name",
+DISSOLVE_KEYS = ["Library", "Map_id", "Hab_origin", "Orig_class", "Eunis_code", "Hab_class", "Eunis_ver", "Eunis_name",
                  "Anxi_code", "Anxi_name", "Ai_subtype", "Ospar_hab", "determiner", "Det_date", "Source", "Item",
-                 "Condition", "Match_rule", "Comp", "Comp_type", "Sum_conf", "Priority", "Year"]
+                 "Condition", "Match_rule", "Comp", "Comp_type", "Sum_conf", "Priority", "Subprio", "Year"]
 
 
 def step_dissolve(a) -> None:
@@ -501,6 +579,8 @@ def main(argv=None):
     p.add_argument("--items", nargs="+", default=["posidonia-beds"])
     p.add_argument("--only", help="text file with the map file names to read (default: all)")
     p.add_argument("--old", type=Path, help="2025 composite polygons, for the comparison")
+    p.add_argument("--geology", type=Path, nargs="*", default=[],
+                   help="EMODnet Geology seabed substrate .gdb files (step select_geology)")
     p.add_argument("--steps", nargs="+", default=["select", "resolve", "dissolve", "check", "export", "compare"])
     p.add_argument("--time-limit", type=float, default=0, help="select: stop after this many seconds (resumable)")
     a = p.parse_args(argv)
@@ -510,6 +590,8 @@ def main(argv=None):
     names = dict(zip(zip(hab.system, hab.code), hab.name))
     if "select" in a.steps:
         step_select(a, keep, drop, names)
+    if "select_geology" in a.steps:
+        step_select_geology(a)
     if "resolve" in a.steps:
         step_resolve(a)
     if "dissolve" in a.steps:
