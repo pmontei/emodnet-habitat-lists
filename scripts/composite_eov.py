@@ -364,10 +364,14 @@ def step_dissolve(a) -> None:
             per_tile = [shapely.union_all(t.geometry.values, grid_size=PRECISION) for _, t in g.groupby("Inspire10k")]
             u = shapely.union_all(np.array(per_tile, dtype=object), grid_size=PRECISION)
         u = polygons_only([u])[0]
-        for part in shapely.get_parts(u):
-            if part.area >= 1.0:
-                rows.append(dict(zip(keys, vals)) | {"N_pieces": len(g)})
-                geoms.append(part)
+        parts = [p for p in shapely.get_parts(u) if p.area >= 1.0]
+        # pieces merged into each polygon: pieces whose interior point falls in it
+        pts = shapely.point_on_surface(g.geometry.values)
+        hit = STRtree(pts).query(np.array(parts, dtype=object), predicate="contains")
+        n_in = np.bincount(hit[0], minlength=len(parts)) if len(parts) else []
+        for part, k in zip(parts, n_in):
+            rows.append(dict(zip(keys, vals)) | {"N_pieces": int(k)})
+            geoms.append(part)
         if n % 500 == 0:
             log(f"dissolve {n} groups, {len(geoms)} polygons, {time.time() - t0:.0f} s")
     out = gpd.GeoDataFrame(rows, geometry=geoms, crs=CRS)
