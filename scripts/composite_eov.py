@@ -14,7 +14,8 @@ Steps (``--steps``, default all):
     association (e.g. *Caulerpa prolifera*), are left out. The classification names of the maps are
     translated with ``CLASS_ALIASES`` (provisional ``class_aliases``). Geometries are reprojected to
     EPSG:3035, repaired (``make_valid``) and snapped to the INSPIRE 1 m grid (``set_precision(1.0)``,
-    the INSPIRE grid has its origin at 0, 0), and written to ``selected.gpkg``.
+    the INSPIRE grid has its origin at 0, 0), and written to ``selected/<map>.fgb``. Resumable
+    (``select_done.txt``) and with ``--time-limit``, for machines that stop long jobs.
 ``resolve``
     Overlaps are resolved tile by tile (INSPIRE 10 km cells generated with ``standardgrid``): each
     polygon keeps only the part not covered by a polygon of higher rank. Rank: source priority
@@ -129,15 +130,30 @@ def match_rows(df: pd.DataFrame, keep, drop, item_re, excl_re) -> tuple[np.ndarr
     return np.array([bool(r) for r in rules]), rules
 
 
+def polygons_only(geoms) -> np.ndarray:
+    """Polygons of each geometry, as one (Multi)Polygon per input: lines and points left by an
+    intersection or a difference (GeometryCollection) are dropped, never the polygons."""
+    out = []
+    for g in geoms:
+        parts = [p for p in shapely.get_parts(shapely.get_parts(g)) if shapely.get_type_id(p) == 3]
+        out.append(shapely.multipolygons(parts) if len(parts) > 1 else parts[0] if parts else
+                   shapely.Polygon())
+    return np.array(out, dtype=object)
+
+
 def year(value) -> int:
     m = re.search(r"(19|20)\d{2}", str(value))
     return int(m.group(0)) if m else 0
 
 
 def step_select(a, keep, drop, names) -> None:
-    out = a.out / "selected.gpkg"
-    if out.exists():
-        out.unlink()
+    """One FlatGeobuf per map in ``out/selected/`` (resumable: maps listed in ``select_done.txt`` are
+    skipped; ``--time-limit`` stops after that many seconds, run again to continue)."""
+    sel_dir = a.out / "selected"
+    sel_dir.mkdir(exist_ok=True)
+    done_file = a.out / "select_done.txt"
+    done = set(done_file.read_text().split()) if done_file.exists() else set()
+    t_start = time.time()
     item = a.items[0]
     item_re = "|".join(ITEM_TEXT[i][0] for i in a.items)
     excl_re = "|".join(ITEM_TEXT[i][1] for i in a.items)
@@ -147,6 +163,11 @@ def step_select(a, keep, drop, names) -> None:
         files = [f for f in files if f.stem in wanted]
     n_total, rows_maps = 0, []
     for i, shp in enumerate(files, 1):
+        if shp.stem in done:
+            continue
+        if a.time_limit and time.time() - t_start > a.time_limit:
+            log(f"select paused at {len(done)}/{len(files)} maps (time limit); run again to continue")
+            return
         try:
             info = pyogrio.read_info(shp)["fields"]
             cols = [f for f in info if f.upper() in DEF_COLS]
@@ -161,6 +182,7 @@ def step_select(a, keep, drop, names) -> None:
         attrs = attrs.fillna("").astype(str)
         mask, rules = match_rows(attrs, keep, drop, item_re, excl_re)
         if not mask.any():
+            _done(done_file, done, shp.stem)
             continue
         fids = np.flatnonzero(mask)
         g = pyogrio.read_dataframe(shp, fids=fids, columns=cols)
@@ -173,11 +195,12 @@ def step_select(a, keep, drop, names) -> None:
         if g.crs is None:
             g = g.set_crs("EPSG:4326")
         g = g.to_crs(CRS)
-        g["geometry"] = shapely.set_precision(shapely.make_valid(g.geometry.values), PRECISION)
+        g["geometry"] = polygons_only(shapely.set_precision(shapely.make_valid(g.geometry.values), PRECISION))
         g = g.explode(index_parts=False)
         g = g[g.geometry.geom_type.isin(["Polygon", "MultiPolygon"]) & ~g.geometry.is_empty]
         g = g[g.geometry.area >= 1.0]
         if g.empty:
+            _done(done_file, done, shp.stem)
             continue
         hs = g.HAB_CLASS.map(alias)
         hab_code = [next((c for c in codes_in(t) if c in keep.get(s, ())), "") for t, s in zip(g.HAB_TYPE, hs)]
@@ -194,15 +217,21 @@ def step_select(a, keep, drop, names) -> None:
             "Priority": np.where(hs == "ANNEX_I", 2, np.where(hs.str.startswith("EUNIS"), 3, 4)),
             "Year": [year(d) for d in g.DET_DATE],
         }, geometry=g.geometry.values, crs=CRS)
-        pyogrio.write_dataframe(out_df, out, layer="selected", append=out.exists())
+        pyogrio.write_dataframe(out_df, sel_dir / f"{shp.stem}.fgb", driver="FlatGeobuf")
         n_total += len(out_df)
-        rows_maps.append({"file": shp.stem, "n_selected": len(out_df), "area_km2": out_df.area.sum() / 1e6,
-                          **{r: int((out_df.Match_rule == r).sum()) for r in ["HAB_TYPE code", "ORIG_HAB code",
-                                                                               "text"]}})
-        if i % 10 == 0:
-            log(f"select {i}/{len(files)} maps, {n_total} polygons")
-    pd.DataFrame(rows_maps).to_csv(a.out / "selected_by_map.csv", index=False)
-    log(f"select done: {len(rows_maps)} maps, {n_total} polygons -> {out}")
+        row = {"file": shp.stem, "n_selected": len(out_df), "area_km2": round(out_df.area.sum() / 1e6, 4),
+               **{r: int((out_df.Match_rule == r).sum()) for r in ["HAB_TYPE code", "ORIG_HAB code", "text"]}}
+        by_map = a.out / "selected_by_map.csv"
+        pd.DataFrame([row]).to_csv(by_map, mode="a", header=not by_map.exists(), index=False)
+        _done(done_file, done, shp.stem)
+        log(f"select {i}/{len(files)} {shp.stem}: {len(out_df)} polygons")
+    log(f"select done: {len(done)}/{len(files)} maps -> {sel_dir}")
+
+
+def _done(done_file: Path, done: set, stem: str) -> None:
+    done.add(stem)
+    with open(done_file, "a") as f:
+        f.write(stem + "\n")
 
 
 def tiles_for(bounds, size) -> gpd.GeoDataFrame:
@@ -217,8 +246,50 @@ def tiles_for(bounds, size) -> gpd.GeoDataFrame:
     return gpd.GeoDataFrame({"cell": code}, geometry=shapely.box(xc - h, yc - h, xc + h, yc + h), crs=CRS)
 
 
+MAX_PER_TILE = 2000   # above this, a 10 km tile is processed by its 1 km cells
+
+
+def resolve_cell(geoms, idx, cell) -> tuple[list, list]:
+    """Pieces of ``geoms[idx]`` inside ``cell`` without overlaps: each part loses what the parts of
+    higher rank (earlier in ``idx``, which is sorted by rank) cover. Only the parts that touch it
+    are used, so the cost grows with the local overlaps, not with the cell."""
+    parts = shapely.intersection(geoms[idx], cell)
+    ok = ~shapely.is_empty(parts)
+    idx, parts = idx[ok], parts[ok]
+    if not len(parts):
+        return [], []
+    shapely.prepare(parts)
+    left, right = STRtree(parts).query(parts, predicate="intersects")
+    higher = left > right            # right has a higher rank than left
+    by_part: dict[int, list[int]] = {}
+    for l, r in zip(left[higher], right[higher]):
+        by_part.setdefault(int(l), []).append(int(r))
+    kept_geom, kept_idx = [], []
+    for i_part, (j, gpart) in enumerate(zip(idx, parts)):
+        over = by_part.get(i_part)
+        if over:
+            hs = parts[over]
+            if shapely.covers(hs, gpart).any():   # fully covered by a higher rank: dropped
+                continue
+            try:   # clip the higher-rank parts to the extent of this part before the difference
+                clipped = shapely.intersection(hs, box(*gpart.bounds))
+                piece = shapely.difference(gpart, shapely.union_all(clipped))
+            except shapely.errors.GEOSException:
+                piece = shapely.difference(gpart, shapely.union_all(shapely.make_valid(hs)))
+        else:
+            piece = gpart
+        piece = polygons_only([shapely.set_precision(shapely.make_valid(piece), PRECISION)])[0]
+        if piece.is_empty or piece.area < 1.0:
+            continue
+        kept_geom.append(piece)
+        kept_idx.append(int(j))
+    return kept_geom, kept_idx
+
+
 def step_resolve(a) -> None:
-    sel = pyogrio.read_dataframe(a.out / "selected.gpkg", layer="selected")
+    files = [f for f in sorted((a.out / "selected").glob("*.fgb")) if not f.stem.endswith("_temp")]
+    sel = pd.concat([pyogrio.read_dataframe(f) for f in files], ignore_index=True)
+    sel = gpd.GeoDataFrame(sel, geometry="geometry", crs=CRS)
     log(f"resolve: {len(sel)} polygons")
     sel = sel.sort_values(["Priority", "Sum_conf", "Year", "Map_id", "Polygon"],
                           ascending=[True, False, False, True, True]).reset_index(drop=True)
@@ -236,18 +307,18 @@ def step_resolve(a) -> None:
         idx = np.sort(tree.query(tile, predicate="intersects"))   # sorted = by rank
         if not len(idx):
             continue
-        parts = shapely.intersection(geoms[idx], tile)
-        covered, kept_geom, kept_idx = None, [], []
-        for j, gpart in zip(idx, parts):
-            if gpart.is_empty:
-                continue
-            piece = gpart if covered is None else shapely.difference(gpart, covered)
-            covered = gpart if covered is None else shapely.union(covered, gpart)
-            piece = shapely.set_precision(shapely.make_valid(piece), PRECISION)
-            if piece.is_empty or piece.area < 1.0:
-                continue
-            kept_geom.append(piece)
-            kept_idx.append(j)
+        # dense tiles are processed by their INSPIRE 1 km cells (memory and time stay bounded)
+        cells = [(tile, idx)]
+        if len(idx) > MAX_PER_TILE:
+            sub = tiles_for(tile.bounds, CELL)
+            sub = sub[shapely.within(sub.geometry.values, shapely.buffer(tile, 1))]
+            cells = [(c, np.sort(tree.query(c, predicate="intersects"))) for c in sub.geometry.values]
+        kept_geom, kept_idx = [], []
+        for cgeom, cidx in cells:
+            if len(cidx):
+                g_, i_ = resolve_cell(geoms, cidx, cgeom)
+                kept_geom += g_
+                kept_idx += i_
         if not kept_idx:
             continue
         part = sel.iloc[kept_idx].drop(columns="geometry").copy()
@@ -257,8 +328,9 @@ def step_resolve(a) -> None:
         g = g[g.area >= 1.0]
         pyogrio.write_dataframe(g.drop(columns=["rank"]), out, layer="polygons", append=out.exists())
         n_out += len(g)
-        if k % 50 == 0:
-            log(f"resolve {k}/{len(tiles)} tiles, {n_out} polygons, {time.time() - t0:.0f} s")
+        if k % 50 == 0 or len(idx) > MAX_PER_TILE:
+            log(f"resolve {k}/{len(tiles)} tiles, {n_out} polygons, {time.time() - t0:.0f} s"
+                + (f" ({cell}: {len(idx)} polygons, by 1 km cells)" if len(idx) > MAX_PER_TILE else ""))
     comp = pyogrio.read_dataframe(out, layer="polygons", read_geometry=False, columns=["Map_id"])
     log(f"resolve done: {len(comp)} polygons -> {out}")
 
@@ -288,7 +360,14 @@ def step_compare(a, keep) -> None:
     new = pyogrio.read_dataframe(a.out / "composite.gpkg", layer="polygons", columns=["Map_id"])
     new_area = new.assign(a=new.area / 1e6).groupby("Map_id").a.sum()
     item_re = "|".join(ITEM_TEXT[i][0] for i in a.items)
-    old = pyogrio.read_dataframe(a.old, columns=["map_id", "hab_origin", "eunis_code", "eunis_name", "anxi_code"])
+    cols = ["map_id", "hab_origin", "eunis_code", "eunis_name", "anxi_code"]
+    if a.old.is_dir():   # folder of FlatGeobuf parts (e.g. the 2025 polygons of the items, already extracted)
+        parts = [f for f in sorted(a.old.glob("*.fgb")) if not f.stem.endswith("_temp")]
+        old = gpd.GeoDataFrame(pd.concat([pyogrio.read_dataframe(f, columns=cols) for f in parts],
+                                         ignore_index=True), geometry="geometry")
+    else:
+        old = pyogrio.read_dataframe(a.old, columns=cols)
+    old = old[old.geometry.notna()].fillna("")
     codes = set().union(*keep.values())
     m = old.eunis_code.astype(str).isin(codes) | old.hab_origin.astype(str).str.contains(item_re, case=False) | \
         old.eunis_name.astype(str).str.contains(item_re, case=False) | \
@@ -314,6 +393,7 @@ def main(argv=None):
     p.add_argument("--only", help="text file with the map file names to read (default: all)")
     p.add_argument("--old", type=Path, help="2025 composite polygons, for the comparison")
     p.add_argument("--steps", nargs="+", default=["select", "resolve", "grid", "compare"])
+    p.add_argument("--time-limit", type=float, default=0, help="select: stop after this many seconds (resumable)")
     a = p.parse_args(argv)
     a.out.mkdir(parents=True, exist_ok=True)
     keep, drop = load_filter(a.filter, a.items)
