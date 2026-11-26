@@ -372,9 +372,9 @@ DISSOLVE_KEYS = ["Map_id", "Hab_origin", "Orig_class", "Eunis_code", "Hab_class"
 def step_dissolve(a) -> None:
     """Merge the polygons of ``polygons`` that carry the same information (``DISSOLVE_KEYS``):
     adjacent pieces become one polygon (also across the 10 km tile edges); pieces that do not touch
-    stay separate polygons. The union is made on the 1 m grid (``grid_size``), first by tile and then
-    across tiles, so memory stays bounded. Output layer ``polygons_dissolved``; ``N_pieces`` is the
-    number of pieces merged."""
+    stay separate polygons. Coverage union inside each 1 km cell, then an ordinary union across the
+    cells (all vertices are already on the 1 m grid). Output layer ``polygons_dissolved``;
+    ``N_pieces`` is the number of pieces merged into each polygon."""
     src = a.out / "composite.gpkg"
     comp = pyogrio.read_dataframe(src, layer="polygons")
     keys = [k for k in DISSOLVE_KEYS if k in comp.columns]
@@ -384,9 +384,21 @@ def step_dissolve(a) -> None:
     for n, (vals, g) in enumerate(comp.groupby(keys, sort=False), 1):
         if len(g) == 1:
             u = g.geometry.values[0]
-        else:   # by tile, then across tiles
-            per_tile = [shapely.union_all(t.geometry.values, grid_size=PRECISION) for _, t in g.groupby("Inspire10k")]
-            u = shapely.union_all(np.array(per_tile, dtype=object), grid_size=PRECISION)
+        else:
+            # inside one 1 km cell the pieces come from one noded overlay, so they form a coverage
+            # (identical shared edges) and the fast coverage union applies; the cells are then joined
+            # by an ordinary union (their shared edges lie on the same grid lines)
+            gv = g.geometry.values
+            p_ = shapely.point_on_surface(gv)
+            key = (shapely.get_x(p_) // CELL).astype(np.int64) * 10_000_000 + (shapely.get_y(p_) // CELL).astype(np.int64)
+            per_cell = []
+            for k in np.unique(key):
+                cg = gv[key == k]
+                try:
+                    per_cell.append(cg[0] if len(cg) == 1 else shapely.coverage_union_all(cg))
+                except shapely.errors.GEOSException:
+                    per_cell.append(shapely.union_all(cg))
+            u = shapely.union_all(np.array(per_cell, dtype=object))
         u = polygons_only([u])[0]
         parts = [p for p in shapely.get_parts(u) if p.area >= 1.0]
         # pieces merged into each polygon: pieces whose interior point falls in it
