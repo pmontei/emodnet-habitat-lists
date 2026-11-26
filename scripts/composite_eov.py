@@ -22,6 +22,9 @@ Steps (``--steps``, default all):
     (D3.11 2025, Table 3: OSPAR 1, Annex I maps 2, EUNIS maps 3, other maps 4), then ``SUM_CONF``
     (higher first), then determination date (more recent first). Output: ``composite.gpkg``, layer
     ``polygons``, in the EOV polygon template (D3.11 2025, Appendix Table 1) plus provenance fields.
+``dissolve``
+    Polygons with the same information (all template and provenance fields except the source
+    polygon id and the tile) are merged (layer ``polygons_dissolved``).
 ``grid``
     Cover of the composite in INSPIRE 1 km cells (layer ``inspire_1km``: area and percentage).
 ``compare``
@@ -336,6 +339,44 @@ def step_resolve(a) -> None:
     log(f"resolve done: {len(comp)} polygons -> {out}")
 
 
+# polygons with the same values in all these fields are merged by ``dissolve``
+DISSOLVE_KEYS = ["Map_id", "Hab_origin", "Orig_class", "Eunis_code", "Hab_class", "Eunis_ver", "Eunis_name",
+                 "Anxi_code", "Anxi_name", "Ai_subtype", "Ospar_hab", "determiner", "Det_date", "Source", "Item",
+                 "Match_rule", "Comp", "Comp_type", "Sum_conf", "Priority", "Year"]
+
+
+def step_dissolve(a) -> None:
+    """Merge the polygons of ``polygons`` that carry the same information (``DISSOLVE_KEYS``):
+    adjacent pieces become one polygon (also across the 10 km tile edges); pieces that do not touch
+    stay separate polygons. The union is made on the 1 m grid (``grid_size``), first by tile and then
+    across tiles, so memory stays bounded. Output layer ``polygons_dissolved``; ``N_pieces`` is the
+    number of pieces merged."""
+    src = a.out / "composite.gpkg"
+    comp = pyogrio.read_dataframe(src, layer="polygons")
+    keys = [k for k in DISSOLVE_KEYS if k in comp.columns]
+    comp[keys] = comp[keys].fillna("")
+    log(f"dissolve: {len(comp)} polygons, {comp.groupby(keys).ngroups} groups of equal information")
+    rows, geoms, t0 = [], [], time.time()
+    for n, (vals, g) in enumerate(comp.groupby(keys, sort=False), 1):
+        if len(g) == 1:
+            u = g.geometry.values[0]
+        else:   # by tile, then across tiles
+            per_tile = [shapely.union_all(t.geometry.values, grid_size=PRECISION) for _, t in g.groupby("Inspire10k")]
+            u = shapely.union_all(np.array(per_tile, dtype=object), grid_size=PRECISION)
+        u = polygons_only([u])[0]
+        for part in shapely.get_parts(u):
+            if part.area >= 1.0:
+                rows.append(dict(zip(keys, vals)) | {"N_pieces": len(g)})
+                geoms.append(part)
+        if n % 500 == 0:
+            log(f"dissolve {n} groups, {len(geoms)} polygons, {time.time() - t0:.0f} s")
+    out = gpd.GeoDataFrame(rows, geometry=geoms, crs=CRS)
+    out.insert(0, "objectid", np.arange(1, len(out) + 1))
+    pyogrio.write_dataframe(out, src, layer="polygons_dissolved")
+    log(f"dissolve done: {len(comp)} -> {len(out)} polygons, {out.area.sum() / 1e6:.1f} km2 "
+        f"(before {comp.area.sum() / 1e6:.1f} km2)")
+
+
 def step_grid(a) -> None:
     comp = pyogrio.read_dataframe(a.out / "composite.gpkg", layer="polygons", columns=["Map_id", "Inspire10k"])
     tree = STRtree(comp.geometry.values)
@@ -393,7 +434,7 @@ def main(argv=None):
     p.add_argument("--items", nargs="+", default=["posidonia-beds"])
     p.add_argument("--only", help="text file with the map file names to read (default: all)")
     p.add_argument("--old", type=Path, help="2025 composite polygons, for the comparison")
-    p.add_argument("--steps", nargs="+", default=["select", "resolve", "grid", "compare"])
+    p.add_argument("--steps", nargs="+", default=["select", "resolve", "dissolve", "grid", "compare"])
     p.add_argument("--time-limit", type=float, default=0, help="select: stop after this many seconds (resumable)")
     a = p.parse_args(argv)
     a.out.mkdir(parents=True, exist_ok=True)
@@ -404,6 +445,8 @@ def main(argv=None):
         step_select(a, keep, drop, names)
     if "resolve" in a.steps:
         step_resolve(a)
+    if "dissolve" in a.steps:
+        step_dissolve(a)
     if "grid" in a.steps:
         step_grid(a)
     if "compare" in a.steps and a.old:
