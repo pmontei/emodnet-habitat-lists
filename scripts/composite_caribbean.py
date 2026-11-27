@@ -253,7 +253,13 @@ def _dissolve(comp, keys):
                     per_cell.append(cg[0] if len(cg) == 1 else shapely.coverage_union_all(cg))
                 except shapely.errors.GEOSException:
                     per_cell.append(shapely.union_all(cg))
-            u = shapely.union_all(np.array(per_cell, dtype=object), grid_size=PRECISION)
+            pc = np.array(per_cell, dtype=object)
+            try:   # the cells come from one noded overlay on the 0.00001 degree grid: a coverage
+                u = pc[0] if len(pc) == 1 else shapely.coverage_union_all(pc)
+                if not u.is_valid:
+                    raise shapely.errors.GEOSException("invalid coverage union")
+            except shapely.errors.GEOSException:
+                u = shapely.union_all(pc, grid_size=PRECISION)
         parts = [p for p in shapely.get_parts(polygons_only([u])[0]) if p.area >= MIN_AREA]
         n_in = np.ones(len(parts), int)
         if "N_pieces" not in g:
@@ -266,31 +272,41 @@ def _dissolve(comp, keys):
 
 
 def step_dissolve(a) -> None:
-    """Merge the pieces with the same information: first inside each 1 degree block, then the
-    polygons that touch a block edge are merged across the blocks (second pass)."""
+    """Merge the pieces with the same information: first inside each 1 degree block (written to
+    disk block by block, layer ``blocks_dissolved``; resumable), then the polygons that touch a
+    block edge are merged across the blocks (second pass)."""
     src = a.out / "composite.gpkg"
+    tmp = a.out / "dissolve_blocks.gpkg"
     blocks = pyogrio.read_dataframe(src, layer="polygons", columns=["Block"], read_geometry=False).Block.unique()
-    out_parts, edge_parts, n_in = [], [], 0
-    for bcode in blocks:
+    done = set(pyogrio.read_dataframe(tmp, layer="interior", columns=["Block"], read_geometry=False).Block) \
+        if tmp.exists() and "interior" in pyogrio.list_layers(tmp)[:, 0] else set()
+    t0 = time.time()
+    for n, bcode in enumerate(blocks, 1):
+        if bcode in done:
+            continue
         comp = pyogrio.read_dataframe(src, layer="polygons", where=f"Block = '{bcode}'")
-        n_in += len(comp)
         keys = [k for k in DISSOLVE_KEYS if k in comp.columns]
         comp[keys] = comp[keys].fillna("")
         d = _dissolve(comp, keys)
-        b = shapely.bounds(d.geometry.values)
-        lines = np.round(b / BLOCK, 6)
-        edge = (lines == np.round(lines)).any(axis=1)   # touches a 1 degree line
-        out_parts.append(d[~edge])
-        edge_parts.append(d[edge])
-    edge = gpd.GeoDataFrame(pd.concat(edge_parts, ignore_index=True), geometry="geometry", crs=CRS)
+        d["Block"] = bcode
+        b = np.round(shapely.bounds(d.geometry.values) / BLOCK, 6)
+        edge = (b == np.round(b)).any(axis=1)   # touches a 1 degree line
+        for layer, part in (("edge", d[edge]), ("interior", d[~edge])):
+            if len(part) or layer == "interior":
+                pyogrio.write_dataframe(part, tmp, layer=layer, append=tmp.exists() and layer in
+                                        pyogrio.list_layers(tmp)[:, 0])
+        log(f"dissolve block {n}/{len(blocks)} {bcode}: {len(comp)} -> {len(d)} polygons, {time.time() - t0:.0f} s")
+    edge = pyogrio.read_dataframe(tmp, layer="edge").drop(columns="Block")
     keys = [k for k in DISSOLVE_KEYS if k in edge.columns]
+    edge[keys] = edge[keys].fillna("")
     pieces = edge.groupby(keys).N_pieces.sum()
     merged = _dissolve(edge.drop(columns="N_pieces"), keys).drop(columns="N_pieces")
-    merged = merged.merge(pieces.reset_index(), on=keys, how="left")   # approximate for split groups
-    out = gpd.GeoDataFrame(pd.concat(out_parts + [merged], ignore_index=True), geometry="geometry", crs=CRS)
+    merged = merged.merge(pieces.reset_index(), on=keys, how="left")   # summed over the group
+    inner = pyogrio.read_dataframe(tmp, layer="interior").drop(columns="Block")
+    out = gpd.GeoDataFrame(pd.concat([inner, merged], ignore_index=True), geometry="geometry", crs=CRS)
     out.insert(0, "objectid", np.arange(1, len(out) + 1))
     pyogrio.write_dataframe(out, src, layer="polygons_dissolved")
-    log(f"dissolve done: {n_in} -> {len(out)} polygons ({len(edge)} on block edges merged into {len(merged)}), "
+    log(f"dissolve done: {len(out)} polygons ({len(edge)} on block edges merged into {len(merged)}), "
         f"{out.to_crs(AREA_CRS).area.sum() / 1e6:.1f} km2")
 
 
