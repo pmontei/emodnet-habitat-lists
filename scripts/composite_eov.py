@@ -10,8 +10,8 @@ Steps (``--steps``, default all):
     * ``ORIG_HAB`` code of the filter for the classification named in ``ORIG_CLASS``;
     * or ``ORIG_HAB`` / ``HAB_TYPE`` text naming the item (e.g. "posidoni" for Posidonia beds).
 
-    Polygons whose code is excluded for the item (``use = no``), or whose text names an excluded
-    association, are left out (none for Posidonia since 26/11/2026: Caulerpa with seagrass is kept). The classification names of the maps are
+    Texts that never count as seagrass (``EXCLUDED_TEXT``: inland seagrass, Iris halophila, classes
+    lumping seagrass with algae) are left out; Caulerpa with seagrass is kept (WP3, 26/11/2026). The classification names of the maps are
     translated with ``CLASS_ALIASES`` (provisional ``class_aliases``). Geometries are reprojected to
     EPSG:3035, repaired (``make_valid``) and snapped to the INSPIRE 1 m grid (``set_precision(1.0)``,
     the INSPIRE grid has its origin at 0, 0), and written to ``selected/<map>.fgb``. Resumable
@@ -19,7 +19,13 @@ Steps (``--steps``, default all):
 ``select_geology``
     EMODnet Geology seabed substrate (``--geology`` .gdb files, e.g. 1:100k, 1:250k, 1:1M): polygons
     whose surface feature names seagrass; Posidonia where it says Posidonia or in the Mediterranean
-    (WP3 decision 26/11/2026); priority 5, finer scale first.
+    (WP3 decision 26/11/2026), otherwise the genus named or generic seagrass; priority 5, finer
+    scale first.
+``select_ospar``
+    OSPAR Habitats in the North-East Atlantic 2025 (``--ospar`` .gdb, layer ``PublicPolygons_2025``):
+    ``HabType`` Zostera beds, priority 1 (D3.11 2025, Table 3); ``Certainty`` Certain / Uncertain /
+    Unknown as ``Sum_conf`` 3 / 1 / -1. Polygons of the map library west of 50 W are left out of the
+    European selection (Caribbean composite, ``composite_caribbean.py``).
 
 The Habitats Directive maps of the library (fields ``ANNEXI``, ``SUBTYPE``, ``CONFIDENCE``) are read
 too: ``ANNEXI`` as the Annex I code (priority 2), ``CONFIDENCE`` High/Medium/Low as 3/2/1.
@@ -45,7 +51,7 @@ too: ``ANNEXI`` as the Annex I code (priority 2), ``CONFIDENCE`` High/Medium/Low
 ``compare``
     Area by map compared with the 2025 composite (``--old``), for the same items.
 
-Usage (test with Posidonia beds only)::
+Usage (all the items of EOV_SEAGRASS: ``--items all``; test with Posidonia beds only)::
 
     python scripts/composite_eov.py --maps Dados/EMODnetSBH_EUNIS_surveymaps --out Dados/composites_test/posidonia \
         --filter Scripts/EOV_seagrass/eov_seagrass_filter.csv --habitats Scripts/EOV_seagrass/habitats.csv \
@@ -86,14 +92,38 @@ CLASS_ALIASES = {
     "benthic biocenoses of mediterranean sea": "BARCELONA_2006",
     "national typology of mediterranean benthic biocenoses": "BARCELONA_2006",
 }
-# item -> (text naming the item, text naming an excluded association)
+# item -> text naming the item (Caulerpa with seagrass is kept, WP3 26/11/2026). A text naming one
+# genus goes to that item; a text naming several genera, or seagrass without a genus, goes to the
+# generic item ``seagrass-beds``.
 ITEM_TEXT = {
-    "posidonia-beds": (r"posidoni", r"$^"),   # Caulerpa with seagrass is kept (WP3, 26/11/2026)
-    "cymodocea-beds": (r"cymodoce", r"$^"),
-    "zostera-beds": (r"zostera|eel-?grass", r"$^"),
-    "halophila-beds": (r"(?<!iris )halophila", r"$^"),
-    "ruppia-beds": (r"ruppia", r"$^"),
+    "posidonia-beds": r"posidoni",
+    "cymodocea-beds": r"cymodoce",
+    "zostera-beds": r"zostera|eel-?grass",
+    "halophila-beds": r"(?<!iris )halophila",
+    "ruppia-beds": r"ruppia",
+    "tropical-seagrass-beds": r"thalassia|syringodium|halodule",
+    "seagrass-beds": r"sea-?grass|phan[ée]rogam|magnoliophyt|marine angiosperm|indigenous .{0,20}angiosperm"
+                     r"|herbiers? (?:de |à |a )?(?:phan|magno|zost|posid|cymo)|faner[oó]gam",
 }
+# texts never taken as seagrass: inland ("athalassic") seagrass, Iris halophila meadows, classes
+# that lump seagrass with algae (e.g. "Algae, Seagrass & Sargassum"), absence of seagrass
+EXCLUDED_TEXT = (r"athalassic|iris halophila|alga\w*,? (?:and |& )?seagrass|seagrass absent|no seagrass"
+                 r"|without seagrass|surrounded by seagrass")
+CARIBBEAN_WEST_OF = -50.0   # map library polygons west of 50 W belong to the Caribbean composite
+
+
+def item_for_text(text: str, items) -> str:
+    """Item named by a habitat text ('' if none)."""
+    if re.search(EXCLUDED_TEXT, text, re.I):
+        return ""
+    genera = [i for i in items if i != "seagrass-beds" and re.search(ITEM_TEXT[i], text, re.I)]
+    if len(genera) == 1:
+        return genera[0]
+    if len(genera) > 1:
+        return "seagrass-beds" if "seagrass-beds" in items else genera[0]
+    if "seagrass-beds" in items and re.search(ITEM_TEXT["seagrass-beds"], text, re.I):
+        return "seagrass-beds"
+    return ""
 EUNIS_VERSION = {"EUNIS_2012": "2007-11", "EUNIS_M_2019": "2019", "EUNIS_M_2022": "2022"}
 ANNEX_I_OF_ITEM = {"posidonia-beds": ("1120", "Posidonia beds (Posidonion oceanicae)")}
 DEF_COLS = ["GUI", "POLYGON", "ORIG_HAB", "ORIG_CLASS", "HAB_TYPE", "HAB_CLASS", "DET_NAME", "DET_DATE",
@@ -132,17 +162,14 @@ def alias(value: str) -> str:
 
 
 def load_filter(path: Path, items: list[str]):
-    """(codes kept, codes excluded) as {system: set(codes)} for the items."""
-    keep: dict[str, set] = {}
-    drop: dict[str, set] = {}
+    """Codes kept for the items, as {system: {code: item}} (``use = yes``). Codes with ``use = no``
+    are not read: a polygon is taken only by a kept code or by a text naming seagrass."""
+    keep: dict[str, dict] = {}
     with open(path, encoding="utf-8") as f:
         for r in csv.DictReader(f):
-            if r["item"] not in items:
-                continue
-            target = keep if r["use"] == "yes" else drop if r["use"] == "no" else None
-            if target is not None:
-                target.setdefault(r["system"], set()).add(r["code"])
-    return keep, drop
+            if r["item"] in items and r["use"] == "yes":
+                keep.setdefault(r["system"], {})[r["code"]] = r["item"]
+    return keep
 
 
 def codes_in(text: str) -> list[str]:
@@ -150,24 +177,28 @@ def codes_in(text: str) -> list[str]:
     return [t.rstrip(".") for t in TOKEN.findall(str(text))]
 
 
-def match_rows(df: pd.DataFrame, keep, drop, item_re, excl_re) -> tuple[np.ndarray, list[str]]:
-    """Boolean mask of the polygons to keep and the rule that matched each one."""
-    rules = []
-    for hc, ht, oc, oh in zip(df.HAB_CLASS, df.HAB_TYPE, df.ORIG_CLASS, df.ORIG_HAB):
+def match_rows(df: pd.DataFrame, keep, items) -> tuple[np.ndarray, list[str], list[str]]:
+    """Mask of the polygons to keep, the rule that matched each one and its item. Order: a kept
+    ``HAB_TYPE`` code (the EUNIS / Annex I translation of the map), then the excluded texts, then a
+    kept ``ORIG_HAB`` code, then a text naming seagrass (``ORIG_HAB``, ``HAB_TYPE``, ``SUBTYPE``)."""
+    rules, its = [], []
+    for hc, ht, oc, oh, st in zip(df.HAB_CLASS, df.HAB_TYPE, df.ORIG_CLASS, df.ORIG_HAB, df.SUBTYPE):
         hs, os_ = alias(hc), alias(oc)
-        hcodes, ocodes = codes_in(ht), codes_in(oh)
-        if any(c in drop.get(hs, ()) for c in hcodes) or any(c in drop.get(os_, ()) for c in ocodes) or \
-                re.search(excl_re, f"{oh} {ht}", re.I):
-            rules.append("")
-        elif any(c in keep.get(hs, ()) for c in hcodes):
-            rules.append("HAB_TYPE code")
-        elif any(c in keep.get(os_, ()) for c in ocodes):
-            rules.append("ORIG_HAB code")
-        elif re.search(item_re, f"{oh} {ht}", re.I):
-            rules.append("text")
+        text = f"{oh} {ht} {st}"
+        hk = [keep[hs][c] for c in codes_in(ht) if c in keep.get(hs, {})]
+        ok = [keep[os_][c] for c in codes_in(oh) if c in keep.get(os_, {})]
+        if hk:
+            rule, item = "HAB_TYPE code", hk[0]
+        elif re.search(EXCLUDED_TEXT, text, re.I):
+            rule, item = "", ""
+        elif ok:
+            rule, item = "ORIG_HAB code", ok[0]
         else:
-            rules.append("")
-    return np.array([bool(r) for r in rules]), rules
+            item = item_for_text(text, items)
+            rule = "text" if item else ""
+        rules.append(rule)
+        its.append(item)
+    return np.array([bool(r) for r in rules]), rules, its
 
 
 GEOLOGY_SCALES = {"100k": 0, "250k": 1, "1M": 2}   # finer scale first where they overlap
@@ -197,9 +228,14 @@ def step_select_geology(a) -> None:
         if d.crs is None:
             d = d.set_crs("EPSG:4326")
         d = d[d.geometry.notna()]
-        posid = d.Surface_feature.str.contains("posidonia", case=False) | in_mediterranean(d.geometry.values)
-        d = d[posid].to_crs(CRS)
-        d["geometry"] = polygons_only(shapely.set_precision(shapely.make_valid(shapely.force_2d(d.geometry.values)),
+        lon = shapely.get_x(shapely.point_on_surface(d.geometry.values))
+        d = d[lon >= CARIBBEAN_WEST_OF]   # e.g. Colombia: outside the European composite
+        med = in_mediterranean(d.geometry.values)
+        items = [("posidonia-beds" if m and not re.search(r"zostera|cymodocea", t, re.I) else
+                  item_for_text(t, list(ITEM_TEXT)) or "seagrass-beds") for t, m in zip(d.Surface_feature, med)]
+        d = d.assign(Item=items)
+        d = d[d.Item.isin(a.items)].to_crs(CRS)
+        d["geometry"] = polygons_only(shapely.set_precision(make_valid(shapely.force_2d(d.geometry.values)),
                                                             PRECISION))
         d = d.explode(index_parts=False)
         d = d[d.geometry.geom_type.isin(["Polygon"]) & (d.area >= 1.0)]
@@ -208,18 +244,64 @@ def step_select_geology(a) -> None:
             "Map_id": f"EMODnet Geology substrate {scale}", "Polygon": d.Code.astype(str),
             "Hab_origin": d.Surface_feature.astype(str) + np.where(dead, " (dead)", ""),
             "Orig_class": "EMODnet Geology surface feature", "Eunis_code": "", "Hab_class": "", "Eunis_ver": "",
-            "Eunis_name": "", "Anxi_code": ANNEX_I_OF_ITEM["posidonia-beds"][0],
-            "Anxi_name": ANNEX_I_OF_ITEM["posidonia-beds"][1], "Ai_subtype": "", "Ospar_hab": "",
+            "Eunis_name": "", "Anxi_code": [ANNEX_I_OF_ITEM.get(i, ("", ""))[0] for i in d.Item],
+            "Anxi_name": [ANNEX_I_OF_ITEM.get(i, ("", ""))[1] for i in d.Item], "Ai_subtype": "", "Ospar_hab": "",
             "Library": "EMODnet Geology seabed substrate", "determiner": d.Data_Holder.astype(str), "Det_date": "",
             "Source": "EMODnet Geology seabed substrate " + scale + " (" + d.Country.astype(str) + ", "
                       + d.Name.astype(str) + ")",
-            "Item": "posidonia-beds", "Match_rule": "Geology surface feature", "Comp": "", "Comp_type": "",
+            "Item": d.Item.values, "Match_rule": "Geology surface feature", "Comp": "", "Comp_type": "",
             "Sum_conf": pd.to_numeric(d.Conf_TOT, errors="coerce").fillna(-1).astype(int), "Priority": 5,
             "Year": 0, "Subprio": GEOLOGY_SCALES.get(scale, 9),
         }, geometry=d.geometry.values, crs=CRS)
         pyogrio.write_dataframe(out, sel_dir / f"GEOLOGY_{scale}.fgb", driver="FlatGeobuf")
         log(f"geology {scale}: {len(out)} polygons, {out.area.sum() / 1e6:.1f} km2 "
             f"({int(dead.sum())} dead/degraded)")
+
+
+OSPAR_ITEMS = {"Zostera beds": "zostera-beds", "Cymodocea meadows": "cymodocea-beds"}
+OSPAR_CERTAINTY = {"certain": 3, "uncertain": 1}
+
+
+def step_select_ospar(a) -> None:
+    """OSPAR habitats 2025, polygons of the seagrass habitats (priority 1), in chunks of 20 000."""
+    sel_dir = a.out / "selected"
+    sel_dir.mkdir(exist_ok=True)
+    layer = "PublicPolygons_2025"
+    types = [t for t, i in OSPAR_ITEMS.items() if i in a.items]
+    where = "HabType IN (" + ", ".join(f"'{t}'" for t in types) + ")"
+    cols = ["GUI", "HabType", "HabSubType", "HabStatus", "Certainty", "Determiner", "DetDate", "RecordKey"]
+    pyogrio.set_gdal_config_options({"OGR_ORGANIZE_POLYGONS": "SKIP"})   # multipart rings: much faster
+    d = pyogrio.read_dataframe(a.ospar, layer=layer if a.ospar.suffix.lower() == ".gdb" else None,
+                               columns=cols, where=where)
+    d = d[d.HabStatus.fillna("Present").str.lower().eq("present") & d.geometry.notna()]
+    if d.crs is None:
+        d = d.set_crs("EPSG:4326")
+    d = d.to_crs(CRS)
+    d["geometry"] = polygons_only(shapely.set_precision(make_valid(shapely.force_2d(d.geometry.values)),
+                                                        PRECISION))
+    d = d.explode(index_parts=False)
+    d = d[d.geometry.geom_type.isin(["Polygon"]) & (d.area >= 1.0)]
+    sub = d.HabSubType.fillna("").replace({"Unknown": ""})
+    out = gpd.GeoDataFrame({
+        "Map_id": d.GUI.astype(str), "Polygon": d.RecordKey.astype(str),
+        "Hab_origin": (d.HabType + np.where(sub != "", " - " + sub, "")).astype(str),
+        "Orig_class": "OSPAR threatened and/or declining habitats", "Eunis_code": "", "Hab_class": "",
+        "Eunis_ver": "", "Eunis_name": "", "Anxi_code": "", "Anxi_name": "", "Ai_subtype": "",
+        "Ospar_hab": d.HabType.astype(str), "Library": "OSPAR habitats 2025", "determiner": d.Determiner.astype(str),
+        "Det_date": d.DetDate.astype(str), "Source": "OSPAR Habitats in the North-East Atlantic 2025 ("
+                                                     + d.GUI.astype(str) + ")",
+        "Item": d.HabType.map(OSPAR_ITEMS).values, "Match_rule": "OSPAR HabType", "Comp": "", "Comp_type": "",
+        "Sum_conf": d.Certainty.fillna("").str.lower().map(OSPAR_CERTAINTY).fillna(-1).astype(int),
+        "Priority": 1, "Year": [year(v) for v in d.DetDate], "Subprio": 0,
+    }, geometry=d.geometry.values, crs=CRS)
+    pyogrio.write_dataframe(out, sel_dir / "OSPAR_2025.fgb", driver="FlatGeobuf")
+    log(f"ospar: {len(out)} polygons, {out.area.sum() / 1e6:.1f} km2 ({', '.join(types)})")
+
+
+def make_valid(geoms):
+    """Repair polygons with the 'structure' method (rings as polygon shells and holes; much faster
+    than 'linework' on large polygons with thousands of holes, and the OGC meaning of polygons)."""
+    return shapely.make_valid(geoms, method="structure", keep_collapsed=False)
 
 
 def polygons_only(geoms) -> np.ndarray:
@@ -250,7 +332,7 @@ def year(value) -> int:
     return int(m.group(0)) if m else 0
 
 
-def step_select(a, keep, drop, names) -> None:
+def step_select(a, keep, names) -> None:
     """One FlatGeobuf per map in ``out/selected/`` (resumable: maps listed in ``select_done.txt`` are
     skipped; ``--time-limit`` stops after that many seconds, run again to continue)."""
     sel_dir = a.out / "selected"
@@ -258,9 +340,6 @@ def step_select(a, keep, drop, names) -> None:
     done_file = a.out / "select_done.txt"
     done = set(done_file.read_text().split()) if done_file.exists() else set()
     t_start = time.time()
-    item = a.items[0]
-    item_re = "|".join(ITEM_TEXT[i][0] for i in a.items)
-    excl_re = "|".join(ITEM_TEXT[i][1] for i in a.items)
     files = sorted(a.maps.glob("*.shp"))
     if a.only:
         wanted = set(Path(a.only).read_text().split())
@@ -280,7 +359,7 @@ def step_select(a, keep, drop, names) -> None:
             log(f"skip {shp.name}: {e}")
             continue
         attrs = normalize(attrs)
-        mask, rules = match_rows(attrs, keep, drop, item_re, excl_re)
+        mask, rules, items = match_rows(attrs, keep, a.items)
         if not mask.any():
             _done(done_file, done, shp.stem)
             continue
@@ -288,10 +367,21 @@ def step_select(a, keep, drop, names) -> None:
         g = pyogrio.read_dataframe(shp, fids=fids, columns=cols)
         g = normalize(g)
         g["Match_rule"] = [rules[j] for j in fids]
+        g["Item"] = [items[j] for j in fids]
         if g.crs is None:
             g = g.set_crs("EPSG:4326")
+        g = g[g.geometry.notna() & ~g.geometry.is_empty]
+        b = shapely.bounds(g.geometry.values)   # centre of the bounding box (cheap, enough for 50 W)
+        lon = shapely.get_x(gpd.GeoSeries(shapely.points((b[:, 0] + b[:, 2]) / 2, (b[:, 1] + b[:, 3]) / 2),
+                                          crs=g.crs).to_crs("EPSG:4326").values)
+        if (lon < CARIBBEAN_WEST_OF).any():   # Caribbean maps: Caribbean composite (c-squares)
+            g = g[lon >= CARIBBEAN_WEST_OF]
+            if g.empty:
+                log(f"select {i}/{len(files)} {shp.stem}: Caribbean, left for the Caribbean composite")
+                _done(done_file, done, shp.stem)
+                continue
         g = g.to_crs(CRS)
-        g["geometry"] = polygons_only(shapely.set_precision(shapely.make_valid(shapely.force_2d(g.geometry.values)),
+        g["geometry"] = polygons_only(shapely.set_precision(make_valid(shapely.force_2d(g.geometry.values)),
                                                             PRECISION))
         g = g.explode(index_parts=False)
         g = g[g.geometry.geom_type.isin(["Polygon", "MultiPolygon"]) & ~g.geometry.is_empty]
@@ -300,17 +390,22 @@ def step_select(a, keep, drop, names) -> None:
             _done(done_file, done, shp.stem)
             continue
         hs = g.HAB_CLASS.map(alias)
-        hab_code = [next((c for c in codes_in(t) if c in keep.get(s, ())), "") for t, s in zip(g.HAB_TYPE, hs)]
+        hab_code = [next((c for c in codes_in(t) if c in keep.get(s, {})), "") for t, s in zip(g.HAB_TYPE, hs)]
+        annex = hs == "ANNEX_I"
+        anx_code = np.where(annex, [next(iter(codes_in(t)), "") for t in g.HAB_TYPE],
+                            [ANNEX_I_OF_ITEM.get(it, ("", ""))[0] for it in g.Item])
+        anx_name = [names.get(("ANNEX_I", c), "") or ANNEX_I_OF_ITEM.get(it, ("", ""))[1] if c else ""
+                    for c, it in zip(anx_code, g.Item)]
         out_df = gpd.GeoDataFrame({
             "Map_id": g.GUI.astype(str), "Polygon": g.POLYGON.astype(str), "Hab_origin": g.ORIG_HAB.astype(str),
             "Orig_class": g.ORIG_CLASS.astype(str), "Eunis_code": g.HAB_TYPE.astype(str),
             "Hab_class": g.HAB_CLASS.astype(str), "Eunis_ver": hs.map(EUNIS_VERSION).fillna(""),
-            "Eunis_name": [names.get((s, c), "") for s, c in zip(hs, hab_code)],
-            "Anxi_code": ANNEX_I_OF_ITEM.get(item, ("", ""))[0], "Anxi_name": ANNEX_I_OF_ITEM.get(item, ("", ""))[1],
+            "Eunis_name": [names.get((s, c), "") if not s == "ANNEX_I" else "" for s, c in zip(hs, hab_code)],
+            "Anxi_code": anx_code, "Anxi_name": anx_name,
             "Ai_subtype": g.SUBTYPE.where(~g.SUBTYPE.str.lower().isin(["not applicable", "none"]), ""),
             "Ospar_hab": "", "Library": a.maps.name, "determiner": g.DET_NAME.astype(str), "Det_date": g.DET_DATE.astype(str),
             "Source": "EMODnet Seabed Habitats map library (" + g.GUI.astype(str) + ")",
-            "Item": item, "Match_rule": g.Match_rule, "Comp": g.COMP.astype(str), "Comp_type": g.COMP_TYPE.astype(str),
+            "Item": g.Item, "Match_rule": g.Match_rule, "Comp": g.COMP.astype(str), "Comp_type": g.COMP_TYPE.astype(str),
             "Sum_conf": pd.to_numeric(g.SUM_CONF, errors="coerce").fillna(-1).astype(int),
             "Priority": np.where(hs == "ANNEX_I", 2, np.where(hs.str.startswith("EUNIS"), 3, 4)),
             "Year": [year(d) for d in g.DET_DATE], "Subprio": 0,
@@ -347,20 +442,21 @@ def tiles_for(bounds, size) -> gpd.GeoDataFrame:
 MAX_PER_TILE = 2000   # above this, a 10 km tile is processed by its 1 km cells
 
 
-def resolve_cell(geoms, idx, cell) -> tuple[list, list]:
+def resolve_cell(geoms, idx, cell, precision=PRECISION, min_area=1.0) -> tuple[list, list]:
     """Pieces of ``geoms[idx]`` inside ``cell`` without overlaps, by a single noded overlay: the
     boundaries of all the parts are noded together on the 1 m grid, the faces of that linework are
     built (polygonize), and each face goes to the part of highest rank that contains it (``idx`` is
     sorted by rank). Neighbouring pieces share exactly the same edges, so no overlap and no sliver is
-    left; the union of the pieces equals the union of the parts."""
-    parts = polygons_only(shapely.intersection(geoms[idx], cell, grid_size=PRECISION))
+    left; the union of the pieces equals the union of the parts. ``precision`` and ``min_area`` are in
+    the units of the CRS (1 m and 1 m2 in EPSG:3035; 0.00001 degree and its square for c-squares)."""
+    parts = polygons_only(shapely.intersection(geoms[idx], cell, grid_size=precision))
     ok = ~shapely.is_empty(parts)
     idx, parts = idx[ok], parts[ok]
     if not len(parts):
         return [], []
     if len(parts) == 1:
         return [parts[0]], [int(idx[0])]
-    lines = shapely.union_all(shapely.boundary(parts), grid_size=PRECISION)   # noded linework
+    lines = shapely.union_all(shapely.boundary(parts), grid_size=precision)   # noded linework
     faces = np.array(shapely.get_parts(shapely.polygonize(shapely.get_parts(lines))), dtype=object)
     faces = faces[shapely.area(faces) > 0]
     if not len(faces):
@@ -377,7 +473,7 @@ def resolve_cell(geoms, idx, cell) -> tuple[list, list]:
         mine = faces[owner == pp]
         piece = mine[0] if len(mine) == 1 else shapely.coverage_union_all(mine)
         piece = polygons_only([piece])[0]
-        if piece.is_empty or piece.area < 1.0:
+        if piece.is_empty or piece.area < min_area:
             continue
         kept_geom.append(piece)
         kept_idx.append(int(idx[pp]))
@@ -503,7 +599,7 @@ def step_export(a) -> None:
     d = pyogrio.read_dataframe(src, layer="polygons_dissolved")
     d["Area_km2"] = (d.area / 1e6).round(6)
     w = d.to_crs("EPSG:4326")
-    w["geometry"] = polygons_only(shapely.make_valid(w.geometry.values))
+    w["geometry"] = polygons_only(make_valid(w.geometry.values))
     w = w[~w.geometry.is_empty]
     out = a.out / "composite_wgs84.gpkg"
     if out.exists():
@@ -544,9 +640,11 @@ def step_grid(a) -> None:
 
 
 def step_compare(a, keep) -> None:
+    """Area by map against the 2025 composite: all its polygons when all the items are wanted,
+    otherwise the 2025 polygons of the wanted items."""
     new = pyogrio.read_dataframe(a.out / "composite.gpkg", layer="polygons", columns=["Map_id"])
     new_area = new.assign(a=new.area / 1e6).groupby("Map_id").a.sum()
-    item_re = "|".join(ITEM_TEXT[i][0] for i in a.items)
+    item_re = "|".join(ITEM_TEXT[i] for i in a.items)
     cols = ["map_id", "hab_origin", "eunis_code", "eunis_name", "anxi_code"]
     if a.old.is_dir():   # folder of FlatGeobuf parts (e.g. the 2025 polygons of the items, already extracted)
         parts = [f for f in sorted(a.old.glob("*.fgb")) if not f.stem.endswith("_temp")]
@@ -555,8 +653,8 @@ def step_compare(a, keep) -> None:
     else:
         old = pyogrio.read_dataframe(a.old, columns=cols)
     old = old[old.geometry.notna()].fillna("")
-    codes = set().union(*keep.values())
-    m = old.eunis_code.astype(str).isin(codes) | old.hab_origin.astype(str).str.contains(item_re, case=False) | \
+    codes = set().union(*[set(v) for v in keep.values()])
+    m = (np.ones(len(old), bool) if set(a.items) >= set(ITEM_TEXT) else False) | old.eunis_code.astype(str).isin(codes) | old.hab_origin.astype(str).str.contains(item_re, case=False) | \
         old.eunis_name.astype(str).str.contains(item_re, case=False) | \
         old.anxi_code.astype(str).isin({ANNEX_I_OF_ITEM.get(i, ("-",))[0] for i in a.items})
     old = old[m].to_crs(CRS)
@@ -576,22 +674,27 @@ def main(argv=None):
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--filter", type=Path, required=True, help="eov_seagrass_filter.csv")
     p.add_argument("--habitats", type=Path, required=True, help="habitats.csv of emodnet-habitat-lists")
-    p.add_argument("--items", nargs="+", default=["posidonia-beds"])
+    p.add_argument("--items", nargs="+", default=["posidonia-beds"], help="items, or 'all'")
     p.add_argument("--only", help="text file with the map file names to read (default: all)")
     p.add_argument("--old", type=Path, help="2025 composite polygons, for the comparison")
     p.add_argument("--geology", type=Path, nargs="*", default=[],
                    help="EMODnet Geology seabed substrate .gdb files (step select_geology)")
+    p.add_argument("--ospar", type=Path, help="OSPAR habitats 2025 .gdb (step select_ospar)")
     p.add_argument("--steps", nargs="+", default=["select", "resolve", "dissolve", "check", "export", "compare"])
     p.add_argument("--time-limit", type=float, default=0, help="select: stop after this many seconds (resumable)")
     a = p.parse_args(argv)
     a.out.mkdir(parents=True, exist_ok=True)
-    keep, drop = load_filter(a.filter, a.items)
+    if a.items == ["all"]:
+        a.items = list(ITEM_TEXT)
+    keep = load_filter(a.filter, a.items)
     hab = pd.read_csv(a.habitats, dtype=str, keep_default_na=False, usecols=["system", "code", "name"])
     names = dict(zip(zip(hab.system, hab.code), hab.name))
     if "select" in a.steps:
-        step_select(a, keep, drop, names)
+        step_select(a, keep, names)
     if "select_geology" in a.steps:
         step_select_geology(a)
+    if "select_ospar" in a.steps:
+        step_select_ospar(a)
     if "resolve" in a.steps:
         step_resolve(a)
     if "dissolve" in a.steps:
